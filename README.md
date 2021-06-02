@@ -1,10 +1,5 @@
 # oSTEM Conference Site
 
-<a href="https://vercel.com/?utm_source=ostem&utm_campaign=oss" style="display: flex; align-items: center;">
-Powered by&nbsp;
-<img height="16px" src="public/images/powered-by-vercel.svg" alt="Vercel" />
-</a>
-
 ## Non-code (copy) edits
 For most non-code changes, edits can be made in the GitHub interface.
 
@@ -54,9 +49,5 @@ If you're new to React or NextJS, these might be some helpful resources:
 ### `src/pages`
 
 Files in this directory define pages for the site.
-For example, `src/pages/foo.mdx` would define the page at the `/foo` URL and `src/pages/bar/spam.mdx` would define a page at the `/foo/spam` URL.
+For example, `src/pages/foo.mdx` would define the page at the `/foo` URL and `src/pages/bar/spam.mdx` would define a page at the `/bar/spam` URL.
 See the NextJS docs for more information about this.
-
-### `src/components`
-
-!!TODO!!
