@@ -8,7 +8,7 @@ Powered by&nbsp;
 ## Non-code (copy) edits
 For most non-code changes, edits can be made in the GitHub interface.
 
-You can edit the page (at `src/pages/[page].mdx`).
+You can edit the page (at `src/pages/[conference year]/[page].mdx`).
 
 ## Development environment setup
 
