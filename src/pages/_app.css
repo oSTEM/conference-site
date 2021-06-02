@@ -14,6 +14,8 @@
   --type-t300: 1.78rem;
   --type-t400: 2.37rem;
   --type-t500: 3.16rem;
+
+  --font-display: "Josefin Sans", Helvetica, Arial, sans-serif;
 }
 
 :root {
@@ -62,7 +64,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
 }
 
 h1 {

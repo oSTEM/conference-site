@@ -1,3 +1,4 @@
+import { CTAButton } from "../../components/button/CTAButton";
 import { SiteLayout } from "../../components/layout/SiteLayout";
 import { TopicSquare } from "../../components/rfp/TopicSquare";
 
@@ -13,6 +14,9 @@ import { TopicSquare } from "../../components/rfp/TopicSquare";
   <img src="/images/hero/color-squares.png" alt="" className="block" />
   <div className="content">
     <h1>Request for Proposals</h1>
+    <CTAButton onClick={"https://form.jotform.com/211237107190142"}>
+      Submit a Proposal
+    </CTAButton>
   </div>
   <style jsx>{`
     .content {
@@ -23,6 +27,7 @@ import { TopicSquare } from "../../components/rfp/TopicSquare";
       width: 70%;
       text-align: center;
       font-weight: bold;
+      font-size: 1.75rem;
     }
   `}</style>
 </div>
@@ -144,9 +149,11 @@ NOTE: If you are unable to access the submission form due to technical issues
 please contact conference@ostem.org for approval to send a document or email
 submission.
 
-<!-- todo: big call to action button -->
-
-[Submit a proposal](https://form.jotform.com/211237107190142)
+<div className="text-2xl flex justify-center p-8">
+  <CTAButton onClick="https://form.jotform.com/211237107190142">
+    Submit a Proposal
+  </CTAButton>
+</div>
 
 ## Additional Information
 
