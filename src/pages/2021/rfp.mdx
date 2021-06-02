@@ -1,8 +1,31 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { TopicSquare } from "../../components/rfp/TopicSquare";
 
 <SiteLayout title="Request for Proposals">
 
-# Request for Proposals
+<div className="relative mb-8">
+  {/*
+  TODO:
+    This arrangement is probably backwards: right now, the image defines the size
+    and the content on top of it is positioned absolutely; instead, we should
+    probably have this just be a background image with object-fit: cover or whatever
+  */}
+  <img src="/images/hero/color-squares.png" alt="" className="block" />
+  <div className="content">
+    <h1>Request for Proposals</h1>
+  </div>
+  <style jsx>{`
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      text-align: center;
+      font-weight: bold;
+    }
+  `}</style>
+</div>
 
 Out in Science, Technology, Engineering, and Mathematics (oSTEM) is now
 accepting program proposals for the virtual 11th Annual oSTEM Conference 2021.
@@ -25,48 +48,40 @@ Identity, (4) Career and Professional Development, and (5) Other Relevant
 Topics. Example session topics that would fit in each category are provided in
 the bullets below each category.
 
-<div className="grid gap-4 sm:grid-cols-2">
-<div>
-
-### Technical Expertise
+<div className="grid gap-8 sm:grid-cols-2 my-8">
+<TopicSquare title="Technical Expertise" borderColor="border-red-500">
 
 - Presenting case studies on common pitfalls or errors and solutions
 - Address upcoming challenges or novel applications
 - In depth research presentation
 
-</div>
-<div>
-
-### Student Leader Development
+</TopicSquare>
+<TopicSquare title="Student Leader Development" borderColor="border-yellow-500">
 
 - Tools and resources for developing student programming on campus
 - Identifying leadership strengths and weaknesses
 - Team building activities and applications
 
-</div>
-<div>
-
-### Intersectionality and Identity
+</TopicSquare>
+<TopicSquare title="Intersectionality and Identity" borderColor="border-green-500">
 
 - How gender, race, and sexual orientation affect day-to-day interactions
 - Developing an understanding of how different identities shape individuals
 
-</div><div>
-
-### Career and Professional Development
+</TopicSquare>
+<TopicSquare title="Career and Professional Development" borderColor="border-blue-500">
 
 - Finding and connecting with queer mentors and/or mentees
 - Enhancing queer experiences in the workplace
 - Creating cover letters and/or resumes
 
-</div><div>
-
-### Other Relevant Topics
+</TopicSquare>
+<TopicSquare title="Other Relevant Topics" borderColor="border-purple-500">
 
 - Queer wellness topics
 - Transitioning in the workplace
 
-</div>
+</TopicSquare>
 </div>
 
 ## Presentation Format

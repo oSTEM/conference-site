@@ -61,7 +61,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 p-8 text-gray-700">
       <div className="max-w-2xl mx-auto text-center">
-        Out inn Science, Technology, Engineering, and Mathematics Incorporated
+        Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}
       </div>
     </footer>
