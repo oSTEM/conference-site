@@ -1,0 +1,97 @@
+@import "./_reset.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --type-t50: 0.87rem;
+  --type-t75: 0.93rem;
+  --type-t100: 1rem;
+  --type-t200: 1.33rem;
+  --type-t300: 1.78rem;
+  --type-t400: 2.37rem;
+  --type-t500: 3.16rem;
+}
+
+:root {
+  --color-rasp: hsl(350, 60%, 48%);
+  --color-frost: hsl(207, 45%, 35%);
+  --color-frost-dark: hsl(207, 55%, 28%);
+  --color-frost-disabled: hsl(207, 50%, 85%);
+  --color-sky: hsl(202, 46%, 67%);
+  --color-space: hsl(238, 43%, 18%);
+  --color-black: hsl(0, 0%, 0%);
+
+  --color-text: #111111;
+  --color-link: var(--color-frost);
+}
+
+html,
+body {
+  color: var(--color-text);
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Block level elements */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0.25em 0;
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: var(--type-t500);
+}
+
+h2 {
+  font-size: var(--type-t400);
+}
+
+h3 {
+  font-size: var(--type-t300);
+}
+
+h4 {
+  font-size: var(--type-t200);
+}
+
+/* Inline elements */
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-left: 2rem;
+}
