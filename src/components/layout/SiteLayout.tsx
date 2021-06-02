@@ -22,6 +22,8 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
   );
 };
 
+const colors = ["red", "amber", "green", "blue", "purple", "pink"];
+
 const NavBar = () => {
   return (
     <nav className="bg-gray-50">
@@ -35,21 +37,42 @@ const NavBar = () => {
         </a>
       </Link>
       <ul className="flex flex-col space-y-4 p-4 max-h-screen list-none">
-        <NavLink href={"/"}>Conference Home</NavLink>
-        <NavLink href={"/2021/rfp"}>Request for Proposals</NavLink>
-        <NavLink href={"/2021/schedule"}>Schedule</NavLink>
-        <NavLink href={"/2021/sponsors"}>Sponsors</NavLink>
-        <NavLink href={"/2021/faq"}>FAQ</NavLink>
+        <NavLink href={"/"} color={colors[0]}>
+          Conference Home
+        </NavLink>
+        <NavLink href={"/2021/rfp"} color={colors[1]}>
+          Request for Proposals
+        </NavLink>
+        <NavLink href={"/2021/schedule"} color={colors[2]}>
+          Schedule
+        </NavLink>
+        <NavLink href={"/2021/sponsors"} color={colors[3]}>
+          Sponsors
+        </NavLink>
+        <NavLink href={"/2021/faq"} color={colors[4]}>
+          FAQ
+        </NavLink>
       </ul>
     </nav>
   );
 };
 
-const NavLink = ({ children, href }: { children: string; href: string }) => {
+const NavLink = ({
+  children,
+  href,
+  color,
+}: {
+  children: string;
+  href: string;
+  color: string;
+}) => {
   return (
     <li>
       <Link href={href} passHref>
-        <a className="block py-2 px-4 rounded-full border-solid border-2 border-red-500 text-black text-center font-display">
+        <a
+          className="block py-2 px-4 rounded-full border-solid border-2  text-black text-center font-display hover:underline focus:underline"
+          style={{ borderColor: `var(--color-${color})` }}
+        >
           {children}
         </a>
       </Link>

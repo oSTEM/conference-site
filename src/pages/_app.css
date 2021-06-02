@@ -29,6 +29,14 @@
 
   --color-text: #111111;
   --color-link: var(--color-frost);
+
+  /* "rainbow" color palette; initial version adapted from Tailwind colors */
+  --color-red: #ef4444;
+  --color-amber: #f59e0b;
+  --color-green: #10b981;
+  --color-blue: #3b82f6;
+  --color-purple: #8b5cf6;
+  --color-pink: #ec4899;
 }
 
 html,
