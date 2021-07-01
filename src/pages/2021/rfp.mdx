@@ -4,14 +4,13 @@ import { TopicSquare } from "../../components/rfp/TopicSquare";
 
 <SiteLayout title="Request for Proposals">
 
-<div className="relative mb-8">
+<div className="wrapper relative mb-8">
   {/*
   TODO:
     This arrangement is probably backwards: right now, the image defines the size
     and the content on top of it is positioned absolutely; instead, we should
     probably have this just be a background image with object-fit: cover or whatever
   */}
-  <img src="/images/hero/color-squares.png" alt="" className="block" />
   <div className="content">
     <h1>Request for Proposals</h1>
     <CTAButton onClick={"https://form.jotform.com/211237107190142"}>
@@ -19,15 +18,18 @@ import { TopicSquare } from "../../components/rfp/TopicSquare";
     </CTAButton>
   </div>
   <style jsx>{`
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 70%;
+    .wrapper {
+      background-image: url("/images/pattern/rainbox-box-pattern-desaturated.png");
+      background-repeat: repeat;
+      background-size: contain;
+      min-height: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      font-size: 2rem;
       text-align: center;
       font-weight: bold;
-      font-size: 1.75rem;
     }
   `}</style>
 </div>
@@ -101,13 +103,13 @@ There are two options for Program Submissions:
   perspective on a similar topic. Panels can be collaborative across different
   universities, companies, and industries depending on the topic. Members
   participating in the discussion are expected to be part of a live discussion.
-  
 - **Lightning Talk (New to 2021!)**: We define a lighting talk as an individual
-  giving a quick introduction to pique interest in a specific STEM or LGBT+ 
+  giving a quick introduction to pique interest in a specific STEM or LGBT+
   related topic. This may be a resource you have found interesting or an issue
-  that future STEM professionals could investigate. These talks will be 8 minutes
-  long with 2 minutes for questions. This is an excellent opportunity to give an
-  oral presentation if a 50 minute presentation is beyond the scope of your topic!
+  that future STEM professionals could investigate. These talks will be 8
+  minutes long with 2 minutes for questions. This is an excellent opportunity to
+  give an oral presentation if a 50 minute presentation is beyond the scope of
+  your topic!
 
 ## Proposal Components
 
@@ -130,15 +132,16 @@ PM PDT. Program assessment will not be provided by oSTEM.
   the audience will supplement the presentation or panel is included. (300 words
   max)
 
-- **Specific workshop outline OR specific panel topics / What qualifications do you have to speak on your proposed topic? (25%)**
+- **Specific workshop outline OR specific panel topics / What qualifications do
+  you have to speak on your proposed topic? (25%)**
 
   - For workshops, give the outline for your presentation, approximating the
     amount of time spent on each question/topic (_e.g._, 20 minute talk on Topic
     X, 10 minutes of discussion, 10 minutes of questions, etc.).
   - For panels, give specific questions that your panel will be discussing and
     how these questions support the proposed topic.
-  - For Lightning Talks, give evidence for why you are qualified to speak on your
-    proposed topic (_i.e._ experience, exposure, publications, ect.).
+  - For Lightning Talks, give evidence for why you are qualified to speak on
+    your proposed topic (_i.e._ experience, exposure, publications, ect.).
 
 - **Presenter identity & experiences match the proposed topic (15%):**
   Presenter(s) demonstrate a basis of knowledge for this proposed program.
