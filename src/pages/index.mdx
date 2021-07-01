@@ -1,13 +1,12 @@
 import { CTAButton } from "../components/button/CTAButton";
+import { ConferenceCountdown } from "../components/ConferenceCountdown";
 import { SiteLayout } from "../components/layout/SiteLayout";
 
 <SiteLayout>
 
 # 11th Annual oSTEM Conference 2021
 
-<p className="text-3xl font-display">
-  Your seat at our table
-</p>
+<p className="text-3xl font-display">Your seat at our table</p>
 <p className="text-3xl font-display">
   October 29 &ndash; November 1, 2021, Virtual
 </p>
@@ -16,6 +15,6 @@ import { SiteLayout } from "../components/layout/SiteLayout";
   <CTAButton onClick="/2021/rfp">Submit a Proposal</CTAButton>
 </div>
 
-Boof **boof**.
+<ConferenceCountdown />
 
 </SiteLayout>
