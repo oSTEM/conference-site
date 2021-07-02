@@ -49,7 +49,10 @@ const NavBar = () => {
         <NavLink href={"/2021/sponsors"} color={colors[3]}>
           Sponsors
         </NavLink>
-        <NavLink href={"/2021/faq"} color={colors[4]}>
+        <NavLink href={"/2021/awards"} color={colors[4]}>
+          Awards
+        </NavLink>
+        <NavLink href={"/2021/faq"} color={colors[5]}>
           FAQ
         </NavLink>
       </ul>
