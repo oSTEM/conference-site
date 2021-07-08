@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SocialRow } from "./Socials";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -90,6 +93,7 @@ const Footer = () => {
         Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}
       </div>
+      <SocialRow />
     </footer>
   );
 };
