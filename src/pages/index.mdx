@@ -4,17 +4,19 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 
 <SiteLayout>
 
-# 11th Annual oSTEM Conference 2021
+<p className="flex justify-center text-4xl font-display">11th Annual oSTEM Conference 2021</p>
 
-<p className="text-3xl font-display">Your seat at our table</p>
-<p className="text-3xl font-display">
+<ConferenceCountdown />
+
+<img src="/images/conference-pic.jpg" alt="Conference Picture" style={{borderRadius: '30px' ,  padding: '1em'}}/>
+
+<p className="flex justify-center text-3xl font-display">Your seat at our table</p>
+<p className="flex justify-center text-3xl font-display">
   October 29 &ndash; November 1, 2021, Virtual
 </p>
 
 <div className="text-2xl flex justify-center p-8">
   <CTAButton onClick="/2021/rfp">Submit a Proposal</CTAButton>
 </div>
-
-<ConferenceCountdown />
 
 </SiteLayout>
