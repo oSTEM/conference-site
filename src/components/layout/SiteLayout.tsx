@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SocialRow } from "./Socials";
 
 export interface SiteLayoutProps {
