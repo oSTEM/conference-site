@@ -91,7 +91,9 @@ const Footer = () => {
         Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}
       </div>
-      <SocialRow />
+      <div className="grid justify-items-center">
+        <SocialRow />
+      </div>
     </footer>
   );
 };
