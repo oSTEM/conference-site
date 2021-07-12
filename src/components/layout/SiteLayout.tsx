@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { SocialRow } from "./Socials";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -89,6 +90,9 @@ const Footer = () => {
       <div className="max-w-2xl mx-auto text-center">
         Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}
+      </div>
+      <div className="grid justify-items-center">
+        <SocialRow />
       </div>
     </footer>
   );
