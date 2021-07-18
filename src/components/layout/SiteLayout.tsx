@@ -74,10 +74,15 @@ const NavLink = ({
     <li>
       <Link href={href} passHref>
         <a
-          className="block py-2 px-4 rounded-full border-solid border-2  text-black text-center font-display hover:underline focus:underline"
+          className="block py-2 px-4 rounded-full border-solid border-2 text-black text-center font-display"
           style={{ borderColor: `var(--color-${color})` }}
         >
           {children}
+          <style jsx>{`
+            a:hover {
+              background: var(--color-${color});
+            }
+          `}</style>
         </a>
       </Link>
     </li>
