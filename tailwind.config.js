@@ -8,7 +8,8 @@ module.exports = {
         halloween: "#d47a1e",
       },
       fontFamily: {
-        display: ["Josefin Sans", "sans-serif"],
+        display: ["Montserrat", "sans-serif"],
+        sans: ["Noto Sans Serif", "Arial"]
       },
       flex: {
         // add the flex-2 class
