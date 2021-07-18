@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         halloween: "#d47a1e",
+        ostem_blue: "#1B7EA1",
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],
