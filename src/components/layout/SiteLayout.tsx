@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { SocialRow } from "./Socials";
+import { useRouter } from "next/router";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -16,7 +17,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       </Head>
       <div className={"flex flex-col sm:flex-row min-h-screen"}>
         <NavBar />
-        <main className="p-4 sm:p-8 max-w-3xl mx-auto">{children}</main>
+        <main className="p-4 sm:p-8 max-w-5xl mx-auto">{children}</main>
       </div>
       <Footer />
     </div>
@@ -70,17 +71,26 @@ const NavLink = ({
   href: string;
   color: string;
 }) => {
+  const router = useRouter();
+
   return (
     <li>
       <Link href={href} passHref>
         <a
-          className="block py-2 px-4 rounded-full border-solid border-2 text-black text-center font-display"
+          className={
+            "block py-2 px-4 rounded-full border-solid border-2 text-black text-center font-display"
+          }
           style={{ borderColor: `var(--color-${color})` }}
         >
           {children}
           <style jsx>{`
             a:hover {
               background: var(--color-${color});
+            }
+            a {
+              background: ${router.pathname === href
+                ? `var(--color-${color})`
+                : `bg-gray-50`};
             }
           `}</style>
         </a>
