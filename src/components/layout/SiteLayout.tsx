@@ -44,16 +44,19 @@ const NavBar = () => {
         <NavLink href={"/2021/rfp"} color={colors[1]}>
           Request for Proposals
         </NavLink>
-        <NavLink href={"/2021/schedule"} color={colors[2]}>
+        <NavLink href={"/2021/cfp"} color={colors[2]}>
+          Call for Presentations
+        </NavLink>
+        <NavLink href={"/2021/schedule"} color={colors[3]}>
           Schedule
         </NavLink>
-        <NavLink href={"/2021/sponsors"} color={colors[3]}>
+        <NavLink href={"/2021/sponsors"} color={colors[4]}>
           Sponsors
         </NavLink>
-        <NavLink href={"/2021/awards"} color={colors[4]}>
+        <NavLink href={"/2021/awards"} color={colors[5]}>
           Awards
         </NavLink>
-        <NavLink href={"/2021/faq"} color={colors[5]}>
+        <NavLink href={"/2021/faq"} color={colors[6]}>
           FAQ
         </NavLink>
       </ul>
