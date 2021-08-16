@@ -1,33 +1,35 @@
+import Image from "next/image"
+
 import { CTAButton } from "../components/button/CTAButton";
 import { ConferenceCountdown } from "../components/ConferenceCountdown";
 import { SiteLayout } from "../components/layout/SiteLayout";
 
 <SiteLayout>
 
-<div className="border-b-4 border-mulberry border-solid pb-4">
-    <p className="flex text-center text-5xl font-display font-black text-mulberry">11th Annual oSTEM Conference 2021</p>
-    <p className="flex justify-center text-2xl font-display italic">Your seat at our table</p>
+<div className="border-b-4 border-mulberry border-solid pb-4 text-center">
+    <p className="text-5xl font-display font-black text-mulberry">11th Annual oSTEM Conference 2021</p>
+    <p className="flex justify-center text-2xl font-display italic">Your Seat at Our Table</p>
     <hr/>
     <p className="flex justify-center text-3xl font-display">
     October 28 &ndash; 31, 2021 | Virtual
     </p>
 </div>
 <div class="grid grid-cols-5 gap-y-2 mt-9">
-    <div class="rounded-l col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0049_Update.png"/></div>
-    <div class="rounded-r col-span-3 bg-tint-spruce-light p-4">
-        <h3>Conference for LGBTQ+ people in STEM Fields</h3>
-        <p>
-            The oSTEM Conference returns agains this year in a virtual format.
-            This conference is a space for LGBTQ+ students and professionals in STEM fields to share their experiences and learn from one another.
-            We have programs ranging from safe spaces to talk about queer issues to discussing the latest in research conducted by our members.
-        </p>
-        <p>
-            If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
-        </p>
-        <div class="text-center my-4">
-            <CTAButton onClick="https://events.bizzabo.com/343425">Register for the Conference</CTAButton>
+        <div className="rounded-l col-span-2 tint tint-dark"><img className="rounded-l object-cover w-full h-full" src="/images/oSTEM.2019.0049_Update_BannerSize.jpg" alt=""/></div>
+        <div class="rounded-r col-span-3 p-4 bg-tint-spruce-light">
+            <h3>Conference for LGBTQ+ people in STEM Fields</h3>
+            <p>
+                The oSTEM Conference returns agains this year in a virtual format.
+                This conference is a space for LGBTQ+ students and professionals in STEM fields to share their experiences and learn from one another.
+                We have programs ranging from safe spaces to talk about queer issues to discussing the latest in research conducted by our members.
+            </p>
+            <p>
+                If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
+            </p>
+            <div class="text-center my-4">
+                <CTAButton onClick="https://events.bizzabo.com/343425">Register for the Conference</CTAButton>
+            </div>
         </div>
-    </div>
     <div class="rounded-l col-span-3 bg-tint-apricot p-4">
         <h3>Career and Graduate School Expo</h3>
         <p>
@@ -42,8 +44,8 @@ import { SiteLayout } from "../components/layout/SiteLayout";
             <CTAButton onClick="https://www.ostem.org/page/sponsorship-opportunities">Exhibitor Information</CTAButton>
         </div>
     </div>
-    <div class="rounded-r col-span-2 tint tint-light"><img class="object-cover w-full h-full rounded-r" src="/images/oSTEM.2019.0111.jpg"/></div>
-    <div class="rounded-l col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0077.jpg"/></div>
+    <div class="rounded-r col-span-2 tint tint-light"><img class="object-cover w-full h-full rounded-r" src="/images/oSTEM.2019.0111.jpg" alt=""/></div>
+    <div class="rounded-l col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0077.jpg" alt=""/></div>
     <div class="rounded-r col-span-3 bg-tint-spruce-light p-4">
         <h3>Affinity Group Breakouts and other Programs</h3>
         <p>
