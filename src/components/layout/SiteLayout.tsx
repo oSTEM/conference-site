@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { SocialRow } from "./Socials";
 import { useRouter } from "next/router";
+import { Color } from "theme/Color";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -15,20 +16,20 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       <Head>
         <title>{title ? title + " | " : ""}11th Annual oSTEM Conference</title>
       </Head>
-      <div className={"flex flex-col sm:flex-row min-h-screen"}>
+      <div className={"flex flex-col sm:flex-row min-h-screen bg-primary"}>
         <NavBar />
-        <main className="p-4 sm:p-8 max-w-5xl mx-auto">{children}</main>
+        <main className="p-4 sm:p-8 max-w-5xl mx-auto bg-primary">
+          {children}
+        </main>
       </div>
       <Footer />
     </div>
   );
 };
 
-const colors = ["red", "amber", "green", "blue", "purple", "pink"];
-
 const NavBar = () => {
   return (
-    <nav className="bg-gray-50">
+    <nav className="bg-primary border-r-2 border-mulberry border-solid">
       <Link href="/">
         <a className="block p-8">
           <img
@@ -39,22 +40,22 @@ const NavBar = () => {
         </a>
       </Link>
       <ul className="flex flex-col space-y-4 p-4 max-h-screen list-none">
-        <NavLink href={"/"} color={colors[0]}>
+        <NavLink href={"/"} color={Color.SpruceLight}>
           Conference Home
         </NavLink>
-        <NavLink href={"/2021/rfp"} color={colors[1]}>
+        <NavLink href={"/2021/rfp"} color={Color.SpruceLight}>
           Request for Proposals
         </NavLink>
-        <NavLink href={"/2021/schedule"} color={colors[2]}>
+        <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
           Schedule
         </NavLink>
-        <NavLink href={"/2021/sponsors"} color={colors[3]}>
+        <NavLink href={"/2021/sponsors"} color={Color.SpruceLight}>
           Sponsors
         </NavLink>
-        <NavLink href={"/2021/awards"} color={colors[4]}>
+        <NavLink href={"/2021/awards"} color={Color.SpruceLight}>
           Awards
         </NavLink>
-        <NavLink href={"/2021/faq"} color={colors[5]}>
+        <NavLink href={"/2021/faq"} color={Color.SpruceLight}>
           FAQ
         </NavLink>
       </ul>
@@ -78,18 +79,20 @@ const NavLink = ({
       <Link href={href} passHref>
         <a
           className={
-            "block py-2 px-4 rounded-full border-solid border-2 text-black text-center font-display"
+            "block py-2 px-4 rounded text-black text-center font-display bg-tint-spruce-light"
           }
-          style={{ borderColor: `var(--color-${color})` }}
         >
           {children}
           <style jsx>{`
             a:hover {
-              background: var(--color-${color});
+              background: ${Color.Apricot};
             }
             a {
               background: ${router.pathname === href
-                ? `var(--color-${color})`
+                ? Color.Apricot
+                : `bg-gray-50`};
+              border-color: ${router.pathname === href
+                ? Color.Apricot
                 : `bg-gray-50`};
             }
           `}</style>
@@ -101,7 +104,7 @@ const NavLink = ({
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 p-8 text-gray-700">
+    <footer className="bg-primary p-8 text-gray-700">
       <div className="max-w-2xl mx-auto text-center">
         Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}
