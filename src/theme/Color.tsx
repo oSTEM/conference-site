@@ -6,4 +6,8 @@ export enum Color {
   Sky = "var(--color-sky)",
   Space = "var(--color-space)",
   Black = "var(--color-black)",
+  Spruce = "var(--color-spruce)",
+  SpruceLight = "var(--color-spruce-light)",
+  Apricot = "var(--color-apricot)",
+  Linen = "var(--color-linen)",
 }
