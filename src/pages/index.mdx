@@ -4,19 +4,73 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 
 <SiteLayout>
 
-<p className="flex justify-center text-4xl font-display">11th Annual oSTEM Conference 2021</p>
+<div className="border-b-4 border-mulberry border-solid pb-4">
+    <p className="flex text-center text-5xl font-display font-black text-mulberry">11th Annual oSTEM Conference 2021</p>
+    <p className="flex justify-center text-3xl font-display italic">Your seat at our table</p>
+    <hr/>
+    <p className="flex justify-center text-3xl font-display">
+    October 29 &ndash; November 1, 2021 | Virtual
+    </p>
+</div>
 
-<ConferenceCountdown />
 
-<img src="/images/conference-pic.jpg" alt="Conference Picture" style={{borderRadius: '30px' ,  padding: '1em'}}/>
 
-<p className="flex justify-center text-3xl font-display">Your seat at our table</p>
-<p className="flex justify-center text-3xl font-display">
-  October 29 &ndash; November 1, 2021, Virtual
-</p>
+<div class="grid grid-cols-5 gap-y-2 mt-9">
+    <div class="rounded-l col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0049_Update.png"/></div>
+    <div class="rounded-r col-span-3 bg-tint-spruce-light p-4">
+        <h3>Conference for LGBTQ+ people in STEM Fields</h3>
+        <p>
+            The oSTEM Conference returns agains this year in a virtual format.
+            This conference is a space for LGBTQ+ students and professionals in STEM fields to share their experiences and learn from one another.
+            We have programs ranging from safe spaces to talk about queer issues to discussing the latest in research conducted by our members.
+        </p>
+        <p>
+            If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="#">Register for the Conference</CTAButton>
+        </div>
+    </div>
+    <div class="rounded-l col-span-3 bg-tint-apricot p-4">
+        <h3>Career and Graduate School Expo</h3>
+        <p>
+            We have a dedicated Career and Graduate School Expo, allowing you to find the best opportunities from organizations and schools that will accept and support you.
+            Closer to the start of the conference, we'll be providing information about what opportunities are available from each sponsor.
+            We'll have professional development virtual events before the expo to help you get ready and make the best impression
+        </p>
+        <p>
+            If you are representing an organization that would like to exhibit at our expo, click the button below for information about the sign up process and the benefits of exhibiting at our conference.
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="#">Exhibitor Information</CTAButton>
+        </div>
+    </div>
+    <div class="rounded-r col-span-2 tint tint-light"><img class="object-cover w-full h-full rounded-r" src="/images/oSTEM.2019.0111.jpg"/></div>
+    <div class="rounded-l col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0077.jpg"/></div>
+    <div class="rounded-r col-span-3 bg-tint-spruce-light p-4">
+        <h3>Affinity Group Breakouts and other Programs</h3>
+        <p>
+            One of the core programs we offer during our conference are our Affinity Group breakouts.
+            We have 7 Affinity Groups: Ace/Aro, (Dis)Ability, InQUEERy, Middle Sexualities, Race and Ethnicity, Trans and Non-Binary, and Women.
+            The breakouts during the conference is a safe space for those who identify with that group to share their unique experiences, discuss things in their community, and find support.
+        </p>
+        <p>
+            We will also have other programming available, such as a Poster Session for our community members to present their research, professional development programs, and keynote sessions.
+            More information about these other programs will be released closer to the conference.
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="#">Check out the Schedule</CTAButton>
+        </div>
+    </div>
+    
+</div>
 
 <div className="text-2xl flex justify-center p-8">
   <CTAButton onClick="/2021/rfp">Submit a Proposal</CTAButton>
+</div>
+
+<div class="bg-gradient-to-r from-spruce to-apricot via-mulberry">
+    <ConferenceCountdown />
 </div>
 
 </SiteLayout>
