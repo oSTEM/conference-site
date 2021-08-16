@@ -9,7 +9,7 @@ export const ConferenceCountdown = () => {
 
   if (isPast(CONFERENCE_DATE)) {
     return (
-      <div className="text-2xl font-display">
+      <div className="text-2xl font-display text-white">
         <p>The conference has started!</p>
       </div>
     );
@@ -26,7 +26,7 @@ export const ConferenceCountdown = () => {
   });
 
   return (
-    <div className="flex flex-wrap justify-center items-center">
+    <div className="flex flex-wrap justify-center items-center text-white">
       <Unit n={diff.months || 0} unit="months" />
       <Unit n={diff.days || 0} unit="days" />
       <Unit n={diff.hours || 0} unit="hours" />
@@ -49,7 +49,7 @@ const Unit = ({ n, unit }: { n: number; unit: string }) => {
       >
         {n}
       </span>
-      <span className="block mt-2 font-display">{unit}</span>
+      <span className="block mt-2 font-display text-white">{unit}</span>
     </div>
   );
 };

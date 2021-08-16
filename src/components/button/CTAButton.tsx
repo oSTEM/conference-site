@@ -73,7 +73,7 @@ const buttonStyle = css.resolve`
   font-size: 1em;
   font-weight: bold;
   text-decoration: none;
-  background-color: var(--bg);
+  background-color: var(--color-mullberry);
   border-radius: 999px;
   transition: background-color 0.15s, border-color 0.15s, color 0.15s,
     box-shadow 0.15s;
@@ -83,7 +83,7 @@ const buttonStyle = css.resolve`
 
   :not([data-disabled="true"]):hover,
   :focus {
-    background-color: var(--bg-active);
+    background-color: var(--color-ostem-darkblue);
     box-shadow: -2px 5px 4px rgba(0, 0, 0, 0.4);
   }
 

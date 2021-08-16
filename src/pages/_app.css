@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Serif&display=swap");
 
 :root {
   --type-t50: 0.87rem;
@@ -15,7 +15,7 @@
   --type-t400: 2.37rem;
   --type-t500: 3.16rem;
 
-  --font-display: "Josefin Sans", Helvetica, Arial, sans-serif;
+  --font-display: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 :root {
@@ -37,6 +37,23 @@
   --color-blue: #3b82f6;
   --color-purple: #8b5cf6;
   --color-pink: #ec4899;
+
+  /* oSTEM Shades of blue */
+  --color-ostem-blue: #1B7EA1;
+  --color-ostem-darkblue: #004f6b;
+  --color-ostem-lightblue: #76bfda;
+
+  /* Conference Colors */
+  --color-umber: #e48440;
+  --color-apricot: #fabb74;
+  --color-mullberry: #705159;
+  --color-slate: #a1a1a3;
+  --color-linen: #ffe8c0;
+  --color-latte: #847465;
+  --color-spruce: #577072;
+  --color-spruce-light: #97AEAF;
+  --color-fog: #f3f6f8;
+
 }
 
 html,
@@ -44,7 +61,7 @@ body {
   color: var(--color-text);
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans Serif", Helvetica, Arial, sans-serif;
   min-height: 100vh;
 }
 
@@ -104,4 +121,37 @@ ul {
   list-style-position: outside;
   list-style-type: disc;
   padding-left: 2rem;
+}
+
+.tint{
+    position: relative;
+}
+
+.tint-dark:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(87,112,114,0.5);
+    transition: background 0.3s linear;
+}
+
+.tint-light:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(250,187,116,0.5);
+    transition: background 0.3s linear;
+}
+
+
+.tint:hover:before{
+    background:none;
 }
