@@ -73,7 +73,7 @@ const buttonStyle = css.resolve`
   font-size: 1em;
   font-weight: bold;
   text-decoration: none;
-  background-color: var(--color-ostem-blue);
+  background-color: var(--color-mullberry);
   border-radius: 999px;
   transition: background-color 0.15s, border-color 0.15s, color 0.15s,
     box-shadow 0.15s;
