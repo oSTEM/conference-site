@@ -151,7 +151,27 @@ ul {
     transition: background 0.3s linear;
 }
 
+.tint:hover:before {
+  background: none;
+}
 
-.tint:hover:before{
-    background:none;
+table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #c6c9cc;
+}
+
+th {
+  text-align: center;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #c6c9cc;
+  padding: 0.5rem 1rem;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.025);
 }
