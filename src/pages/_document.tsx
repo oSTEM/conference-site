@@ -31,7 +31,17 @@ class Document extends NextDocument {
     // TODO: more meta tags and whatnot
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-86N002ZC1J"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: gtagScript,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -42,3 +52,11 @@ class Document extends NextDocument {
 }
 
 export default Document;
+
+const gtagScript = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-86N002ZC1J');
+`;
