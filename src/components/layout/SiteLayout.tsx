@@ -16,9 +16,9 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       <Head>
         <title>{title ? title + " | " : ""}11th Annual oSTEM Conference</title>
       </Head>
-      <div className={"flex flex-col sm:flex-row min-h-screen bg-primary"}>
+      <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
         <NavBar />
-        <main className="p-4 sm:p-8 max-w-5xl mx-auto bg-primary">
+        <main className="p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full">
           {children}
         </main>
       </div>
@@ -29,7 +29,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
 
 const NavBar = () => {
   return (
-    <nav className="bg-primary border-r-2 border-mulberry border-solid">
+    <nav className="bg-primary border-r-2 border-mulberry border-solid h-screen sm:sticky top-0">
       <Link href="/">
         <a className="block p-8">
           <img
@@ -46,7 +46,10 @@ const NavBar = () => {
         <NavLink href={"/2021/rfp"} color={Color.SpruceLight}>
           Request for Proposals
         </NavLink>
-        <NavLink href={"/2021/call-for-presentations"} color={Color.SpruceLight}>
+        <NavLink
+          href={"/2021/call-for-presentations"}
+          color={Color.SpruceLight}
+        >
           Call for Posters
         </NavLink>
         <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
