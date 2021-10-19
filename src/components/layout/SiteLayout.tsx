@@ -46,8 +46,14 @@ const NavBar = () => {
         <NavLink href={"/2021/rfp"} color={Color.SpruceLight}>
           Request for Proposals
         </NavLink>
-        <NavLink href={"/2021/call-for-presentations"} color={Color.SpruceLight}>
+        <NavLink
+          href={"/2021/call-for-presentations"}
+          color={Color.SpruceLight}
+        >
           Call for Posters
+        </NavLink>
+        <NavLink href={"/2021/hackathon"} color={Color.SpruceLight}>
+          Hackathon
         </NavLink>
         <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
           Schedule
