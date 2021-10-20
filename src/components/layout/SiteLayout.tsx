@@ -43,23 +43,14 @@ const NavBar = () => {
         <NavLink href={"/"} color={Color.SpruceLight}>
           Conference Home
         </NavLink>
-        <NavLink href={"/2021/rfp"} color={Color.SpruceLight}>
-          Request for Proposals
-        </NavLink>
-        <NavLink
-          href={"/2021/call-for-presentations"}
-          color={Color.SpruceLight}
-        >
-          Call for Posters
+        <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
+          Schedule
         </NavLink>
         <NavLink href={"/2021/hackathon"} color={Color.SpruceLight}>
           Hackathon
         </NavLink>
-        <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
-          Schedule
-        </NavLink>
         <NavLink href={"/2021/sponsors"} color={Color.SpruceLight}>
-          Sponsors
+          Expo
         </NavLink>
         <NavLink href={"/2021/awards"} color={Color.SpruceLight}>
           Awards
