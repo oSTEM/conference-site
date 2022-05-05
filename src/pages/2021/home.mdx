@@ -1,0 +1,85 @@
+import Image from "next/image"
+
+import { CTAButton } from "../components/button/CTAButton";
+import { ConferenceCountdown } from "../components/ConferenceCountdown";
+import { SiteLayout } from "../components/layout/SiteLayout";
+
+<SiteLayout>
+
+<div className="border-b-4 border-mulberry border-solid pb-4 text-center">
+    <p className="text-5xl font-display font-black text-mulberry">11th Annual oSTEM Conference 2021</p>
+    <p className="flex justify-center text-2xl font-display italic">Your Seat at Our Table</p>
+    <hr/>
+    <p className="flex justify-center text-3xl font-display">
+    October 28 &ndash; 31, 2021 | Virtual
+    </p>
+</div>
+<div class="grid md:grid-cols-5 gap-y-2 mt-9">
+        <div className="rounded-l md:col-span-2 tint tint-dark"><img className="rounded-l object-cover w-full h-full" src="/images/oSTEM.2019.0049_Update_BannerSize.jpg" alt=""/></div>
+        <div class="rounded-r md:col-span-3 p-4 bg-tint-spruce-light">
+            <h3>Conference for LGBTQ+ people in STEM Fields</h3>
+            <p>
+                The oSTEM Conference returns again this year in a virtual format.
+                This conference is a space for LGBTQ+ students and professionals in STEM fields to share their experiences and learn from one another.
+                We have programs ranging from safe spaces to talk about queer issues to discussing the latest in research conducted by our members.
+            </p>
+            <p>
+                If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
+            </p>
+            <div class="text-center my-4">
+                <CTAButton onClick="https://events.bizzabo.com/343425">Register for the Conference</CTAButton>
+            </div>
+        </div>
+    <div class="rounded-l md:col-span-3 bg-tint-apricot p-4">
+        <h3>Career and Graduate School Expo</h3>
+        <p>
+            We have a dedicated Career and Graduate School Expo, allowing you to find the best opportunities from organizations and schools that will accept and support you.
+            Closer to the start of the conference, we'll be providing information about what opportunities are available from each sponsor.
+        </p>
+        <p>
+            Finish your career expo profile on Brazen and start looking at what organizations will be at the Expo.
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="https://app.brazenconnect.com/app/events/VgxjR/">Sign up for the Expo</CTAButton>
+        </div>
+    </div>
+    <div class="rounded-r md:col-span-2 tint tint-light"><img class="object-cover w-full h-full rounded-r" src="/images/oSTEM.2019.0111.jpg" alt=""/></div>
+    <div class="rounded-l md:col-span-2 tint tint-dark"><img class="object-cover w-full h-full rounded-l" src="/images/oSTEM.2019.0077.jpg" alt=""/></div>
+    <div class="rounded-r md:col-span-3 bg-tint-spruce-light p-4">
+        <h3>Affinity Group Breakouts and other Programs</h3>
+        <p>
+            One of the core programs we offer during our conference are our Affinity Group breakouts.
+            We have 7 Affinity Groups: Ace/Aro, (Dis)Ability, InQUEERy, Middle Sexualities, Race and Ethnicity, Trans and Non-Binary, and Women.
+            The breakouts during the conference is a safe space for those who identify with that group to share their unique experiences, discuss things in their community, and find support.
+        </p>
+        <p>
+            We will also have other programming available, such as a Poster Session for our community members to present their research, professional development programs, and keynote sessions.
+            More information about these other programs will be released closer to the conference.
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="/2021/schedule">Check out the Schedule</CTAButton>
+        </div>
+    </div>
+    <div class="rounded-l md:col-span-3 bg-tint-apricot p-4">
+        <h3>Hackathon</h3>
+        <p>
+            Each year we host an annual hackathon as a fun technical challenge for our members to participate in to win awards and prizes.
+            We're looking for enthusiastic students and mentors with skills in software development. If you're interested in using technology and engineering
+            to solve problems for the queer community, then this is the event for you!
+        </p>
+        <div class="text-center my-4">
+            <CTAButton onClick="/2021/hackathon">Sign up for the Hackathon</CTAButton>
+        </div>
+    </div>
+    <div class="rounded-r md:col-span-2 tint tint-light"><img class="object-cover w-full h-full rounded-r" src="/images/hackathon.jpg" alt=""/></div>
+</div>
+
+<div className="text-2xl flex justify-center p-8">
+  <CTAButton onClick="https://www.ostem.org/page/newsletter">Sign Up for Our Newsletter</CTAButton>
+</div>
+
+<div class="bg-gradient-to-r from-spruce to-apricot via-mulberry">
+    <ConferenceCountdown />
+</div>
+
+</SiteLayout>
