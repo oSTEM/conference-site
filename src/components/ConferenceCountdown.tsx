@@ -1,8 +1,8 @@
 import { intervalToDuration, isPast } from "date-fns";
 import React from "react";
 
-// Thursday, October 28, 2021 at 9:00AM PST
-const CONFERENCE_DATE = new Date("2021-10-28T16:00:00.000Z");
+// Thursday, November 10, 2022 at 9:00AM Eastern
+const CONFERENCE_DATE = new Date("2022-11-10T14:00:00.000Z");
 
 export const ConferenceCountdown = () => {
   const now = useCurrentTime();
