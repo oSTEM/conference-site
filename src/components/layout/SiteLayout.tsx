@@ -14,7 +14,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
   return (
     <div>
       <Head>
-        <title>{title ? title + " | " : ""}11th Annual oSTEM Conference</title>
+        <title>{title ? title + " | " : ""}12th Annual oSTEM Conference</title>
       </Head>
       <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
         <NavBar />
@@ -43,19 +43,7 @@ const NavBar = () => {
         <NavLink href={"/"} color={Color.SpruceLight}>
           Conference Home
         </NavLink>
-        <NavLink href={"/2021/schedule"} color={Color.SpruceLight}>
-          Schedule
-        </NavLink>
-        <NavLink href={"/2021/hackathon"} color={Color.SpruceLight}>
-          Hackathon
-        </NavLink>
-        <NavLink href={"/2021/sponsors"} color={Color.SpruceLight}>
-          Expo
-        </NavLink>
-        <NavLink href={"/2021/awards"} color={Color.SpruceLight}>
-          Awards
-        </NavLink>
-        <NavLink href={"/2021/faq"} color={Color.SpruceLight}>
+        <NavLink href={"/2022/faq"} color={Color.SpruceLight}>
           FAQ
         </NavLink>
       </ul>
