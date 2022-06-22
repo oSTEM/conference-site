@@ -3,6 +3,8 @@
 //    loaded as an ESM module (which we can't do in next.config.js).
 //    This plugin provides support for tables, to-do lists, and auto-linking.
 const remarkGfm = require("remark-gfm");
+const withImages = require('next-images');
+const { publicDecrypt } = require("crypto");
 
 const withMDX = require("@next/mdx")({
   options: {
@@ -10,6 +12,8 @@ const withMDX = require("@next/mdx")({
     rehypePlugins: [],
   },
 });
+
+module.exports = withImages();
 
 module.exports = withMDX({
   pageExtensions: ["js", "jsx", "tsx", "mdx"],
@@ -22,3 +26,4 @@ module.exports = withMDX({
     return config;
   },
 });
+
