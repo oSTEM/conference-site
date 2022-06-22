@@ -10,4 +10,8 @@ export enum Color {
   SpruceLight = "var(--color-spruce-light)",
   Apricot = "var(--color-apricot)",
   Linen = "var(--color-linen)",
+  Deepwater = "var(--color-deepwater)",
+  oSTEMBlue = "var(--color-ostem-blue)",
+  AntiqueTeal = "var(--color-antique-teal)",
+  SkyBlue = "var(--color-skyblue)",
 }
