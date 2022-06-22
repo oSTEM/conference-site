@@ -29,7 +29,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
 
 const NavBar = () => {
   return (
-    <nav className="bg-primary border-r-2 border-mulberry border-solid h-screen sm:sticky top-0">
+    <nav className="bg-primary border-r-2 border-deepwater border-solid h-screen sm:sticky top-0">
       <Link href="/">
         <a className="block p-8">
           <img
@@ -40,10 +40,13 @@ const NavBar = () => {
         </a>
       </Link>
       <ul className="flex flex-col space-y-4 p-4 max-h-screen list-none">
-        <NavLink href={"/"} color={Color.SpruceLight}>
+        <NavLink href={"/"} color={Color.AntiqueTeal}>
           Conference Home
         </NavLink>
-        <NavLink href={"/2022/faq"} color={Color.SpruceLight}>
+        <NavLink href={"/2022/rfp"} color={Color.AntiqueTeal}>
+          Request for Proposals
+        </NavLink>
+        <NavLink href={"/2022/faq"} color={Color.AntiqueTeal}>
           FAQ
         </NavLink>
       </ul>
@@ -67,20 +70,20 @@ const NavLink = ({
       <Link href={href} passHref>
         <a
           className={
-            "block py-2 px-4 rounded text-black text-center font-display bg-tint-spruce-light"
+            "block py-2 px-4 rounded text-black text-center font-display bg-tint-deepwater-light"
           }
         >
           {children}
           <style jsx>{`
             a:hover {
-              background: ${Color.Apricot};
+              background: ${Color.SkyBlue};
             }
             a {
               background: ${router.pathname === href
-                ? Color.Apricot
+                ? Color.SkyBlue
                 : `bg-gray-50`};
               border-color: ${router.pathname === href
-                ? Color.Apricot
+                ? Color.SkyBlue
                 : `bg-gray-50`};
             }
           `}</style>
