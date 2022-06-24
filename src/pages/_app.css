@@ -43,7 +43,7 @@
   --color-ostem-darkblue: #004f6b;
   --color-ostem-lightblue: #76bfda;
 
-  /* Conference Colors */
+  /* Conference 2021 Colors */
   --color-umber: #e48440;
   --color-apricot: #fabb74;
   --color-mullberry: #705159;
@@ -53,6 +53,11 @@
   --color-spruce: #577072;
   --color-spruce-light: #97AEAF;
   --color-fog: #f3f6f8;
+
+  /* Conference 2022 Colors */
+  --color-deepwater: #6F7588;
+  --color-antique-teal: #75949E;
+  --color-skyblue: #88B8D1;
 
 }
 
