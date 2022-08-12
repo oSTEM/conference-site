@@ -96,7 +96,11 @@ export const CTAButton = ({
   const button = (() => {
     if (typeof onClick === "string") {
       return (
-        <a {...commonProps} href={disabled ? undefined : onClick}>
+        <a
+          {...commonProps}
+          href={disabled ? undefined : onClick}
+          target="_blank"
+        >
           <span>{children}</span>
         </a>
       );
