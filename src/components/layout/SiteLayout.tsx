@@ -19,7 +19,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       </Head>
       <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
         <NavBar />
-        <main className="p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full">
+        <main className="container p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full">
           {children}
         </main>
       </div>
