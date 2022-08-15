@@ -7,6 +7,10 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 <SiteLayout>
 
 <div className="border-b-4 border-deepwater border-solid pb-4 text-center">
+    <img alt="Sail to Success Conference Banner"
+         src="/images/2022/2022_lightbluebanner.png"
+         className="flex max-w-[40rem] mx-auto"
+    />
     <p className="text-5xl font-display font-black text-navy">12th Annual oSTEM Conference 2022</p>
     <hr/>
     <p className="flex justify-center text-3xl font-display">
@@ -26,9 +30,21 @@ import { SiteLayout } from "../components/layout/SiteLayout";
                 If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
             </p>
         </div>
+        <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-ostem-blue border-solid pb-4">
+            <div className="bg-ostem-blue">
+                <h3 className="p-4">Registration - Now Open!</h3>
+            </div>
+            <p className="p-4">
+                Registration for our conference is now open! Register today on our <a href="/2022/registration">registration page</a>. <br />
+                A 10% early bird discount is available untl August 31. oSTEM members receive additional discounted pricing.
+            </p>
+            <div className="text-xl flex justify-center p-2">
+                <CTAButton onClick="/2022/registration" backgroundColor="ostem-blue">Register for the conference</CTAButton>
+            </div>
+        </div>
         <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-deepwater-light border-solid pb-4">
             <div className="bg-tint-deepwater-light">
-                <h3 className="p-4">Request for Proposals - Now Open!</h3>
+                <h3 className="p-4">Request for Proposals</h3>
             </div>
             <p className="p-4">
                 oSTEM's Annual Conference has, as a foundation, our exceptional programming. 
@@ -45,7 +61,7 @@ import { SiteLayout } from "../components/layout/SiteLayout";
     
 </div>
 
-<div className="text-2xl flex justify-center p-8">
+<div className="text-xl flex justify-center p-8">
   <CTAButton onClick="https://www.ostem.org/page/newsletter">Sign Up for Our Newsletter</CTAButton>
 </div>
 

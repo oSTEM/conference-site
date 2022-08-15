@@ -22,7 +22,7 @@ export const TopicSquare = ({
     <div
       // note: we set a min-height because the "Other Relevant Topics" square
       // looks a little wimpy without it
-      className={`border-solid pl-4 border-l-8 ${borderColor} flex flex-col justify-center min-h-[12rem] py-2`}
+      className={`border-solid pl-4 border-l-8 ${borderColor} flex flex-col min-h-[12rem] py-2 my-4`}
     >
       <h3>{title}</h3>
       {children}

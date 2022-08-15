@@ -19,6 +19,7 @@ module.exports = {
       }),
     extend: {
       colors: {
+        'ostem-blue': '#1B7EA1',
         'mulberry': '#705159',
         'spruce': '#577072',
         'spruce-light': '#97AEAF',
