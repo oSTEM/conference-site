@@ -33,7 +33,7 @@ export default function NavBar() {
 
   return (
     <div>
-      <nav className="bg-primary border-r-2 border-deepwater border-solid top-0 flex items-center justify-between md:block sm:sticky">
+      <nav className="bg-primary border-r-2 border-deepwater border-solid top-0 flex items-center justify-evenly md:block sm:sticky">
         <Link href="/">
           <a className="flex p-8">
             <img
