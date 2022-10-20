@@ -112,7 +112,13 @@ const NavBarLinks = () => {
         Conference Home
       </NavLink>
       <NavLink href={"/2022/schedule"} color={Color.AntiqueTeal}>
-        Schedule
+        High Level Schedule
+      </NavLink>
+      <NavLink
+        href="https://whova.com/embedded/event/tTwmdLA%40Va-l9L5Fq6HAx4EtI7njz4P25IpFWfGrgOM%3D/?refer=undefined&day=0"
+        color={Color.AntiqueTeal}
+      >
+        Detailed Agenda
       </NavLink>
       <NavLink href={"/2022/registration"} color={Color.AntiqueTeal}>
         Registration
