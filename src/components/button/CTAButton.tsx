@@ -1,4 +1,4 @@
-import css from "styled-jsx/css";
+import { css } from "styled-jsx/css";
 
 /**
  * A button that invokes a call to action.
