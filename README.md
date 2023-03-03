@@ -44,6 +44,7 @@ Any edits you make will be reflected in real time (after you save the file).
 If you're new to React or NextJS, these might be some helpful resources:
 * https://nextjs.org/docs
 
+If you're running into the  `digital envelope routines::unsupported` error, please install Node.js with version 16+. Read [this](https://medium.com/geekculture/how-to-install-node-js-by-nvm-61addf4ab1ba).
 ## Directory structure
 
 ### `src/pages`
