@@ -1,0 +1,73 @@
+import Image from "next/image"
+
+import { CTAButton } from "../../components/button/CTAButton";
+import { ConferenceCountdown } from "../../components/ConferenceCountdown";
+import { SiteLayout } from "../../components/layout/SiteLayout";
+
+<SiteLayout>
+
+<div className="border-b-4 border-deepwater border-solid pb-4 text-center">
+    <img alt="Sail to Success Conference Banner"
+         src="/images/2022/2022_lightbluebanner.png"
+         className="flex w-full mx-auto"
+    />
+    <p className="text-5xl font-display font-black text-navy">12th Annual oSTEM Conference 2022</p>
+    <hr/>
+    <p className="flex justify-center text-3xl font-display">
+    November 11 &ndash; 13, 2022 | Boston, MA
+    </p>
+</div>
+<div className="grid md:grid-cols-5 mt-9">
+        <div className="rounded-l md:col-span-5 tint tint-dark"><img className="rounded-l object-cover w-full h-full" src="/images/oSTEM.2019.0049_Update_BannerSize.jpg" alt=""/></div>
+        <div className="rounded-r md:col-span-5 p-4 bg-tint-seamist">
+            <h3>Conference for LGBTQ+ people in STEM Fields</h3>
+            <p>
+                We're very excited to announce that our Annual Conference is returning to an in-person format for 2022.
+                This conference is a space for LGBTQ+ students and professionals in STEM fields to share their experiences and learn from one another.
+                We have programs ranging from safer spaces to talk about queer issues to discussing the latest in research conducted by our members.
+            </p>
+            <p>
+                If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
+            </p>
+        </div>
+        <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-ostem-blue border-solid pb-4">
+            <div className="bg-ostem-blue">
+                <h3 className="p-4">Registration Closed!</h3>
+            </div>
+            <p className="p-4">
+                Registration for full conference and expo is now closed!             
+            </p>
+            <div className="text-xl flex justify-center p-2">
+                <CTAButton onClick="/2022/registration" backgroundColor="ostem-blue"> 2022 Registeration Closed</CTAButton>
+            </div>
+        </div>
+        <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-deepwater-light border-solid pb-4">
+            <div className="bg-tint-deepwater-light">
+                <h3 className="p-4">Request for Proposals</h3>
+            </div>
+            <p className="p-4">
+                We are no longer accepting proposals for 2022. oSTEM's Annual Conference has, as a foundation, our exceptional programming. 
+                Our conference offers a unique opportunity for LGBTQ individuals in STEM to present to an audience of peers. 
+                Come be a part of the foundational experience and submit a program today! 
+                We've had presentations on identity issues such as "Traveling while Trans" and technical content like "Life Lessons Looking Through Infrared Technology". 
+                If you've got a program idea or a presentation you've given at other conferences or your job/school consider presenting at oSTEM's Annual Conference. 
+                Submit your program to our Request for Presentations today!
+            </p>
+            <p className="p-4">
+                If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
+            </p>
+        </div>
+    
+</div>
+
+<div className="text-xl flex justify-center p-8">
+  <CTAButton onClick="https://www.ostem.org/page/newsletter">Sign Up for Our Newsletter</CTAButton>
+</div>
+
+<div className="bg-gradient-to-r from-seafoam to-navy via-deepwater">
+    <ConferenceCountdown />
+</div>
+
+<div className="mt-8"> <Image src="/images/oSTEM.2019.0077.jpg" alt="" layout="responsive" width="800" height="500"/></div>
+
+</SiteLayout>

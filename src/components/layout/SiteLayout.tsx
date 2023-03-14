@@ -111,20 +111,11 @@ const NavBarLinks = () => {
       <NavLink href={"/"} color={Color.AntiqueTeal}>
         Conference Home
       </NavLink>
-      <NavLink href={"/2022/schedule"} color={Color.AntiqueTeal}>
-        Schedule
-      </NavLink>
-      <NavLink href={"/2022/registration"} color={Color.AntiqueTeal}>
-        Registration
-      </NavLink>
-      <NavLink href={"/2022/rfp"} color={Color.AntiqueTeal}>
+      <NavLink href={"/2023/rfp"} color={Color.AntiqueTeal}>
         Request for Proposals
       </NavLink>
-      <NavLink href={"/2022/cfp"} color={Color.AntiqueTeal}>
+      <NavLink href={"/2023/cfp"} color={Color.AntiqueTeal}>
         Call for Posters
-      </NavLink>
-      <NavLink href={"/2022/faq"} color={Color.AntiqueTeal}>
-        FAQ
       </NavLink>
     </div>
   );
