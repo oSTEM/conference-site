@@ -15,7 +15,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
   return (
     <div>
       <Head>
-        <title>{title ? title + " | " : ""}12th Annual oSTEM Conference</title>
+        <title>{title ? title + " | " : ""}13th Annual oSTEM Conference</title>
       </Head>
       <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
         <NavBar />
