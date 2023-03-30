@@ -108,14 +108,8 @@ export default function NavBar() {
 const NavBarLinks = () => {
   return (
     <div className="space-y-4">
-      <NavLink href={"/"} color={Color.AntiqueTeal}>
-        Conference Home
-      </NavLink>
       <NavLink href={"/2023/rfp"} color={Color.AntiqueTeal}>
         Request for Proposals
-      </NavLink>
-      <NavLink href={"/2023/cfp"} color={Color.AntiqueTeal}>
-        Call for Posters
       </NavLink>
     </div>
   );
