@@ -14,4 +14,5 @@ export enum Color {
   oSTEMBlue = "var(--color-ostem-blue)",
   AntiqueTeal = "var(--color-antique-teal)",
   SkyBlue = "var(--color-skyblue)",
+  ChillGreen = "var(--color-chill-green)",
 }

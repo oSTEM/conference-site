@@ -16,6 +16,7 @@ module.exports = {
         'tint-deepwater-light': '#979fb9',
         'tint-antiqueteal': '#75949E',
         'tint-rouge-light': '#c6a6aa', 
+        'bright-peach': '#EB6955',
       }),
     extend: {
       colors: {
@@ -32,7 +33,12 @@ module.exports = {
         'skyblue': '#88B8D1',
         'seamist': '#9aC9CE',
         'deepwater': '#6F7588',
-        'deepwater-light': '#979fb9'
+        'deepwater-light': '#979fb9',
+        'bright-peach': '#e8533c',
+        'peach': '#FF9185',
+        'light-peach': '#f7c2bc',
+        'chill-yellow': '#FFD285',
+        'chill-green': '#B3E6E0',
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],
