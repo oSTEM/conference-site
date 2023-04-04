@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 import { CTAButton } from "../components/button/CTAButton";
 import { ConferenceCountdown } from "../components/ConferenceCountdown";
@@ -7,66 +7,101 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 <SiteLayout>
 
 <div className="border-b-4 border-chill-green border-solid pb-4 text-center">
-    <img alt="Anaheim 2023 Banner"
-         src="/images/2023/2023_templogo.png"
-         className="flex w-full mx-auto"
-    />
-    <p className="text-5xl font-display font-black text-navy">13th Annual oSTEM Conference 2023</p>
-    <hr/>
-    <p className="flex justify-center text-3xl font-display">
-        Anaheim, CA
-    </p>
+  <img
+    alt="Anaheim 2023 Banner"
+    src="/images/2023/2023_templogo.png"
+    className="flex w-full mx-auto"
+  />
+  <p className="text-5xl font-display font-black text-navy">
+    13th Annual oSTEM Conference 2023
+  </p>
+  <hr />
+  <p className="flex justify-center text-3xl font-display">Anaheim, CA</p>
 </div>
 <div className="grid md:grid-cols-5 mt-9">
-    <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-chill-green border-solid pb-4">
-        <div className="bg-chill-green">
-            <h3 className="p-4">Upcoming Dates</h3>
-        </div>
-        <p className="p-4">
-            Request for Programs Open: April 2023 <br/>
-            Call for Posters Open: April 2023 <br/>
-            Early Bird Registration: May 2023 <br/>
-            Full-Priced Registration: August 2023 <br/>
-            Registration Deadline: October 15, 2023 <br/>
-        </p>
+  <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-chill-green border-solid pb-4">
+    <div className="bg-chill-green">
+      <h3 className="p-4">Upcoming Dates</h3>
     </div>
-    <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-light-peach border-solid pb-4">
-        <div className="bg-light-peach">
-            <h3 className="p-4">Request for Proposals</h3>
-        </div>
-        <p className="p-4">
-            oSTEM's Annual Conference has, as a foundation, our exceptional programming. 
-            Our conference offers a unique opportunity for LGBTQ+ individuals in STEM to present to an audience of peers. 
-            Come be a part of the foundational experience by submitting a program this year! <br/><br/>
-            We've had presentations on identity issues, student leadership and career development, and technical content. Examples include "Traveling while Trans", "Hosting Campus Events & Collaborating with Campus Partners", and "Life Lessons Looking Through Infrared Technology".
-            If you've got a program idea or a presentation you've given at other conferences or your job/school consider presenting at oSTEM's Annual Conference. 
-            <br/><br/>
-            Submit your program to our Request for Presentations today!
-        </p>
-        <div className="text-xl flex justify-center p-2">
-            <CTAButton onClick="/2023/rfp" backgroundColor="bright-peach">Submit a Proposal</CTAButton>
-        </div>
+    <p className="p-4">
+      Request for Programs Open: April 2023 <br />
+      Call for Posters Open: April 2023 <br />
+      Early Bird Registration: May 2023 <br />
+      Full-Priced Registration: August 2023 <br />
+      Registration Deadline: October 15, 2023 <br />
+    </p>
+  </div>
+  <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-light-peach border-solid pb-4">
+    <div className="bg-light-peach">
+      <h3 className="p-4">Request for Proposals</h3>
     </div>
-    <div className="rounded-l md:col-span-5 tint tint-dark mt-7">
-            <img className="rounded-l object-cover w-full h-full" src="/images/oSTEM.2019.0049_Update_BannerSize.jpg" alt=""/>
-        </div> 
-    <div className="rounded-r md:col-span-5 p-4 bg-tint-seamist">
-        <h3>Conference for LGBTQ+ People in STEM</h3>
-        <p>
-            The 13th Annual oSTEM Conference will take place in Anaheim, California with 1,000+ LGBTQ+ students, professionals, and recruiters in STEM fields from across the country and around the globe. This space is designed for attendees to share their professional and personal experiences and learn from one another in an authentic and vulernable way. Programs and content range from introspective including safer spaces to talk about queer issues and career development to technical such as discussing the latest in research conducted by our members. The Career & Graduate School Expo allows attendees to connect and network with professionals, academics, and colleagues from STEM industries and universities.
-            
-            For more examples of sessions, speakers, and career expo exhibitors, click here for the 2022 conference program.
-            
-            If you want a space where you can be your authentic LGBTQ+ self and your authentic STEM self, this is the conference for you.
-            
-        </p>
+    <p className="p-4">
+      oSTEM's Annual Conference has, as a foundation, our exceptional
+      programming. Our conference offers a unique opportunity for LGBTQ+
+      individuals in STEM to present to an audience of peers. Come be a part of
+      the foundational experience by submitting a program this year! <br />
+      <br />
+      We've had presentations on identity issues, student leadership and career
+      development, and technical content. Examples include "Traveling while
+      Trans", "Hosting Campus Events & Collaborating with Campus Partners", and
+      "Life Lessons Looking Through Infrared Technology". If you've got a
+      program idea or a presentation you've given at other conferences or your
+      job/school consider presenting at oSTEM's Annual Conference.
+      <br />
+      <br />
+      Submit your program to our Request for Presentations today!
+    </p>
+    <div className="text-xl flex justify-center p-2">
+      <CTAButton onClick="/2023/rfp" backgroundColor="bright-peach">
+        Submit a Proposal
+      </CTAButton>
     </div>
-</div>     
-    
-<div className="text-xl flex justify-center p-8">
-  <CTAButton onClick="https://www.ostem.org/page/newsletter" backgroundColor="bright-peach">Sign Up for Our Newsletter</CTAButton>
+  </div>
+  <div className="rounded-l md:col-span-5 tint tint-dark mt-7">
+    <img
+      className="rounded-l object-cover w-full h-full"
+      src="/images/oSTEM.2019.0049_Update_BannerSize.jpg"
+      alt=""
+    />
+  </div>
+  <div className="rounded-r md:col-span-5 p-4 bg-tint-seamist">
+    <h3>Conference for LGBTQ+ People in STEM</h3>
+    <p>
+      The 13th Annual oSTEM Conference will take place in Anaheim, California
+      with 1,000+ LGBTQ+ students, professionals, and recruiters in STEM fields
+      from across the country and around the globe. This space is designed for
+      attendees to share their professional and personal experiences and learn
+      from one another in an authentic and vulernable way. Programs and content
+      range from introspective including safer spaces to talk about queer issues
+      and career development to technical such as discussing the latest in
+      research conducted by our members. The Career & Graduate School Expo
+      allows attendees to connect and network with professionals, academics, and
+      colleagues from STEM industries and universities. For more examples of
+      sessions, speakers, and career expo exhibitors, click here for the 2022
+      conference program. If you want a space where you can be your authentic
+      LGBTQ+ self and your authentic STEM self, this is the conference for you.
+    </p>
+  </div>
 </div>
 
-<div className="mt-8"> <Image src="/images/oSTEM.2019.0077.jpg" alt="" layout="responsive" width="800" height="500"/></div>
+<div className="text-xl flex justify-center p-8">
+  <CTAButton
+    onClick="https://www.ostem.org/page/newsletter"
+    backgroundColor="bright-peach"
+  >
+    Sign Up for Our Newsletter
+  </CTAButton>
+</div>
+
+<div className="mt-8">
+  {" "}
+  <Image
+    src="/images/2023/2023_homepage_image.jpg"
+    alt=""
+    layout="responsive"
+    width="800"
+    height="500"
+  />
+</div>
 
 </SiteLayout>
