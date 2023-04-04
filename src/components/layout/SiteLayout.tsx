@@ -108,7 +108,7 @@ export default function NavBar() {
 const NavBarLinks = () => {
   return (
     <div className="space-y-4">
-      <NavLink href={"/2023/rfp"} color={Color.AntiqueTeal}>
+      <NavLink href={"/2023/rfp"} color={Color.ChillGreen}>
         Request for Proposals
       </NavLink>
     </div>
@@ -137,14 +137,14 @@ const NavLink = ({
           {children}
           <style jsx>{`
             a:hover {
-              background: ${Color.SkyBlue};
+              background: ${Color.ChillGreen};
             }
             a {
               background: ${router.pathname === href
-                ? Color.SkyBlue
+                ? Color.ChillGreen
                 : `bg-gray-50`};
               border-color: ${router.pathname === href
-                ? Color.SkyBlue
+                ? Color.ChillGreen
                 : `bg-gray-50`};
             }
           `}</style>
