@@ -1,5 +1,6 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
 import { AwardSquare } from "../../components/awards/AwardSquare";
+import { AwardCard } from "../../components/awards/AwardCard";
 
 <SiteLayout title="Awards">
 <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
@@ -23,7 +24,7 @@ believe deserve recognition.
 - Global STEM Service Award
 
 </AwardSquare>
-<AwardSquare title="Chapter Awards" borderColor="border-orange-500">
+<AwardSquare title="Chapter Awards" borderColor="border-blue-500">
 
 - Chapter of the Year - Group
 - Rookie Chapter of the Year - Group
@@ -48,13 +49,27 @@ believe deserve recognition.
 
 <br />
 
-Offline versions of the applications can be provided upon request by contacting
-info@ostem.org or by contacting the individual team responsible for the award.
+_Offline versions of the applications can be provided upon request by contacting
+info@ostem.org or by contacting the individual team responsible for the award._
+
+<br />
 
 <div className="text-bright-peach font-bold">
 
 ## Service Awards
 
+</div>
+
+<div>
+  <AwardCard
+    title="oSTEM Global STEM Service Award"
+    desc="This award is presented to an active member, alumnus/a, chapter mentor, or organization leader of oSTEM who has demonstrated a strong dedication to oSTEM, LGBTQ+ people in STEM, and STEM education. They are an outstanding role model for the future of our community. They are accomplished in their academic or professional lives and they regularly advocate for the full inclusion of people of all marginalized identities. They are committed to and continually strive to understand the most effective methods for reaching equality for all people."
+    elig={[
+      "Must be an oSTEM member",
+      "Must be attending the oSTEM Annual Conference",
+    ]}
+    alert="Self-nominations are accepted and encouraged. If you have any questions regarding this application, please contact us at info@ostem.org."
+  />
 </div>
 
 <div className="text-bright-peach font-bold">
@@ -63,15 +78,109 @@ info@ostem.org or by contacting the individual team responsible for the award.
 
 </div>
 
+<div>
+  <AwardCard
+    title="oSTEM Chapter of the Year"
+    desc="This award recognizes the ongoing accomplishments of established oSTEM Chapters. The guiding purpose of the oSTEM organization is to empower LGBTQ+ people in STEM to succeed personally, academically, and professionally by cultivating environments and communities that nurture innovation, leadership, and advocacy. It is the oSTEM chapters that contribute greatly to this work. If your chapter has made a significant effort toward achieving these goals on your campus and/or in your community we ask you to apply and be recognized for your efforts."
+    elig={[
+      "Must be a verified Standard oSTEM Chapter or Affiliate Chapter of active status",
+      "Must have a representative attending the oSTEM Annual Conference",
+    ]}
+    borderColor="border-blue-500"
+    alert="Please only submit one nomination per chapter. If you have any questions regarding this application, please contact us at membership@ostem.org."
+  />
+
+<AwardCard
+  title="oSTEM Rookie Chapter of the Year"
+  desc="This award celebrates the achievements made by those chapters who are only just getting started. The first years of any student organization can be difficult and a test of true staying power. For those student leaders who are able to navigate that time and accomplish change on their campus that reflects the oSTEM mission, we want to recognize you. If you feel that your chapter matches this description we encourage you to submit an application for this award."
+  elig={[
+    "Must be a verified non-affiliate oSTEM Chapter of active status",
+    "Must have been founded within two years of the submission of this application",
+    "Must have a representative attending the oSTEM Annual Conference",
+  ]}
+  borderColor="border-blue-500"
+  alert="Please only submit one nomination per chapter. If you have any questions regarding this application, please contact us at membership@ostem.org."
+/>
+
+<AwardCard
+  title="oSTEM Chapter Leader of the Year"
+  desc="This award recognizes the impact that strong, innovative, and passionate leaders have on oSTEM chapters. The guiding purpose of the oSTEM organization is to empower LGBTQ+ people in STEM to succeed personally, academically, and professionally by cultivating environments and communities that nurture innovation, leadership, and advocacy. Chapter leaders not only understand this mission but strive to embody it in their personal and professional lives. Whether they founded their chapter, created a tight knit community of members, or created a network of connections, we want to hear about it! If your chapter leader has made a significant effort toward achieving these goals on your campus and in your community we ask you to nominate them so they can be recognized for their efforts."
+  elig={[
+    "Must be a chapter leader of a verified Standard oSTEM Chapter or Affiliate Chapter of active status in good standing with your Regional Coordinator",
+    "Must be attending the oSTEM Annual Conference",
+  ]}
+  borderColor="border-blue-500"
+  alert="Self-nominations are accepted and encouraged. If you have any questions regarding this application, please contact us at membership@ostem.org."
+/>
+
+  <AwardCard
+    title="oSTEM Advisor of the Year"
+    desc="This award recognizes those advisors who have gone above and beyond in their support to one or more oSTEM chapters. The guiding purpose of the oSTEM organization is to empower LGBTQ+ people in STEM to succeed personally, academically, and professionally by cultivating environments and communities that nurture innovation, leadership, and advocacy. Our chapter's advisors support our chapters in succeeding in this mission. Their enthusiasm, advice and dedication is a role model for our chapters. If your advisor has made a significant effort toward achieving these goals on your campus and in your community we ask you to nominate them so they can be recognized for their effort."
+    elig={[
+      "Must be an advisor of a verified Standard oSTEM Chapter or Affiliate Chapter of active status in good standing with your Regional Coordinator",
+      "Must be attending the oSTEM Annual Conference"
+    ]}
+    borderColor="border-blue-500"
+    alert="Self-nominations are accepted and encouraged. If you have any questions regarding this application, please contact us at membership@ostem.org."
+  />
+</div>
+
 <div className="text-bright-peach font-bold">
 
 ## Sponsor Awards
 
 </div>
 
+<div>
+<AwardCard
+    title="oSTEM Strategic Alliance Award"
+    desc="This award is presented to a current sponsoring organization, community partner, or grant provider of oSTEM who has demonstrated a strong dedication to oSTEM, LGBTQ+ people in STEM, and STEM education. They are recognized leaders in LGBTQ+ workplace or institutional inclusion. They are a consistent supporter of oSTEM, Inc. and regularly engage with and support oSTEM chapters. They are committed to and continually strive to understand the most effective methods for reaching equality for all people."
+    elig={[
+      "Must be a current sponsoring organization of oSTEM",
+      "Must be have a representative attending the oSTEM Annual Conference"
+    ]}
+    borderColor="border-yellow-500"
+    alert="Self-nominations are accepted and encouraged. Please only submit one nomination per organization. If you have any questions regarding this application, please contact us at sponsorship@ostem.org."
+  />
+
+<AwardCard
+  title="oSTEM Partner Excellence Award"
+  desc="This award is presented to an individual representative of a current sponsoring organization, community partner, or grant provider of oSTEM that has demonstrated a strong dedication to oSTEM, LGBTQ+ people in STEM, and STEM education. They are an outstanding role model for the future of our community. They are accomplished in their academic or professional lives and they regularly advocate for the full inclusion of people of all marginalized identities. They are committed to and continually strive to understand the most effective methods for reaching equality for all people."
+  elig={[
+    "Must be an employee or member of a current sponsoring organization of oSTEM",
+    "Must be attending the oSTEM Annual Conference",
+  ]}
+  borderColor="border-yellow-500"
+  alert="Self-nominations are accepted and encouraged. If you have any questions regarding this application, please contact us at sponsorship@ostem.org."
+/>
+
+<AwardCard
+    title="oSTEM LGBTQ+ Employee Network of the Year"
+    desc="Support, a sense of belonging, and encouragement are key to employee growth, positive performance, and retention. Employee Networks have stepped in to fulfill these basic human needs through the creation of a community that supports employees, champions inclusion and diversity, and reaches out to better the community around them for all people. The vitality of these employee groups cannot be overstated, and the hard work they do deserves recognition. The oSTEM LGBTQ+ Employee Network of the Year Award highlights and applauds the work of an organization's employee network that embodies the oSTEM mission of empowering LGBTQ+ people in STEM to succeed personally, academically, and professionally through the cultivation of environments and communities that nurture innovation, leadership, and advocacy."
+    elig={[
+      "Must be a current sponsoring organization of oSTEM",
+      "Must be have a representative attending the oSTEM Annual Conferencee"
+    ]}
+    borderColor="border-yellow-500"
+    alert="Self-nominations are accepted and encouraged. Please only submit one nomination per organization. If you have any questions regarding this application, please contact us at sponsorship@ostem.org."
+  />
+</div>
+
 <div className="text-bright-peach font-bold">
 
 ## Volunteer Awards
+
+</div>
+<AwardCard
+    title="oSTEM Volunteer of the Year & Spotlights"
+    desc="Description Coming Soon"
+    elig={[
+      "Must be an oSTEM Global Volunteer",
+      "Must be attending the oSTEM Annual Conference"
+    ]}
+    borderColor="border-green-500"
+  />
+<div>
 
 </div>
 </SiteLayout>;
