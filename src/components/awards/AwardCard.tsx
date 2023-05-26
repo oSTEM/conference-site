@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import React from "react";
 import { css } from "styled-jsx/css";
 import { Color } from "theme/Color";
@@ -13,6 +14,7 @@ export const AwardCard = ({
   elig,
   alert,
   nominateUrl,
+  awardDetailUrl,
 }: {
   borderColor: string;
   buttonColor: string;
@@ -23,6 +25,8 @@ export const AwardCard = ({
   alert?: string;
   // jotform to nominate someone
   nominateUrl: string;
+  // link to award detail page (e.g. "\2023\awards-global-service")
+  awardDetailUrl: string;
 }) => {
   return (
     <div
@@ -40,7 +44,9 @@ export const AwardCard = ({
         <p className={"text-sm italic my-1 text-gray-500"}>{"* " + alert}</p>
       )}
       <div className="flex flex-row mt-2">
-        <AwardCardButton>View Previous Awardees</AwardCardButton>
+        <AwardCardButton url={awardDetailUrl}>
+          View Previous Awardees
+        </AwardCardButton>
         <AwardCardButton url={nominateUrl}>
           Nominate Someone for this Award
         </AwardCardButton>
@@ -126,13 +132,20 @@ const AwardCardButton = ({
   };
 
   const button = (() => {
+    // if this url is a jotform
+    if (url?.startsWith("https")) {
+      return (
+        <a {...commonProps} href={disabled ? undefined : url} target="_blank">
+          <span>{children}</span>
+        </a>
+      );
+    }
     return (
-      // <button {...commonProps}>
-      //   <span>{children}</span>
-      // </button>
-      <a {...commonProps} href={disabled ? undefined : url} target="_blank">
-        <span>{children}</span>
-      </a>
+      <Link href={url ? url : "/404"}>
+        <a {...commonProps}>
+          <span>{children}</span>
+        </a>
+      </Link>
     );
   })();
 
