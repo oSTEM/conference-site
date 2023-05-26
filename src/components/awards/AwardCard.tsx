@@ -12,6 +12,7 @@ export const AwardCard = ({
   desc,
   elig,
   alert,
+  nominateUrl,
 }: {
   borderColor: string;
   buttonColor: string;
@@ -20,6 +21,8 @@ export const AwardCard = ({
   elig: Array<string>;
   // text alert
   alert?: string;
+  // jotform to nominate someone
+  nominateUrl: string;
 }) => {
   return (
     <div
@@ -38,7 +41,9 @@ export const AwardCard = ({
       )}
       <div className="flex flex-row mt-2">
         <AwardCardButton>View Previous Awardees</AwardCardButton>
-        <AwardCardButton>Nominate Someone for this Award</AwardCardButton>
+        <AwardCardButton url={nominateUrl}>
+          Nominate Someone for this Award
+        </AwardCardButton>
       </div>
     </div>
   );
@@ -122,9 +127,12 @@ const AwardCardButton = ({
 
   const button = (() => {
     return (
-      <button {...commonProps}>
+      // <button {...commonProps}>
+      //   <span>{children}</span>
+      // </button>
+      <a {...commonProps} href={disabled ? undefined : url} target="_blank">
         <span>{children}</span>
-      </button>
+      </a>
     );
   })();
 
