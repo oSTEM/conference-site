@@ -1,7 +1,87 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { AwardCardButton } from "../../components/awards/AwardCard";
+import { AwardeeCard } from "../../components/awards/AwardeeCard";
 
-<SiteLayout title="Awards - Overall Chapter">
-  <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
-    <p className="text-5xl font-display font-black">Awards - Overall Chapter</p>
-  </div>
+<SiteLayout title="Awards - Global STEM Service Award">
+<div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
+  <p className="text-5xl font-display font-black">
+    Awards - oSTEM Chapter of the Year
+  </p>
+</div>
+
+<div>
+
+### Award Description
+
+This award recognizes the ongoing accomplishments of established oSTEM Chapters.
+The guiding purpose of the oSTEM organization is to empower LGBTQ+ people in
+STEM to succeed personally, academically, and professionally by cultivating
+environments and communities that nurture innovation, leadership, and advocacy.
+It is the oSTEM chapters that contribute greatly to this work. If your chapter
+has made a significant effort toward achieving these goals on your campus and/or
+in your community we ask you to apply and be recognized for your efforts.
+
+### Eligibility
+
+- Must be a verified Standard oSTEM Chapter or Affiliate Chapter of active
+  status
+- Must have a representative attending the oSTEM Annual Conference
+
+<br />
+
+Please only submit one nomination per chapter. If you have any questions
+regarding this application, please contact us at membership@ostem.org.
+
+<br />
+<div align="center">
+  <AwardCardButton url="https://forms.gle/daxNPtKTFXLaiG47A">
+    Nominate Someone for this Award
+  </AwardCardButton>
+</div>
+
+</div>
+
+<br />
+
+<div>
+
+### Previous Awardees
+
+<div className="grid gap-8 md:grid-cols-2 my-1">
+  <AwardeeCard
+    awardeeName="oSTEM at University of California San Diego"
+    awardYear={2019}
+    profileImg="/images/awards/chapter-award/ucsd-logo-2019.png"
+    altDesc="logo of University of California San Diego"
+    width={360}
+    height={60}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at Colorado School of Mines"
+    awardYear={2018}
+    profileImg="/images/awards/chapter-award/colorado-school-of-mines-2018.png"
+    altDesc="logo of Colorado School of Mines"
+    width={360}
+    height={96.25}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at New York University"
+    awardYear={2017}
+    profileImg="/images/awards/chapter-award/nyu-logo-2017.jpeg"
+    altDesc="logo of New York University"
+    width={200}
+    height={200}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at University of Kansas"
+    awardYear={2016}
+    profileImg="/images/awards/chapter-award/university-of-kansas-2016.png"
+    altDesc="logo of University of Kansas"
+    width={200}
+    height={171}
+  />
+</div>
+
+</div>
+
 </SiteLayout>

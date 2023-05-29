@@ -55,7 +55,7 @@ export const AwardCard = ({
   );
 };
 
-const AwardCardButton = ({
+export const AwardCardButton = ({
   children,
   disabled = false,
   url,
