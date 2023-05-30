@@ -1,7 +1,88 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { AwardCardButton } from "../../components/awards/AwardCard";
+import { AwardeeCard } from "../../components/awards/AwardeeCard";
 
 <SiteLayout title="Awards - Rookie Chapter">
   <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
-    <p className="text-5xl font-display font-black">Awards - Rookie Chapter</p>
+    <p className="text-5xl font-display font-black">
+      Awards - Rookie Chapter
+    </p>
   </div>
+
+  <div>
+
+## Rookie Chapter of the Year
+
+### Award Description
+
+This award celebrates the achievements made by those chapters who are only just
+getting started. The first years of any student organization can be difficult
+and a test of true staying power. For those student leaders who are able to
+navigate that time and accomplish change on their campus that reflects the oSTEM
+mission, we want to recognize you. If you feel that your chapter matches this
+description we encourage you to submit an application for this award.
+
+### Eligibility
+
+- Must be a verified non-affiliate oSTEM Chapter of active status
+- Must have been founded within two years of the submission of this application
+- Must have a representative attending the oSTEM Annual Conference
+
+<br />
+
+Please only submit one nomination per chapter. If you have any questions
+regarding this application, please contact us at membership@ostem.org.
+
+<br />
+<div align="center">
+  <AwardCardButton url="https://forms.gle/hFT6CFfDaj7FH5tMA">
+    Nominate Someone for this Award
+  </AwardCardButton>
+</div>
+
+</div>
+
+<br />
+
+<div>
+
+### Previous Awardees
+
+<div className="grid gap-8 md:grid-cols-3 my-1">
+  <AwardeeCard
+    awardeeName="oSTEM at Howard University"
+    awardYear={2019}
+    profileImg="/images/awards/rookie-chapter-award/howard-university-2019.png"
+    altDesc="logo of Howard University"
+    width={300}
+    height={157.5}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at University of Arkansas"
+    awardYear={2018}
+    profileImg="/images/awards/rookie-chapter-award/university-of-arkansas-2018.png"
+    altDesc="logo of University of Arkansas"
+    width={200}
+    height={152}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at University of Minnesota"
+    awardYear={2017}
+    profileImg="/images/awards/rookie-chapter-award/university-of-minnesota-2017.png"
+    altDesc="logo of University of Minnesota"
+    width={300}
+    height={188}
+  />
+  <AwardeeCard
+    awardeeName="oSTEM at University of Michigan"
+    awardYear={2016}
+    profileImg="/images/awards/rookie-chapter-award/university-of-michigan-2016.png"
+    altDesc="logo of University of Michigan"
+    width={200}
+    height={211}
+  />
+</div>
+
+</div>
+
 </SiteLayout>

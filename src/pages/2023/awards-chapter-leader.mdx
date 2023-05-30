@@ -1,7 +1,68 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { AwardCardButton } from "../../components/awards/AwardCard";
+import { AwardeeCard } from "../../components/awards/AwardeeCard";
 
 <SiteLayout title="Awards - Chapter Leader">
   <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
-    <p className="text-5xl font-display font-black">Awards - Chapter Leader</p>
+    <p className="text-5xl font-display font-black">
+      Awards - Chapter Leader
+    </p>
   </div>
+
+  <div>
+
+## oSTEM Chapter Leader of the Year
+
+### Award Description
+
+This award recognizes the impact that strong, innovative, and passionate leaders
+have on oSTEM chapters. The guiding purpose of the oSTEM organization is to
+empower LGBTQ+ people in STEM to succeed personally, academically, and
+professionally by cultivating environments and communities that nurture
+innovation, leadership, and advocacy. Chapter leaders not only understand this
+mission but strive to embody it in their personal and professional lives.
+Whether they founded their chapter, created a tight knit community of members,
+or created a network of connections, we want to hear about it! If your chapter
+leader has made a significant effort toward achieving these goals on your campus
+and in your community we ask you to nominate them so they can be recognized for
+their efforts.
+
+### Eligibility
+
+- Must be a chapter leader of a verified Standard oSTEM Chapter or Affiliate
+  Chapter of active status in good standing with your Regional Coordinator
+- Must be attending the oSTEM Annual Conference
+
+<br />
+
+Self-nominations are accepted and encouraged. If you have any questions
+regarding this application, please contact us at membership@ostem.org.
+
+<br />
+<div align="center">
+  <AwardCardButton url="https://forms.gle/MWMysVcRivv85t1cA">
+    Nominate Someone for this Award
+  </AwardCardButton>
+</div>
+
+</div>
+
+<br />
+
+<div>
+
+### Previous Awardees
+
+<div className="grid gap-8 md:grid-cols-3 my-1">
+  <AwardeeCard
+    awardeeName="Billie Harrer - Region C Coordinator"
+    awardYear={2019}
+    profileImg="/images/awards/chapter-leader-award/william-harrer-2019.jpeg"
+    altDesc="Profile picture of Billie Harrer"
+    width={150}
+    height={225}
+  />
+</div>
+
+</div>
 </SiteLayout>

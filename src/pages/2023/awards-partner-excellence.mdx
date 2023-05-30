@@ -1,4 +1,6 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { AwardCardButton } from "../../components/awards/AwardCard";
+import { AwardeeCard } from "../../components/awards/AwardeeCard";
 
 <SiteLayout title="Awards - Partner Excellence">
   <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
@@ -6,4 +8,89 @@ import { SiteLayout } from "../../components/layout/SiteLayout";
       Awards - Partner Excellence
     </p>
   </div>
+
+<div>
+
+## oSTEM Partner Excellence Award
+
+### Award Description
+
+This award is presented to an individual representative of a current sponsoring
+organization, community partner, or grant provider of oSTEM that has
+demonstrated a strong dedication to oSTEM, LGBTQ+ people in STEM, and STEM
+education. They are an outstanding role model for the future of our community.
+They are accomplished in their academic or professional lives and they regularly
+advocate for the full inclusion of people of all marginalized identities. They
+are committed to and continually strive to understand the most effective methods
+for reaching equality for all people.
+
+### Eligibility
+
+- Must be an employee or member of a current sponsoring organization of oSTEM
+- Must be attending the oSTEM Annual Conference
+
+<br />
+
+Self-nominations are accepted and encouraged. If you have any questions
+regarding this application, please contact us at sponsorship@ostem.org.
+
+<br />
+<div align="center">
+  <AwardCardButton url="https://forms.gle/hpQSZyGk4iJNGXoBA">
+    Nominate Someone for this Award
+  </AwardCardButton>
+</div>
+
+</div>
+
+<br />
+
+<div>
+
+### Previous Awardees
+
+<div className="grid gap-8 md:grid-cols-3 my-1">
+  <AwardeeCard
+    awardeeName="Beau Williams - Boeing Sr Manager"
+    awardYear={2019}
+    profileImg="/images/awards/partner-excellence-award/beau-williams-2019.jpeg"
+    altDesc="Profile picture of Beau Williams"
+    width={180}
+    height={220}
+  />
+  <AwardeeCard
+    awardeeName="Lianna Newman - ConsenSys"
+    awardYear={2018}
+    profileImg="/images/awards/partner-excellence-award/lianna-newman-2018.jpeg"
+    altDesc="Profile picture of Lianna Newman"
+    width={150}
+    height={227}
+  />
+  <AwardeeCard
+    awardeeName="Steve Riley - NASA"
+    awardYear={2017}
+    profileImg="/images/awards/partner-excellence-award/steve-riley-2017.jpeg"
+    altDesc="Profile picture of Steve Riley"
+    width={150}
+    height={226}
+  />
+  <AwardeeCard
+    awardeeName="Wolfgang Sigmund - University of Florida"
+    awardYear={2016}
+    profileImg="/images/awards/partner-excellence-award/wolfgang-sigmund-2016.jpeg"
+    altDesc="Profile picture of Wolfgang Sigmund"
+    width={150}
+    height={255}
+  />
+  <AwardeeCard
+    awardeeName="Gib Murray - Raytheon"
+    awardYear={2015}
+    profileImg="/images/awards/partner-excellence-award/gib-murray-2015.jpeg"
+    altDesc="Profile picture of Gib Murray"
+    width={200}
+    height={200}
+  />
+</div>
+
+</div>
 </SiteLayout>
