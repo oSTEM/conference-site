@@ -111,6 +111,9 @@ const NavBarLinks = () => {
       <NavLink href={"/2023/rfp"} color={Color.ChillGreen}>
         Request for Proposals
       </NavLink>
+      <NavLink href={"/2023/awards"} color={Color.Apricot}>
+        Awards
+      </NavLink>
     </div>
   );
 };
@@ -137,15 +140,11 @@ const NavLink = ({
           {children}
           <style jsx>{`
             a:hover {
-              background: ${Color.ChillGreen};
+              background: ${color};
             }
             a {
-              background: ${router.pathname === href
-                ? Color.ChillGreen
-                : `bg-gray-50`};
-              border-color: ${router.pathname === href
-                ? Color.ChillGreen
-                : `bg-gray-50`};
+              background: ${router.pathname === href ? color : `bg-gray-50`};
+              border-color: ${router.pathname === href ? color : `bg-gray-50`};
             }
           `}</style>
         </a>
