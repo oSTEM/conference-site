@@ -1,0 +1,67 @@
+import { SiteLayout } from "../../components/layout/SiteLayout";
+import { AwardCardButton } from "../../components/awards/AwardCard";
+import { AwardeeCard } from "../../components/awards/AwardeeCard";
+
+<SiteLayout title="Awards - Advisor">
+  <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
+    <p className="text-5xl font-display font-black">
+      Awards - Advisor
+    </p>
+  </div>
+
+  <div>
+
+## oSTEM Advisor of the Year
+
+### Award Description
+
+This award recognizes those advisors who have gone above and beyond in their
+support to one or more oSTEM chapters. The guiding purpose of the oSTEM
+organization is to empower LGBTQ+ people in STEM to succeed personally,
+academically, and professionally by cultivating environments and communities
+that nurture innovation, leadership, and advocacy. Our chapter's advisors
+support our chapters in succeeding in this mission. Their enthusiasm, advice and
+dedication is a role model for our chapters. If your advisor has made a
+significant effort toward achieving these goals on your campus and in your
+community we ask you to nominate them so they can be recognized for their
+effort.
+
+### Eligibility
+
+- Must be an advisor of a verified Standard oSTEM Chapter or Affiliate Chapter
+  of active status in good standing with your Regional Coordinator
+- Must be attending the oSTEM Annual Conference
+
+<br />
+
+Self-nominations are accepted and encouraged. If you have any questions
+regarding this application, please contact us at membership@ostem.org.
+
+<br />
+<div align="center">
+  <AwardCardButton url="https://form.jotform.com/231425475169359">
+    Nominate Someone for this Award
+  </AwardCardButton>
+</div>
+
+</div>
+
+<br />
+
+<div>
+
+### Previous Awardees
+
+<div className="grid gap-8 md:grid-cols-2 my-1">
+  <AwardeeCard
+    awardeeName="Sean Dowd - NJIT Spectrum"
+    awardYear={2022}
+    profileImg="/images/pattern/rainbox-box-pattern-desaturated.png"
+    altDesc="Profile picture of Sean Dowd"
+    width={150}
+    height={225}
+  />
+</div>
+
+</div>
+</SiteLayout>
