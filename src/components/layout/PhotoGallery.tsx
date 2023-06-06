@@ -79,6 +79,96 @@ export const PhotoGallery = () => {
         width={600}
         height={400}
       />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1393.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1405.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1443.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1461.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1481.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1493.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1574.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1593.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1598.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1722 (1).jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1734.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1800.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1941.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1999.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_2271.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_2651.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_2699.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_3323.jpg"
+        width={600}
+        height={400}
+      />
     </div>
   );
 };
