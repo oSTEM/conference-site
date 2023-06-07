@@ -13,6 +13,7 @@ export const AwardSquare = ({
   children: React.ReactNode;
   title: string;
   borderColor: string;
+  // hyperlink to the specific segement in the page (by id)
   href: string;
 }) => {
   return (
