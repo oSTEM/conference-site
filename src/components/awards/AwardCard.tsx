@@ -89,14 +89,14 @@ export const AwardCardButton = ({
     font-size: 1.1em;
     font-weight: normal;
     text-decoration: none;
-    background-color: var(--color-frost);
+    background-color: var(--color-space);
     border-radius: 1px;
     transition: background-color 0.15s, border-color 0.15s, color 0.15s,
       box-shadow 0.15s;
 
     :hover,
     :focus {
-      background-color: var(--color-ostem-darkblue);
+      background-color: var(--color-deepwater);
       box-shadow: -2px 5px 4px rgba(0, 0, 0, 0.4);
     }
 
