@@ -1,11 +1,21 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
 import { AwardSquare } from "../../components/awards/AwardSquare";
 import { AwardCard } from "../../components/awards/AwardCard";
+import Image from "next/image";
 
 <SiteLayout title="Awards">
 <div className="border-b-4 border-apricot border-solid pb-4 mb-4 text-center">
   <p className="text-5xl font-display font-black">Awards</p>
 </div>
+
+<Image
+  src="/images/oSTEM-awards.jpg"
+  alt=""
+  layout="responsive"
+  width="400"
+  height="180"
+  priority="true"
+/>
 
 oSTEM's awards programs recognize the achievements of our members, chapters, and
 supporters during the oSTEM Annual Conference. Please review the award
