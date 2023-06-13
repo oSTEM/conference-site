@@ -5,27 +5,39 @@ export const PhotoGallery = () => {
   return (
     <div className={"grid gap-4 md:grid-cols-3 my-1"}>
       <Image
-        src="/images/recap/2022/2022 Award - Angie Gonzalez.jpg"
+        src="/images/recap/2022/2022-11-12 oSTEM_0440 (1).jpg"
+        width={600}
+        height={400}
+      />
+
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_2651.jpg"
         width={600}
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022 Chapter of the Year.jpg"
+        src="/images/recap/2022/2022-11-12 oSTEM_3323.jpg"
         width={600}
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022 Strategic Aliance - Ansys.jpg"
+        src="/images/recap/2022/2022-11-12 oSTEM_1800.jpg"
         width={600}
         height={400}
       />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_1941.jpg"
+        width={600}
+        height={400}
+      />
+      <Image
+        src="/images/recap/2022/2022-11-12 oSTEM_2699.jpg"
+        width={600}
+        height={400}
+      />
+
       <Image
         src="/images/recap/2022/2022-11-12 oSTEM_0057.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_0440 (1).jpg"
         width={600}
         height={400}
       />
@@ -80,32 +92,22 @@ export const PhotoGallery = () => {
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1800.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1941.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
         src="/images/recap/2022/2022-11-12 oSTEM_1999.jpg"
         width={600}
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_2651.jpg"
+        src="/images/recap/2022/2022 Award - Angie Gonzalez.jpg"
         width={600}
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_2699.jpg"
+        src="/images/recap/2022/2022 Chapter of the Year.jpg"
         width={600}
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_3323.jpg"
+        src="/images/recap/2022/2022 Strategic Aliance - Ansys.jpg"
         width={600}
         height={400}
       />
