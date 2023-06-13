@@ -10,22 +10,7 @@ export const PhotoGallery = () => {
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022 Chapter Leader of the Year - Lex Yu at USC Quest.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
         src="/images/recap/2022/2022 Chapter of the Year.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022 Partner Excellence Award - Casady.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022 Rookie Chapter of the Year - Cal Poly San Luis.jpg"
         width={600}
         height={400}
       />
@@ -40,22 +25,12 @@ export const PhotoGallery = () => {
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_0107.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
         src="/images/recap/2022/2022-11-12 oSTEM_0440 (1).jpg"
         width={600}
         height={400}
       />
       <Image
         src="/images/recap/2022/2022-11-12 oSTEM_0690.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_0755.jpg"
         width={600}
         height={400}
       />
@@ -70,27 +45,7 @@ export const PhotoGallery = () => {
         height={400}
       />
       <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1262.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1340.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1393.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
         src="/images/recap/2022/2022-11-12 oSTEM_1405.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1443.jpg"
         width={600}
         height={400}
       />
@@ -111,16 +66,6 @@ export const PhotoGallery = () => {
       />
       <Image
         src="/images/recap/2022/2022-11-12 oSTEM_1574.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1593.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_1598.jpg"
         width={600}
         height={400}
       />
@@ -146,11 +91,6 @@ export const PhotoGallery = () => {
       />
       <Image
         src="/images/recap/2022/2022-11-12 oSTEM_1999.jpg"
-        width={600}
-        height={400}
-      />
-      <Image
-        src="/images/recap/2022/2022-11-12 oSTEM_2271.jpg"
         width={600}
         height={400}
       />
