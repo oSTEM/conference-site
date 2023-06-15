@@ -19,7 +19,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       </Head>
       <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
         <NavBar />
-        <main className="container p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full">
+        <main className="container p-4 md:ml-[22%] sm:p-8 max-w-5xl mx-auto bg-primary h-full">
           {children}
         </main>
       </div>
@@ -32,7 +32,7 @@ export default function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div>
+    <div className="md:fixed">
       <nav className="bg-primary border-r-2 border-deepwater border-solid top-0 flex items-center justify-evenly md:block sm:sticky">
         <Link href="/">
           <a className="flex p-8">
@@ -116,6 +116,9 @@ const NavBarLinks = () => {
       </NavLink>
       <NavLink href={"/2023/recap"} color={Color.Raspberry}>
         2022 Recap
+      </NavLink>
+      <NavLink href={"/2023/partnership"} color={Color.Linen}>
+        Partnership
       </NavLink>
     </div>
   );
