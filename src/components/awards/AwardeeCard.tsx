@@ -15,7 +15,7 @@ export const AwardeeCard = ({
   height,
 }: {
   awardeeName: string;
-  awardYear: number;
+  awardYear: number | undefined;
   // awardee profile image path
   profileImg: string;
   // alternative image description
@@ -34,7 +34,7 @@ export const AwardeeCard = ({
         layout="fixed"
       />
       <p className={"font-semibold mt-1.5 w-max"}>{awardeeName}</p>
-      <p className={"-mt-1"}>{awardYear}</p>
+      {awardYear && <p className={"-mt-1"}>{awardYear}</p>}
     </div>
   );
 };
