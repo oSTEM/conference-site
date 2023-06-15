@@ -118,7 +118,7 @@ const NavBarLinks = () => {
         2022 Recap
       </NavLink>
       <NavLink href={"/2023/partnership"} color={Color.Linen}>
-        Partnership
+        Partnerships
       </NavLink>
     </div>
   );
