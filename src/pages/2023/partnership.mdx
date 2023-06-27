@@ -1,4 +1,5 @@
 import { SiteLayout } from "../../components/layout/SiteLayout";
+import { CTAButton } from "../../components/button/CTAButton";
 import { AwardSquare } from "../../components/awards/AwardSquare";
 import { AwardCard } from "../../components/awards/AwardCard";
 import Image from "next/image";
@@ -51,6 +52,27 @@ import Image from "next/image";
 We invite you to join us in Anaheim, CA. As a partner you will be a critical
 member of our community.
 
+<div className="flex flex-col items-center text-xl my-4">
+  <div className="pb-4">
+    <CTAButton
+      onClick="https://ostemfilestorage.blob.core.windows.net/publicfiles/2023oSTEMProspectusJun
+22.pdf"
+      backgroundColor="bright-peach"
+    >
+      View our Partnership Prospectus
+    </CTAButton>
+  </div>
+  <p className="font-bold">Ready to reserve your booth?</p>
+  <div className="pt-2">
+    <CTAButton
+      onClick="https://www.jotform.com/form/230715276160148"
+      backgroundColor="rasp"
+    >
+      Complete our commitment form
+    </CTAButton>
+  </div>
+</div>
+
 <div className="font-bold my-2">
   <a
     href="https://ostemfilestorage.blob.core.windows.net/publicfiles/oSTEM2023ConferencePartnership.pdf"
@@ -76,9 +98,21 @@ member of our community.
   .
 </div>
 
-Have questions or need more information? Please contact sponsorship@ostem.org.
+**Have questions or need more information?** Please contact
+sponsorship@ostem.org.
 
 </div>
+
+<br />
+
+<Image
+  src="/images/partnership-footer-image.jpg"
+  alt=""
+  layout="responsive"
+  width="400"
+  height="267"
+  priority="true"
+/>
 
 <br />
 
