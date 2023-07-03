@@ -15,4 +15,5 @@ export enum Color {
   AntiqueTeal = "var(--color-antique-teal)",
   SkyBlue = "var(--color-skyblue)",
   ChillGreen = "var(--color-chill-green)",
+  Mulberry = "var(--color-mullberry)",
 }
