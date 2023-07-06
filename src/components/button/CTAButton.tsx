@@ -11,6 +11,7 @@ export const CTAButton = ({
   disabled,
   onClick,
   backgroundColor = "antique-teal",
+  target = "_blank",
 }: {
   // The label for the button.
   children: string;
@@ -26,6 +27,8 @@ export const CTAButton = ({
   // Additional classes to apply to the button element.
   backgroundColor: string;
   fontSize?: string;
+  // Open this link in current tab (_self) or a new tab (_blank)
+  target: "_self" | "_blank";
 }) => {
   const buttonStyle = css.resolve`
     --bg: black;
@@ -99,7 +102,7 @@ export const CTAButton = ({
         <a
           {...commonProps}
           href={disabled ? undefined : onClick}
-          target="_blank"
+          target={target}
         >
           <span>{children}</span>
         </a>
