@@ -9,8 +9,8 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 <div className="border-b-4 border-chill-green border-solid pb-4 text-center">
   <img
     alt="Anaheim 2023 Banner"
-    src="/images/2023/2023_templogo.png"
-    className="flex w-full mx-auto"
+    src="/images/2023/2023_official_logo.png"
+    className="flex w-96 mx-auto"
   />
   <p className="text-5xl font-display font-black text-navy">
     13th Annual oSTEM Conference 2023
@@ -21,7 +21,7 @@ import { SiteLayout } from "../components/layout/SiteLayout";
   </p>
 </div>
 <div className="grid md:grid-cols-5 mt-9">
-  <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-chill-green border-solid pb-4">
+  <div className="rounded md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-chill-green border-solid pb-4">
     <div className="bg-chill-green">
       <h3 className="p-4">Upcoming Dates</h3>
     </div>
@@ -33,14 +33,21 @@ import { SiteLayout } from "../components/layout/SiteLayout";
       <b>Registration Deadline:</b> October 15, 2023 <br />
     </p>
   </div>
-  <div className="rounded-r md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-light-peach border-solid pb-4">
+  <div className="rounded md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-light-peach border-solid pb-4">
     <div className="bg-light-peach">
       <h3 className="p-4">Call for Posters</h3>
     </div>
     <p className="p-4">
-      The oSTEM Annual Conference Poster Session is intended for undergraduate students, graduate students, and postdocs to showcase their research to other conference attendees. Anyone performing academic or industry research is invited to submit a poster for consideration. If you are interested in submitting a poster please do so at the button below.
-      Posters will be on display for all conference attendees during the day on Saturday. Poster submitters will be asked to remain with their poster and explain their research to interested attendees and judges during the Career and Graduate Fair Expo.
-      Awards will be given out to the highest-scoring undergraduate, graduate, and postdoc posters!
+      The oSTEM Annual Conference Poster Session is intended for undergraduate
+      students, graduate students, and postdocs to showcase their research to
+      other conference attendees. Anyone performing academic or industry
+      research is invited to submit a poster for consideration. If you are
+      interested in submitting a poster please do so at the button below.
+      Posters will be on display for all conference attendees during the day on
+      Saturday. Poster submitters will be asked to remain with their poster and
+      explain their research to interested attendees and judges during the
+      Career and Graduate Fair Expo. Awards will be given out to the
+      highest-scoring undergraduate, graduate, and postdoc posters!
       <br />
       <br />
       <b>
@@ -54,14 +61,14 @@ import { SiteLayout } from "../components/layout/SiteLayout";
       </CTAButton>
     </div>
   </div>
-  <div className="rounded-l md:col-span-5 tint tint-dark mt-7">
+  <div className="rounded-t md:col-span-5 tint tint-dark mt-7">
     <img
-      className="rounded-l object-cover w-full h-full"
+      className="rounded-t object-cover w-full h-full"
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
     />
   </div>
-  <div className="rounded-r md:col-span-5 p-4 bg-tint-seamist">
+  <div className="rounded-b md:col-span-5 p-4 bg-tint-seamist">
     <h3>Conference for LGBTQ+ People in STEM</h3>
     <p>
       The 13th Annual oSTEM Conference will take place in Anaheim, California
@@ -90,8 +97,9 @@ import { SiteLayout } from "../components/layout/SiteLayout";
   </CTAButton>
 </div>
 
-<div className="mt-8">
+<div className="mt-8 rounded">
   <Image
+    className="rounded"
     src="/images/2023/2023_homepage_image.jpg"
     alt=""
     layout="responsive"
