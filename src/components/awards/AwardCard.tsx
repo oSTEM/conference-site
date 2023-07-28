@@ -1,7 +1,6 @@
 import Link from "next/dist/client/link";
 import React from "react";
 import { css } from "styled-jsx/css";
-import { Color } from "theme/Color";
 
 /**
  * Generate a card component for each award
@@ -15,9 +14,9 @@ export const AwardCard = ({
   alert,
   nominateUrl,
   awardDetailUrl,
+  nominationClosed = false,
 }: {
   borderColor: string;
-  buttonColor: string;
   title: string;
   desc: string;
   elig: Array<string>;
@@ -27,6 +26,8 @@ export const AwardCard = ({
   nominateUrl: string;
   // link to award detail page (e.g. "\2023\awards-global-service")
   awardDetailUrl: string;
+  // to disable the nomination button
+  nominationClosed: boolean;
 }) => {
   return (
     <div
@@ -47,9 +48,11 @@ export const AwardCard = ({
         <AwardCardButton url={awardDetailUrl}>
           View Previous Awardees
         </AwardCardButton>
-        <AwardCardButton url={nominateUrl}>
-          Nominate Someone for this Award
-        </AwardCardButton>
+        {!nominationClosed && (
+          <AwardCardButton url={nominateUrl}>
+            Nominate Someone for this Award
+          </AwardCardButton>
+        )}
       </div>
     </div>
   );
@@ -96,7 +99,7 @@ export const AwardCardButton = ({
 
     :hover,
     :focus {
-      background-color: var(--color-deepwater);
+      background-color: var(--color-sky);
       box-shadow: -2px 5px 4px rgba(0, 0, 0, 0.4);
     }
 
