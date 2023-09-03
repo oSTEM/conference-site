@@ -40,6 +40,7 @@ module.exports = {
         "light-peach": "#f7c2bc",
         "chill-yellow": "#FFD285",
         "chill-green": "#B3E6E0",
+        "purple": "#8b5cf6",
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],

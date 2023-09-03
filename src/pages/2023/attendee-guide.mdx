@@ -1,0 +1,252 @@
+import { CTAButton } from "../../components/button/CTAButton";
+import { SiteLayout } from "../../components/layout/SiteLayout";
+import { TopicSquare } from "../../components/rfp/TopicSquare";
+import Image from "next/image";
+
+<SiteLayout title="Attendee Guide">
+
+<div className="border-b-4 border-purple border-solid pb-4 mb-4 text-center">
+  <p className="text-5xl font-display font-black">Attendee Guide</p>
+</div>
+
+<br />
+Not sure what to do when you arrive? Here’s some tips on how to plan your trip:
+<br />
+
+<TopicSquare title="AIRPORTS" borderColor="border-green-500">
+  <div className="overflow-x-scroll">
+    <table>
+      <tr>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>John Wayne Airport (SNA)</b>
+            <p>11.8 miles from hotel</p>
+            <a href="https://www.ocair.com/travelers/flights/airlines/">
+              Airlines
+            </a>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Los Angeles International Airport (LAX)</b>
+            <p>35 miles from hotel</p>
+            <ul>
+              <li key="1">
+                <a href="https://www.flylax.com/lax-airline-list">Airlines</a>
+              </li>
+              <li key="2">
+                <a href="https://www.flylax.com/lax-traffic-and-ground-transportation#laxT">
+                  LAX Ground Transportation Options
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Long Beach Airport (LGB)</b>
+            <p>18 miles from hotel</p>
+            <a href="https://www.longbeach.gov/lgb/airlines-destinations/">
+              Airlines
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</TopicSquare>
+
+<TopicSquare title="PARKING" borderColor="border-blue-500">
+  <div className="overflow-x-scroll">
+    <table>
+      <tr>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Anaheim Marriott</b>
+            <p>Guest Rates</p>
+            <p>On-Site Daily</p>
+            <ul>
+              <li key="self-parking">Self-Parking: $30</li>
+              <li key="guest-valet">Guest Valet: $40</li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Anaheim Marriott</b>
+            <p>Visitor Rates</p>
+            <ul>
+              <li key="self-parking">
+                Daily Self-Parking (up to 24 hours): $38
+              </li>
+              <li key="guest-valet">Guest Valet: $42</li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Anaheim Convention Center</b>
+            <p>
+              Although prices vary, the standard parking rate is $20 per day.
+            </p>
+            <p>We recommend Car Park 2 (0.2 mile) and Car Park 4 (0.4 mile).</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</TopicSquare>
+
+<TopicSquare title="PUBLIC TRANSPORTATION" borderColor="border-yellow-500">
+  <em>Buses and subways and trains, oh my!</em>
+  <div className="overflow-x-scroll">
+    <table>
+      <tr>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Bus Stations</b>
+            <ul>
+              <li key="greyhound">
+                <a href="http://locations.greyhound.com/">
+                  Anaheim Greyhound Station{" "}
+                </a>
+                <em>(Stops 3 miles from Anaheim Marriott)</em>
+              </li>
+              <li key="resort-transport">
+                <a href="http://rideart.org/">Anaheim Resort Transportation </a>
+                <em>(Convention Way EB @ 700 W. Convention Way)</em>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Metro/Shuttles</b>
+            <ul>
+              <li key="octa">
+                <a href="https://www.octa.net/">
+                  Orange County Transportation Authority (OCTA){" "}
+                </a>
+                <em>(Stops 3 miles from Anaheim Marriott)</em>
+              </li>
+              <li key="metrolink">
+                <a href="https://metrolinktrains.com/">MetroLink</a>
+              </li>
+              <li key="shuttle-one">
+                <a href="http://www.shuttleone.net/">ShuttleOne </a>
+                <em>(Disneyland Express)</em>
+              </li>
+              <li key="mickey's-space-ship">
+                <a href="https://mickeysdisneylandexpress.com/">
+                  Mickey's Space Ship Shuttle
+                </a>
+              </li>
+              <li key="super-shuttle">
+                <a href="https://www.supershuttle.com/ride-choices/non-stop-shuttle/">
+                  Super Shuttle Express
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Train Station</b>
+            <ul>
+              <li key="amtrak">
+                <a href="https://www.amtrak.com/stations/ana.html">
+                  Anaheim Amtrak Station{" "}
+                </a>
+                <em>
+                  (Stops at Anaheim Regional Transportation Intermodal (ARTIC)
+                  then take ART bus to hotel)
+                </em>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div className="flex flex-col w-40 sm:w-auto">
+            <b>Anaheim Transportation Network</b>
+            <ul>
+              <li key="1">
+                <a href="https://rideart.org/art/">
+                  Anaheim Regional Transportation (ART) Bus{" "}
+                </a>
+                <em>
+                  (Hotel stop is Convention Way EB @ 700 W. Convention Way)
+                </em>
+              </li>
+              <li key="2">
+                <a href="https://rideart.org/fran/">
+                  Free Rides Around the Neighborhood (FRAN){" "}
+                </a>
+              </li>
+              <li key="3">
+                <a href="https://rideart.org/eve/">
+                  Everyone Ventures Everywhere (EVE){" "}
+                </a>
+                <em>Connects to SNA Airport</em>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</TopicSquare>
+
+<br />
+<hr />
+
+### TRAVEL OPTIONS FROM **LAX** AIRPORT TO CONFERENCE HOTEL
+
+- **Ride-share like Uber or Lyft (Most Convenient)**
+  - Time and costs will vary
+- **Public Transportation - Option 1 (Fastest - About $30 pp | About 1 hour )**
+  - From LAX, take the
+    <a href="https://www.flylax.com/flyaway-bus/union-station"> FlyAway </a>
+    shuttle to Union Station - 10-25 minutes | One-way fare is $9.75
+  - From Union Station, take the Amtrak Pacific Surfliner to Anaheim, CA (ANA)
+    - 38 min | $16-$26
+      (<a href="https://www.amtrak.com/student-discounts">Student discount
+      available</a>)
+  - From Anaheim Regional Transportation Intermodal Center (ARTIC) bay 8, 12 or
+    13, take the Anaheim Regional Transportation (ART) bus (15 Artic Express
+    Line) to Disneyland Main Transportation Center - 15
+  - Take the 05 Grand Plaza Line ART bus to Convention Way EB @ 700 W.
+    Convention Way
+    - One-way ART bus fare is $4
+- **Public Transportation - Option 2 (Cheapest - About $22 pp | About 1.5
+  hours)**
+
+  - From LAX, take
+    the<a href="https://www.flylax.com/flyaway-bus/union-station"> FlyAway </a>
+    shuttle to Union Station
+
+    - 10-25 minutes | One-way fare is $9.75
+
+  - From Union Station, take
+    the<a href="https://metrolinktrains.com/ticketsOverview/where-to-buy/">
+    MetroLink </a>Orange County Line to Anaheim
+    - 43 min | One-way fare is $8.75 | Student discount is $6.50
+  - From Anaheim Regional Transportation Intermodal Center (ARTIC) bay 8, 12 or
+    13, take the Anaheim Regional Transportation (ART) bus (15 Artic Express
+    Line) to Disneyland Main Transportation Center - 15
+  - Take the 05 Grand Plaza Line ART bus to Convention Way EB @ 700 W.
+    Convention Way
+    - One-way ART bus fare is $4
+
+<br />
+
+### TRAVEL OPTIONS FROM **SNA** AIRPORT TO CONFERENCE HOTEL
+
+- **Ride-share like Uber or Lyft (Most Convenient)**
+  - Time and costs will vary
+- **Public Transportation - Option 1 (Fastest)**
+  - From SNA Airport, take the <a href="https://rideart.org/eve/"> Everyone
+    Ventures Everywhere (EVE) </a> shuttle to Convention Way EB @ 700 W.
+    Convention Way (05 Grand Plaza Line)
+    - One-way fare is $15 pp | Round-trip is $30 pp
+
+</SiteLayout>
