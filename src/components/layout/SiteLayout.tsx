@@ -108,26 +108,32 @@ export default function NavBar() {
 const NavBarLinks = () => {
   return (
     <div className="space-y-4">
-      <NavLink href={"/2023/rfp"} color={Color.ChillGreen}>
-        Request for Proposals
-      </NavLink>
-      <NavLink href={"/2023/cfp"} color={Color.Mulberry}>
-        Call for Posters
-      </NavLink>
       <NavLink href={"/2023/registration"} color={Color.oSTEMBlue}>
         Registration
+      </NavLink>
+      <NavLink href={"/2023/schedule"} color={Color.Amber}>
+        Schedule
+      </NavLink>
+      <NavLink href={"/2023/site-tour"} color={Color.Sky}>
+        Sponsor Site Tours
       </NavLink>
       <NavLink href={"/2023/attendee-guide"} color={Color.Purple}>
         Attendee Resources
       </NavLink>
-      <NavLink href={"/2023/awards"} color={Color.Apricot}>
-        Awards
-      </NavLink>
       <NavLink href={"/2023/partnership"} color={Color.Linen}>
         Partnerships
       </NavLink>
+      <NavLink href={"/2023/cfp"} color={Color.Mulberry}>
+        Call for Posters
+      </NavLink>
+      <NavLink href={"/2023/awards"} color={Color.Apricot}>
+        Awards
+      </NavLink>
       <NavLink href={"/2023/recap"} color={Color.Raspberry}>
         2022 Recap
+      </NavLink>
+      <NavLink href={"/2023/rfp"} color={Color.ChillGreen}>
+        Request for Proposals
       </NavLink>
     </div>
   );
