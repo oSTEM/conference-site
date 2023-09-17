@@ -41,6 +41,7 @@ module.exports = {
         "chill-yellow": "#FFD285",
         "chill-green": "#B3E6E0",
         "purple": "#8b5cf6",
+        "amber": "#f59e0b",
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],
