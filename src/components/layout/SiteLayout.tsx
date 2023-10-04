@@ -123,7 +123,7 @@ const NavBarLinks = () => {
       <NavLink href={"/2023/partnership"} color={Color.Linen}>
         Partnerships
       </NavLink>
-      <NavLink href={"/2023/expo"} color={Color.Space}>
+      <NavLink href={"/2023/expo"} color={Color.Frost}>
         Career & Grad School Expo
       </NavLink>
       <NavLink href={"/2023/cfp"} color={Color.Mulberry}>
