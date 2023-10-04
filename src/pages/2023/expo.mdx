@@ -1,1 +1,34 @@
+import { SiteLayout } from "../../components/layout/SiteLayout";
+import { CTAButton } from "../../components/button/CTAButton";
+import { AwardSquare } from "../../components/awards/AwardSquare";
+import { AwardCard } from "../../components/awards/AwardCard";
+import Image from "next/image";
 
+<SiteLayout title="Expo">
+<div className="border-b-4 border-linen border-solid pb-4 mb-4 text-center">
+  <p className="text-5xl font-display font-black">Career & Grad School Expo</p>
+</div>
+
+
+
+<div>
+  <div title="Whova event and conference app" id="whova-exhibitorwidget">
+    <p id="whova-loading">Loading...</p>
+  </div>
+  <script
+    src="https://whova.com/static/frontend/xems/js/whova-exhibitor-widget.js?eid=w3nm9trIKDqa2Z4vqZBaEdUpVsJ8Xtqb1C7tvh3-BT0%3D&host=https://whova.com"
+    type="text/javascript"
+    id="embeded-exhibitor-script"
+  ></script>
+  <div id="whova-wrap" class="whova-wrap-class">
+    Powered By
+    <a class="brandlink" target="_blank" href="https://whova.com">
+      <b>Whova</b>
+    </a>
+    <br />
+  </div>
+</div>
+
+Exhibitor list not loading? Try refreshing the page.
+
+</SiteLayout>
