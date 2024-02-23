@@ -108,7 +108,7 @@ export default function NavBar() {
 const NavBarLinks = () => {
   return (
     <div className="space-y-4">
-      <NavLink href={"/2023/schedule"} color={Color.Amber}>
+      <NavLink color={Color.Gray}>
         Schedule
       </NavLink>
       <NavLink href={"/2023/expo"} color={Color.Frost}>
