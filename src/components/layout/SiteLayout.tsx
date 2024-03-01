@@ -117,25 +117,19 @@ const NavBarLinks = () => {
       <NavLink href={"/2023/attendee-guide"} color={Color.Purple}>
         Attendee Resources
       </NavLink>
-      <NavLink href={"/2023/site-tour"} color={Color.Sky}>
-        Sponsor Site Tours
-      </NavLink>
       <NavLink href={"/2023/partnership"} color={Color.Linen}>
         Partnerships
       </NavLink>
-      <NavLink href={"/2023/registration"} color={Color.oSTEMBlue}>
-        Registration
-      </NavLink>
-      <NavLink href={"/2023/awards"} color={Color.Apricot}>
-        Awards
+      <NavLink href={"#"} color={Color.oSTEMBlue}>
+        Coming Soon - Registration
       </NavLink>
       <NavLink href={"/2023/recap"} color={Color.Raspberry}>
         2022 Recap
       </NavLink>
-      <NavLink href={"/2023/cfp"} color={Color.Mulberry}>
-        Call for Posters
+      <NavLink href={"#"} color={Color.Mulberry}>
+        Coming Soon - Call for Posters
       </NavLink>
-      <NavLink href={"/2023/rfp"} color={Color.ChillGreen}>
+      <NavLink href={"/2024/rfp"} color={Color.ChillGreen}>
         Request for Proposals
       </NavLink>
     </div>
