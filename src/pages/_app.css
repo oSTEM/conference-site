@@ -183,27 +183,3 @@ th {
 tbody tr:nth-child(2n) {
   background-color: rgba(0, 0, 0, 0.025);
 }
-
-/* New Navbar */
-.NavNew {
-  background: #8f8;
-  position: sticky;
-  display: initial;
-}
-
-.NavNew-inner {
-  margin: auto;
-  background: #ff8;
-  max-width: 1400px;
-  border-bottom: 1px solid #000;
-}
-
-.NavNew-inner {
-  display: flex;
-}
-.NavNew-inner-left {
-  flex-grow: 1;
-}
-.NavNew-inner-right {
-  background: #8ff;
-}

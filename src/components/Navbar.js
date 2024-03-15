@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import Link from "next/link";
 import { Fragment, useState } from "react";
+import styles from "./Navbar.module.css";
 
 export function DropdownExample() {
   return (
@@ -86,9 +87,9 @@ export function DropdownExample() {
 
 export default function NavBar() {
   return (
-    <div className="NavNew">
-      <div className="NavNew-inner">
-        <div className="NavNew-inner-left">
+    <div className={styles.NavNew}>
+      <div className={styles["NavNew-inner"]}>
+        <div className={styles["NavNew-inner-left"]}>
           <Link href="/">
             <a className="inline-block">
               <img
@@ -100,7 +101,7 @@ export default function NavBar() {
           </Link>
           <p className="inline-block">14th Annual Conference</p>
         </div>
-        <div className="NavNew-inner-right">
+        <div className={styles["NavNew-inner-right"]}>
           <DropdownExample />
         </div>
       </div>
