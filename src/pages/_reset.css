@@ -3,6 +3,13 @@
    License: none (public domain)
 */
 
+/*
+  Note from oSTEM Tech: _reset.css was causing trouble and overwriting styles I didn't want overwritten (i.e., forcing Serif on everything). 
+  Couldn't figure out why _reset.css was needed in the first place (Tailwind comes with preflight, which does roughly the same thing but plays much nicer with our code) so this has been deprecated and I'm planning on removing this whole file soon. 
+  - Rem
+*/
+
+
 html,
 body,
 div,
