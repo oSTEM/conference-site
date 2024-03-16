@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 @import "./_reset.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,7 +64,7 @@
 }
 
 html,
-html body {
+html > * {
   color: var(--color-text);
   padding: 0;
   margin: 0;
