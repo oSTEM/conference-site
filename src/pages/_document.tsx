@@ -1,4 +1,4 @@
-import { DocumentInitialProps } from "next/dist/next-server/lib/utils";
+// import { useState } from 'react'
 import NextDocument, {
   DocumentContext,
   Head,
@@ -7,21 +7,25 @@ import NextDocument, {
   NextScript,
 } from "next/document";
 
-import flushToReact from "styled-jsx/server";
+// import flushToReact from "styled-jsx/server";
+// import StyledJsxRegistry from "_registry";
+// import { StyleRegistry, createStyleRegistry } from 'styled-jsx'
 
 class Document extends NextDocument {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx: DocumentContext): Promise<any> {
     const props = await NextDocument.getInitialProps(ctx);
     // This is required to avoid flashes of unstyled content on first load
-    const extraStyles = flushToReact();
+
+    // const [jsxStyleRegistry] = useState(() => createStyleRegistry());
+    // const styles = jsxStyleRegistry.styles()
+    // jsxStyleRegistry.flush()
+
     return {
       ...props,
       styles: (
         <>
           {props.styles}
-          {extraStyles}
+          {/* {styles} */}
         </>
       ),
     };
