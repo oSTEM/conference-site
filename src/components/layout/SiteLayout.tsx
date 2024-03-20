@@ -5,6 +5,7 @@ import Head from "next/head";
 import { SocialRow } from "./Socials";
 import { useRouter } from "next/router";
 import { Color } from "theme/Color";
+import NavBar from "components/Navbar";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -17,9 +18,10 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       <Head>
         <title>{title ? title + " | " : ""}14th Annual oSTEM Conference</title>
       </Head>
-      <div className="flex flex-col sm:flex-row min-h-screen bg-primary">
+      <div className="flex flex-col min-h-screen bg-primary">
+        {/* <NavBarLegacy /> */}
         <NavBar />
-        <main className="container p-4 md:ml-[22%] sm:p-8 max-w-5xl mx-auto bg-primary h-full">
+        <main className="container p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full">
           {children}
         </main>
       </div>
@@ -28,12 +30,14 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
   );
 };
 
-export default function NavBar() {
+// import { Fragment, useEffect, useRef, useState } from 'react'
+
+export function NavBarLegacy() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <div className="md:fixed">
-      <nav className="bg-primary border-r-2 border-deepwater border-solid top-0 flex items-center justify-evenly md:block sm:sticky">
+      <nav className="bg-primary border-r-2 border-deepwater border-solid ">
         <Link href="/">
           <a className="flex p-8">
             <img
@@ -99,6 +103,9 @@ export default function NavBar() {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+    }
+    .rem-inline {
+      // display: inline-block
     }
   `}</style>
     </div>

@@ -1,0 +1,30 @@
+/* New Navbar */
+.NavNew {
+  background: #8f8;
+  position: sticky;
+  display: initial;
+}
+
+.NavNew-inner {
+  margin: auto;
+  background: #ff8;
+  max-width: 1400px;
+  border-bottom: 1px solid #000;
+}
+
+.NavNew-inner {
+  display: flex;
+}
+.NavNew-inner-left {
+  flex-grow: 1;
+}
+.NavNew-inner-right {
+  background: #8ff;
+}
+
+.dropdownIcon {
+  margin-left: 0.5rem;
+  /* Not good practice... if someone else wants to figure out why by default (without these two lines below) the icon size changes on different pages feel free! */
+  width: 1rem !important;
+  height: 100% !important;
+}
