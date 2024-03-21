@@ -1,13 +1,13 @@
 /* New Navbar */
 .NavNew {
-  background: #8f8;
+  /* background: #8f8; */
   position: sticky;
   display: initial;
 }
 
 .NavNew-inner {
   margin: auto;
-  background: #ff8;
+  /* background: #ff8; */
   max-width: 1400px;
   border-bottom: 1px solid #000;
 }
@@ -20,6 +20,7 @@
 }
 .NavNew-inner-right {
   background: #8ff;
+  display: flex;
 }
 
 .dropdownIcon {
