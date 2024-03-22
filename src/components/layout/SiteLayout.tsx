@@ -5,7 +5,7 @@ import Head from "next/head";
 import { SocialRow } from "./Socials";
 import { useRouter } from "next/router";
 import { Color } from "theme/Color";
-import NavBar from "components/Navbar";
+import NavBar from "@/components/navbar/NavbarCore";
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
