@@ -12,14 +12,11 @@
   border-bottom: 1px solid #000;
 }
 
-.NavNew-inner {
-  display: flex;
-}
 .NavNew-inner-left {
   flex-grow: 1;
 }
 .NavNew-inner-right {
-  background: #8ff;
+  /* background: #8ff; */
   display: flex;
 }
 
@@ -28,4 +25,11 @@
   /* Not good practice... if someone else wants to figure out why by default (without these two lines below) the icon size changes on different pages feel free! */
   width: 1rem !important;
   height: 100% !important;
+}
+
+.gradientText {
+  background: linear-gradient(120deg, #e76f51 0%, #9333ea 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
