@@ -100,13 +100,17 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   );
 };
 
-export interface NavbarCategoryWithLinks {
-  name: string;
-  displayName: string;
-  color: string;
+export interface NavbarCategoryWithLinks extends NavbarCategory {
   links: NavbarLink[];
 }
 
+/**
+ * Sorts a 1D array of navbar links into categories by adding a new links property to each category.
+ *
+ * @param cat - Array of navbar categories to sort links into
+ * @param links - Array of links to sort
+ * @returns {NavbarCategoryWithLinks[]}
+ */
 function categorizeNavbarLinks(cat: NavbarCategory[], links: NavbarLink[]) {
   let out: NavbarCategoryWithLinks[] = cat.map((r) =>
     Object.assign(r, { links: [] }),

@@ -50,7 +50,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: "attend",
     label: "Attendee Resources",
-    href: "/2024/register",
+    href: "/2023/attendee-guide",
   },
   {
     category: "attend",
