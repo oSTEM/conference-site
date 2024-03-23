@@ -6,6 +6,7 @@
   background: linear-gradient( to bottom, #f3f6f8ef 40%, #f3f6f8af 80%);
   backdrop-filter: blur(4px);
   padding-bottom: 1px;
+  z-index: 1;
 }
 
 .NavNew-inner {

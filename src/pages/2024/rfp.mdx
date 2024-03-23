@@ -1,7 +1,7 @@
 import { CTAButton } from "../../components/button/CTAButton";
 import { SiteLayout } from "../../components/layout/SiteLayout";
 import { TopicSquare } from "../../components/rfp/TopicSquare";
-import Image from "next/image";
+import Image from "next/future/image";
 
 <SiteLayout title="Request for Programs">
 
@@ -171,7 +171,7 @@ Your proposal must include the following components:
 <Image
   src="/images/2022-11-12 oSTEM_2489.jpg"
   alt="A photo showing three presenters from the 2022 conference speaking."
-  layout="responsive"
+  style={{width: "100%", height: 'auto'}}
   width="400"
   height="180"
   priority="true"
