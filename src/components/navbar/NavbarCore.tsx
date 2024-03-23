@@ -132,7 +132,7 @@ export default function NavBar() {
   const NavCategories = categorizeNavbarLinks(NAVBAR_CATEGORIES, NAVBAR_LINKS)
 
   return (
-    <div className={styles.NavNew}>
+    <div className={`${styles.NavNew}`}>
       <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
         <div className={`flex ${styles['NavNew-inner-left']}`}>
           <Link href='/'>

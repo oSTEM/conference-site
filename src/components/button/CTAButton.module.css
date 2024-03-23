@@ -1,4 +1,4 @@
-.CTAButton { 
+.CTAButton {
   --bg: black;
   --bg-active: #111111;
   --bg-disabled: #666666;
@@ -12,7 +12,6 @@
   text-align: center;
   font-family: var(--font-display);
   line-height: 1.3em;
-  position: relative;
   padding: var(--padding, 0.5em 1.5em);
   color: var(--text);
   font-size: 1.1em;
@@ -29,30 +28,13 @@
 
 .CTAButton:not([data-disabled="true"]):hover,
 .CTAButton:focus {
-    background-color: var(--color-ostem-darkblue);
-    box-shadow: -2px 5px 4px rgba(0, 0, 0, 0.4);
-  }
+  background-color: var(--color-ostem-darkblue);
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.4);
+}
 
 .CTAButton:disabled[data-disabled="true"] {
-    background-color: var(--bg-disabled);
-    cursor: not-allowed;
-  }
-
-  /* outer focus ring */
-.CTAButton:after {
-    content: "";
-    transition: box-shadow 0.15s;
-    margin: -4px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    border-radius: 999px;
-  }
-
-.CTAButton:focus:after {
-  box-shadow: 0 0 0 2px var(--bg-active);
+  background-color: var(--bg-disabled);
+  cursor: not-allowed;
 }
 
 .CTAButton & :global(.icon) {

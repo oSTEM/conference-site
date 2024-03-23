@@ -1,8 +1,11 @@
 /* New Navbar */
 .NavNew {
-  /* background: #8f8; */
-  position: sticky;
+  position: fixed;
   display: initial;
+  width: 100%;
+  background: linear-gradient( to bottom, #f3f6f8ef 40%, #f3f6f8af 80%);
+  backdrop-filter: blur(4px);
+  padding-bottom: 1px;
 }
 
 .NavNew-inner {

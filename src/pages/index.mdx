@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 
 import { CTAButton } from "../components/button/CTAButton";
 // import { ConferenceCountdown } from "../components/ConferenceCountdown";
@@ -41,14 +41,15 @@ import { SiteLayout } from "../components/layout/SiteLayout";
       </CTAButton>
     </div>
   </div>
-  <div className="rounded-t md:col-span-5 tint tint-dark mt-7">
-    <img
-      className="rounded-t object-cover w-full h-full"
+
+  <div className="rounded-b mt-8 md:col-span-5 p-4 bg-tint-seamist">
+    <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
+      style={{width: "100%", height: 'auto'}}
+      width="6000"
+      height="2003"
     />
-  </div>
-  <div className="rounded-b md:col-span-5 p-4 bg-tint-seamist">
     <h3>Conference for LGBTQ+ People in STEM</h3>
     <p>
       The 14th Annual oSTEM Conference will take place in Portland, OR
@@ -81,7 +82,7 @@ import { SiteLayout } from "../components/layout/SiteLayout";
     className="rounded"
     src="/images/2023/2023_homepage_image.jpg"
     alt=""
-    layout="responsive"
+    style={{width: "100%", height: 'auto'}}
     width="800"
     height="500"
   />
