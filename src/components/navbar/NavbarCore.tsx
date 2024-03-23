@@ -129,14 +129,12 @@ export default function NavBar() {
     <div className={styles.NavNew}>
       <div className="flex pb-1 border-b border-black max-w-7xl mx-auto">
         <div className={`flex ${styles["NavNew-inner-left"]}`}>
-          <Link href="/">
-            <a className="inline-block">
-              <img
-                alt="oSTEM"
-                src="/logo-banner.png"
-                className="flex h-14 mt-0.5 mx-auto"
-              />
-            </a>
+          <Link href="/" className="inline-block">
+            <img
+              alt="oSTEM"
+              src="/logo-banner.png"
+              className="flex h-14 mt-0.5 mx-auto"
+            />
           </Link>
           <div className="ml-2 pl-2 border-l border-black mt-2">
             <p className="inline-block text-xl leading-none pb-0">

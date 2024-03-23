@@ -38,7 +38,7 @@ export function NavBarLegacy() {
   return (
     <div className="md:fixed">
       <nav className="bg-primary border-r-2 border-deepwater border-solid ">
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a className="flex p-8">
             <img
               alt="oSTEM"
@@ -156,7 +156,7 @@ const NavLink = ({
 
   return (
     <li>
-      <Link href={href} passHref>
+      <Link href={href} passHref legacyBehavior>
         <a
           className={
             "block py-2 px-4 rounded text-black text-center font-display bg-tint-deepwater-light"

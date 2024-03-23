@@ -26,13 +26,7 @@ export const AwardeeCard = ({
 }) => {
   return (
     <div className={"flex flex-col items-center justify-end"}>
-      <Image
-        src={profileImg}
-        alt={altDesc}
-        width={width}
-        height={height}
-        layout="fixed"
-      />
+      <Image src={profileImg} alt={altDesc} width={width} height={height} />
       <p className={"font-semibold mt-1.5 w-max"}>{awardeeName}</p>
       {awardYear && <p className={"-mt-1"}>{awardYear}</p>}
     </div>
