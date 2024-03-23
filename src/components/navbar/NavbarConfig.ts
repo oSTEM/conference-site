@@ -21,6 +21,16 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
     displayName: "Present",
     color: "blue-500",
   },
+  {
+    name: "sponsor",
+    displayName: "Sponsor",
+    color: "purple-500",
+  },
+  {
+    name: "misc",
+    displayName: "More",
+    color: "pink-500",
+  },
 ];
 
 /**
@@ -38,8 +48,39 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     },
   },
   {
+    category: "attend",
+    label: "Attendee Resources",
+    href: "/2024/register",
+  },
+  {
+    category: "attend",
+    label: "Register",
+    href: "/2024/register",
+    badge: {
+      label: "Opens June",
+    },
+  },
+  {
     category: "present",
     label: "Request for Programs",
     href: "/2024/rfp",
+    badge: {
+      label: "Open",
+      accent: true,
+    },
+  },
+  {
+    category: "sponsor",
+    label: "Partnerships",
+    href: "/2024/partnership",
+    badge: {
+      label: "Open",
+      accent: true,
+    },
+  },
+  {
+    category: "misc",
+    label: "Annual Awards",
+    href: "/2023/awards",
   },
 ];
