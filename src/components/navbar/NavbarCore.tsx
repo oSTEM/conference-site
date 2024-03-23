@@ -54,8 +54,10 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   return (
     <div className="mt-2.5 mr-4 text-right">
       <Menu as="div" className="relative inline-block text-left">
-        <Menu.Button className="inline-flex w-full justify-center rounded-full border-2 border-green-600 px-4 py-2 text-sm font-medium hover:bg-green-600/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600/75 transition">
-          Attend{" "}
+        <Menu.Button
+          className={`inline-flex w-full justify-center rounded-full border-2 border-${category.color} px-4 py-2 text-sm font-medium hover:bg-${category.color}/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-${category.color}/75 transition`}
+        >
+          {`${category.displayName} `}
           <FontAwesomeIcon
             className={styles["dropdownIcon"]}
             icon={faChevronDown}

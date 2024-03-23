@@ -2,7 +2,7 @@ import { SiteLayout } from "../../components/layout/SiteLayout";
 import { CTAButton } from "../../components/button/CTAButton";
 import { AwardSquare } from "../../components/awards/AwardSquare";
 import { AwardCard } from "../../components/awards/AwardCard";
-import Image from "next/image";
+import Image from "next/future/image";
 
 <SiteLayout title="Partnerships">
 <div className="border-b-4 border-linen border-solid pb-4 mb-4 text-center">
@@ -12,7 +12,7 @@ import Image from "next/image";
 <Image
   src="/images/partnership-banner-image.jpg"
   alt="Decorative banner image showing three oSTEM attendees looking into the camera at a previous oSTEM national conference."
-  layout="responsive"
+  style={{width: "100%", height: 'auto'}}
   width="400"
   height="167"
 />

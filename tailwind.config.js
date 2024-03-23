@@ -1,7 +1,11 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
+  content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
   darkMode: false, // or 'media' or 'class'
+  safelist: [
+    'border-blue-600',
+    'purple-600'
+  ],
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
@@ -46,7 +50,6 @@ module.exports = {
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],
-        sans: ["Noto Sans Serif", "Arial"],
       },
       flex: {
         // add the flex-2 class
