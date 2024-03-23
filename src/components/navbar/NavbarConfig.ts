@@ -4,7 +4,7 @@
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from "./NavbarCore";
+import { NavbarCategory, NavbarLink } from './NavbarCore'
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).
@@ -12,26 +12,26 @@ import { NavbarCategory, NavbarLink } from "./NavbarCore";
  */
 export const NAVBAR_CATEGORIES: NavbarCategory[] = [
   {
-    name: "attend",
-    displayName: "Attend",
-    color: "green-600",
+    name: 'attend',
+    displayName: 'Attend',
+    color: 'green-600',
   },
   {
-    name: "present",
-    displayName: "Present",
-    color: "blue-600",
+    name: 'present',
+    displayName: 'Present',
+    color: 'blue-600',
   },
   {
-    name: "sponsor",
-    displayName: "Sponsor",
-    color: "violet-600",
+    name: 'sponsor',
+    displayName: 'Sponsor',
+    color: 'violet-600',
   },
   {
-    name: "misc",
-    displayName: "More",
-    color: "pink-600",
+    name: 'misc',
+    displayName: 'More',
+    color: 'pink-600',
   },
-];
+]
 
 /**
  * This object specifies what links are available and what categories they should be put under.
@@ -40,44 +40,44 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
  */
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
-    category: "attend",
-    label: "Register",
-    href: "/2024/register",
+    category: 'attend',
+    label: 'Register',
+    href: '/2024/register',
     badge: {
-      label: "Opens June",
+      label: 'Opens June',
     },
   },
   {
-    category: "attend",
-    label: "Attendee Resources",
-    href: "/2023/attendee-guide",
+    category: 'attend',
+    label: 'Attendee Resources',
+    href: '/2023/attendee-guide',
   },
   {
-    category: "attend",
-    label: "Schedule",
-    href: "/2023/schedule",
+    category: 'attend',
+    label: 'Schedule',
+    href: '/2023/schedule',
   },
   {
-    category: "present",
-    label: "Request for Programs",
-    href: "/2024/rfp",
+    category: 'present',
+    label: 'Request for Programs',
+    href: '/2024/rfp',
     badge: {
-      label: "Open",
+      label: 'Open',
       accent: true,
     },
   },
   {
-    category: "sponsor",
-    label: "Partnerships",
-    href: "/2024/partnership",
+    category: 'sponsor',
+    label: 'Partnerships',
+    href: '/2024/partnership',
     badge: {
-      label: "Open",
+      label: 'Open',
       accent: true,
     },
   },
   {
-    category: "misc",
-    label: "Annual Awards",
-    href: "/2023/awards",
+    category: 'misc',
+    label: 'Annual Awards',
+    href: '/2023/awards',
   },
-];
+]

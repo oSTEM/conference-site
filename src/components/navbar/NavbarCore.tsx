@@ -7,36 +7,36 @@
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
 
-import { Menu, Transition } from "@headlessui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
-import Link from "next/link";
-import { Fragment, useState } from "react";
-import styles from "./Navbar.module.css";
-import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from "./NavbarConfig";
+import { Menu, Transition } from '@headlessui/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown'
+import Link from 'next/link'
+import { Fragment, useState } from 'react'
+import styles from './Navbar.module.css'
+import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig'
 
 export interface NavbarCategory {
-  name: string;
-  displayName: string;
-  color: string;
+  name: string
+  displayName: string
+  color: string
 }
 
 export interface NavbarLink {
-  category: string;
-  label: string;
-  href: string;
-  badge?: NavbarBadge;
+  category: string
+  label: string
+  href: string
+  badge?: NavbarBadge
 }
 
 interface NavbarBadge {
-  label: string;
-  accent?: boolean;
+  label: string
+  accent?: boolean
 }
 
 interface DropdownProps {
-  category: NavbarCategory | NavbarCategoryWithLinks;
-  links: NavbarLink[];
-  compact: boolean;
+  category: NavbarCategory | NavbarCategoryWithLinks
+  links: NavbarLink[]
+  compact: boolean
 }
 
 /**
@@ -53,30 +53,30 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   compact,
 }) => {
   return (
-    <div className="mt-2.5 mr-4 text-right">
-      <Menu as="div" className="relative inline-block text-left">
+    <div className='mt-2.5 mr-4 text-right'>
+      <Menu as='div' className='relative inline-block text-left'>
         <Menu.Button
           className={`inline-flex w-full justify-center rounded-full border-2 border-${category.color} px-4 py-2 text-sm font-medium hover:bg-${category.color}/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-${category.color}/75 transition`}
         >
           {`${category.displayName} `}
           <FontAwesomeIcon
-            className={styles["dropdownIcon"]}
+            className={styles['dropdownIcon']}
             icon={faChevronDown}
           />
         </Menu.Button>
         <Transition
           as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
+          enter='transition ease-out duration-100'
+          enterFrom='transform opacity-0 scale-95'
+          enterTo='transform opacity-100 scale-100'
+          leave='transition ease-in duration-75'
+          leaveFrom='transform opacity-100 scale-100'
+          leaveTo='transform opacity-0 scale-95'
         >
-          <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+          <Menu.Items className='absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none'>
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
-              <div key={link.href} className="px-1 py-1">
+              <div key={link.href} className='px-1 py-1'>
                 <Menu.Item as={Fragment}>
                   {({ active }) => (
                     <a
@@ -84,7 +84,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                       className={`${
                         active
                           ? `bg-${category.color} text-white`
-                          : "bg-white text-black"
+                          : 'bg-white text-black'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm transition`}
                     >
                       {link.label}
@@ -97,11 +97,11 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
         </Transition>
       </Menu>
     </div>
-  );
-};
+  )
+}
 
 export interface NavbarCategoryWithLinks extends NavbarCategory {
-  links: NavbarLink[];
+  links: NavbarLink[]
 }
 
 /**
@@ -114,50 +114,50 @@ export interface NavbarCategoryWithLinks extends NavbarCategory {
 function categorizeNavbarLinks(cat: NavbarCategory[], links: NavbarLink[]) {
   let out: NavbarCategoryWithLinks[] = cat.map((r) =>
     Object.assign(r, { links: [] }),
-  );
+  )
   for (let link of links) {
-    let o = out.find((r) => r.name === link.category);
+    let o = out.find((r) => r.name === link.category)
     o
       ? o.links.push(link)
       : console.warn(
           `NavbarLink: Link ${JSON.stringify(
             link,
           )} does not have a valid category.`,
-        );
+        )
   }
-  return out;
+  return out
 }
 
 export default function NavBar() {
-  const NavCategories = categorizeNavbarLinks(NAVBAR_CATEGORIES, NAVBAR_LINKS);
+  const NavCategories = categorizeNavbarLinks(NAVBAR_CATEGORIES, NAVBAR_LINKS)
 
   return (
     <div className={styles.NavNew}>
-      <div className="flex pb-1 border-b border-black max-w-7xl mx-auto">
-        <div className={`flex ${styles["NavNew-inner-left"]}`}>
-          <Link href="/">
-            <a className="inline-block">
+      <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
+        <div className={`flex ${styles['NavNew-inner-left']}`}>
+          <Link href='/'>
+            <a className='inline-block'>
               <img
-                alt="oSTEM"
-                src="/logo-banner.png"
-                className="flex h-14 mt-0.5 mx-auto"
+                alt='oSTEM'
+                src='/logo-banner.png'
+                className='flex h-14 mt-0.5 mx-auto'
               />
             </a>
           </Link>
-          <div className="ml-2 pl-2 border-l border-black mt-2">
-            <p className="inline-block text-xl leading-none pb-0">
+          <div className='ml-2 pl-2 border-l border-black mt-2'>
+            <p className='inline-block text-xl leading-none pb-0'>
               <b>
                 14<sup>th</sup>
-              </b>{" "}
+              </b>{' '}
               Annual Conference
               <br></br>
-              <span className={`text-sm ${styles["gradientText"]}`}>
+              <span className={`text-sm ${styles['gradientText']}`}>
                 <b>Portland, OR</b> - Oct 17-20, 2024
               </span>
             </p>
           </div>
         </div>
-        <div className={styles["NavNew-inner-right"]}>
+        <div className={styles['NavNew-inner-right']}>
           {/* <DropdownLinkExample /> */}
           {NavCategories.map((categoryWithLink) => (
             <NavbarDropdown
@@ -170,5 +170,5 @@ export default function NavBar() {
         </div>
       </div>
     </div>
-  );
+  )
 }
