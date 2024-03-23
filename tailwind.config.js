@@ -1,11 +1,19 @@
+/**
+ * Because the new navbar is dynamically generated, we need to manually tell Tailwind what CSS classes we need for navbar coloring.
+ * Refer to NavbarConfig and NavbarCore for more information.
+ */
+import {NAVBAR_CATEGORIES} from './src/components/navbar/NavbarConfig';
+let safelist = [];
+for (let i of NAVBAR_CATEGORIES) {
+  let c = i.color;
+  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/20`, `bg-${c}`]);
+}
+
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
   darkMode: false, // or 'media' or 'class'
-  safelist: [
-    'border-blue-600',
-    'purple-600'
-  ],
+  safelist,
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),

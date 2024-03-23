@@ -1,8 +1,9 @@
 /**
  * NavbarCore.tsx
  *
- * Responsible for rendering the new navbar at the top of all pages.
+ * Responsible for rendering the new navbar at the top/side of all pages.
  * Change the links in the navbar by editing @see NavbarConfig.ts - not this file.
+ *
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
 
@@ -33,7 +34,7 @@ interface NavbarBadge {
 }
 
 interface DropdownProps {
-  category: NavbarCategory;
+  category: NavbarCategory | NavbarCategoryWithLinks;
   links: NavbarLink[];
   compact: boolean;
 }
@@ -82,7 +83,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                       href={link.href}
                       className={`${
                         active
-                          ? "bg-green-700 text-white"
+                          ? `bg-${category.color} text-white`
                           : "bg-white text-black"
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm transition`}
                     >
@@ -125,7 +126,6 @@ function categorizeNavbarLinks(cat: NavbarCategory[], links: NavbarLink[]) {
 
 export default function NavBar() {
   const NavCategories = categorizeNavbarLinks(NAVBAR_CATEGORIES, NAVBAR_LINKS);
-  // console.log(NavCategories[0]);
 
   return (
     <div className={styles.NavNew}>
@@ -155,11 +155,14 @@ export default function NavBar() {
         </div>
         <div className={styles["NavNew-inner-right"]}>
           {/* <DropdownLinkExample /> */}
-          <NavbarDropdown
-            category={NAVBAR_CATEGORIES[0]}
-            links={NAVBAR_LINKS}
-            compact={false}
-          ></NavbarDropdown>
+          {NavCategories.map((categoryWithLink) => (
+            <NavbarDropdown
+              key={categoryWithLink.name}
+              category={categoryWithLink}
+              links={categoryWithLink.links}
+              compact={false}
+            ></NavbarDropdown>
+          ))}
         </div>
       </div>
     </div>

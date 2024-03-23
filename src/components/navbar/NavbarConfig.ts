@@ -24,7 +24,7 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
   {
     name: "sponsor",
     displayName: "Sponsor",
-    color: "purple-600",
+    color: "violet-600",
   },
   {
     name: "misc",
@@ -54,11 +54,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: "attend",
-    label: "Register",
-    href: "/2024/register",
-    badge: {
-      label: "Opens June",
-    },
+    label: "Schedule",
+    href: "/2023/schedule",
   },
   {
     category: "present",
