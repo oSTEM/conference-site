@@ -4,7 +4,7 @@
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from './NavbarCore'
+import { NavbarCategory, NavbarLink } from './NavbarCore';
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).
@@ -31,7 +31,7 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
     displayName: 'More',
     color: 'pink-600',
   },
-]
+];
 
 /**
  * This object specifies what links are available and what categories they should be put under.
@@ -42,7 +42,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Register',
-    href: '/2024/register',
+    href: '/2023/register',
     badge: {
       label: 'Opens June',
     },
@@ -67,6 +67,14 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     },
   },
   {
+    category: 'present',
+    label: 'Call for Posters',
+    href: '/2023/cfp',
+    badge: {
+      label: 'Not Yet Open',
+    },
+  },
+  {
     category: 'sponsor',
     label: 'Partnerships',
     href: '/2024/partnership',
@@ -80,4 +88,4 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Annual Awards',
     href: '/2023/awards',
   },
-]
+];

@@ -7,36 +7,38 @@
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
 
-import { Menu, Transition } from '@headlessui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown'
-import Link from 'next/link'
-import { Fragment, useState } from 'react'
-import styles from './Navbar.module.css'
-import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig'
+import { Menu, Transition } from '@headlessui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import Link from 'next/link';
+import { Fragment, useState } from 'react';
+import { useRouter } from 'next/router';
+
+import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig';
+import styles from './Navbar.module.css';
 
 export interface NavbarCategory {
-  name: string
-  displayName: string
-  color: string
+  name: string;
+  displayName: string;
+  color: string;
 }
 
 export interface NavbarLink {
-  category: string
-  label: string
-  href: string
-  badge?: NavbarBadge
+  category: string;
+  label: string;
+  href: string;
+  badge?: NavbarBadge;
 }
 
 interface NavbarBadge {
-  label: string
-  accent?: boolean
+  label: string;
+  accent?: boolean;
 }
 
 interface DropdownProps {
-  category: NavbarCategory | NavbarCategoryWithLinks
-  links: NavbarLink[]
-  compact: boolean
+  category: NavbarCategory | NavbarCategoryWithLinks;
+  links: NavbarLink[];
+  compact: boolean;
 }
 
 /**
@@ -97,11 +99,11 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
         </Transition>
       </Menu>
     </div>
-  )
-}
+  );
+};
 
 export interface NavbarCategoryWithLinks extends NavbarCategory {
-  links: NavbarLink[]
+  links: NavbarLink[];
 }
 
 /**
@@ -111,25 +113,44 @@ export interface NavbarCategoryWithLinks extends NavbarCategory {
  * @param links - Array of links to sort
  * @returns {NavbarCategoryWithLinks[]}
  */
-function categorizeNavbarLinks(cat: NavbarCategory[], links: NavbarLink[]) {
+function categorizeNavbarLinks(
+  cat: NavbarCategory[],
+  links: NavbarLink[],
+  currentPage: NavbarLink | undefined,
+) {
   let out: NavbarCategoryWithLinks[] = cat.map((r) =>
     Object.assign(r, { links: [] }),
-  )
+  );
+  let currentCategory = -1;
   for (let link of links) {
-    let o = out.find((r) => r.name === link.category)
-    o
-      ? o.links.push(link)
-      : console.warn(
-          `NavbarLink: Link ${JSON.stringify(
-            link,
-          )} does not have a valid category.`,
-        )
+    let o = out.findIndex((r) => r.name === link.category);
+    if (o !== -1) {
+      out[o].links.push(link);
+      if (link.href === currentPage?.href) {
+        currentCategory = o;
+      }
+    } else {
+      console.warn(
+        `NavbarLink: Link ${JSON.stringify(
+          link,
+        )} does not have a valid category.`,
+      );
+    }
   }
-  return out
+  return [out, currentCategory];
 }
 
 export default function NavBar() {
-  const NavCategories = categorizeNavbarLinks(NAVBAR_CATEGORIES, NAVBAR_LINKS)
+  const router = useRouter();
+  const currentPage = NAVBAR_LINKS.find(
+    (link) => link.href === router.pathname,
+  );
+
+  const [NavCategories, currentCategory] = categorizeNavbarLinks(
+    NAVBAR_CATEGORIES,
+    NAVBAR_LINKS,
+    currentPage,
+  );
 
   return (
     <div className={`${styles.NavNew}`}>
@@ -146,10 +167,16 @@ export default function NavBar() {
           </Link>
           <div className='ml-2 pl-2 border-l border-black mt-2'>
             <p className='inline-block text-xl leading-none pb-0'>
-              <b>
-                14<sup>th</sup>
-              </b>{' '}
-              Annual Conference
+              {currentPage ? (
+                <span className={`text-${currentCategory.color}`}></span>
+              ) : (
+                <span>
+                  <b>
+                    14<sup>th</sup>
+                  </b>{' '}
+                  Annual Conference
+                </span>
+              )}
               <br></br>
               <span className={`text-sm ${styles['gradientText']}`}>
                 <b>Portland, OR</b> - Oct 17-20, 2024
@@ -159,7 +186,7 @@ export default function NavBar() {
         </div>
         <div className={styles['NavNew-inner-right']}>
           {/* <DropdownLinkExample /> */}
-          {NavCategories.map((categoryWithLink) => (
+          {NavCategories.map((categoryWithLink: NavbarCategoryWithLinks) => (
             <NavbarDropdown
               key={categoryWithLink.name}
               category={categoryWithLink}
@@ -170,5 +197,5 @@ export default function NavBar() {
         </div>
       </div>
     </div>
-  )
+  );
 }
