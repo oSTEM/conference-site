@@ -6,13 +6,12 @@ import {NAVBAR_CATEGORIES} from './src/components/navbar/NavbarConfig';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;
-  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/20`, `bg-${c}`]);
+  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/20`, `hover:bg-${c}/70`, `bg-${c}`, `text-${c}`]);
 }
 
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
-  darkMode: false, // or 'media' or 'class'
   safelist,
   theme: {
     backgroundColor: (theme) => ({

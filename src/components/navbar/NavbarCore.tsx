@@ -38,6 +38,7 @@ interface NavbarBadge {
 interface DropdownProps {
   category: NavbarCategory | NavbarCategoryWithLinks;
   links: NavbarLink[];
+  fill: boolean;
   compact: boolean;
 }
 
@@ -47,18 +48,28 @@ interface DropdownProps {
  * @param {NavbarCategory} category - Which category to pull a label and base color from
  * @param {NavbarLink[]} links - Array of links to render when dropdown is selected
  * @param {boolean} compact - True for a compact, mobile friendly render (no background, no border, small text)
+ * @param {boolean} fill - True to fill the button with the accent color (rather than applying it only to the border)
  * @returns {React.FC<DropdownProps>} Dropdown component
  */
 const NavbarDropdown: React.FC<DropdownProps> = ({
   category,
   links,
+  fill,
   compact,
 }) => {
   return (
     <div className='mt-2.5 mr-4 text-right'>
       <Menu as='div' className='relative inline-block text-left'>
         <Menu.Button
-          className={`inline-flex w-full justify-center rounded-full border-2 border-${category.color} px-4 py-2 text-sm font-medium hover:bg-${category.color}/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-${category.color}/75 transition`}
+          className={`inline-flex w-full justify-center rounded-full border-2 border-${
+            category.color
+          } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
+            category.color
+          }/75 transition ${
+            fill
+              ? `bg-${category.color} text-white hover:bg-${category.color}/70`
+              : `hover:bg-${category.color}/20`
+          }`}
         >
           {`${category.displayName} `}
           <FontAwesomeIcon
@@ -137,7 +148,7 @@ function categorizeNavbarLinks(
       );
     }
   }
-  return [out, currentCategory];
+  return [out, currentCategory] as [NavbarCategoryWithLinks[], number];
 }
 
 export default function NavBar() {
@@ -155,7 +166,7 @@ export default function NavBar() {
   return (
     <div className={`${styles.NavNew}`}>
       <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
-        <div className={`flex ${styles['NavNew-inner-left']}`}>
+        <div className={`flex select-none ${styles['NavNew-inner-left']}`}>
           <Link href='/'>
             <a className='inline-block'>
               <img
@@ -166,9 +177,13 @@ export default function NavBar() {
             </a>
           </Link>
           <div className='ml-2 pl-2 border-l border-black mt-2'>
-            <p className='inline-block text-xl leading-none pb-0'>
+            <p className='inline-block text-xl leading-none cursor-default pb-0'>
               {currentPage ? (
-                <span className={`text-${currentCategory.color}`}></span>
+                <span
+                  className={`text-${NavCategories[currentCategory].color}`}
+                >
+                  {currentPage.label}
+                </span>
               ) : (
                 <span>
                   <b>
@@ -178,9 +193,18 @@ export default function NavBar() {
                 </span>
               )}
               <br></br>
-              <span className={`text-sm ${styles['gradientText']}`}>
-                <b>Portland, OR</b> - Oct 17-20, 2024
-              </span>
+              {currentPage ? (
+                <span className='text-sm'>
+                  <b>
+                    14<sup>th</sup>
+                  </b>{' '}
+                  Annual Conference
+                </span>
+              ) : (
+                <span className={`text-sm ${styles['gradientText']}`}>
+                  <b>Portland, OR</b> - Oct 17-20, 2024
+                </span>
+              )}
             </p>
           </div>
         </div>
@@ -192,6 +216,9 @@ export default function NavBar() {
               category={categoryWithLink}
               links={categoryWithLink.links}
               compact={false}
+              fill={
+                categoryWithLink.name === NavCategories[currentCategory]?.name
+              }
             ></NavbarDropdown>
           ))}
         </div>

@@ -14,7 +14,7 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
   {
     name: 'attend',
     displayName: 'Attend',
-    color: 'green-600',
+    color: 'green-700',
   },
   {
     name: 'present',
@@ -42,7 +42,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Register',
-    href: '/2023/register',
+    href: '/2023/registration',
     badge: {
       label: 'Opens June',
     },
