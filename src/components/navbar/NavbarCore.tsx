@@ -67,7 +67,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
             category.color
           }/75 transition ${
             fill
-              ? `bg-${category.color} text-white hover:bg-${category.color}/70`
+              ? `bg-${category.color} text-white hover:bg-${category.color}/70 font-semibold`
               : `hover:bg-${category.color}/20`
           }`}
         >

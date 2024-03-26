@@ -41,7 +41,7 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: 'Register',
+    label: 'Registration',
     href: '/2023/registration',
     badge: {
       label: 'Opens June',
