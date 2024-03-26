@@ -19,10 +19,6 @@
 .NavNew-inner-left {
   flex-grow: 1;
 }
-.NavNew-inner-right {
-  /* background: #8ff; */
-  display: flex;
-}
 
 .dropdownIcon {
   margin-left: 0.5rem;

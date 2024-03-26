@@ -10,6 +10,7 @@
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -212,8 +213,7 @@ export default function NavBar() {
             </p>
           </div>
         </div>
-        <div className={styles['NavNew-inner-right']}>
-          {/* <DropdownLinkExample /> */}
+        <div className={`hidden lg:flex`}>
           {NavCategories.map((categoryWithLink: NavbarCategoryWithLinks) => (
             <NavbarDropdown
               key={categoryWithLink.name}
@@ -225,6 +225,11 @@ export default function NavBar() {
               }
             ></NavbarDropdown>
           ))}
+        </div>
+        <div className={`flex lg:hidden`}>
+          <button className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'>
+            <FontAwesomeIcon className='' icon={faBars} />
+          </button>
         </div>
       </div>
     </div>
