@@ -29,6 +29,9 @@ module.exports = {
       "tint-rouge-light": "#c6a6aa",
       "bright-peach": "#EB6955",
     }),
+    transitionDuration: {
+      DEFAULT: '180ms'
+    },
     extend: {
       colors: {
         "ostem-blue": "#1B7EA1",

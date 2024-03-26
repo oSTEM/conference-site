@@ -26,9 +26,12 @@
 
 .dropdownIcon {
   margin-left: 0.5rem;
-  /* Not good practice... if someone else wants to figure out why by default (without these two lines below) the icon size changes on different pages feel free! */
-  width: 1rem !important;
-  height: 100% !important;
+  height: 0.875rem;
+  transition: transform 0.24s;
+}
+
+.dropdownBtn[data-headlessui-state="open"] .dropdownIcon {
+  transform: rotateX(180deg);
 }
 
 .gradientText {
