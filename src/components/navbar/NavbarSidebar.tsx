@@ -5,6 +5,33 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { NavbarCategoryWithLinks } from './NavbarCore';
 import Link from 'next/link';
 
+interface LinkGroup {
+  category: NavbarCategoryWithLinks;
+}
+
+const LinkGroup: React.FC<LinkGroup> = ({ category }) => {
+  return (
+    <div>
+      <h2
+        className={`text-${category.color} font-semibold text-2xl leading-none`}
+      >
+        {category.displayName}
+      </h2>
+      <div className={`border-l-2 border-${category.color} ml-0.5 pl-1 mb-2`}>
+        {category.links.map((link) => (
+          <Link key={link.label} className='text-black' href={link.href}>
+            <p
+              className={`pl-1 hover:bg-${category.color}/20 transition cursor-pointer`}
+            >
+              {link.label}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 interface SidebarProps {
   active: boolean;
   navCategories: NavbarCategoryWithLinks[];
@@ -46,13 +73,13 @@ const SideBar: React.FC<SidebarProps> = ({
         <div
           className={`fixed right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
         >
-          <div className='flex'>
+          <div className='flex border-b border-black'>
             <Link href='/'>
               <a className='inline-block'>
                 <img
                   alt='oSTEM'
                   src='/logo-banner.png'
-                  className='flex h-14 ml-4 sm:ml-2 mt-0.5 mx-auto'
+                  className='flex h-14 ml-4 sm:ml-2 mt-0.5 mb-1 mx-auto'
                 />
               </a>
             </Link>
@@ -63,6 +90,11 @@ const SideBar: React.FC<SidebarProps> = ({
             >
               <FontAwesomeIcon className='w-5 h-5' icon={faTimes} />
             </button>
+          </div>
+          <div className='p-4'>
+            {navCategories.map((category) => (
+              <LinkGroup key={category.name} category={category}></LinkGroup>
+            ))}
           </div>
         </div>
       </Transition>
