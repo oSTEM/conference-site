@@ -212,7 +212,7 @@ const SideBar: React.FC<SidebarProps> = ({
               className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
               onClick={() => sidebarStateHandler(false)}
             >
-              <FontAwesomeIcon className='' icon={faTimes} />
+              <FontAwesomeIcon className='w-5 h-5' icon={faTimes} />
             </button>
           </div>
         </div>
@@ -303,7 +303,7 @@ export default function NavBar() {
               className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
-              <FontAwesomeIcon className='' icon={faBars} />
+              <FontAwesomeIcon className='w-5 h-5' icon={faBars} />
             </button>
           </div>
         </div>
