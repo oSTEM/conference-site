@@ -110,10 +110,12 @@ h2 {
 
 h3 {
   font-size: var(--type-t300);
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--type-t200);
+  font-weight: 600;
 }
 
 /* Inline elements */

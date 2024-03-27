@@ -17,14 +17,16 @@ const LinkGroup: React.FC<LinkGroup> = ({ category }) => {
       >
         {category.displayName}
       </h2>
-      <div className={`border-l-2 border-${category.color} ml-0.5 pl-1 mb-2`}>
+      <div className={`border-l-2 border-${category.color} ml-0.5 mb-4`}>
         {category.links.map((link) => (
-          <Link key={link.label} className='text-black' href={link.href}>
-            <p
-              className={`pl-1 hover:bg-${category.color}/20 transition cursor-pointer`}
-            >
-              {link.label}
-            </p>
+          <Link key={link.label} href={link.href}>
+            <a className='text-black'>
+              <p
+                className={`pl-2 hover:bg-${category.color}/15 active:bg-${category.color}/20 transition cursor-pointer rounded-r-sm `}
+              >
+                {link.label}
+              </p>
+            </a>
           </Link>
         ))}
       </div>
