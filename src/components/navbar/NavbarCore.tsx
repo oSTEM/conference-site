@@ -223,7 +223,7 @@ const SideBar: React.FC<SidebarProps> = ({
 
 export default function NavBar() {
   const router = useRouter();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentPage = NAVBAR_LINKS.find(
     (link) => link.href === router.pathname,
   );
@@ -249,7 +249,7 @@ export default function NavBar() {
                 <img
                   alt='oSTEM'
                   src='/logo-banner.png'
-                  className='flex h-14 ml-4 sm:ml-0 mt-0.5 mx-auto'
+                  className='flex h-14 ml-4 sm:ml-1 mt-0.5 mx-auto'
                 />
               </a>
             </Link>
