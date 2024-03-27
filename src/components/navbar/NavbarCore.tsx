@@ -11,8 +11,9 @@ import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import Link from 'next/link';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, Dispatch, SetStateAction } from 'react';
 import { useRouter } from 'next/router';
 
 import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig';
@@ -156,8 +157,46 @@ function categorizeNavbarLinks(
   return [out, currentCategory] as [NavbarCategoryWithLinks[], number];
 }
 
+interface SidebarProps {
+  active: boolean;
+  navCategories: NavbarCategoryWithLinks[];
+  sidebarStateHandler: Dispatch<SetStateAction<boolean>>;
+}
+const SideBar: React.FC<SidebarProps> = ({
+  active,
+  navCategories,
+  sidebarStateHandler,
+}) => {
+  return (
+    <div
+      className={`${
+        active ? 'fixed' : 'hidden'
+      } right-0 top-0 h-full w-72 bg-white z-10`}
+    >
+      <div className='flex'>
+        <Link href='/'>
+          <a className='inline-block flex-grow'>
+            <img
+              alt='oSTEM'
+              src='/logo-banner.png'
+              className='flex h-14 ml-1 mt-0.5 mx-auto'
+            />
+          </a>
+        </Link>
+        <button
+          className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'
+          onClick={() => sidebarStateHandler(false)}
+        >
+          <FontAwesomeIcon className='' icon={faTimes} />
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export default function NavBar() {
   const router = useRouter();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const currentPage = NAVBAR_LINKS.find(
     (link) => link.href === router.pathname,
   );
@@ -169,67 +208,77 @@ export default function NavBar() {
   );
 
   return (
-    <div className={`${styles.NavNew}`}>
-      <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
-        <div className={`flex select-none ${styles['NavNew-inner-left']}`}>
-          <Link href='/'>
-            <a className='inline-block'>
-              <img
-                alt='oSTEM'
-                src='/logo-banner.png'
-                className='flex h-14 mt-0.5 mx-auto'
-              />
-            </a>
-          </Link>
-          <div className='ml-2 pl-2 border-l border-black mt-2'>
-            <p className='inline-block text-xl leading-none cursor-default pb-0'>
-              {currentPage ? (
-                <span
-                  className={`text-${NavCategories[currentCategory].color}`}
-                >
-                  {currentPage.label}
-                </span>
-              ) : (
-                <span>
-                  <b>
-                    14<sup>th</sup>
-                  </b>{' '}
-                  Annual Conference
-                </span>
-              )}
-              <br></br>
-              {currentPage ? (
-                <span className='text-sm'>
-                  <b>
-                    14<sup>th</sup>
-                  </b>{' '}
-                  Annual Conference
-                </span>
-              ) : (
-                <span className={`text-sm ${styles['gradientText']}`}>
-                  <b>Portland, OR</b> - Oct 17-20, 2024
-                </span>
-              )}
-            </p>
+    <div>
+      <SideBar
+        active={sidebarOpen}
+        navCategories={NavCategories}
+        sidebarStateHandler={setSidebarOpen}
+      />
+      <div className={`${styles.NavNew}`}>
+        <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
+          <div className={`flex select-none ${styles['NavNew-inner-left']}`}>
+            <Link href='/'>
+              <a className='inline-block'>
+                <img
+                  alt='oSTEM'
+                  src='/logo-banner.png'
+                  className='flex h-14 mt-0.5 mx-auto'
+                />
+              </a>
+            </Link>
+            <div className='ml-2 pl-2 border-l border-black mt-2'>
+              <p className='inline-block text-xl leading-none cursor-default pb-0'>
+                {currentPage ? (
+                  <span
+                    className={`text-${NavCategories[currentCategory].color}`}
+                  >
+                    {currentPage.label}
+                  </span>
+                ) : (
+                  <span>
+                    <b>
+                      14<sup>th</sup>
+                    </b>{' '}
+                    Annual Conference
+                  </span>
+                )}
+                <br></br>
+                {currentPage ? (
+                  <span className='text-sm'>
+                    <b>
+                      14<sup>th</sup>
+                    </b>{' '}
+                    Annual Conference
+                  </span>
+                ) : (
+                  <span className={`text-sm ${styles['gradientText']}`}>
+                    <b>Portland, OR</b> - Oct 17-20, 2024
+                  </span>
+                )}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={`hidden lg:flex`}>
-          {NavCategories.map((categoryWithLink: NavbarCategoryWithLinks) => (
-            <NavbarDropdown
-              key={categoryWithLink.name}
-              category={categoryWithLink}
-              links={categoryWithLink.links}
-              compact={false}
-              fill={
-                categoryWithLink.name === NavCategories[currentCategory]?.name
-              }
-            ></NavbarDropdown>
-          ))}
-        </div>
-        <div className={`flex lg:hidden`}>
-          <button className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'>
-            <FontAwesomeIcon className='' icon={faBars} />
-          </button>
+          <div className={`hidden lg:flex`}>
+            {NavCategories.map((categoryWithLink: NavbarCategoryWithLinks) => (
+              <NavbarDropdown
+                key={categoryWithLink.name}
+                category={categoryWithLink}
+                links={categoryWithLink.links}
+                compact={false}
+                fill={
+                  categoryWithLink.name === NavCategories[currentCategory]?.name
+                }
+              ></NavbarDropdown>
+            ))}
+          </div>
+          <div className={`flex lg:hidden`}>
+            <button
+              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+            >
+              <FontAwesomeIcon className='' icon={faBars} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

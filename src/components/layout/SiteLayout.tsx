@@ -1,15 +1,15 @@
-import React from 'react'
-import { useState } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import { SocialRow } from './Socials'
-import { useRouter } from 'next/router'
-import { Color } from 'theme/Color'
-import NavBar from '@/components/navbar/NavbarCore'
+import React from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import { SocialRow } from './Socials';
+import { useRouter } from 'next/router';
+import { Color } from 'theme/Color';
+import NavBar from '@/components/navbar/NavbarCore';
 
 export interface SiteLayoutProps {
-  children: React.ReactNode
-  title?: string
+  children: React.ReactNode;
+  title?: string;
 }
 
 export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
@@ -19,7 +19,6 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
         <title>{title ? title + ' | ' : ''}14th Annual oSTEM Conference</title>
       </Head>
       <div className='flex flex-col min-h-screen bg-primary'>
-        {/* <NavBarLegacy /> */}
         <NavBar />
         <main className='container mt-12 p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full'>
           {children}
@@ -27,13 +26,13 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 // import { Fragment, useEffect, useRef, useState } from 'react'
 
 export function NavBarLegacy() {
-  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <div className='md:fixed'>
@@ -109,7 +108,7 @@ export function NavBarLegacy() {
     }
   `}</style>
     </div>
-  )
+  );
 }
 
 const NavBarLinks = () => {
@@ -140,19 +139,19 @@ const NavBarLinks = () => {
         Request for Proposals
       </NavLink>
     </div>
-  )
-}
+  );
+};
 
 const NavLink = ({
   children,
   href,
   color,
 }: {
-  children: string
-  href: string
-  color: string
+  children: string;
+  href: string;
+  color: string;
 }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <li>
@@ -175,8 +174,8 @@ const NavLink = ({
         </a>
       </Link>
     </li>
-  )
-}
+  );
+};
 
 const Footer = () => {
   return (
@@ -189,5 +188,5 @@ const Footer = () => {
         <SocialRow />
       </div>
     </footer>
-  )
-}
+  );
+};
