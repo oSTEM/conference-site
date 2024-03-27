@@ -30,7 +30,10 @@ module.exports = {
       "bright-peach": "#EB6955",
     }),
     transitionDuration: {
-      DEFAULT: '180ms'
+      DEFAULT: '180ms',
+      '135': '135ms',
+      '270': '270ms',
+      '360': '360ms'
     },
     extend: {
       colors: {
