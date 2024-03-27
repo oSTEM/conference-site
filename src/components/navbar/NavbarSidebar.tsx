@@ -73,7 +73,7 @@ const SideBar: React.FC<SidebarProps> = ({
         show={active}
       >
         <div
-          className={`fixed right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
+          className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
         >
           <div className='flex border-b border-black'>
             <Link href='/'>
@@ -93,7 +93,7 @@ const SideBar: React.FC<SidebarProps> = ({
               <FontAwesomeIcon className='w-5 h-5' icon={faTimes} />
             </button>
           </div>
-          <div className='p-4'>
+          <div className='p-4 overflow-y-auto'>
             {navCategories.map((category) => (
               <LinkGroup key={category.name} category={category}></LinkGroup>
             ))}
