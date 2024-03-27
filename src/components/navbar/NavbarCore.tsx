@@ -168,27 +168,29 @@ const SideBar: React.FC<SidebarProps> = ({
   sidebarStateHandler,
 }) => {
   return (
-    <div
-      className={`${
-        active ? 'fixed' : 'hidden'
-      } right-0 top-0 h-full w-72 bg-white z-10`}
-    >
-      <div className='flex'>
-        <Link href='/'>
-          <a className='inline-block flex-grow'>
-            <img
-              alt='oSTEM'
-              src='/logo-banner.png'
-              className='flex h-14 ml-1 mt-0.5 mx-auto'
-            />
-          </a>
-        </Link>
-        <button
-          className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'
-          onClick={() => sidebarStateHandler(false)}
-        >
-          <FontAwesomeIcon className='' icon={faTimes} />
-        </button>
+    <div className={`${active ? '' : 'hidden'}`}>
+      <div className='fixed z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-sm'></div>
+      <div
+        className={`fixed right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
+      >
+        <div className='flex'>
+          <Link href='/'>
+            <a className='inline-block'>
+              <img
+                alt='oSTEM'
+                src='/logo-banner.png'
+                className='flex h-14 ml-4 sm:ml-2 mt-0.5 mx-auto'
+              />
+            </a>
+          </Link>
+          <span className='flex-grow'></span>
+          <button
+            className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
+            onClick={() => sidebarStateHandler(false)}
+          >
+            <FontAwesomeIcon className='' icon={faTimes} />
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -222,11 +224,11 @@ export default function NavBar() {
                 <img
                   alt='oSTEM'
                   src='/logo-banner.png'
-                  className='flex h-14 mt-0.5 mx-auto'
+                  className='flex h-14 ml-4 sm:ml-0 mt-0.5 mx-auto'
                 />
               </a>
             </Link>
-            <div className='ml-2 pl-2 border-l border-black mt-2'>
+            <div className='hidden sm:flex ml-2 pl-2 border-l border-black mt-2'>
               <p className='inline-block text-xl leading-none cursor-default pb-0'>
                 {currentPage ? (
                   <span
@@ -273,7 +275,7 @@ export default function NavBar() {
           </div>
           <div className={`flex lg:hidden`}>
             <button
-              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-4 mt-2.5'
+              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
               <FontAwesomeIcon className='' icon={faBars} />
