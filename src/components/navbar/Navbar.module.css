@@ -9,13 +9,6 @@
   z-index: 1;
 }
 
-.NavNew-inner {
-  margin: auto;
-  /* background: #ff8; */
-  max-width: 1400px;
-  border-bottom: 1px solid #000;
-}
-
 .NavNew-inner-left {
   flex-grow: 1;
 }
@@ -35,4 +28,9 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.NavMobile p {
+  font-size: 14px;
+  line-height: 1;
 }

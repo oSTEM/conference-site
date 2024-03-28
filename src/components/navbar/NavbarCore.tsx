@@ -179,14 +179,14 @@ export default function NavBar() {
         sidebarStateHandler={setSidebarOpen}
       />
       <div className={`${styles.NavNew}`}>
-        <div className='flex pb-1 border-b border-black max-w-7xl mx-auto'>
+        <div className='flex ml-2 mr-2 xl:mx-auto pb-1 border-b border-black max-w-7xl mx-auto'>
           <div className={`flex select-none ${styles['NavNew-inner-left']}`}>
             <Link href='/'>
               <a className='inline-block'>
                 <img
                   alt='oSTEM'
                   src='/logo-banner.png'
-                  className='flex h-14 ml-4 sm:ml-1 mt-0.5 mx-auto'
+                  className='flex h-14 sm:ml-1 mt-0.5 mx-auto'
                 />
               </a>
             </Link>
@@ -194,7 +194,7 @@ export default function NavBar() {
               <p className='inline-block text-xl leading-none cursor-default pb-0'>
                 {currentPage ? (
                   <span
-                    className={`text-${NavCategories[currentCategory].color}`}
+                    className={`text-${NavCategories[currentCategory].color} font-semibold`}
                   >
                     {currentPage.label}
                   </span>
@@ -237,12 +237,31 @@ export default function NavBar() {
           </div>
           <div className={`flex lg:hidden`}>
             <button
-              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
+              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-3 sm:mr-4 mt-2.5'
               onClick={() => setSidebarOpen(!sidebarOpen)}
             >
               <FontAwesomeIcon className='w-5 h-5' icon={faBars} />
             </button>
           </div>
+        </div>
+        <div
+          className={`flex sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
+        >
+          {currentPage ? (
+            <div className={`text-${NavCategories[currentCategory].color}`}>
+              <p>{currentPage.label}</p>
+            </div>
+          ) : (
+            <div className='flex w-full ml-0.5 mr-1'>
+              <p className='grow'>
+                <b>
+                  14<sup>th</sup>
+                </b>{' '}
+                Annual Conference
+              </p>
+              <p className={styles['gradientText']}>Portland, OR</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
