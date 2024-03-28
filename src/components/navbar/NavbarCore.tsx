@@ -89,7 +89,9 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
           {labelOverride ? labelOverride : category.displayName}
           <span>
             <FontAwesomeIcon
-              className={`${styles['dropdownIcon']} mt-0.5 h-3.5 ml-2 transition duration-270`}
+              className={`${styles['dropdownIcon']} ${
+                compact ? 'mt-0.5 ml-1 h-3' : 'mt-0.5 ml-2 h-3.5'
+              } transition duration-270`}
               icon={faChevronDown}
             />
           </span>
@@ -260,7 +262,7 @@ export default function NavBar() {
           </div>
         </div>
         <div
-          className={`flex sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
+          className={`flex cursor-default sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
         >
           {currentPage ? (
             <div
