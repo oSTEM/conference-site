@@ -13,8 +13,14 @@
   flex-grow: 1;
 }
 
+.dropdownCompactOuter {
+  font-size: 14px;
+  line-height: 1;
+  padding-top: 0.25rem;
+}
+
 .dropdownCompact {
-  display: inline-flex
+  display: inline-flex;
 }
 
 .dropdownBtn[data-headlessui-state="open"] .dropdownIcon, .dropdownCompact[data-headlessui-state="open"] .dropdownIcon {

@@ -63,8 +63,12 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   labelOverride,
 }) => {
   return (
-    <div className={compact ? '' : 'mt-2.5 mr-4 text-right'}>
-      <Menu as='div' className='relative inline-block text-left'>
+    <div
+      className={
+        compact ? styles['dropdownCompactOuter'] : 'mt-2.5 mr-4 text-right'
+      }
+    >
+      <Menu as='div' className={`relative inline-block text-left`}>
         <Menu.Button
           className={
             compact
@@ -263,12 +267,11 @@ export default function NavBar() {
               className={`text-${NavCategories[currentCategory].color} flex`}
             >
               <p>{NavCategories[currentCategory].displayName}</p>
-              <p>
-                <FontAwesomeIcon
-                  className='text-black ml-1 mr-1 mt-1 w-2 h-2'
-                  icon={faChevronRight}
-                />
-              </p>
+
+              <FontAwesomeIcon
+                className='text-black ml-1.5 mr-1.5 mt-2 w-2 h-2'
+                icon={faChevronRight}
+              />
               <NavbarDropdown
                 category={NavCategories[currentCategory]}
                 links={NavCategories[currentCategory].links}
