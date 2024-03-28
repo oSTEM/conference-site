@@ -174,6 +174,7 @@ export default function NavBar() {
     <div>
       <SideBar
         active={sidebarOpen}
+        currentPage={currentPage}
         navCategories={NavCategories}
         sidebarStateHandler={setSidebarOpen}
       />

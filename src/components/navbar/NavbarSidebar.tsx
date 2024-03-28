@@ -2,14 +2,15 @@ import { Fragment, Dispatch, SetStateAction } from 'react';
 import { Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
-import { NavbarCategoryWithLinks } from './NavbarCore';
+import { NavbarLink, NavbarCategoryWithLinks } from './NavbarCore';
 import Link from 'next/link';
 
 interface LinkGroup {
   category: NavbarCategoryWithLinks;
+  active: string | boolean;
 }
 
-const LinkGroup: React.FC<LinkGroup> = ({ category }) => {
+const LinkGroup: React.FC<LinkGroup> = ({ category, active }) => {
   return (
     <div>
       <h2
@@ -22,7 +23,11 @@ const LinkGroup: React.FC<LinkGroup> = ({ category }) => {
           <Link key={link.label} href={link.href}>
             <a className='text-black'>
               <p
-                className={`pl-2 hover:bg-${category.color}/15 active:bg-${category.color}/20 transition cursor-pointer rounded-r-sm `}
+                className={`pl-2 transition cursor-pointer rounded-r-md ${
+                  active === link.href
+                    ? `text-white bg-${category.color} hover:bg-${category.color}/70`
+                    : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
+                }`}
               >
                 {link.label}
               </p>
@@ -36,15 +41,18 @@ const LinkGroup: React.FC<LinkGroup> = ({ category }) => {
 
 interface SidebarProps {
   active: boolean;
+  currentPage?: NavbarLink | undefined;
   navCategories: NavbarCategoryWithLinks[];
   sidebarStateHandler: Dispatch<SetStateAction<boolean>>;
 }
 
 const SideBar: React.FC<SidebarProps> = ({
   active,
+  currentPage,
   navCategories,
   sidebarStateHandler,
 }) => {
+  let highlight = currentPage?.href || false;
   return (
     <div>
       <Transition
@@ -95,7 +103,13 @@ const SideBar: React.FC<SidebarProps> = ({
           </div>
           <div className='p-4 overflow-y-auto'>
             {navCategories.map((category) => (
-              <LinkGroup key={category.name} category={category}></LinkGroup>
+              <LinkGroup
+                key={category.name}
+                category={category}
+                active={
+                  category.name === currentPage?.category ? highlight : false
+                }
+              ></LinkGroup>
             ))}
           </div>
         </div>
