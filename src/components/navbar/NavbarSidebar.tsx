@@ -23,11 +23,14 @@ const LinkGroup: React.FC<LinkGroup> = ({ category, active }) => {
           <Link key={link.label} href={link.href}>
             <a className='text-black'>
               <p
-                className={`pl-2 transition cursor-pointer rounded-r-md ${
+                className={`pl-2 transition rounded-r-full hover:bg-${
+                  category.color
+                }/15 ${
                   active === link.href
-                    ? `text-white bg-${category.color} hover:bg-${category.color}/70`
-                    : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
+                    ? `text-${category.color} font-semibold cursor-default`
+                    : `active:bg-${category.color}/20 cursor-pointer`
                 }`}
+                title={active === link.href ? `You're already here!` : ''}
               >
                 {link.label}
               </p>
