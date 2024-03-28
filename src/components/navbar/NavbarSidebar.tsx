@@ -86,19 +86,19 @@ const SideBar: React.FC<SidebarProps> = ({
         <div
           className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
         >
-          <div className='flex border-b border-black'>
+          <div className='flex border-b ml-2 mr-2 border-black'>
             <Link href='/'>
               <a className='inline-block'>
                 <img
                   alt='oSTEM'
                   src='/logo-banner.png'
-                  className='flex h-14 ml-4 sm:ml-2 mt-0.5 mb-1 mx-auto'
+                  className='flex h-14 mt-0.5 mb-1 mx-auto'
                 />
               </a>
             </Link>
             <span className='flex-grow'></span>
             <button
-              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-5 sm:mr-4 mt-2.5'
+              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-3 mt-2.5'
               onClick={() => sidebarStateHandler(false)}
             >
               <FontAwesomeIcon className='w-5 h-5' icon={faTimes} />
