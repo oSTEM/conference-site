@@ -13,13 +13,11 @@
   flex-grow: 1;
 }
 
-.dropdownIcon {
-  margin-left: 0.5rem;
-  height: 0.875rem;
-  transition: transform 0.24s;
+.dropdownCompact {
+  display: inline-flex
 }
 
-.dropdownBtn[data-headlessui-state="open"] .dropdownIcon {
+.dropdownBtn[data-headlessui-state="open"] .dropdownIcon, .dropdownCompact[data-headlessui-state="open"] .dropdownIcon {
   transform: rotateX(180deg);
 }
 
@@ -30,7 +28,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.NavMobile p {
+.NavMobile p, .dropdownCompact {
   font-size: 14px;
   line-height: 1;
 }

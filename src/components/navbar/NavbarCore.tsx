@@ -10,6 +10,7 @@
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
 import { Fragment, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -40,8 +41,9 @@ interface NavbarBadge {
 interface DropdownProps {
   category: NavbarCategory | NavbarCategoryWithLinks;
   links: NavbarLink[];
-  fill: boolean;
+  fill?: boolean;
   compact: boolean;
+  labelOverride?: string;
 }
 
 /**
@@ -58,27 +60,32 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   links,
   fill,
   compact,
+  labelOverride,
 }) => {
   return (
-    <div className='mt-2.5 mr-4 text-right'>
+    <div className={compact ? '' : 'mt-2.5 mr-4 text-right'}>
       <Menu as='div' className='relative inline-block text-left'>
         <Menu.Button
-          className={`${
-            styles['dropdownBtn']
-          } inline-flex items-center w-full justify-center rounded-full border-2 border-${
-            category.color
-          } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
-            category.color
-          }/75 transition ${
-            fill
-              ? `bg-${category.color} text-white hover:bg-${category.color}/70 font-semibold`
-              : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
-          }`}
+          className={
+            compact
+              ? styles['dropdownCompact']
+              : `${
+                  styles['dropdownBtn']
+                } inline-flex items-center w-full justify-center rounded-full border-2 border-${
+                  category.color
+                } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
+                  category.color
+                }/75 transition ${
+                  fill
+                    ? `bg-${category.color} text-white hover:bg-${category.color}/70 font-semibold`
+                    : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
+                }`
+          }
         >
-          {`${category.displayName} `}
+          {labelOverride ? labelOverride : category.displayName}
           <span>
             <FontAwesomeIcon
-              className={styles['dropdownIcon']}
+              className={`${styles['dropdownIcon']} mt-0.5 h-3.5 ml-2 transition duration-270`}
               icon={faChevronDown}
             />
           </span>
@@ -92,7 +99,11 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-          <Menu.Items className='absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none'>
+          <Menu.Items
+            className={`${
+              compact ? 'fixed left-2' : 'absolute right-0'
+            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none`}
+          >
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
               <div key={link.href} className='px-1 py-1'>
@@ -248,8 +259,22 @@ export default function NavBar() {
           className={`flex sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
         >
           {currentPage ? (
-            <div className={`text-${NavCategories[currentCategory].color}`}>
-              <p>{currentPage.label}</p>
+            <div
+              className={`text-${NavCategories[currentCategory].color} flex`}
+            >
+              <p>{NavCategories[currentCategory].displayName}</p>
+              <p>
+                <FontAwesomeIcon
+                  className='text-black ml-1 mr-1 mt-1 w-2 h-2'
+                  icon={faChevronRight}
+                />
+              </p>
+              <NavbarDropdown
+                category={NavCategories[currentCategory]}
+                links={NavCategories[currentCategory].links}
+                labelOverride={currentPage.label}
+                compact={true}
+              ></NavbarDropdown>
             </div>
           ) : (
             <div className='flex w-full ml-0.5 mr-1'>
