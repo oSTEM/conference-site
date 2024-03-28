@@ -72,7 +72,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
         <Menu.Button
           className={
             compact
-              ? styles['dropdownCompact']
+              ? `${styles['dropdownCompact']} transition hover:bg-${category.color}/15 active:bg-${category.color}/20`
               : `${
                   styles['dropdownBtn']
                 } inline-flex items-center w-full justify-center rounded-full border-2 border-${
@@ -262,16 +262,18 @@ export default function NavBar() {
           </div>
         </div>
         <div
-          className={`flex cursor-default sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
+          className={`flex select-none cursor-default sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
         >
           {currentPage ? (
             <div
               className={`text-${NavCategories[currentCategory].color} flex`}
             >
-              <p>{NavCategories[currentCategory].displayName}</p>
+              <p className='font-semibold'>
+                {NavCategories[currentCategory].displayName}
+              </p>
 
               <FontAwesomeIcon
-                className='text-black ml-1.5 mr-1.5 mt-2 w-2 h-2'
+                className='text-black ml-1.5 mr-0.5 mt-2 w-2 h-2'
                 icon={faChevronRight}
               />
               <NavbarDropdown

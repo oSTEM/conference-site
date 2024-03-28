@@ -16,11 +16,11 @@
 .dropdownCompactOuter {
   font-size: 14px;
   line-height: 1;
-  padding-top: 3px;
 }
 
 .dropdownCompact {
   display: inline-flex;
+  padding: 3px 4px 4px;
 }
 
 .dropdownBtn[data-headlessui-state="open"] .dropdownIcon, .dropdownCompact[data-headlessui-state="open"] .dropdownIcon {
