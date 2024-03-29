@@ -1,0 +1,72 @@
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { CTAButton } from "@/components/button/CTAButton";
+import { TopicSquare } from "@/components/rfp/TopicSquare";
+import Image from "next/image";
+
+<SiteLayout title="Registration">
+
+<div className="border-b-4 border-ostem-blue border-solid pb-4 mb-4 text-center">
+  <p className="text-5xl font-display font-medium">Registration</p>
+</div>
+
+<Image
+  src="/images/2023registration.png"
+  alt=""
+  layout="responsive"
+  width="800"
+  height="360"
+/>
+
+<br />
+
+We are pleased to invite you to the 14th Annual Conference in Portland, OR! Join
+us in a celebration of diversity across all fields.
+
+<br />
+
+---
+
+<div className="text-bright-peach font-bold text-center">
+
+### Conference registration opens June
+
+</div>
+
+Registration is not open yet. If you'd like, you can fill out the form below to be notified when tickets for oSTEM 2024 go on sale.
+
+<div className="my-2 flex flex-col items-center sm:flex-row justify-center">
+  <div className="my-1 sm:mx-2">
+    <CTAButton onClick="https://form.jotform.com/232986540358062">
+      oSTEM 2024 Ticket Alert
+    </CTAButton>
+  </div>
+</div>
+<br />
+
+---
+
+<div className="text-bright-peach font-bold text-center">
+
+### Previous Conference Registration
+
+</div>
+
+While 2024 Conference Registration hasn't opened yet, you can take a look at last year's registration to get a sense of what registration generally looks like. We plan on continuing to offer similar ticket tiering (discounted member pricing, discounted early-bird pricing, and expo-only options), however, you can expect registration to open sometime in June instead of August this year.
+
+<div className="my-2 flex flex-col items-center sm:flex-row justify-center">
+  <div className="my-1 sm:mx-2">
+    <CTAButton onClick="/archive/2023/registration" target="_self">
+      Archived 2023 Registration
+    </CTAButton>
+  </div>
+</div>
+<br />
+
+---
+
+For further conference and/or accessibility questions or concerns, please
+contact conference@ostem.org.
+
+---
+
+</SiteLayout>

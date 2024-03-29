@@ -42,7 +42,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Registration',
-    href: '/2023/registration',
+    href: '/2024/registration',
     badge: {
       label: 'Opens June',
     },
@@ -50,12 +50,12 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Attendee Resources',
-    href: '/2023/attendee-guide',
+    href: '/2024/attendee-resources',
   },
   {
     category: 'attend',
     label: 'Schedule',
-    href: '/2023/schedule',
+    href: '/archive/2023/schedule',
   },
   {
     category: 'present',
@@ -69,7 +69,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'present',
     label: 'Call for Posters',
-    href: '/2023/cfp',
+    href: '/archive/2023/cfp',
     badge: {
       label: 'Not Yet Open',
     },
@@ -86,6 +86,6 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'misc',
     label: 'Annual Awards',
-    href: '/2023/awards',
+    href: '/archive/2023/awards',
   },
 ];
