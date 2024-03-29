@@ -22,8 +22,8 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
     color: 'blue-600',
   },
   {
-    name: 'sponsor',
-    displayName: 'Sponsor',
+    name: 'partner',
+    displayName: 'Partner',
     color: 'violet-600',
   },
   {
@@ -75,9 +75,18 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     },
   },
   {
-    category: 'sponsor',
-    label: 'Partnerships',
+    category: 'partner',
+    label: 'Exhibition and Sponsorship',
     href: '/2024/partnership',
+    badge: {
+      label: 'Open',
+      accent: true,
+    },
+  },
+  {
+    category: 'partner',
+    label: 'Previous Exhibitors',
+    href: '/2024/previous-exhibitors',
     badge: {
       label: 'Open',
       accent: true,
