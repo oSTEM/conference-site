@@ -26,9 +26,15 @@ html.dark:root {
   color-scheme: dark;
 
   --color-chill-green: #6d8b85;
-  --color-bright-peach: #c6513e;
+  --color-bright-peach: #d86351;
   --color-dark-teal: #074c4d;
   --color-green-gray: #5c6d5c;
+
+  /* Navbar Accents (Dark) */
+  --sp-nav-accent-green: 110 231 183;
+  --sp-nav-accent-blue: 96 165 250;
+  --sp-nav-accent-purple: 192 132 252;
+  --sp-nav-accent-pink: 244 114 182;
 }
 
 html:root {
@@ -36,6 +42,12 @@ html:root {
   --sp-nav-bg: linear-gradient( to bottom, color-mix(in srgb, var(--bg-primary) 90%, #ffffff00) 40%, color-mix(in srgb, var(--bg-primary) 82%, #ffffff00) 80%);
   --sp-nav-gradient: linear-gradient(120deg, #e76f51 0%, #9333ea 100%);
   color-scheme: light;
+
+  /* Navbar Accents */
+  --sp-nav-accent-green: 21 128 61;
+  --sp-nav-accent-blue: 37 99 235;
+  --sp-nav-accent-purple: 147 51 234;
+  --sp-nav-accent-pink: 219 39 119;
 
   /* todo: consolidate and remove unused colors */
 

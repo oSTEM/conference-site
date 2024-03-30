@@ -81,7 +81,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                   category.color
                 }/75 transition ${
                   fill
-                    ? `bg-${category.color} text-white hover:bg-${category.color}/70 font-semibold`
+                    ? `bg-${category.color} dark:bg-${category.color}/25 dark:hover:bg-${category.color}/40 text-white hover:bg-${category.color}/70 font-semibold`
                     : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
                 }`
           }
@@ -108,7 +108,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
           <Menu.Items
             className={`${
               compact ? 'fixed left-2' : 'absolute right-0'
-            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black/5 focus:outline-none`}
+            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700`}
           >
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
@@ -119,8 +119,8 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                       href={link.href}
                       className={`${
                         active
-                          ? `bg-${category.color} text-white`
-                          : 'bg-white dark:bg-gray-800 text-black dark:text-white'
+                          ? `bg-${category.color} dark:bg-${category.color}/50 text-white`
+                          : 'bg-white dark:bg-zinc-900 text-black dark:text-white'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm transition`}
                     >
                       {link.label}

@@ -6,7 +6,7 @@ import {NAVBAR_CATEGORIES} from './src/components/navbar/NavbarConfig';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;
-  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/15`, `active:bg-${c}/20`, `hover:bg-${c}/70`, `bg-${c}`, `text-${c}`]);
+  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/15`, `active:bg-${c}/20`, `hover:bg-${c}/70`, `dark:bg-${c}/25`, `dark:bg-${c}/50`, `dark:hover:bg-${c}/40`, `bg-${c}`, `text-${c}`]);
 }
 
 module.exports = {
@@ -64,7 +64,12 @@ module.exports = {
         "bright-peach": "var(--color-bright-peach)",
         "dark-teal": "var(--color-dark-teal)",
         "chill-green": "var(--color-chill-green)",
-        "green-gray": "var(--color-green-gray)"
+        "green-gray": "var(--color-green-gray)",
+        // Navbar accents
+        "nav-green": "rgb(var(--sp-nav-accent-green) / <alpha-value>)",
+        "nav-blue": "rgb(var(--sp-nav-accent-blue) / <alpha-value>)",
+        "nav-purple": "rgb(var(--sp-nav-accent-purple) / <alpha-value>)",
+        "nav-pink": "rgb(var(--sp-nav-accent-pink) / <alpha-value>)",
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],

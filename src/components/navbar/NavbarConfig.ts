@@ -14,22 +14,22 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
   {
     name: 'attend',
     displayName: 'Attend',
-    color: 'green-700',
+    color: 'nav-green',
   },
   {
     name: 'present',
     displayName: 'Present',
-    color: 'blue-600',
+    color: 'nav-blue',
   },
   {
     name: 'partner',
     displayName: 'Partner',
-    color: 'violet-600',
+    color: 'nav-purple',
   },
   {
     name: 'misc',
     displayName: 'More',
-    color: 'pink-600',
+    color: 'nav-pink',
   },
 ];
 
