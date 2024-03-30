@@ -3,7 +3,7 @@ export default function Custom404() {
     <div className='h-screen grid place-content-center'>
       <img
         src='/logo-banner.png'
-        style={{ 'max-width': '300px' }}
+        style={{ maxWidth: '300px' }}
         className='mx-auto mb-8'
       ></img>
       <h2>

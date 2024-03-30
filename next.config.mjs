@@ -22,6 +22,13 @@ const nextConfig = {
     });
     return config;
   },
+  redirects: async () => ([
+    {
+      source: '/2023/:path',
+      destination: '/archive/2023/:path',
+      permanent: false
+    }
+  ])
 };
 
 const withMDX = createMDX({
