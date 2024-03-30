@@ -18,7 +18,29 @@
   --font-display: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
-:root {
+html.dark:root {
+  --bg-primary: #1d1d1d;
+  --sp-nav-bg: linear-gradient( to bottom, #1d1d1def 40%, #1d1d1dbf 80%);
+  --sp-nav-gradient: linear-gradient(120deg, #ff7a59 0%, #c280ff 100%);
+  --color-text: #ffffff;
+  --color-link: var(--color-sky);
+  color-scheme: dark;
+
+  --color-chill-green: #6d8b85;
+  --color-bright-peach: #c6513e;
+  --color-dark-teal: #074c4d;
+  --color-green-gray: #5c6d5c;
+}
+
+html:root {
+  --bg-primary: #f6f8fa;
+  --sp-nav-bg: linear-gradient( to bottom, #f6f8faef 40%, #f6f8fabf 80%);
+  --sp-nav-gradient: linear-gradient(120deg, #e76f51 0%, #9333ea 100%);
+  color-scheme: light;
+
+  /* todo: consolidate and remove unused colors */
+
+
   --color-rasp: hsl(350, 60%, 48%);
   --color-frost: hsl(207, 45%, 35%);
   --color-frost-dark: hsl(207, 55%, 28%);
@@ -59,9 +81,19 @@
   --color-antique-teal: #75949E;
   --color-skyblue: #88B8D1;
 
+  /* Conference 2023 Colors */
   --color-bright-peach: #EB6955;
   --color-chill-green: #B3E6E0;
+  --color-dark-teal: #a2eae7;
+  --color-green-gray: #b7d5b7;
+}
 
+.img-logo {
+  content: url(/logo-banner.png);
+}
+
+html.dark .img-logo {
+  content: url(/logo-banner-light.png)
 }
 
 html,

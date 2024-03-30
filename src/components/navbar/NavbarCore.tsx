@@ -196,18 +196,19 @@ export default function NavBar() {
         sidebarStateHandler={setSidebarOpen}
       />
       <div className={`${styles.NavNew}`}>
-        <div className='flex ml-2 mr-2 xl:mx-auto pb-1 border-b border-black max-w-7xl mx-auto'>
+        <div className='flex ml-2 mr-2 xl:mx-auto pb-1 border-b border-text-color max-w-7xl mx-auto'>
           <div className={`flex select-none ${styles['NavNew-inner-left']}`}>
             <Link href='/'>
               <a className='inline-block'>
-                <img
-                  alt='oSTEM'
-                  src='/logo-banner.png'
-                  className='flex h-14 sm:ml-1 mt-0.5 mx-auto'
-                />
+                <picture>
+                  <img
+                    alt='oSTEM Logo'
+                    className='flex h-14 sm:ml-1 mt-0.5 mx-auto img-logo'
+                  />
+                </picture>
               </a>
             </Link>
-            <div className='hidden sm:flex ml-2 pl-2 border-l border-black mt-2'>
+            <div className='hidden sm:flex ml-2 pl-2 border-l border-text-color mt-2'>
               <p className='inline-block text-xl leading-none cursor-default pb-0'>
                 {currentPage ? (
                   <span
@@ -262,7 +263,7 @@ export default function NavBar() {
           </div>
         </div>
         <div
-          className={`flex select-none cursor-default sm:hidden border-b border-black ml-2 mr-2 ${styles['NavMobile']}`}
+          className={`flex select-none cursor-default sm:hidden border-b border-text-color ml-2 mr-2 ${styles['NavMobile']}`}
         >
           {currentPage ? (
             <div

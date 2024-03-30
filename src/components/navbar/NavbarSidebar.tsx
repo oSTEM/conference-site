@@ -21,7 +21,7 @@ const LinkGroup: React.FC<LinkGroup> = ({ category, active }) => {
       <div className={`border-l-2 border-${category.color} ml-0.5 mb-4`}>
         {category.links.map((link) => (
           <Link key={link.label} href={link.href}>
-            <a className='text-black'>
+            <a className='text-black dark:text-white'>
               <p
                 className={`pl-2 transition rounded-r-full hover:bg-${
                   category.color
@@ -70,7 +70,7 @@ const SideBar: React.FC<SidebarProps> = ({
       >
         <div
           onClick={() => sidebarStateHandler(false)}
-          className='fixed z-10 top-0 left-0 w-full h-full bg-black/40 backdrop-blur-sm'
+          className='fixed z-10 top-0 left-0 w-full h-full bg-black/40 dark:bg-black/20 backdrop-blur-sm'
         ></div>
       </Transition>
       <Transition
@@ -84,15 +84,14 @@ const SideBar: React.FC<SidebarProps> = ({
         show={active}
       >
         <div
-          className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 backdrop-blur-md z-20`}
+          className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 dark:bg-black/50 backdrop-blur-md z-20`}
         >
           <div className='flex border-b ml-2 mr-2 border-black'>
             <Link href='/'>
               <a className='inline-block'>
                 <img
                   alt='oSTEM'
-                  src='/logo-banner.png'
-                  className='flex h-14 mt-0.5 mb-1 mx-auto'
+                  className='flex h-14 mt-0.5 mb-1 mx-auto img-logo'
                 />
               </a>
             </Link>

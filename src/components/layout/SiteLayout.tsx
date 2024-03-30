@@ -1,10 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import { SocialRow } from './Socials';
-import { useRouter } from 'next/router';
-import { Color } from 'theme/Color';
 import NavBar from '@/components/navbar/NavbarCore';
 
 export interface SiteLayoutProps {
@@ -31,7 +27,7 @@ export const SiteLayout = ({ children, title }: SiteLayoutProps) => {
 
 const Footer = () => {
   return (
-    <footer className='bg-primary p-8 text-gray-700'>
+    <footer className='bg-primary p-8 text-gray-700 dark:text-gray-400'>
       <div className='max-w-2xl mx-auto text-center'>
         Out in Science, Technology, Engineering, and Mathematics Incorporated
         &copy; {new Date().getFullYear()}

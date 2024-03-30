@@ -6,51 +6,55 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 
 <SiteLayout>
 
-<div className="border-b-4 border-chill-green border-solid pb-4 text-center">
+<div className="border-chill-green border-solid text-center">
   <img
     alt="Banner for the 14th Annual oSTEM Conference, from October 17-20 in Portland, OR."
     src="/images/2024/14th_annual_banner.png"
     className="flex w-200 mx-auto rounded"
   />
 </div>
-<div className="grid md:grid-cols-5 mt-4">
-  <div className="rounded md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-chill-green border-solid pb-4">
-    <div className="bg-chill-green">
-      <h3 className="p-4">2024 Conference Deadlines</h3>
-    </div>
-    <p className="p-4">
-      <b>Request for Proposals:</b> May 31, 2024 <br />
-      <b>Early Bird Registration:</b> TBD <br />
-    </p>
-    <p className='p-4'>Request for proposals now open!</p>
-    <div className="text-xl flex justify-center p-2">
-        <CTAButton onClick="/2024/rfp" backgroundColor="ostem-blue" target='_self'> Submit your Proposal</CTAButton>
+<hr className='border-dark-teal border-2 mt-2 rounded'/>
+
+<div className="grid md:grid-cols-5">
+  <div className="rounded md:col-span-5 mt-8 border-4 border-dark-teal border-solid bg-dark-teal">
+    <h3 className="p-4 pt-3">2024 Conference Deadlines</h3>
+    <div className="bg-primary rounded">
+      <p className="p-4">
+        <b>Request for Proposals:</b> May 31, 2024 <br />
+        <b>Early Bird Registration:</b> TBD <br />
+      </p>
+      <p className='p-4'>Request for proposals now open!</p>
+      <div className="text-xl flex justify-center p-2">
+          <CTAButton onClick="/2024/rfp" backgroundColor="ostem-blue" target='_self'> Submit your Proposal</CTAButton>
+      </div>
     </div>
   </div>
-  <div className="rounded md:col-span-5 mt-8 border-b-4 border-l-4 border-r-4 border-light-peach border-solid pb-4">
-    <div className="bg-light-peach">
-      <h3 className="p-4">14th Annual Conference in Portland, OR</h3>
-    </div>
-    <p className="p-4">
-      We hope you will join us next year at the beautiful Oregon Convention Center in Portland, OR from October 17-20, 2024! To receive an email when tickets for oSTEM 2024 go on sale, please fill out this form.  
-      <br />
-    </p>
-    <div className="text-xl flex justify-center p-2">
-      <CTAButton onClick="https://form.jotform.com/232986540358062" backgroundColor="bright-peach">
-        oSTEM 2024 Ticket Alert
-      </CTAButton>
+  
+  <div className="rounded md:col-span-5 mt-8 border-4 border-chill-green bg-chill-green border-solid">
+    <h3 className="p-4 pt-3">14<sup>th</sup> Annual Conference in Portland, OR</h3>
+    <div className='bg-primary rounded'>
+      <p className="p-4">
+        We hope you will join us next year at the beautiful Oregon Convention Center in Portland, OR from October 17-20, 2024! To receive an email when tickets for oSTEM 2024 go on sale, please fill out this form.  
+        <br />
+      </p>
+      <div className="text-xl flex justify-center p-2 pb-4">
+        <CTAButton onClick="https://form.jotform.com/232986540358062" backgroundColor="bright-peach">
+          oSTEM 2024 Ticket Alert
+        </CTAButton>
+      </div>
     </div>
   </div>
 
-  <div className="rounded mt-8 md:col-span-5 p-4 bg-tint-seamist">
+  <div className="rounded mt-8 md:col-span-5 bg-green-gray border-4 border-green-gray">
     <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
       style={{width: "100%", height: 'auto'}}
       width="6000"
       height="2003"
-      className='rounded'
+      className='rounded-t'
     />
+    <div className='px-4 py-2'>
     <h3>Conference for LGBTQ+ People in STEM</h3>
     <p>
       The 14th Annual oSTEM Conference will take place in Portland, OR
@@ -66,6 +70,7 @@ import { SiteLayout } from "../components/layout/SiteLayout";
       sessions, speakers, and career expo exhibitors, visit the "2022 Recap" page. If you want a space where you can be your authentic
       LGBTQ+ self and your authentic STEM self, this is the conference for you!
     </p>
+    </div>
   </div>
 </div>
 
@@ -82,7 +87,7 @@ import { SiteLayout } from "../components/layout/SiteLayout";
   <Image
     className="rounded"
     src="/images/2023/2023_homepage_image.jpg"
-    alt=""
+    alt="A decorative image of oSTEM conference attendees sitting around a table. One attendee is in focus looking at another attendee, while four other attendees can be seen blurred in the foreground and background."
     style={{width: "100%", height: 'auto'}}
     width="800"
     height="500"

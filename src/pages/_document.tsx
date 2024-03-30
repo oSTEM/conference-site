@@ -5,7 +5,7 @@ import NextDocument, {
   Html,
   Main,
   NextScript,
-} from "next/document";
+} from 'next/document';
 
 // import flushToReact from "styled-jsx/server";
 // import StyledJsxRegistry from "_registry";
@@ -34,7 +34,7 @@ class Document extends NextDocument {
   render() {
     // TODO: more meta tags and whatnot
     return (
-      <Html lang="en">
+      <Html lang='en' className=''>
         <Head>
           <script
             dangerouslySetInnerHTML={{
@@ -43,7 +43,7 @@ class Document extends NextDocument {
           />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-86N002ZC1J"
+            src='https://www.googletagmanager.com/gtag/js?id=G-86N002ZC1J'
           />
           <script
             dangerouslySetInnerHTML={{

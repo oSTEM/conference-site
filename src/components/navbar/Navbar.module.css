@@ -3,7 +3,7 @@
   position: fixed;
   display: initial;
   width: 100%;
-  background: linear-gradient( to bottom, #f6f8faef 40%, #f6f8fabf 80%);
+  background: var(--sp-nav-bg);
   backdrop-filter: blur(4px);
   padding-bottom: 1px;
   z-index: 1;
@@ -28,7 +28,7 @@
 }
 
 .gradientText {
-  background: linear-gradient(120deg, #e76f51 0%, #9333ea 100%);
+  background: var(--sp-nav-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

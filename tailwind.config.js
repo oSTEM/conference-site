@@ -12,11 +12,12 @@ for (let i of NAVBAR_CATEGORIES) {
 module.exports = {
   mode: "jit",
   content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
+  darkMode: 'selector',
   safelist,
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
-      "primary": "#f6f8fa",
+      "primary": "var(--bg-primary)",
       "secondary": "#FFF8EB",
       "dark": "#577072",
       "tint-spruce": "#577072",
@@ -37,6 +38,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        // Colors to CONSOLIDATE / CLEAN UP
         "ostem-blue": "#1B7EA1",
         "mulberry": "#705159",
         "raspberry": "#E30B5C",
@@ -52,13 +54,17 @@ module.exports = {
         "seamist": "#9aC9CE",
         "deepwater": "#6F7588",
         "deepwater-light": "#979fb9",
-        "bright-peach": "#e8533c",
         "peach": "#FF9185",
         "light-peach": "#f7c2bc",
         "chill-yellow": "#FFD285",
-        "chill-green": "#B3E6E0",
         "amber": "#f59e0b",
         "sky": "#88B8D1",
+        // Colors to KEEP
+        "text-color": "var(--text-color)",
+        "bright-peach": "var(--color-bright-peach)",
+        "dark-teal": "var(--color-dark-teal)",
+        "chill-green": "var(--color-chill-green)",
+        "green-gray": "var(--color-green-gray)"
       },
       fontFamily: {
         display: ["Montserrat", "sans-serif"],
