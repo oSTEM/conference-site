@@ -47,7 +47,7 @@ class Document extends NextDocument {
           />
           <script
             dangerouslySetInnerHTML={{
-              __html: gtagScript,
+              __html: headerScripts,
             }}
           />
         </Head>
@@ -62,11 +62,13 @@ class Document extends NextDocument {
 
 export default Document;
 
-const gtagScript = `
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+// dark mode detection + gtag
+const headerScripts = `
+(() => {let d = window.matchMedia('(prefers-color-scheme: dark)'), e = document.documentElement.classList
+if (localStorage.dark === '1' || (!('dark' in localStorage) && d.matches)) e.add('dark')
+d.addEventListener('change', event => {if (!('dark' in localStorage)) e[event.matches ? 'add':'remove']('dark')})})()
 
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
 gtag('config', 'G-86N002ZC1J');
 `;
 
