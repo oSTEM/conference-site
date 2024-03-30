@@ -3,7 +3,7 @@
   position: fixed;
   display: initial;
   width: 100%;
-  background: linear-gradient( to bottom, #f3f6f8ef 40%, #f3f6f8bf 80%);
+  background: linear-gradient( to bottom, #f6f8faef 40%, #f6f8fabf 80%);
   backdrop-filter: blur(4px);
   padding-bottom: 1px;
   z-index: 1;
