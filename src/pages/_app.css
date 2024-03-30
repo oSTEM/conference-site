@@ -19,8 +19,7 @@
 }
 
 html.dark:root {
-  --bg-primary: #1d1d1d;
-  --sp-nav-bg: linear-gradient( to bottom, #1d1d1def 40%, #1d1d1dbf 80%);
+  --bg-primary: #18181a;
   --sp-nav-gradient: linear-gradient(120deg, #ff7a59 0%, #c280ff 100%);
   --color-text: #ffffff;
   --color-link: var(--color-sky);
@@ -34,7 +33,7 @@ html.dark:root {
 
 html:root {
   --bg-primary: #f6f8fa;
-  --sp-nav-bg: linear-gradient( to bottom, #f6f8faef 40%, #f6f8fabf 80%);
+  --sp-nav-bg: linear-gradient( to bottom, color-mix(in srgb, var(--bg-primary) 90%, #ffffff00) 40%, color-mix(in srgb, var(--bg-primary) 82%, #ffffff00) 80%);
   --sp-nav-gradient: linear-gradient(120deg, #e76f51 0%, #9333ea 100%);
   color-scheme: light;
 

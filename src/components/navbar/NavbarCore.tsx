@@ -108,7 +108,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
           <Menu.Items
             className={`${
               compact ? 'fixed left-2' : 'absolute right-0'
-            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none`}
+            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black/5 focus:outline-none`}
           >
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
@@ -120,7 +120,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                       className={`${
                         active
                           ? `bg-${category.color} text-white`
-                          : 'bg-white text-black'
+                          : 'bg-white dark:bg-gray-800 text-black dark:text-white'
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm transition`}
                     >
                       {link.label}
@@ -274,7 +274,7 @@ export default function NavBar() {
               </p>
 
               <FontAwesomeIcon
-                className='text-black ml-1.5 mr-0.5 mt-2 w-2 h-2'
+                className='text-black dark:text-white ml-1.5 mr-0.5 mt-2 w-2 h-2'
                 icon={faChevronRight}
               />
               <NavbarDropdown
