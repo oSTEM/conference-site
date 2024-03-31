@@ -3,6 +3,7 @@ import { Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { NavbarLink, NavbarCategoryWithLinks } from './NavbarCore';
+import { TextBadge } from '@/components/badge/TextBadge';
 import Link from 'next/link';
 
 interface LinkGroup {
@@ -33,6 +34,19 @@ const LinkGroup: React.FC<LinkGroup> = ({ category, active }) => {
                 title={active === link.href ? `You're already here!` : ''}
               >
                 {link.label}
+                {link.badge ? (
+                  <TextBadge
+                    className={`ml-1 ${
+                      link.badge.accent
+                        ? `border-${category.color} bg-${category.color} dark:bg-${category.color}/50 text-white font-bold`
+                        : `border-${category.color}/15 dark:border-${category.color} bg-${category.color}/15 font-normal`
+                    }`}
+                  >
+                    {link.badge.label}
+                  </TextBadge>
+                ) : (
+                  ''
+                )}
               </p>
             </a>
           </Link>

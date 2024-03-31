@@ -16,6 +16,7 @@ import { Fragment, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+import { TextBadge } from '@/components/badge/TextBadge';
 import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig';
 import SideBar from './NavbarSidebar';
 import styles from './Navbar.module.css';
@@ -108,7 +109,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
           <Menu.Items
             className={`${
               compact ? 'fixed left-2' : 'absolute right-0'
-            } mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700`}
+            } mt-2 w-64 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700`}
           >
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
@@ -121,9 +122,28 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                         active
                           ? `bg-${category.color} dark:bg-${category.color}/50 text-white`
                           : 'bg-white dark:bg-zinc-900 text-black dark:text-white'
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm transition`}
+                      } group flex w-full items-center rounded-sm px-2 py-2 text-sm transition`}
                     >
-                      {link.label}
+                      <span className='grow'>{link.label}</span>
+                      {link.badge ? (
+                        <TextBadge
+                          className={`${
+                            link.badge.accent
+                              ? `${
+                                  active
+                                    ? 'border-white'
+                                    : `border-${category.color}`
+                                } bg-${category.color} dark:bg-${
+                                  category.color
+                                }/50 text-white font-bold`
+                              : `border-${category.color}/15 dark:border-${category.color} bg-${category.color}/15 font-normal`
+                          }`}
+                        >
+                          {link.badge.label}
+                        </TextBadge>
+                      ) : (
+                        ''
+                      )}
                     </a>
                   )}
                 </Menu.Item>

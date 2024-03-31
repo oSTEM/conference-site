@@ -6,7 +6,7 @@ import {NAVBAR_CATEGORIES} from './src/components/navbar/NavbarConfig';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;
-  safelist.push(...[`border-${c}`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/15`, `active:bg-${c}/20`, `hover:bg-${c}/70`, `dark:bg-${c}/25`, `dark:bg-${c}/50`, `dark:hover:bg-${c}/40`, `bg-${c}`, `text-${c}`]);
+  safelist.push(...[`border-${c}`, `dark:border-${c}`, `border-${c}/15`, `focus-visible:ring-${c}/75`, `hover:bg-${c}/15`, `bg-${c}/15`, `active:bg-${c}/20`, `hover:bg-${c}/70`, `dark:bg-${c}/25`, `dark:bg-${c}/50`, `dark:hover:bg-${c}/40`, `bg-${c}`, `text-${c}`]);
 }
 
 module.exports = {

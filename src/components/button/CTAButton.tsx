@@ -1,6 +1,4 @@
-// import { css } from "styled-jsx/css";
-// import css = require("styled-jsx/css");
-import styles from "./CTAButton.module.css";
+import styles from './CTAButton.module.css';
 
 /**
  * A button that invokes a call to action.
@@ -12,8 +10,8 @@ export const CTAButton = ({
   children,
   disabled,
   onClick,
-  backgroundColor = "antique-teal",
-  target = "_blank",
+  backgroundColor = 'antique-teal',
+  target = '_blank',
 }: {
   // The label for the button.
   children: string;
@@ -30,11 +28,11 @@ export const CTAButton = ({
   backgroundColor: string;
   fontSize?: string;
   // Open this link in current tab (_self) or a new tab (_blank)
-  target: "_self" | "_blank";
+  target: '_self' | '_blank';
 }) => {
   const commonProps = {
-    "className": styles.CTAButton,
-    "data-disabled": disabled,
+    'className': styles.CTAButton,
+    'data-disabled': disabled,
   };
 
   let bgStyle = {
@@ -42,7 +40,7 @@ export const CTAButton = ({
   };
 
   const button = (() => {
-    if (typeof onClick === "string") {
+    if (typeof onClick === 'string') {
       // console.log('css', buttonStyle);
       return (
         <a

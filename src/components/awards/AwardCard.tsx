@@ -1,14 +1,14 @@
-import Link from "next/dist/client/link";
-import React from "react";
+import Link from 'next/dist/client/link';
+import React from 'react';
 
-import styles from "./AwardCard.module.css";
+import styles from './AwardCard.module.css';
 
 /**
  * Generate a card component for each award
  * Display award name, description, two buttons
  */
 export const AwardCard = ({
-  borderColor = "border-red-500",
+  borderColor = 'border-red-500',
   title,
   desc,
   elig,
@@ -34,7 +34,7 @@ export const AwardCard = ({
     <div
       className={`border-solid px-4 py-2 my-4 border-4 ${borderColor} flex flex-col `}
     >
-      <h3 className={"font-bold"}>{title}</h3>
+      <h3 className={'font-bold'}>{title}</h3>
       <p>{desc}</p>
       <h4>Eligibility:</h4>
       <ul>
@@ -43,9 +43,11 @@ export const AwardCard = ({
         ))}
       </ul>
       {alert && (
-        <p className={"text-sm italic my-1 text-gray-500"}>{"* " + alert}</p>
+        <p className={'text-sm italic my-1 text-gray-500 dark:text-gray-300'}>
+          {'* ' + alert}
+        </p>
       )}
-      <div className="flex flex-row mt-2">
+      <div className='flex flex-row mt-2'>
         <AwardCardButton url={awardDetailUrl}>
           View Previous Awardees
         </AwardCardButton>
@@ -77,15 +79,15 @@ export const AwardCardButton = ({
 
   const button = (() => {
     // if this url is a jotform
-    if (url?.startsWith("https")) {
+    if (url?.startsWith('https')) {
       return (
-        <a {...commonProps} href={disabled ? undefined : url} target="_blank">
+        <a {...commonProps} href={disabled ? undefined : url} target='_blank'>
           <span>{children}</span>
         </a>
       );
     }
     return (
-      <Link href={url ? url : "/404"}>
+      <Link href={url ? url : '/404'}>
         <a {...commonProps}>
           <span>{children}</span>
         </a>
