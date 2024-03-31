@@ -86,7 +86,7 @@ const SideBar: React.FC<SidebarProps> = ({
         <div
           className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 dark:bg-black/50 backdrop-blur-md z-20`}
         >
-          <div className='flex border-b ml-2 mr-2 border-black'>
+          <div className='flex border-b ml-2 mr-2 border-text-color'>
             <Link href='/'>
               <a className='inline-block'>
                 <img
