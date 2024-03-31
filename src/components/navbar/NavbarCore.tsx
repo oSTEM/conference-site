@@ -70,33 +70,45 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
       }
     >
       <Menu as='div' className={`relative inline-block text-left`}>
-        <Menu.Button
-          className={
-            compact
-              ? `${styles['dropdownCompact']} transition hover:bg-${category.color}/15 active:bg-${category.color}/20`
-              : `${
-                  styles['dropdownBtn']
-                } inline-flex items-center w-full justify-center rounded-full border-2 border-${
-                  category.color
-                } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
-                  category.color
-                }/75 transition ${
-                  fill
-                    ? `bg-${category.color} dark:bg-${category.color}/25 dark:hover:bg-${category.color}/40 text-white hover:bg-${category.color}/70 font-semibold`
-                    : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
-                }`
-          }
-        >
-          {labelOverride ? labelOverride : category.displayName}
-          <span>
-            <FontAwesomeIcon
-              className={`${styles['dropdownIcon']} ${
-                compact ? 'mt-0.5 ml-1 h-3' : 'mt-0.5 ml-2 h-3.5'
-              } transition duration-270`}
-              icon={faChevronDown}
-            />
-          </span>
-        </Menu.Button>
+        {compact ? (
+          <Menu.Button
+            className={`${styles['dropdownCompact']} transition hover:bg-${category.color}/15 active:bg-${category.color}/20`}
+          >
+            {labelOverride ? labelOverride : category.displayName}
+            <span>
+              <FontAwesomeIcon
+                className={`${
+                  styles['dropdownIcon']
+                } ${'mt-0.5 ml-1 h-3'} transition duration-270`}
+                icon={faChevronDown}
+              />
+            </span>
+          </Menu.Button>
+        ) : (
+          <Menu.Button
+            className={`${
+              styles['dropdownBtn']
+            } inline-flex items-center w-full justify-center rounded-full border-2 border-${
+              category.color
+            } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
+              category.color
+            }/75 transition ${
+              fill
+                ? `bg-${category.color} dark:bg-${category.color}/25 dark:hover:bg-${category.color}/40 text-white hover:bg-${category.color}/70 font-semibold`
+                : `hover:bg-${category.color}/15 active:bg-${category.color}/20`
+            }`}
+          >
+            {labelOverride ? labelOverride : category.displayName}
+            <span>
+              <FontAwesomeIcon
+                className={`${
+                  styles['dropdownIcon']
+                } ${'mt-0.5 ml-2 h-3.5'} transition duration-270`}
+                icon={faChevronDown}
+              />
+            </span>
+          </Menu.Button>
+        )}
         <Transition
           as={Fragment}
           enter='transition ease-out'
