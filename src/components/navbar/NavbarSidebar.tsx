@@ -1,10 +1,14 @@
+import { Menu, Transition } from '@headlessui/react';
 import { Fragment, Dispatch, SetStateAction } from 'react';
-import { Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import { NavbarLink, NavbarCategoryWithLinks } from './NavbarCore';
 import { TextBadge } from '@/components/badge/TextBadge';
 import Link from 'next/link';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface LinkGroup {
   category: NavbarCategoryWithLinks;
@@ -70,6 +74,19 @@ const SideBar: React.FC<SidebarProps> = ({
   sidebarStateHandler,
 }) => {
   let highlight = currentPage?.href || false;
+
+  // Site theme settings
+  let themeOpts: [IconProp, string][] = [
+    [faSun, 'Light'],
+    [faMoon, 'Dark'],
+    [faAdjust, 'System'],
+  ];
+  let currentTheme: number =
+    'dark' in localStorage ? (localStorage.dark === '1' ? 1 : 0) : 2;
+  function handleThemeClick(ind: number): void {
+    console.log(ind);
+  }
+
   return (
     <div>
       <Transition
@@ -110,8 +127,53 @@ const SideBar: React.FC<SidebarProps> = ({
               </a>
             </Link>
             <span className='flex-grow'></span>
+            <Menu>
+              <Menu.Button className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-nav-accent hover:bg-nav-accent/10 active:text-nav-accent active:bg-nav-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-nav-accent/75 mr-2 mt-2.5'>
+                <FontAwesomeIcon
+                  className='w-5 h-5'
+                  icon={themeOpts[currentTheme][0]}
+                />
+              </Menu.Button>
+              <Transition
+                as={Fragment}
+                enter='transition ease-out'
+                enterFrom='transform opacity-0 scale-95'
+                enterTo='transform opacity-100 scale-100'
+                leave='transition ease-in duration-135'
+                leaveFrom='transform opacity-100 scale-100'
+                leaveTo='transform opacity-0 scale-95'
+              >
+                <Menu.Items className='cursor-default mt-2 w-28 origin-top-right divide-y divide-gray-100 dark:divide-gray-700 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700 absolute right-[68px] top-12 overflow-hidden'>
+                  <p className='px-2 text-sm font-semibold'>Site Theme</p>
+                  {themeOpts.map((theme, ind) => (
+                    <div>
+                      <Menu.Item as={Fragment}>
+                        {({ active }) => (
+                          <button
+                            className={`cursor-pointer text-black dark:text-white group flex w-full items-center px-2 py-2 text-sm transition ${
+                              active
+                                ? `bg-nav-accent/40`
+                                : `bg-white dark:bg-zinc-900`
+                            }`}
+                            onClick={() => {
+                              handleThemeClick(ind);
+                            }}
+                          >
+                            <FontAwesomeIcon
+                              className='w-5 h-5 mr-2'
+                              icon={theme[0]}
+                            />{' '}
+                            {theme[1]}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  ))}
+                </Menu.Items>
+              </Transition>
+            </Menu>
             <button
-              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-3 mt-2.5'
+              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-nav-accent hover:bg-nav-accent/10 active:text-nav-accent active:bg-nav-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-nav-accent/75 mr-3 mt-2.5'
               onClick={() => sidebarStateHandler(false)}
             >
               <FontAwesomeIcon className='w-5 h-5' icon={faTimes} />

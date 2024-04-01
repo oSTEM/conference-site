@@ -66,6 +66,7 @@ module.exports = {
         "chill-green": "var(--color-chill-green)",
         "green-gray": "var(--color-green-gray)",
         // Navbar accents
+        "nav-accent": "#6d8b85", // Default accent
         "nav-green": "rgb(var(--sp-nav-accent-green) / <alpha-value>)",
         "nav-blue": "rgb(var(--sp-nav-accent-blue) / <alpha-value>)",
         "nav-purple": "rgb(var(--sp-nav-accent-purple) / <alpha-value>)",
