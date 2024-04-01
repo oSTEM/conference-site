@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react';
-import { Fragment, Dispatch, SetStateAction } from 'react';
+import { Fragment, Dispatch, SetStateAction, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
@@ -81,10 +81,29 @@ const SideBar: React.FC<SidebarProps> = ({
     [faMoon, 'Dark'],
     [faAdjust, 'System'],
   ];
-  let currentTheme: number =
-    'dark' in localStorage ? (localStorage.dark === '1' ? 1 : 0) : 2;
+  let [currentTheme, setCurrentTheme] = useState(
+    'dark' in localStorage ? (localStorage.dark === '1' ? 1 : 0) : 2,
+  );
   function handleThemeClick(ind: number): void {
-    console.log(ind);
+    setCurrentTheme(ind);
+    switch (ind) {
+      case 0:
+        localStorage.dark = '0';
+        document.documentElement.classList.remove('dark');
+        break;
+      case 1:
+        localStorage.dark = '1';
+        document.documentElement.classList.add('dark');
+        break;
+      case 2:
+        localStorage.removeItem('dark');
+        document.documentElement.classList[
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'add'
+            : 'remove'
+        ]('dark');
+        break;
+    }
   }
 
   return (
@@ -130,7 +149,9 @@ const SideBar: React.FC<SidebarProps> = ({
             <Menu>
               <Menu.Button className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-nav-accent hover:bg-nav-accent/10 active:text-nav-accent active:bg-nav-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-nav-accent/75 mr-2 mt-2.5'>
                 <FontAwesomeIcon
-                  className='w-5 h-5'
+                  className={`w-5 h-5 ${
+                    currentTheme === 2 ? '' : 'text-sky-600 dark:text-sky-300'
+                  }`}
                   icon={themeOpts[currentTheme][0]}
                 />
               </Menu.Button>

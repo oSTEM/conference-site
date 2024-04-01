@@ -58,7 +58,6 @@ module.exports = {
         "light-peach": "#f7c2bc",
         "chill-yellow": "#FFD285",
         "amber": "#f59e0b",
-        "sky": "#88B8D1",
         // Colors to KEEP
         "text-color": "var(--text-color)",
         "bright-peach": "var(--color-bright-peach)",
