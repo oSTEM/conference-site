@@ -54,9 +54,14 @@ const ThemeSelector = ({
   currentTheme,
   setCurrentTheme,
 }: {
-  currentTheme: number;
-  setCurrentTheme: Dispatch<SetStateAction<number>>;
+  currentTheme?: number;
+  setCurrentTheme?: Dispatch<SetStateAction<number>>;
 }) => {
+  if (
+    typeof currentTheme !== 'number' ||
+    typeof setCurrentTheme === 'undefined'
+  )
+    return <div></div>;
   return (
     <div className='flex text-sm cursor-default py-1 h-[44px] mr-1'>
       <p className='px-3 py-2 grow'>
