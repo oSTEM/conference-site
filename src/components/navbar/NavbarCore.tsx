@@ -7,12 +7,17 @@
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
 
-import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
-import { Fragment, useState } from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+import { Menu, Transition } from '@headlessui/react';
+import { Fragment, useState, Dispatch, SetStateAction } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -39,12 +44,57 @@ interface NavbarBadge {
   accent?: boolean;
 }
 
+export const themeOpts: [IconProp, string][] = [
+  [faSun, 'Light'],
+  [faMoon, 'Dark'],
+  [faAdjust, 'System'],
+];
+
+const ThemeSelector = ({
+  currentTheme,
+  setCurrentTheme,
+}: {
+  currentTheme: number;
+  setCurrentTheme: Dispatch<SetStateAction<number>>;
+}) => {
+  return (
+    <div className='flex text-sm cursor-default py-1 h-[44px] mr-1'>
+      <p className='px-3 py-2 grow'>
+        Site Theme:{' '}
+        <span className='text-sky-600 dark:text-sky-300'>
+          {themeOpts[currentTheme][1]}
+        </span>
+      </p>
+      {themeOpts.map((theme, ind) => (
+        <button
+          title={
+            ind === currentTheme ? `` : `Change to ${themeOpts[ind][1]} Theme`
+          }
+          className={`w-8 h-8 mt-0.5 ml-0.5 transition rounded-md border-2 ${
+            ind === currentTheme
+              ? 'cursor-default border-sky-500/50 text-sky-600 dark:text-sky-300'
+              : 'border-transparent hover:bg-sky-500/20 active:bg-sky-500/30'
+          }`}
+          onClick={() => {
+            setCurrentTheme(ind);
+            handleThemeClick(ind);
+          }}
+        >
+          <FontAwesomeIcon className='w-8 h-7' icon={theme[0]} />
+        </button>
+      ))}
+    </div>
+  );
+};
+
 interface DropdownProps {
   category: NavbarCategory | NavbarCategoryWithLinks;
   links: NavbarLink[];
   fill?: boolean;
   compact: boolean;
   labelOverride?: string;
+  currentTheme?: number;
+  setCurrentTheme?: Dispatch<SetStateAction<number>>;
 }
 
 /**
@@ -62,6 +112,8 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   fill,
   compact,
   labelOverride,
+  currentTheme,
+  setCurrentTheme,
 }) => {
   return (
     <div
@@ -161,6 +213,14 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                 </Menu.Item>
               </div>
             ))}
+            {category.name === 'misc' ? (
+              <ThemeSelector
+                currentTheme={currentTheme}
+                setCurrentTheme={setCurrentTheme}
+              />
+            ) : (
+              ''
+            )}
           </Menu.Items>
         </Transition>
       </Menu>
@@ -170,6 +230,27 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
 
 export interface NavbarCategoryWithLinks extends NavbarCategory {
   links: NavbarLink[];
+}
+
+export function handleThemeClick(ind: number): void {
+  switch (ind) {
+    case 0:
+      localStorage.dark = '0';
+      document.documentElement.classList.remove('dark');
+      break;
+    case 1:
+      localStorage.dark = '1';
+      document.documentElement.classList.add('dark');
+      break;
+    case 2:
+      localStorage.removeItem('dark');
+      document.documentElement.classList[
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'add'
+          : 'remove'
+      ]('dark');
+      break;
+  }
 }
 
 /**
@@ -209,6 +290,15 @@ function categorizeNavbarLinks(
 export default function NavBar() {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(
+    typeof localStorage === 'undefined'
+      ? 2
+      : 'dark' in localStorage
+      ? localStorage.dark === '1'
+        ? 1
+        : 0
+      : 2,
+  );
   const currentPage = NAVBAR_LINKS.find(
     (link) => link.href === router.pathname,
   );
@@ -226,6 +316,8 @@ export default function NavBar() {
         currentPage={currentPage}
         navCategories={NavCategories}
         sidebarStateHandler={setSidebarOpen}
+        currentTheme={currentTheme}
+        setCurrentTheme={setCurrentTheme}
       />
       <div className={`${styles.NavNew}`}>
         <div className='flex ml-2 mr-2 xl:mx-auto pb-1 border-b border-text-color max-w-7xl mx-auto'>
@@ -282,6 +374,8 @@ export default function NavBar() {
                 fill={
                   categoryWithLink.name === NavCategories[currentCategory]?.name
                 }
+                currentTheme={currentTheme}
+                setCurrentTheme={setCurrentTheme}
               ></NavbarDropdown>
             ))}
           </div>

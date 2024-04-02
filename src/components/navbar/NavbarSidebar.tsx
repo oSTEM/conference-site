@@ -1,14 +1,15 @@
 import { Menu, Transition } from '@headlessui/react';
-import { Fragment, Dispatch, SetStateAction, useState } from 'react';
+import { Fragment, Dispatch, SetStateAction } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
-import { NavbarLink, NavbarCategoryWithLinks } from './NavbarCore';
+import {
+  NavbarLink,
+  NavbarCategoryWithLinks,
+  themeOpts,
+  handleThemeClick,
+} from './NavbarCore';
 import { TextBadge } from '@/components/badge/TextBadge';
 import Link from 'next/link';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface LinkGroup {
   category: NavbarCategoryWithLinks;
@@ -65,6 +66,8 @@ interface SidebarProps {
   currentPage?: NavbarLink | undefined;
   navCategories: NavbarCategoryWithLinks[];
   sidebarStateHandler: Dispatch<SetStateAction<boolean>>;
+  currentTheme: number;
+  setCurrentTheme: Dispatch<SetStateAction<number>>;
 }
 
 const SideBar: React.FC<SidebarProps> = ({
@@ -72,39 +75,10 @@ const SideBar: React.FC<SidebarProps> = ({
   currentPage,
   navCategories,
   sidebarStateHandler,
+  currentTheme,
+  setCurrentTheme,
 }) => {
   let highlight = currentPage?.href || false;
-
-  // Site theme settings
-  let themeOpts: [IconProp, string][] = [
-    [faSun, 'Light'],
-    [faMoon, 'Dark'],
-    [faAdjust, 'System'],
-  ];
-  let [currentTheme, setCurrentTheme] = useState(
-    'dark' in localStorage ? (localStorage.dark === '1' ? 1 : 0) : 2,
-  );
-  function handleThemeClick(ind: number): void {
-    setCurrentTheme(ind);
-    switch (ind) {
-      case 0:
-        localStorage.dark = '0';
-        document.documentElement.classList.remove('dark');
-        break;
-      case 1:
-        localStorage.dark = '1';
-        document.documentElement.classList.add('dark');
-        break;
-      case 2:
-        localStorage.removeItem('dark');
-        document.documentElement.classList[
-          window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'add'
-            : 'remove'
-        ]('dark');
-        break;
-    }
-  }
 
   return (
     <div>
@@ -167,7 +141,7 @@ const SideBar: React.FC<SidebarProps> = ({
                 <Menu.Items className='cursor-default mt-2 w-28 origin-top-right divide-y divide-gray-100 dark:divide-gray-700 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700 absolute right-[68px] top-12 overflow-hidden'>
                   <p className='px-2 text-sm font-semibold'>Site Theme</p>
                   {themeOpts.map((theme, ind) => (
-                    <div>
+                    <div key={ind}>
                       <Menu.Item as={Fragment}>
                         {({ active }) => (
                           <button
@@ -177,6 +151,7 @@ const SideBar: React.FC<SidebarProps> = ({
                                 : `bg-white dark:bg-zinc-900`
                             }`}
                             onClick={() => {
+                              setCurrentTheme(ind);
                               handleThemeClick(ind);
                             }}
                           >
