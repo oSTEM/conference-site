@@ -85,7 +85,7 @@ const ThemeSelector = ({
             handleThemeClick(ind);
           }}
         >
-          <FontAwesomeIcon className='w-8 h-7' icon={theme[0]} />
+          <FontAwesomeIcon className='w-4 h-4 mx-auto mt-0.5' icon={theme[0]} />
         </button>
       ))}
     </div>
