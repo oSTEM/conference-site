@@ -42,7 +42,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Registration',
-    href: '/2024/registration',
+    href: '/2024/attend/registration',
     badge: {
       label: 'Opens June',
     },
@@ -50,7 +50,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Attendee Resources',
-    href: '/2024/attendee-resources',
+    href: '/2024/attend/attendee-resources',
   },
   {
     category: 'attend',
@@ -60,7 +60,16 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'present',
     label: 'Request for Programs',
-    href: '/2024/rfp',
+    href: '/2024/present/request-for-programs',
+    badge: {
+      label: 'Open',
+      accent: true,
+    },
+  },
+  {
+    category: 'present',
+    label: 'Request for Panel Topics',
+    href: '/2024/present/request-for-panel-topics',
     badge: {
       label: 'Open',
       accent: true,
@@ -69,7 +78,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'present',
     label: 'Call for Posters',
-    href: '/archive/2023/cfp',
+    href: '/2024/present/call-for-posters',
     badge: {
       label: 'Not Yet Open',
     },
@@ -77,7 +86,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
-    href: '/2024/partnership',
+    href: '/2024/partner/partnership',
     badge: {
       label: 'Open',
       accent: true,
@@ -86,7 +95,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'partner',
     label: 'Previous Exhibitors',
-    href: '/2024/previous-exhibitors',
+    href: '/2024/partner/previous-exhibitors',
   },
   {
     category: 'misc',
