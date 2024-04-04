@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { SocialRow } from './Socials';
 import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
 import NavBar from '@/components/navbar/NavbarCore';
@@ -23,7 +24,9 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
         <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
           <BannerMessage type='update' icon={faMagic}>
             Our conference website has been revamped.{' '}
-            <a>See what's new here.</a>
+            <Link href='/2024/whats-new'>
+              <a>See what's new here.</a>
+            </Link>
           </BannerMessage>
           <main className='container max-w-5xl mx-auto bg-primary h-full'>
             {title ? <PageHeader accent={accent}>{title}</PageHeader> : ''}
