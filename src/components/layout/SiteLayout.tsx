@@ -1,8 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import { SocialRow } from './Socials';
+import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
 import NavBar from '@/components/navbar/NavbarCore';
 import { PageHeader } from '../header/PageHeader';
+import { BannerMessage } from '../banner/BannerMessage';
 
 export interface SiteLayoutProps {
   children: React.ReactNode;
@@ -18,10 +20,16 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
       </Head>
       <div className='flex flex-col min-h-screen bg-primary'>
         <NavBar />
-        <main className='container mt-20 sm:mt-12 p-4 sm:p-8 max-w-5xl mx-auto bg-primary h-full'>
-          {title ? <PageHeader accent={accent}>{title}</PageHeader> : ''}
-          {children}
-        </main>
+        <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
+          <BannerMessage type='update' icon={faMagic}>
+            Our conference website has been revamped.{' '}
+            <a>See what's new here.</a>
+          </BannerMessage>
+          <main className='container max-w-5xl mx-auto bg-primary h-full'>
+            {title ? <PageHeader accent={accent}>{title}</PageHeader> : ''}
+            {children}
+          </main>
+        </div>
       </div>
       <Footer />
     </div>
