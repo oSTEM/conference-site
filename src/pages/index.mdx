@@ -7,11 +7,14 @@ import { SiteLayout } from "../components/layout/SiteLayout";
 <SiteLayout>
 
 <div className="border-chill-green border-solid text-center">
-  <img
-    alt="Banner for the 14th Annual oSTEM Conference, from October 17-20 in Portland, OR."
-    src="/images/2024/14th_annual_banner.png"
-    className="flex w-200 mx-auto rounded"
-  />
+  <picture>
+    <source srcSet="/images/2024/14th_banner_square.webp" media='(orientation: portrait)'/>
+    <img
+      alt="Banner for the 14th Annual oSTEM Conference, from October 17-20 in Portland, OR."
+      src="/images/2024/14th_annual_banner.png"
+      className="flex w-200 mx-auto rounded"
+    />
+  </picture>
 </div>
 <hr className='border-dark-teal border-2 mt-2 rounded'/>
 

@@ -405,7 +405,7 @@ export default function NavBar() {
               </p>
 
               <FontAwesomeIcon
-                className='text-black dark:text-white ml-1.5 mr-0.5 mt-2 w-2 h-2'
+                className='text-black dark:text-white ml-1.5 mr-0.5 mt-1 w-2 h-1 font-[14px]'
                 icon={faChevronRight}
               />
               <NavbarDropdown

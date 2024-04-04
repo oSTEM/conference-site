@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { SocialRow } from './Socials';
+import { faArchive } from '@fortawesome/free-solid-svg-icons';
 import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
 import NavBar from '@/components/navbar/NavbarCore';
 import { PageHeader } from '../header/PageHeader';
@@ -14,6 +16,9 @@ export interface SiteLayoutProps {
 }
 
 export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
+  const router = useRouter();
+  const isArchive = router.pathname.indexOf('/archive') !== -1;
+
   return (
     <div>
       <Head>
@@ -22,6 +27,14 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
       <div className='flex flex-col min-h-screen bg-primary'>
         <NavBar />
         <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
+          {isArchive ? (
+            <BannerMessage icon={faArchive}>
+              You're viewing an archived page for a past conference. Information
+              may not be relevant to this year's conference.
+            </BannerMessage>
+          ) : (
+            ''
+          )}
           <BannerMessage type='update' icon={faMagic}>
             Our conference website has been revamped.{' '}
             <Link href='/2024/whats-new'>
