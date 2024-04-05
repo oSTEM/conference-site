@@ -147,7 +147,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
               styles['dropdownBtn']
             } inline-flex items-center w-full justify-center rounded-full border-2 border-${
               category.color
-            } px-4 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-${
+            } px-4 py-2 text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-${
               category.color
             }/75 transition ${
               fill

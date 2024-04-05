@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -18,6 +18,7 @@ export interface SiteLayoutProps {
 export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   const router = useRouter();
   const isArchive = router.pathname.indexOf('/archive') !== -1;
+  let [updateBannerVisible, setUpdateBannerVisible] = useState(true);
 
   return (
     <div>
@@ -28,20 +29,29 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
         <NavBar />
         <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
           {isArchive ? (
-            <BannerMessage icon={faArchive}>
+            <BannerMessage icon={faArchive} type='warning' closeButton={false}>
               You're viewing an archived page for a past conference. Information
               may not be relevant to this year's conference.
             </BannerMessage>
           ) : (
             ''
           )}
-          <BannerMessage type='update' icon={faMagic}>
-            Our conference website has been revamped.{' '}
-            <Link href='/2024/whats-new'>
-              <a>See what's new here.</a>
-            </Link>
-          </BannerMessage>
-          <main className='container max-w-5xl mx-auto bg-primary h-full'>
+          {updateBannerVisible ? (
+            <BannerMessage
+              type='update'
+              icon={faMagic}
+              closeHandler={setUpdateBannerVisible}
+            >
+              Our conference website has been revamped.{' '}
+              <Link href='/2024/whats-new'>
+                <a>See what's new here.</a>
+              </Link>
+            </BannerMessage>
+          ) : (
+            ''
+          )}
+
+          <main className='container pt-2 max-w-5xl mx-auto bg-primary h-full'>
             {title ? <PageHeader accent={accent}>{title}</PageHeader> : ''}
             {children}
           </main>
