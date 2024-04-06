@@ -1,6 +1,7 @@
 import { CTAButton } from "@/components/button/CTAButton";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { Tab } from '@headlessui/react'
 import Image from "next/future/image";
 
 <SiteLayout title="Requests for Programs" accent="nav-blue">
@@ -10,7 +11,7 @@ import Image from "next/future/image";
     <img src="/images/2024/2024_rfp_horizontal.png" alt="Graphical timeline explaining the 2024 RFP process. There are four headers titled Review the RFP, Three Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image." className='mx-auto max-h-screen'/>
 </picture>
 
-<div className="text-bright-peach font-bold">
+<div className="text-nav-blue font-bold">
 
 ## Submission Milestones
 
@@ -32,7 +33,7 @@ Successful programs will align with oSTEM’s mission and core values: *integrit
 </div>
 
 
-<div className="text-bright-peach font-bold">
+<div className="text-nav-blue font-bold">
 
 ## 2024 Program Tracks and Updates
 </div>
@@ -46,7 +47,17 @@ Based on previous feedback, oSTEM is excited to introduce three tracks for the 2
 
 **Technical Spotlight:** Topics for this track will be extremely focused on the highly technical aspects of the presented topic. Professionals who already belong to this field or want to appreciate the intricacies of the field. These submissions are more focused and it is expected that the audience will have foundational knowledge of the topic being discussed. For the 2024 Conference, our programs will focus on AI and Machine Learning, Research and Study Design in LGBT+ Population, and Sustainable Engineering.
 
-<div className="text-bright-peach font-bold">
+<div>
+<Tab.Group>
+<Tab.List className='mt-4 pt-1 sticky top-[87px] sm:top-[64px] flex space-x-1 p-1 bg-primary border-b'>
+  {/* Learn more about:&nbsp; */}
+  {
+    ['Collegiate', 'Industry', 'Technical Spotlight'].map(e => (<Tab className={({selected}) => (`${selected ? `text-nav-blue bg-blue-200/25` : `hover:bg-blue-200/15`} transition rounded px-1 text-lg`)} key={e}>{e}</Tab>))
+  }
+</Tab.List>
+<Tab.Panels className='border-b border-l border-r px-4 border-x-gray-500/50'>
+<Tab.Panel>
+<div className="text-nav-blue font-bold">
 
 ### Collegiate Program Topics
 </div>
@@ -71,8 +82,9 @@ Other Relevant Topics - Interested in presenting something that doesn’t fit in
 
 **Other Relevant Topics** - Interested in presenting something that doesn’t fit into one of these categories? That’s great! People don’t always fit neatly into a box so we don’t expect our programs to either. Feel free to submit a program that highlights STEM and queer populations in an academic setting. 
 
-
-<div className="text-bright-peach font-bold">
+</Tab.Panel>
+<Tab.Panel>
+<div className="text-nav-blue font-bold">
 
 ### Industry Program Topics
 </div>
@@ -96,11 +108,11 @@ A description of each submission category is provided below:
 
 **Other Relevant Topics** - Interested in presenting something that doesn’t fit into one of these categories? That’s great! People don’t always fit neatly into a box so we don’t expect our programs to either. Feel free to submit a program that highlights STEM and queer populations in an industry setting.
 
+</Tab.Panel>
+<Tab.Panel>
+<div className="text-nav-blue font-bold">
 
-
-<div className="text-bright-peach font-bold">
-
-### Technical Spotlight
+### Technical Spotlight Program Topics
 </div>
 
 Presentations are required to fall within the following categories: 
@@ -116,7 +128,12 @@ A description of each submission category is provided below:
 
 **Sustainable Engineering** - There is a considerable movement to include sustainable design in future projects. Programs submitted in this topic will highlight how sustainability practices can be used in order to better your organization and highlight key efforts that are ongoing for renewable energy and the future of climate change. 
 
-<div className="text-bright-peach font-bold">
+</Tab.Panel>
+</Tab.Panels>
+</Tab.Group>
+</div>
+
+<div className="text-nav-blue font-bold">
 
 ## 2024 Proposal Components
 </div>
@@ -174,7 +191,7 @@ Your proposal must include the following components:
   priority="true"
 />
 
-<div className="text-bright-peach font-bold">
+<div className="text-nav-blue font-bold">
 
 ## Benefits for Presenters
 </div>
@@ -190,7 +207,7 @@ Your proposal must include the following components:
 - Receive presenter acknowledgment in conference program book and on badge
 <br />
 
-<div className="text-bright-peach font-bold">
+<div className="text-nav-blue font-bold">
 
 ## Additional Info
 </div>
