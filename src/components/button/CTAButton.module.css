@@ -11,10 +11,10 @@
   justify-content: center;
   text-align: center;
   font-family: var(--font-display);
-  line-height: 1.3em;
-  padding: var(--padding, 0.5em 1.5em);
+  line-height: 1.5rem;
+  padding: var(--padding, 0.4em 1.2em);
   color: var(--text);
-  font-size: 1.1em;
+  font-size: 1.25rem;
   font-weight: bold;
   text-decoration: none;
   /* background-color: var(--color-${backgroundColor}); */
@@ -28,8 +28,11 @@
 
 .CTAButton:not([data-disabled="true"]):hover,
 .CTAButton:focus {
-  background-color: var(--color-ostem-darkblue);
   box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.CTAButton:focus-visible {
+  outline: 3px solid var(--color-text);
 }
 
 .CTAButton:disabled[data-disabled="true"] {

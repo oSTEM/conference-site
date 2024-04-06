@@ -31,7 +31,7 @@ export const CTAButton = ({
   target: '_self' | '_blank';
 }) => {
   const commonProps = {
-    'className': styles.CTAButton,
+    'className': `${styles.CTAButton} no-underline`,
     'data-disabled': disabled,
   };
 

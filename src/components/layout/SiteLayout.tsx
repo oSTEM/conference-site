@@ -46,8 +46,8 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
         <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
           {isArchive ? (
             <BannerMessage icon={faArchive} type='warning' closeButton={false}>
-              You're viewing an archived page for a past conference. Information
-              may not be relevant to this year's conference.
+              You're viewing an <b>archived</b> page for a past conference.
+              Information may not be relevant to this year's conference.
             </BannerMessage>
           ) : (
             ''

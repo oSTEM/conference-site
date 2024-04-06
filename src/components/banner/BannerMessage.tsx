@@ -20,7 +20,7 @@ export const BannerMessage = ({
   let [showBanner, setShowBanner] = useState(true);
   const themes: { [key: string]: string[] } = {
     default: ['bg-purple-400/20', 'text-fuchsia-700 dark:text-fuchsia-200'],
-    warning: ['bg-orange-600/15', 'text-fuchsia-700 dark:text-orange-200'],
+    warning: ['bg-orange-600/15', 'text-orange-700 dark:text-orange-200'],
   };
   let theme = themes['default'];
   if (typeof type === 'string') {

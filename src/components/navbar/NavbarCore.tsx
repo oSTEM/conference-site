@@ -306,6 +306,8 @@ export default function NavBar() {
   const currentPage = NAVBAR_LINKS.find(
     (link) => link.href === router.pathname,
   );
+  const isArchive = router.pathname.indexOf('/archive') !== -1;
+  const archiveYear = router.pathname.match(/(?<=archive\/)\d{4}/);
 
   const [NavCategories, currentCategory] = categorizeNavbarLinks(
     NAVBAR_CATEGORIES,
@@ -344,6 +346,8 @@ export default function NavBar() {
                   >
                     {currentPage.label}
                   </span>
+                ) : isArchive ? (
+                  <span>Annual Conference</span>
                 ) : (
                   <span>
                     <b>
@@ -361,8 +365,22 @@ export default function NavBar() {
                     Annual Conference
                   </span>
                 ) : (
-                  <span className={`text-sm ${styles['gradientText']}`}>
-                    <b>Portland, OR</b> - Oct 17-20, 2024
+                  <span
+                    className={`text-sm ${
+                      isArchive
+                        ? 'text-orange-600 dark:text-yellow-200'
+                        : styles['gradientText']
+                    }`}
+                  >
+                    {isArchive ? (
+                      <span>
+                        <b>{archiveYear}</b> Archive
+                      </span>
+                    ) : (
+                      <span>
+                        <b>Portland, OR</b> - Oct 17-20, 2024
+                      </span>
+                    )}
                   </span>
                 )}
               </p>
