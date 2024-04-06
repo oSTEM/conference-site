@@ -27,7 +27,7 @@ const LinkGroup: React.FC<LinkGroup> = ({ category, active }) => {
       <div className={`border-l-2 border-${category.color} ml-0.5 mb-4`}>
         {category.links.map((link) => (
           <Link key={link.label} href={link.href}>
-            <a className='text-black dark:text-white'>
+            <a className='text-black dark:text-white no-underline'>
               <p
                 className={`pl-2 transition rounded-r-full hover:bg-${
                   category.color
@@ -108,7 +108,7 @@ const SideBar: React.FC<SidebarProps> = ({
         show={active}
       >
         <div
-          className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 dark:bg-black/50 backdrop-blur-md z-20`}
+          className={`fixed flex flex-col right-0 w-full sm:w-80 top-0 h-full bg-white/80 dark:bg-black/50 backdrop-blur-md z-20 select-none`}
         >
           <div className='flex border-b ml-2 mr-2 border-text-color'>
             <Link href='/'>

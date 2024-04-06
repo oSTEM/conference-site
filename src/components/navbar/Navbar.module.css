@@ -23,8 +23,17 @@
   padding: 3px 4px 4px;
 }
 
+.mobileIcon {
+  margin: 7px 2px 0 6px;
+  height: 10px;
+}
+
 .dropdownBtn[data-headlessui-state="open"] .dropdownIcon, .dropdownCompact[data-headlessui-state="open"] .dropdownIcon {
   transform: rotateX(180deg);
+}
+
+.dropdownCompact .dropdownIcon {
+  height: 12px;
 }
 
 .gradientText {

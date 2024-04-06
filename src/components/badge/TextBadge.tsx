@@ -8,12 +8,12 @@ export const TextBadge = ({
   className?: string;
 }) => {
   return (
-    <div
+    <span
       className={`${styles['TextBadge']} transition border ${
         className ? className : ''
       }`}
     >
       {children}
-    </div>
+    </span>
   );
 };

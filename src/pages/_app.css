@@ -118,11 +118,11 @@ html > * {
 
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:not(.no-underline):hover {
+  text-decoration-line: underline;
 }
 
 * {

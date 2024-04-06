@@ -72,6 +72,7 @@ const ThemeSelector = ({
       </p>
       {themeOpts.map((theme, ind) => (
         <button
+          key={ind}
           title={
             ind === currentTheme ? `` : `Change to ${themeOpts[ind][1]} Theme`
           }
@@ -191,7 +192,7 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
                         active
                           ? `bg-${category.color} dark:bg-${category.color}/50 text-white`
                           : 'bg-white dark:bg-zinc-900 text-black dark:text-white'
-                      } group flex w-full items-center rounded-sm px-2 py-2 text-sm transition`}
+                      } group flex w-full items-center rounded-sm px-2 py-2 text-sm no-underline transition`}
                     >
                       <span className='grow'>{link.label}</span>
                       {link.badge ? (
@@ -405,7 +406,7 @@ export default function NavBar() {
               </p>
 
               <FontAwesomeIcon
-                className='text-black dark:text-white ml-1.5 mr-0.5 mt-1 w-2 h-1 font-[14px]'
+                className={`text-black dark:text-white ${styles['mobileIcon']}`}
                 icon={faChevronRight}
               />
               <NavbarDropdown
