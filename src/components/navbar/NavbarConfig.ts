@@ -55,7 +55,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Schedule',
-    href: '/2024/schedule',
+    href: '/2024/attend/schedule',
   },
   {
     category: 'present',
