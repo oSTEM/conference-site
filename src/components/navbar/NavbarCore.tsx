@@ -432,6 +432,13 @@ export default function NavBar() {
                 compact={true}
               ></NavbarDropdown>
             </div>
+          ) : isArchive ? (
+            <div className='flex w-full ml-0.5 mr-1'>
+              <p className='grow'>Annual Conference</p>
+              <p className={'text-orange-600 dark:text-yellow-200'}>
+                <b>{archiveYear}</b> Archive
+              </p>
+            </div>
           ) : (
             <div className='flex w-full ml-0.5 mr-1'>
               <p className='grow'>
