@@ -86,16 +86,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
-    href: '/2024/partner/partnership',
+    href: '/2024/partner/exhibitors-and-sponsors',
     badge: {
       label: 'Open',
       accent: true,
     },
-  },
-  {
-    category: 'partner',
-    label: 'Previous Exhibitors',
-    href: '/2024/partner/previous-exhibitors',
   },
   {
     category: 'misc',
