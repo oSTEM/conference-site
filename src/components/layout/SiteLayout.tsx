@@ -18,7 +18,23 @@ export interface SiteLayoutProps {
 export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   const router = useRouter();
   const isArchive = router.pathname.indexOf('/archive') !== -1;
-  let [updateBannerVisible, setUpdateBannerVisible] = useState(true);
+  let updateBannerVisible = true;
+
+  if (
+    typeof localStorage !== 'undefined' &&
+    localStorage.getItem('ocf-ver') === '1'
+  ) {
+    updateBannerVisible = false;
+  } else if (router.pathname === '/2024/whats-new') {
+    if (typeof localStorage !== 'undefined')
+      localStorage.setItem('ocf-ver', '1');
+    updateBannerVisible = false;
+  }
+
+  function whatsNewCloseHandler() {
+    if (typeof localStorage !== 'undefined')
+      localStorage.setItem('ocf-ver', '1');
+  }
 
   return (
     <div>
@@ -40,11 +56,11 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
             <BannerMessage
               type='update'
               icon={faMagic}
-              closeHandler={setUpdateBannerVisible}
+              closeHandler={whatsNewCloseHandler}
             >
               Our conference website has been revamped.{' '}
               <Link href='/2024/whats-new'>
-                <a>See what's new here.</a>
+                <a>See&nbsp;what's&nbsp;new&nbsp;here.</a>
               </Link>
             </BannerMessage>
           ) : (

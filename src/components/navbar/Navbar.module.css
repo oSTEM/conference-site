@@ -20,7 +20,7 @@
 
 .dropdownCompact {
   display: inline-flex;
-  padding: 3px 4px 4px;
+  padding: 4px 4px 2px 4px;
 }
 
 .mobileIcon {
@@ -33,7 +33,9 @@
 }
 
 .dropdownCompact .dropdownIcon {
-  height: 12px;
+  height: 100%;
+  padding: 1px;
+  vertical-align: top;
 }
 
 .gradientText {

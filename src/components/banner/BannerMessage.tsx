@@ -38,8 +38,8 @@ export const BannerMessage = ({
     <Transition
       as={Fragment}
       leave='transition-all ease-in duration-360'
-      leaveFrom='opacity-100 h-8 overflow-hidden'
-      leaveTo='opacity-0 h-0 overflow-hidden'
+      leaveFrom='opacity-100 max-h-20 overflow-hidden'
+      leaveTo='opacity-0 max-h-0 overflow-hidden'
       show={showBanner}
     >
       <div
