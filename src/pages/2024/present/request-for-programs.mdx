@@ -51,12 +51,9 @@ You can learn more about the three tracks below:
 
 <div>
 <Tab.Group>
-<Tab.List className='mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 p-1 bg-primary border-b border-text-color'>
-  {/* Learn more about:&nbsp; */}
-  {
-    ['Collegiate', 'Industry', 'Technical Spotlight'].map(e => (<Tab className={({selected}) => (`${selected ? `text-nav-blue bg-blue-300/25` : `hover:bg-blue-300/15`} transition rounded px-1 sm:px-2 sm:py-0.5`)} key={e}>{e}</Tab>))
-  }
-</Tab.List>
+<Tab.List className='mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>{
+    ['Collegiate', 'Industry', 'Technical Spotlight'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-blue bg-blue-300/25` : `hover:bg-blue-300/15`} transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
+}</Tab.List>
 <Tab.Panels className='border-b border-text-color px-4 bg-blue-500/10'>
 <Tab.Panel>
 <div className="text-nav-blue font-bold">
