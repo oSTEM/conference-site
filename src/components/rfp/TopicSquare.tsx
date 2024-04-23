@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 /**
  * A topic in the RFP page.
@@ -10,7 +10,7 @@ import React from "react";
  *    I think. Not sure what best thing to do is here.
  */
 export const TopicSquare = ({
-  borderColor = "border-red-500",
+  borderColor = 'border-red-500',
   children,
   title,
 }: {
@@ -22,7 +22,7 @@ export const TopicSquare = ({
     <div
       // note: we set a min-height because the "Other Relevant Topics" square
       // looks a little wimpy without it
-      className={`border-solid pl-4 border-l-8 ${borderColor} flex flex-col min-h-[12rem] py-2 my-4`}
+      className={`border-solid pl-4 border-l-4 ${borderColor} flex flex-col min-h-[12rem] py-2 my-4`}
     >
       <h3>{title}</h3>
       {children}
