@@ -230,6 +230,15 @@ th {
   vertical-align: baseline;
 }
 
+/* Minimal border tables */
+table.table-mb, table.table-mb th, table.table-mb td {
+  border: none;
+}
+
+table.table-mb th {
+  border-bottom: 1px solid #c6c9cc;
+}
+
 tbody tr:nth-child(2n) {
   background-color: rgba(0, 0, 0, 0.025);
 }
