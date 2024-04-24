@@ -1,21 +1,72 @@
 import { TextBadge } from '@/components/badge/TextBadge';
+import { Switch } from '@headlessui/react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 const Price = ({ val }: { val: number }) => {
   return <td>{val}</td>;
 };
 
-export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
+const ToggleSwitch = ({
+  enabled,
+  setEnabled,
+}: {
+  enabled: boolean;
+  setEnabled: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
-    <table className='table-fixed text-center table-mb'>
+    <Switch
+      checked={enabled}
+      onChange={setEnabled}
+      className={`${
+        enabled ? 'bg-green-700 dark:bg-green-400/60' : 'bg-gray-400/30'
+      } relative inline-flex h-5 w-10 items-center rounded-full`}
+    >
+      <span className='sr-only'>
+        Toggle for showing ticket prices with fees
+      </span>
+      <span
+        className={`${
+          enabled ? 'translate-x-6' : 'translate-x-1'
+        } inline-block h-3 w-3 transform rounded-full bg-white transition`}
+      />
+    </Switch>
+  );
+};
+
+export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
+  const [enabled, setEnabled] = useState(false);
+
+  return (
+    <table className='text-center table-mb'>
       <thead>
-        <tr className='bg-green-300/25'>
+        <tr>
+          <th className='p-0 pb-1 font-normal' colSpan={4}>
+            <span className='flex w-full text-left'>
+              <span className='grow'>
+                Tickets are{' '}
+                <span
+                  className='text-nav-green'
+                  title='Approx. 6.08% + $1.32/ticket'
+                >
+                  subject to a fee
+                </span>{' '}
+                not currently shown below.
+              </span>
+              <span>
+                Show Prices w/ Fees{' '}
+                <ToggleSwitch enabled={enabled} setEnabled={setEnabled} />
+              </span>
+            </span>
+          </th>
+        </tr>
+        <tr className='bg-green-400/30'>
           <th>Ticket Type</th>
           <th>Purchase Deadline</th>
           <th>Member Price</th>
           <th>Non-Member Price</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
         <tr>
           <td>
             Collegiate Full Conference{' '}
@@ -27,7 +78,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
           <td>$150</td>
           <td>$225</td>
         </tr>
-        <tr className='bg-green-300/10'>
+        <tr>
           <td>
             Collegiate Full Conference{' '}
             <TextBadge className='border-text-color'>Regular</TextBadge>
@@ -47,7 +98,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
           <td>$225</td>
           <td>n/a</td>
         </tr>
-        <tr className='bg-green-300/10'>
+        <tr>
           <td>
             Advisor Full Conference{' '}
             <TextBadge className='border-text-color'>Regular</TextBadge>
@@ -62,18 +113,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
 };
 
 const GeneralTable = ({ type }: { type: String }) => {
-  return (
-    <div>
-      <p>
-        Tickets are{' '}
-        <span className='text-nav-green' title='6.08% + $1.32/ticket'>
-          subject to a fee
-        </span>{' '}
-        not shown below.
-      </p>
-      <CollegiateTable></CollegiateTable>
-    </div>
-  );
+  return <CollegiateTable></CollegiateTable>;
 };
 
 export default GeneralTable;
