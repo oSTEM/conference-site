@@ -52,30 +52,42 @@
 
 @keyframes fade-in-out {
   0% {
+    display: block;
+    /* height: 0px; */
+  }
+  1% {
     opacity: 0;
   }
-  10% {
+  3% {
     opacity: 1;
   }
-  40% {
+  49% {
     opacity: 1;
   }
-  50% {
+  52% {
     opacity: 0;
+  }
+  53% {
+    display: none;
+    /* height: 0px; */
   }
 }
 
 .NavFade, .NavFadeAlt {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
-  /* display: block; */
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  text-align: right;
 }
 .NavFade {
   opacity: 0;
-  animation: 2s ease-in-out -0.25s infinite running fade-in-out;
+  animation: 12s ease-in-out -1.50s infinite running fade-in-out;
 }
 .NavFadeAlt {
   opacity: 0;
-  animation: 2s ease-in-out 0.75s infinite running fade-in-out;
+  animation: 12s ease-in-out 4.50s infinite running fade-in-out;
+  margin-top: -15px;
 }

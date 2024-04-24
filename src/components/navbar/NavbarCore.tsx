@@ -447,7 +447,7 @@ export default function NavBar() {
                 </b>{' '}
                 Annual Conference
               </p>
-              <p className={`${styles['gradientText']} relative w-12`}>
+              <p className={`${styles['gradientText']} relative`}>
                 <span className={styles['NavFade']}>Portland, OR</span>
                 <span className={styles['NavFadeAlt']}>Oct 17-20, 2024</span>
               </p>
