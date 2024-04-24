@@ -2,8 +2,8 @@ import { SiteLayout } from "@/components/layout/SiteLayout";
 import { CTAButton } from "@/components/button/CTAButton";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
 import { Switch } from '@headlessui/react'
-import { TextBadge } from '@/components/badge/TextBadge';
 import { Tab } from '@headlessui/react'
+import * as TicketTable from './RegistrationTicketTables';
 import Image from "next/image";
 
 <SiteLayout title="Registration" accent="nav-green">
@@ -57,45 +57,16 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
 <p><b className='text-red-600 dark:text-red-300'>All online ticket sales will close on September 30.</b> No exceptions will be made. If you miss the online ticket window, you may purchase tickets on-site for an additional cost. Please note that on-site tickets do not come with any food vouchers or special accommodations.</p>
 
 <Tab.Group>
-<Tab.List className='mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>{
-    ['Collegiate', 'Professional', 'Expo Only'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-green bg-green-300/25` : `hover:bg-green-300/15`} focus:outline-none focus:ring-nav-green/70 focus:ring-1 transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
+<Tab.List className='flex mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>
+<span className='grow'>
+{
+    ['Collegiate', 'Professional', 'Expo Only'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-green bg-green-300/25` : `hover:bg-green-300/15`} focus:outline-none focus:ring-nav-green/70 focus:ring-1 transition text-sm sm:text-base rounded px-1 sm:px-2 mr-1 py-0.5`)}>{e}</Tab>))
 }
-<p></p>
+</span>
 </Tab.List>
 <Tab.Panels className='px-3 py-2'>
 <Tab.Panel>
-  <table className="table-fixed text-center table-mb">
-    <tr className='bg-green-300/25'>
-        <th>Ticket Type</th>
-        <th>Purchase Deadline</th>
-        <th>Member Price</th>
-        <th>Non-Member Price</th>
-    </tr>
-    <tr>
-        <td>Collegiate Full Conference <TextBadge className='border-nav-green text-nav-green'>Early Bird</TextBadge></td>
-        <td>June 30, 2024</td>
-        <td>$150</td>
-        <td>$225</td>
-    </tr>
-    <tr className='bg-green-300/10'>
-        <td>Collegiate Full Conference <TextBadge>Regular</TextBadge></td>
-        <td>September 30, 2024</td>
-        <td>$175</td>
-        <td>$250</td>
-    </tr>
-    <tr>
-        <td>Advisor Full Conference <TextBadge className='border-nav-green text-nav-green'>Early Bird</TextBadge></td>
-        <td>June 30, 2024</td>
-        <td>$225</td>
-        <td>n/a</td>
-    </tr>
-    <tr className='bg-green-300/10'>
-        <td>Advisor Full Conference <TextBadge>Regular</TextBadge></td>
-        <td>September 30, 2024</td>
-        <td>$250</td>
-        <td>n/a</td>
-    </tr>
-</table>
+<TicketTable.CollegiateTable></TicketTable.CollegiateTable>
 <p><b>Early Bird Discount:</b> Save $25/ticket by purchasing your ticket(s) by June 30th!</p>
 <h4>Group Tickets</h4>
 <p>New this year, collegiate chapters may purchase tickets for their members in bulk. Select "Collegiate (Member) - Group Tickets " on the registration page to use this option. This option is useful if you (a) want to take advantage of early-bird pricing but don't have a finalized attendee list yet, or (b) are purchasing a large number of tickets under a chapter.</p>
@@ -106,6 +77,8 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
   <li>All blank tickets must be filled out by the regular ticket deadline (9/30).</li>
   <li>Group tickets cannot be partially refunded. Blank tickets that are not completed by the deadline will be cancelled without a refund.</li>
 </ul>
+</Tab.Panel>
+<Tab.Panel>
 </Tab.Panel>
 <Tab.Panel>
 </Tab.Panel>
