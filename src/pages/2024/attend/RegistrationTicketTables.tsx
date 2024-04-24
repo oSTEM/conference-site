@@ -60,3 +60,9 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
     </div>
   );
 };
+
+const GeneralTable = ({ table }: { table: String }) => {
+  return <CollegiateTable></CollegiateTable>;
+};
+
+export default GeneralTable;
