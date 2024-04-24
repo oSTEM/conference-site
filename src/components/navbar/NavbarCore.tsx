@@ -2,7 +2,7 @@
  * NavbarCore.tsx
  *
  * Responsible for rendering the new navbar at the top/side of all pages.
- * Change the links in the navbar by editing @see NavbarConfig.ts - not this file.
+ * Change the links in the navbar by editing @see Navbar.config.ts - not this file.
  *
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */

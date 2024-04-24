@@ -1,5 +1,5 @@
 /**
- * NavbarConfig.ts
+ * Navbar.config.ts
  *
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
