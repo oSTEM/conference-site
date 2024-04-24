@@ -3,13 +3,15 @@ import { CTAButton } from "@/components/button/CTAButton";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
 import { Switch } from '@headlessui/react'
 import { Tab } from '@headlessui/react'
-import * as TicketTable from './RegistrationTicketTables';
+import TicketTable from './RegistrationTicketTables';
 import Image from "next/image";
+import landingImg from './registration-2024.png'
 
 <SiteLayout title="Registration" accent="nav-green">
 
 <Image
-  src="/images/2023registration.png"
+  src={landingImg}
+  placeholder="blur"
   alt=""
   layout="responsive"
   width="800"
@@ -66,7 +68,7 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
 </Tab.List>
 <Tab.Panels className='px-3 py-2'>
 <Tab.Panel>
-<TicketTable.CollegiateTable></TicketTable.CollegiateTable>
+<TicketTable></TicketTable>
 <p><b>Early Bird Discount:</b> Save $25/ticket by purchasing your ticket(s) by June 30th!</p>
 <h4>Group Tickets</h4>
 <p>New this year, collegiate chapters may purchase tickets for their members in bulk. Select "Collegiate (Member) - Group Tickets " on the registration page to use this option. This option is useful if you (a) want to take advantage of early-bird pricing but don't have a finalized attendee list yet, or (b) are purchasing a large number of tickets under a chapter.</p>
