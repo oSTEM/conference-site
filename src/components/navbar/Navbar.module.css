@@ -49,3 +49,33 @@
   font-size: 0.9375rem;
   line-height: 1;
 }
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.NavFade, .NavFadeAlt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* display: block; */
+}
+.NavFade {
+  opacity: 0;
+  animation: 2s ease-in-out -0.25s infinite running fade-in-out;
+}
+.NavFadeAlt {
+  opacity: 0;
+  animation: 2s ease-in-out 0.75s infinite running fade-in-out;
+}
