@@ -62,7 +62,7 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
 <Tab.List className='flex mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>
 <span className='grow'>
 {
-    ['Collegiate', 'Professional', 'Expo Only'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-green bg-green-300/25` : `hover:bg-green-300/15`} focus:outline-none focus:ring-nav-green/70 focus:ring-1 transition text-sm sm:text-base rounded px-1 sm:px-2 mr-1 py-0.5`)}>{e}</Tab>))
+    ['Collegiate', 'Professional', 'Expo Only'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-green bg-green-300/25 border-nav-green/90` : `hover:bg-green-300/15   border-nav-green/60`} border focus:outline-none focus:ring-nav-green/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>{e}</Tab>))
 }
 </span>
 </Tab.List>
@@ -71,11 +71,11 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
   <TicketTable type='collegiate'></TicketTable>
   <p><b>Early Bird Discount:</b> Save $25/ticket by purchasing your ticket(s) by June 30th!</p>
   <h4>Group Tickets</h4>
-  <p>New this year, collegiate chapters may purchase tickets for their members in bulk. Select "Collegiate (Member) - Group Tickets" on the registration page to use this option. This option is useful if you (a) want to take advantage of early-bird pricing but don't have a finalized attendee list yet, or (b) are purchasing a large number of tickets under a chapter.</p>
+  <p>We are piloting group tickets this year, allowing collegiate chapters to purchase tickets for their members in bulk. Select "Collegiate (Member) - Group Tickets" on the registration page to use this option.</p>
   <ul>
-    <li>Group tickets cost the same as regular tickets, but you may purchase up to 99 in one transaction instead of 10.</li>
+    <li>Group and individual tickets cost the same, but you may purchase up to 99 in one transaction instead of 10.</li>
     <li>All attendees under a set of group tickets must be oSTEM members. Group tickets are not available for non-members.</li>
-    <li>You may buy blank group tickets first (i.e., to get early-bird pricing) and then fill in attendee names on a later day.</li>
+    <li>You may buy blank group tickets first and then fill in attendee names on a later day.</li>
     <li>All blank tickets must be filled out by the regular ticket deadline (9/30).</li>
     <li>Group tickets cannot be partially refunded. Blank tickets that are not completed by the deadline will be cancelled without a refund.</li>
   </ul>
@@ -88,6 +88,15 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
 <Tab.Panel>
   <TicketTable type='professional'></TicketTable>
   <p><b>Early Bird Discount:</b> Save $50/ticket by purchasing your ticket(s) by June 30th!</p>
+  <h4>Group Tickets</h4>
+  <p>We are piloting group tickets this year, allowing companies to purchase tickets for their employees in bulk. Select "Professional (Member) - Group Tickets" on the registration page to use this option.</p>
+  <ul>
+    <li>Group and individual tickets cost the same, but you may purchase up to 99 in one transaction instead of 10.</li>
+    <li>All attendees under a set of group tickets must be oSTEM members. Group tickets are not available for non-members.</li>
+    <li>You may buy blank group tickets first and then fill in attendee names on a later day.</li>
+    <li>All blank tickets must be filled out by the regular ticket deadline (9/30).</li>
+    <li>Group tickets cannot be partially refunded. Blank tickets that are not completed by the deadline will be cancelled without a refund.</li>
+  </ul>
 </Tab.Panel>
 <Tab.Panel>
 </Tab.Panel>

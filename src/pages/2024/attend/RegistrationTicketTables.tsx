@@ -63,7 +63,7 @@ const PriceElement = ({
   );
 };
 
-export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
+export const CollegiateTable = () => {
   const [showFee, setShowFee] = useState(false);
 
   return (
@@ -101,7 +101,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
       <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
         <tr>
           <td>
-            Collegiate Full Conference{' '}
+            Collegiate Full{' '}
             <TextBadge className='border-nav-green text-nav-green'>
               Early Bird
             </TextBadge>
@@ -112,7 +112,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
         </tr>
         <tr>
           <td>
-            Collegiate Full Conference{' '}
+            Collegiate Full{' '}
             <TextBadge className='border-text-color'>Regular</TextBadge>
           </td>
           <td>September 30, 2024</td>
@@ -121,7 +121,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
         </tr>
         <tr>
           <td>
-            Advisor Full Conference{' '}
+            Advisor Full{' '}
             <TextBadge className='border-nav-green text-nav-green'>
               Early Bird
             </TextBadge>
@@ -132,7 +132,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
         </tr>
         <tr>
           <td>
-            Advisor Full Conference{' '}
+            Advisor Full{' '}
             <TextBadge className='border-text-color'>Regular</TextBadge>
           </td>
           <td>September 30, 2024</td>
@@ -144,11 +144,7 @@ export const CollegiateTable = ({ includeFees }: { includeFees?: boolean }) => {
   );
 };
 
-export const ProfessionalTable = ({
-  includeFees,
-}: {
-  includeFees?: boolean;
-}) => {
+export const ProfessionalTable = () => {
   const [showFee, setShowFee] = useState(false);
 
   return (
@@ -186,7 +182,7 @@ export const ProfessionalTable = ({
       <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
         <tr>
           <td>
-            Professional Full Conference{' '}
+            Professional Full{' '}
             <TextBadge className='border-nav-green text-nav-green'>
               Early Bird
             </TextBadge>
@@ -197,7 +193,7 @@ export const ProfessionalTable = ({
         </tr>
         <tr>
           <td>
-            Professional Full Conference{' '}
+            Professional Full{' '}
             <TextBadge className='border-text-color'>Regular</TextBadge>
           </td>
           <td>September 30, 2024</td>
