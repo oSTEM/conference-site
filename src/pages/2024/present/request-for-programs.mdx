@@ -8,7 +8,7 @@ import Image from "next/future/image";
 
 <picture>
     <source srcSet="/images/2024/2024_rfp_vertical.png" media='(orientation: portrait)' alt="Graphical timeline explaining the 2024 RFP process. There are four headers titled Review the RFP, Three Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image."/>
-    <img src="/images/2024/2024_rfp_horizontal.png" alt="Graphical timeline explaining the 2024 RFP process. There are four headers titled Review the RFP, Three Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image." className='mx-auto max-h-screen'/>
+    <img src="/images/2024/2024_rfp_horizontal.png" alt="Graphical timeline explaining the 2024 RFP process. There are four headers titled Review the RFP, Three Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image." className='mx-auto max-h-screen rounded'/>
 </picture>
 
 <div className="text-nav-blue font-bold">
@@ -51,8 +51,8 @@ You can learn more about the three tracks below:
 
 <div>
 <Tab.Group>
-<Tab.List className='mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>{
-    ['Collegiate', 'Industry', 'Technical Spotlight'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-blue bg-blue-300/25` : `hover:bg-blue-300/15`} transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
+<Tab.List className='z-10 mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>{
+    ['Collegiate', 'Industry', 'Technical Spotlight'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `bg-blue-300/25 border-nav-blue/50` : `hover:bg-blue-300/15`} text-nav-blue border border-transparent transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
 }</Tab.List>
 <Tab.Panels className='border-b border-text-color px-4 bg-blue-500/10'>
 <Tab.Panel>
