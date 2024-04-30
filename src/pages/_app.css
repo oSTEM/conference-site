@@ -21,7 +21,7 @@
 html.dark:root {
   --bg-primary: #18181a;
   --sp-nav-gradient: linear-gradient(120deg, #ff7a59 0%, #c280ff 100%);
-  --color-text: #ffffff;
+  --color-text: #e7e8e9;
   --color-link: var(--color-sky);
   color-scheme: dark;
 
