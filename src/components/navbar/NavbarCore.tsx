@@ -316,7 +316,7 @@ export default function NavBar() {
   );
 
   return (
-    <div>
+    <div className='z-30'>
       <SideBar
         active={sidebarOpen}
         currentPage={currentPage}
