@@ -67,80 +67,112 @@ export const CollegiateTable = () => {
   const [showFee, setShowFee] = useState(false);
 
   return (
-    <table className='text-center table-mb'>
-      <thead>
-        <tr>
-          <th className='p-0 pb-1 font-normal' colSpan={4}>
-            <span className='flex w-full text-left'>
-              <span className='grow'>
-                Tickets are{' '}
-                <span
-                  className='text-nav-green cursor-help'
-                  title='Approx. 6.08% + $1.32/ticket'
-                >
-                  subject to a fee
-                </span>{' '}
-                {showFee
-                  ? 'included in the prices shown.'
-                  : 'not currently shown below.'}
+    <div>
+      <table className='text-center table-mb'>
+        <thead>
+          <tr>
+            <th className='p-0 pb-1 font-normal' colSpan={4}>
+              <span className='flex w-full text-left'>
+                <span className='grow'>
+                  Tickets are{' '}
+                  <span
+                    className='text-nav-green cursor-help'
+                    title='Approx. 6.08% + $1.32/ticket'
+                  >
+                    subject to a fee
+                  </span>{' '}
+                  {showFee
+                    ? 'included in the prices shown.'
+                    : 'not currently shown below.'}
+                </span>
+                <span>
+                  Show Prices w/ Fees{' '}
+                  <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
+                </span>
               </span>
-              <span>
-                Show Prices w/ Fees{' '}
-                <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
-              </span>
-            </span>
-          </th>
-        </tr>
-        <tr className='bg-green-400/30'>
-          <th>Ticket Type</th>
+            </th>
+          </tr>
+          <tr className='bg-green-400/30'>
+            <th>Ticket Type</th>
+            <th>Purchase Deadline</th>
+            <th>Member Price</th>
+            <th>Non-Member Price</th>
+          </tr>
+        </thead>
+        <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
+          <tr>
+            <td>
+              Collegiate Full{' '}
+              <TextBadge className='border-nav-green text-nav-green'>
+                Early Bird
+              </TextBadge>
+            </td>
+            <td>June 30, 2024</td>
+            <PriceElement
+              val={150}
+              fee={10.44}
+              showFee={showFee}
+            ></PriceElement>
+            <PriceElement val={225} fee={15} showFee={showFee}></PriceElement>
+          </tr>
+          <tr>
+            <td>
+              Collegiate Full{' '}
+              <TextBadge className='border-text-color'>Regular</TextBadge>
+            </td>
+            <td>September 30, 2024</td>
+            <PriceElement
+              val={175}
+              fee={11.96}
+              showFee={showFee}
+            ></PriceElement>
+            <PriceElement
+              val={250}
+              fee={16.52}
+              showFee={showFee}
+            ></PriceElement>
+          </tr>
+          <tr>
+            <td>
+              Advisor Full{' '}
+              <TextBadge className='border-nav-green text-nav-green'>
+                Early Bird
+              </TextBadge>
+            </td>
+            <td>June 30, 2024</td>
+            <PriceElement val={225} fee={15.0} showFee={showFee}></PriceElement>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td>
+              Advisor Full{' '}
+              <TextBadge className='border-text-color'>Regular</TextBadge>
+            </td>
+            <td>September 30, 2024</td>
+            <PriceElement
+              val={250}
+              fee={16.52}
+              showFee={showFee}
+            ></PriceElement>
+            <td>n/a</td>
+          </tr>
+        </tbody>
+      </table>
+      <table className='text-center table-mb'>
+        <thead className='bg-green-400/30'>
+          <th>Optional Ticket Addons</th>
           <th>Purchase Deadline</th>
-          <th>Member Price</th>
-          <th>Non-Member Price</th>
-        </tr>
-      </thead>
-      <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
-        <tr>
-          <td>
-            Collegiate Full{' '}
-            <TextBadge className='border-nav-green text-nav-green'>
-              Early Bird
-            </TextBadge>
-          </td>
-          <td>June 30, 2024</td>
-          <PriceElement val={150} fee={10.44} showFee={showFee}></PriceElement>
-          <PriceElement val={225} fee={15} showFee={showFee}></PriceElement>
-        </tr>
-        <tr>
-          <td>
-            Collegiate Full{' '}
-            <TextBadge className='border-text-color'>Regular</TextBadge>
-          </td>
-          <td>September 30, 2024</td>
-          <PriceElement val={175} fee={11.96} showFee={showFee}></PriceElement>
-          <PriceElement val={250} fee={16.52} showFee={showFee}></PriceElement>
-        </tr>
-        <tr>
-          <td>
-            Advisor Full{' '}
-            <TextBadge className='border-nav-green text-nav-green'>
-              Early Bird
-            </TextBadge>
-          </td>
-          <td>June 30, 2024</td>
-          <PriceElement val={225} fee={15.0} showFee={showFee}></PriceElement>
-          <td>n/a</td>
-        </tr>
-        <tr>
-          <td>
-            Advisor Full{' '}
-            <TextBadge className='border-text-color'>Regular</TextBadge>
-          </td>
-          <td>September 30, 2024</td>
-          <PriceElement val={250} fee={16.52} showFee={showFee}></PriceElement>
-          <td>n/a</td>
-        </tr>
-      </tbody>
-    </table>
+          <th>Price</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ga(y)la Ticket - Collegiate</td>
+            <td>September 30, 2024</td>
+            <PriceElement val={50} fee={4.37} showFee={showFee}></PriceElement>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
