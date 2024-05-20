@@ -39,7 +39,6 @@ module.exports = {
     extend: {
       colors: {
         // Colors to CONSOLIDATE / CLEAN UP
-        "ostem-blue": "#1B7EA1",
         "mulberry": "#705159",
         "raspberry": "#E30B5C",
         "spruce": "#577072",
@@ -59,6 +58,7 @@ module.exports = {
         "chill-yellow": "#FFD285",
         "amber": "#f59e0b",
         // Colors to KEEP
+        "ostem-blue": "#1B7EA1",
         "text-color": "var(--text-color)",
         "bright-peach": "var(--color-bright-peach)",
         "dark-teal": "var(--color-dark-teal)",
