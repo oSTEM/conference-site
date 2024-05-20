@@ -18,17 +18,17 @@ export interface SiteLayoutProps {
 export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   const router = useRouter();
   const isArchive = router.pathname.indexOf('/archive') !== -1;
-  let updateBannerVisible = true;
+  let updateBannerVisible = false;
 
   if (
     typeof localStorage !== 'undefined' &&
     localStorage.getItem('ocf-ver') === '1'
   ) {
-    updateBannerVisible = false;
   } else if (router.pathname === '/2024/whats-new') {
     if (typeof localStorage !== 'undefined')
       localStorage.setItem('ocf-ver', '1');
-    updateBannerVisible = false;
+  } else {
+    updateBannerVisible = true;
   }
 
   function whatsNewCloseHandler() {
