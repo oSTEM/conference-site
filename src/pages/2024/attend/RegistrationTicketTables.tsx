@@ -63,6 +63,37 @@ const PriceElement = ({
   );
 };
 
+const TicketFeeElement = ({
+  showFee,
+  setShowFee,
+}: {
+  showFee: boolean;
+  setShowFee: Dispatch<SetStateAction<boolean>>;
+}) => {
+  return (
+    <span className='flex flex-col md:flex-row w-full text-left'>
+      <span className='grow'>
+        Tickets are{' '}
+        <span
+          className='text-nav-green cursor-help'
+          title='Approx. 6.08% + $1.32/ticket'
+        >
+          subject to a fee
+        </span>{' '}
+        {showFee
+          ? 'included in the prices shown.'
+          : 'not currently shown below.'}
+      </span>
+      <span className='flex gap-x-2'>
+        <span className='order-2 md:order-none'>Show Prices w/ Fees</span>
+        <span>
+          <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
+        </span>
+      </span>
+    </span>
+  );
+};
+
 export const CollegiateTable = () => {
   const [showFee, setShowFee] = useState(false);
 
@@ -72,24 +103,10 @@ export const CollegiateTable = () => {
         <thead>
           <tr>
             <th className='p-0 pb-1 font-normal' colSpan={4}>
-              <span className='flex w-full text-left'>
-                <span className='grow'>
-                  Tickets are{' '}
-                  <span
-                    className='text-nav-green cursor-help'
-                    title='Approx. 6.08% + $1.32/ticket'
-                  >
-                    subject to a fee
-                  </span>{' '}
-                  {showFee
-                    ? 'included in the prices shown.'
-                    : 'not currently shown below.'}
-                </span>
-                <span>
-                  Show Prices w/ Fees{' '}
-                  <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
-                </span>
-              </span>
+              <TicketFeeElement
+                showFee={showFee}
+                setShowFee={setShowFee}
+              ></TicketFeeElement>
             </th>
           </tr>
           <tr className='bg-green-400/30'>
@@ -185,24 +202,10 @@ export const ProfessionalTable = () => {
         <thead>
           <tr>
             <th className='p-0 pb-1 font-normal' colSpan={4}>
-              <span className='flex w-full text-left'>
-                <span className='grow'>
-                  Tickets are{' '}
-                  <span
-                    className='text-nav-green cursor-help'
-                    title='Approx. 6.08% + $1.32/ticket'
-                  >
-                    subject to a fee
-                  </span>{' '}
-                  {showFee
-                    ? 'included in the prices shown.'
-                    : 'not currently shown below.'}
-                </span>
-                <span>
-                  Show Prices w/ Fees{' '}
-                  <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
-                </span>
-              </span>
+              <TicketFeeElement
+                showFee={showFee}
+                setShowFee={setShowFee}
+              ></TicketFeeElement>
             </th>
           </tr>
           <tr className='bg-green-400/30'>
@@ -278,24 +281,10 @@ export const ExpoOnlyTable = () => {
         <thead>
           <tr>
             <th className='p-0 pb-1 font-normal' colSpan={4}>
-              <span className='flex w-full text-left'>
-                <span className='grow'>
-                  Tickets are{' '}
-                  <span
-                    className='text-nav-green cursor-help'
-                    title='Approx. 6.08% + $1.32/ticket'
-                  >
-                    subject to a fee
-                  </span>{' '}
-                  {showFee
-                    ? 'included in the prices shown.'
-                    : 'not currently shown below.'}
-                </span>
-                <span>
-                  Show Prices w/ Fees{' '}
-                  <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
-                </span>
-              </span>
+              <TicketFeeElement
+                showFee={showFee}
+                setShowFee={setShowFee}
+              ></TicketFeeElement>
             </th>
           </tr>
           <tr className='bg-green-400/30'>
