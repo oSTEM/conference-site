@@ -71,7 +71,7 @@ const TicketFeeElement = ({
   setShowFee: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <span className='flex flex-col md:flex-row w-full text-left'>
+    <span className='flex flex-col md:flex-row w-full text-left max-w-[700px]'>
       <span className='grow'>
         Tickets are{' '}
         <span
@@ -106,7 +106,7 @@ export const CollegiateTable = () => {
         setShowFee={setShowFee}
       ></TicketFeeElement>
       <div className='overflow-x-auto'>
-        <table className='text-center table-mb'>
+        <table className='text-center table-mb md:w-[700px]'>
           <thead>
             <tr className='bg-green-400/30'>
               <th>Ticket Type</th>
@@ -209,7 +209,7 @@ export const ProfessionalTable = () => {
         setShowFee={setShowFee}
       ></TicketFeeElement>
       <div className='overflow-x-auto'>
-        <table className='text-center table-mb'>
+        <table className='text-center table-mb md:w-[700px]'>
           <thead>
             <tr className='bg-green-400/30'>
               <th>Ticket Type</th>

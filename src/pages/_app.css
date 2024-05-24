@@ -239,6 +239,13 @@ table.table-mb th {
   border-bottom: 1px solid #c6c9cc;
 }
 
+@media (max-width: 639px) { 
+  td,
+  th {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
 /* tbody tr:nth-child(2n) {
   background-color: rgba(0, 0, 0, 0.025);
 } */
