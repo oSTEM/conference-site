@@ -85,7 +85,9 @@ const TicketFeeElement = ({
           : 'not currently shown below.'}
       </span>
       <span className='flex gap-x-2'>
-        <span className='order-2 md:order-none'>Show Prices w/ Fees</span>
+        <span className='order-2 md:order-none md:ml-6'>
+          Show Prices w/ Fees
+        </span>
         <span>
           <ToggleSwitch enabled={showFee} setEnabled={setShowFee} />
         </span>
@@ -99,87 +101,91 @@ export const CollegiateTable = () => {
 
   return (
     <div>
-      <table className='text-center table-mb'>
-        <thead>
-          <tr>
-            <th className='p-0 pb-1 font-normal' colSpan={4}>
-              <TicketFeeElement
+      <TicketFeeElement
+        showFee={showFee}
+        setShowFee={setShowFee}
+      ></TicketFeeElement>
+      <div className='overflow-x-auto'>
+        <table className='text-center table-mb'>
+          <thead>
+            <tr className='bg-green-400/30'>
+              <th>Ticket Type</th>
+              <th>Purchase Deadline</th>
+              <th>Member Price</th>
+              <th>Non-Member Price</th>
+            </tr>
+          </thead>
+          <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
+            <tr>
+              <td>
+                Collegiate Full{' '}
+                <TextBadge className='border-nav-green text-nav-green'>
+                  Early Bird
+                </TextBadge>
+              </td>
+              <td>June 30, 2024</td>
+              <PriceElement
+                val={150}
+                fee={10.44}
                 showFee={showFee}
-                setShowFee={setShowFee}
-              ></TicketFeeElement>
-            </th>
-          </tr>
-          <tr className='bg-green-400/30'>
-            <th>Ticket Type</th>
-            <th>Purchase Deadline</th>
-            <th>Member Price</th>
-            <th>Non-Member Price</th>
-          </tr>
-        </thead>
-        <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
-          <tr>
-            <td>
-              Collegiate Full{' '}
-              <TextBadge className='border-nav-green text-nav-green'>
-                Early Bird
-              </TextBadge>
-            </td>
-            <td>June 30, 2024</td>
-            <PriceElement
-              val={150}
-              fee={10.44}
-              showFee={showFee}
-            ></PriceElement>
-            <PriceElement val={225} fee={15} showFee={showFee}></PriceElement>
-          </tr>
-          <tr>
-            <td>
-              Collegiate Full{' '}
-              <TextBadge className='border-text-color'>Regular</TextBadge>
-            </td>
-            <td>September 30, 2024</td>
-            <PriceElement
-              val={175}
-              fee={11.96}
-              showFee={showFee}
-            ></PriceElement>
-            <PriceElement
-              val={250}
-              fee={16.52}
-              showFee={showFee}
-            ></PriceElement>
-          </tr>
-          <tr>
-            <td>
-              Advisor Full{' '}
-              <TextBadge className='border-nav-green text-nav-green'>
-                Early Bird
-              </TextBadge>
-            </td>
-            <td>June 30, 2024</td>
-            <PriceElement val={225} fee={15.0} showFee={showFee}></PriceElement>
-            <td>n/a</td>
-          </tr>
-          <tr>
-            <td>
-              Advisor Full{' '}
-              <TextBadge className='border-text-color'>Regular</TextBadge>
-            </td>
-            <td>September 30, 2024</td>
-            <PriceElement
-              val={250}
-              fee={16.52}
-              showFee={showFee}
-            ></PriceElement>
-            <td>n/a</td>
-          </tr>
-        </tbody>
-      </table>
+              ></PriceElement>
+              <PriceElement val={225} fee={15} showFee={showFee}></PriceElement>
+            </tr>
+            <tr>
+              <td>
+                Collegiate Full{' '}
+                <TextBadge className='border-text-color'>Regular</TextBadge>
+              </td>
+              <td>September 30, 2024</td>
+              <PriceElement
+                val={175}
+                fee={11.96}
+                showFee={showFee}
+              ></PriceElement>
+              <PriceElement
+                val={250}
+                fee={16.52}
+                showFee={showFee}
+              ></PriceElement>
+            </tr>
+            <tr>
+              <td>
+                Advisor Full{' '}
+                <TextBadge className='border-nav-green text-nav-green'>
+                  Early Bird
+                </TextBadge>
+              </td>
+              <td>June 30, 2024</td>
+              <PriceElement
+                val={225}
+                fee={15.0}
+                showFee={showFee}
+              ></PriceElement>
+              <td>n/a</td>
+            </tr>
+            <tr>
+              <td>
+                Advisor Full{' '}
+                <TextBadge className='border-text-color'>Regular</TextBadge>
+              </td>
+              <td>September 30, 2024</td>
+              <PriceElement
+                val={250}
+                fee={16.52}
+                showFee={showFee}
+              ></PriceElement>
+              <td>n/a</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <table className='text-center table-mb'>
         <thead className='bg-green-400/30'>
-          <th>Optional Ticket Addons</th>
-          <th>Purchase Deadline</th>
-          <th>Price</th>
+          <tr>
+            <th>Optional Ticket Addons</th>
+            <th>Purchase Deadline</th>
+            <th>Price</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -198,67 +204,67 @@ export const ProfessionalTable = () => {
 
   return (
     <div>
-      <table className='text-center table-mb'>
-        <thead>
-          <tr>
-            <th className='p-0 pb-1 font-normal' colSpan={4}>
-              <TicketFeeElement
+      <TicketFeeElement
+        showFee={showFee}
+        setShowFee={setShowFee}
+      ></TicketFeeElement>
+      <div className='overflow-x-auto'>
+        <table className='text-center table-mb'>
+          <thead>
+            <tr className='bg-green-400/30'>
+              <th>Ticket Type</th>
+              <th>Purchase Deadline</th>
+              <th>Member Price</th>
+              <th>Non-Member Price</th>
+            </tr>
+          </thead>
+          <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
+            <tr>
+              <td>
+                Professional Full{' '}
+                <TextBadge className='border-nav-green text-nav-green'>
+                  Early Bird
+                </TextBadge>
+              </td>
+              <td>June 30, 2024</td>
+              <PriceElement
+                val={375}
+                fee={24.11}
                 showFee={showFee}
-                setShowFee={setShowFee}
-              ></TicketFeeElement>
-            </th>
-          </tr>
-          <tr className='bg-green-400/30'>
-            <th>Ticket Type</th>
-            <th>Purchase Deadline</th>
-            <th>Member Price</th>
-            <th>Non-Member Price</th>
-          </tr>
-        </thead>
-        <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
-          <tr>
-            <td>
-              Professional Full{' '}
-              <TextBadge className='border-nav-green text-nav-green'>
-                Early Bird
-              </TextBadge>
-            </td>
-            <td>June 30, 2024</td>
-            <PriceElement
-              val={375}
-              fee={24.11}
-              showFee={showFee}
-            ></PriceElement>
-            <PriceElement
-              val={425}
-              fee={27.15}
-              showFee={showFee}
-            ></PriceElement>
-          </tr>
-          <tr>
-            <td>
-              Professional Full{' '}
-              <TextBadge className='border-text-color'>Regular</TextBadge>
-            </td>
-            <td>September 30, 2024</td>
-            <PriceElement
-              val={475}
-              fee={30.19}
-              showFee={showFee}
-            ></PriceElement>
-            <PriceElement
-              val={525}
-              fee={33.23}
-              showFee={showFee}
-            ></PriceElement>
-          </tr>
-        </tbody>
-      </table>
+              ></PriceElement>
+              <PriceElement
+                val={425}
+                fee={27.15}
+                showFee={showFee}
+              ></PriceElement>
+            </tr>
+            <tr>
+              <td>
+                Professional Full{' '}
+                <TextBadge className='border-text-color'>Regular</TextBadge>
+              </td>
+              <td>September 30, 2024</td>
+              <PriceElement
+                val={475}
+                fee={30.19}
+                showFee={showFee}
+              ></PriceElement>
+              <PriceElement
+                val={525}
+                fee={33.23}
+                showFee={showFee}
+              ></PriceElement>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <table className='text-center table-mb'>
         <thead className='bg-green-400/30'>
-          <th>Optional Ticket Addons</th>
-          <th>Purchase Deadline</th>
-          <th>Price</th>
+          <tr>
+            <th>Optional Ticket Addons</th>
+            <th>Purchase Deadline</th>
+            <th>Price</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
@@ -277,7 +283,7 @@ export const ExpoOnlyTable = () => {
 
   return (
     <div>
-      <table className='text-center table-mb'>
+      <table className='text-center table-mb md:min-w-[610px]'>
         <thead>
           <tr>
             <th className='p-0 pb-1 font-normal' colSpan={4}>
@@ -316,9 +322,11 @@ export const ExpoOnlyTable = () => {
       </table>
       <table className='text-center table-mb'>
         <thead className='bg-green-400/30'>
-          <th>Optional Ticket Addons</th>
-          <th>Purchase Deadline</th>
-          <th>Price</th>
+          <tr>
+            <th>Optional Ticket Addons</th>
+            <th>Purchase Deadline</th>
+            <th>Price</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
