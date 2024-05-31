@@ -30,25 +30,6 @@ us in a celebration of diversity across all fields.
 
 <div className="text-nav-green font-bold text-center">
 
-### Conference registration opens June
-
-</div>
-
-Registration will be available starting on June 1. If you'd like, you can fill out the form below to be notified when tickets for oSTEM 2024 go on sale.
-
-<div className="my-2 flex flex-col items-center sm:flex-row justify-center">
-  <div className="my-1 sm:mx-2">
-    <CTAButton onClick="https://form.jotform.com/232986540358062">
-      oSTEM 2024 Ticket Alert
-    </CTAButton>
-  </div>
-</div>
-<br />
-
----
-
-<div className="text-nav-green font-bold text-center">
-
 ### Tickets
 
 </div>
@@ -57,20 +38,21 @@ Registration will be available starting on June 1. If you'd like, you can fill o
 
 Please pay attention to ticket deadlines, as they are **significantly earlier** than previous years. Ticket sales will open on June 1, 2024.
 
-<p><b className='text-red-600 dark:text-red-300'>All online ticket sales will close on September 30.</b> No exceptions will be made. If you miss the online ticket window, you may purchase tickets on-site for an additional cost. On-site tickets do not come with any food vouchers or special accommodations.</p>
+<p><b className='text-red-600 dark:text-red-300'>All online ticket sales will close on September 30 at 11:59 PM EST.</b> No exceptions will be made. If you miss the online ticket window, you may purchase tickets on-site for an additional cost. Please note that on-site tickets do not come with any food vouchers. Additionally, accommodations will be extremely limited due to the short turnaround.</p>
 
 <Tab.Group>
 <Tab.List className='z-10 flex mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>
 <span className='grow'>
-{
-    ['Collegiate', 'Professional', 'Expo Only'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `text-nav-green bg-green-300/25 border-nav-green/90` : `hover:bg-green-300/15   border-nav-green/60`} border focus:outline-none focus:ring-nav-green/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>{e}</Tab>))
-}
+<Tab className={({selected}) => (`${selected ? `text-white bg-green-700 border-nav-green/90` : `dark:text-white text-nav-green bg-green-300/25 border-nav-green/90 hover:bg-green-500/30 border-nav-green/60`} font-semibold border focus:outline-none focus:ring-nav-green/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>Collegiate</Tab>
+<Tab className={({selected}) => (`${selected ? `text-white bg-blue-700 border-nav-blue/90` : `dark:text-white text-nav-blue bg-blue-300/25 border-nav-blue/90 hover:bg-blue-500/30 border-nav-blue/60`} font-semibold border focus:outline-none focus:ring-nav-blue/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>Professional</Tab>
+<Tab className={({selected}) => (`${selected ? `text-white bg-purple-700 border-nav-purple/90` : `dark:text-white text-nav-purple bg-purple-300/25 border-nav-purple/90 hover:bg-purple-500/30 border-nav-purple/60`} font-semibold border focus:outline-none focus:ring-nav-purple/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>Expo Only</Tab>
+<Tab className={({selected}) => (`${selected ? `text-white bg-purple-700 border-nav-purple/90` : `dark:text-white text-nav-purple bg-purple-300/25 border-nav-purple/90 hover:bg-purple-500/30 border-nav-purple/60`} font-semibold border focus:outline-none focus:ring-nav-purple/70 focus:ring-1 focus-visible:ring-2 transition text-sm sm:text-base rounded px-2 md:px-3 mr-1 md:mr-3 py-0.5 md:py-1`)}>Exhibitor / Sponsor</Tab>
 </span>
 </Tab.List>
 <Tab.Panels className='sm:px-3 py-2'>
   <Tab.Panel>
     <TicketTable type='collegiate'></TicketTable>
-    <p><b>Early Bird Discount:</b> Save $25/ticket by purchasing your ticket(s) by June 30th!</p>
+    <p><b>Early Bird Discount:</b> Save $25 on registration tickets by purchasing them by June 30!</p>
     <p>Scroll down for more information about purchasing tickets and add-ons.</p>
     <br/>
     <CTAButton backgroundColor="ostem-blue" onClick="https://whova.com/portal/registration/ostem_202411/u4h5ecl9">
@@ -79,7 +61,7 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
   </Tab.Panel>
   <Tab.Panel>
     <TicketTable type='professional'></TicketTable>
-    <p><b>Early Bird Discount:</b> Save $50/ticket by purchasing your ticket(s) by June 30th!</p>
+    <p><b>Early Bird Discount:</b> Save $50 on registration tickets by purchasing them by June 30!</p>
     <p>Scroll down for more information about purchasing tickets and add-ons.</p>
     <br/>
     <CTAButton backgroundColor="ostem-blue" onClick="https://whova.com/portal/registration/ostem_202411/cmxb3vkv">
@@ -95,6 +77,11 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
       Purchase Expo Only Tickets
     </CTAButton>
   </Tab.Panel>
+  <Tab.Panel>
+    <p>If your company has an exhibitor or sponsorship package, please reach out to your company's conference contact for registration instructions. Tickets included with a package cannot be purchased from this page.</p>
+    <p><b>Do not purchase a ticket from this website unless oSTEM explicitly tells you to.</b></p>
+    <p>If you have additional questions regarding this, please contact <a href='mailto:sponsorship@ostem.org'>sponsorship@ostem.org</a>.</p>
+  </Tab.Panel>
 </Tab.Panels>
 </Tab.Group>
 </TopicSquare>
@@ -103,10 +90,7 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
   <p>oSTEM members receive discounted tickets. Member discounts stack with early-bird discounts.</p>
   <ul>
     <li>If you are not currently a member, you can <a href='https://ostem.org/page/how-to-join-ostem'>become one on our Join oSTEM page</a>.</li>
-    <li>Members will need their <b>Member ID</b> to purchase tickets at the member rate. You can find your ID* by going to oSTEM.org and clicking on <a target='_blank' href='https://web.membernova.com/305556/User/Login?OriginalUrl=4pKVpb/xoDZG1dUAW84nsHhYAw61eLT2svqZ8qNGE4fU3N+bOXWDED/RQHxka661'>Member Login</a>. Your ID will be displayed under the Member Tab.
-    <br/>
-    * <i>We are actively migrating to a new member management system, so these instructions may change.</i>
-    </li>
+    <li>Members will need their <b>Member ID</b> to purchase tickets at the member rate. You can find your ID* by going to oSTEM.org and clicking on <a target='_blank' href='https://web.membernova.com/305556/User/Login?OriginalUrl=4pKVpb/xoDZG1dUAW84nsHhYAw61eLT2svqZ8qNGE4fU3N+bOXWDED/RQHxka661'>Member Login</a>. Your ID will be displayed under the Member Tab.<br/>* <i>We are actively migrating to a new member management system, so these instructions may change.</i></li>
   </ul>
 <br/>
 
@@ -121,11 +105,11 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
   </ul>
 <br/>
 
-<h4>oSTEM Ga(y)la</h4>
-<p>Join us for Ga(y)la, the perfect way to round off the conference. This is your chance to celebrate the weekend, the connections you've made and the achievements of our community throughout the year, complete with dinner and entertainment.</p>
+<h4>oSTEM Gala</h4>
+<p>Join us for Gala, the perfect way to round off the conference. This is your chance to celebrate the weekend, the connections you've made and the achievements of our community throughout the year, complete with dinner and entertainment.</p>
 <ul>
-  <li>Ga(y)la tickets are an optional, paid add-on - they are <b className='text-nav-pink'>not included</b> with your conference pass. Each attendee needs their own add-on ticket.</li>
-  <li>Ga(y)la is on Saturday night. Please refer to <a href='schedule'>our high-level schedule</a> for more details.</li>
+  <li>Gala tickets are an optional, paid add-on - they are <b className='text-nav-pink'>not included</b> with your conference pass. Each attendee needs their own add-on ticket.</li>
+  <li>Gala is on Saturday night. Please refer to <a href='schedule'>our high-level schedule</a> for more details.</li>
 </ul>
 <br/>
 
@@ -137,37 +121,30 @@ Please pay attention to ticket deadlines, as they are **significantly earlier** 
 
 </div>
 
+#### My employer is exhibiting/sponsoring the conference and pre-purchased my registration. How do I register? 
+If you are registering as part of your company's exhibitor/sponsorship package, you should receive instructions from your company's conference contact. They will be given a private Whova link and promo code for the company's representatives to redeem their pre-paid registrations. If you have questions, please contact sponsorship@ostem.org.
+
 #### What if I miss the online deadline? Will there be on-site registration?
-If you miss the online registration deadline (September 30th), you will be able to register on-site. Please note that on-site registration will be more expensive than online prices, will not include any meals, and will only have limited accomodations available.
+If you miss the online registration deadline (September 30), you will be able to register on-site. Please note that on-site registration will be more expensive than online prices, will not include any meals, and will only have limited accomodations available.
 
 No exceptions will be made for online registration after the deadline. There is no "late" online registration option this year.
 
 #### Are registration discounts available?
-Yes, oSTEM members get a discounted rate. Furthermore, the member discount stacks with the early-bird discount allowing you to save more if you purchase your ticket by June 30th.
+Yes, oSTEM members get a discounted rate. Furthermore, the member discount stacks with the early-bird discount allowing you to save more if you purchase your ticket by June 30.
 
 #### I submitted a RFP/RFPT. When should I register?
 Attendees with an accepted [Request for Programs (RFP)](/2024/present/request-for-programs) or [Request for Panel Topics (RFPT)](/2024/present/request-for-panel-topics) submission will receive a 50% registration discount\* on their conference pass. As such, you should hold off registration until you hear whether your submission was accepted or not.
 
-We do not expect to finish judging submissions by June 30th, however we understand that attendees may want the early-bird rate if their submission is not accepted. Therefore, this year we will offer extended early-bird registration rates to all program/panel topic applicants regardless of whether your submission is accepted. **Please do not register until you receive a status update on your submission.**
-
 \* There is a limit on how many discounted tickets you can purchase. Please view the respective RFP and RFPT pages for more information.
+
+#### What if I miss the early-bird deadline waiting for a RFP/RFPT decision?
+
+Your submission decision will likely come after June 30. As a thank you for submitting a proposal, we will honor the early bird rate anytime before the September 30 regular cut off. You will receive instructions for this with your decision email.
 
 #### I missed the early-bird deadline. Can I still get the early-bird rate?
 If you submitted a RFP or RFPT (see above), you will still be able to register at the early-bird rate after it closes. No other exceptions will be made.
 
 <br/>
-
----
-
-<div className="text-nav-green font-bold text-center">
-
-### Previous Conference Information
-
-</div>
-
-If needed, you can view [last year's conference registration page here](/archive/2023/registration).
-
-<br />
 
 ---
 
