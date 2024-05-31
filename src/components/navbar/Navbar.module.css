@@ -49,3 +49,45 @@
   font-size: 0.9375rem;
   line-height: 1;
 }
+
+@keyframes fade-in-out {
+  0% {
+    display: block;
+    /* height: 0px; */
+  }
+  1% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  53% {
+    display: none;
+    /* height: 0px; */
+  }
+}
+
+.NavFade, .NavFadeAlt {
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  text-align: right;
+}
+.NavFade {
+  opacity: 0;
+  animation: 12s ease-in-out -1.50s infinite running fade-in-out;
+}
+.NavFadeAlt {
+  opacity: 0;
+  animation: 12s ease-in-out 4.50s infinite running fade-in-out;
+  margin-top: -15px;
+}

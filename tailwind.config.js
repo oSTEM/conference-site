@@ -1,8 +1,8 @@
 /**
  * Because the new navbar is dynamically generated, we need to manually tell Tailwind what CSS classes we need for navbar coloring.
- * Refer to NavbarConfig and NavbarCore for more information.
+ * Refer to Navbar.config and NavbarCore for more information.
  */
-import {NAVBAR_CATEGORIES} from './src/components/navbar/NavbarConfig';
+import {NAVBAR_CATEGORIES} from './src/components/navbar/Navbar.config';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;
@@ -39,7 +39,6 @@ module.exports = {
     extend: {
       colors: {
         // Colors to CONSOLIDATE / CLEAN UP
-        "ostem-blue": "#1B7EA1",
         "mulberry": "#705159",
         "raspberry": "#E30B5C",
         "spruce": "#577072",
@@ -57,8 +56,8 @@ module.exports = {
         "peach": "#FF9185",
         "light-peach": "#f7c2bc",
         "chill-yellow": "#FFD285",
-        "amber": "#f59e0b",
         // Colors to KEEP
+        "ostem-blue": "#1B7EA1",
         "text-color": "var(--text-color)",
         "bright-peach": "var(--color-bright-peach)",
         "dark-teal": "var(--color-dark-teal)",

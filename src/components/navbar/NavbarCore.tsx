@@ -2,7 +2,7 @@
  * NavbarCore.tsx
  *
  * Responsible for rendering the new navbar at the top/side of all pages.
- * Change the links in the navbar by editing @see NavbarConfig.ts - not this file.
+ * Change the links in the navbar by editing @see Navbar.config.ts - not this file.
  *
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
@@ -22,7 +22,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import { TextBadge } from '@/components/badge/TextBadge';
-import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './NavbarConfig';
+import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './Navbar.config';
 import SideBar from './NavbarSidebar';
 import styles from './Navbar.module.css';
 
@@ -316,7 +316,7 @@ export default function NavBar() {
   );
 
   return (
-    <div>
+    <div className='z-30'>
       <SideBar
         active={sidebarOpen}
         currentPage={currentPage}
@@ -447,7 +447,10 @@ export default function NavBar() {
                 </b>{' '}
                 Annual Conference
               </p>
-              <p className={styles['gradientText']}>Portland, OR</p>
+              <p className={`${styles['gradientText']} relative`}>
+                <span className={styles['NavFade']}>Portland, OR</span>
+                <span className={styles['NavFadeAlt']}>Oct 17-20, 2024</span>
+              </p>
             </div>
           )}
         </div>
