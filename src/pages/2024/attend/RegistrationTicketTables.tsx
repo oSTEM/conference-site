@@ -256,7 +256,7 @@ export const ProfessionalTable = () => {
             <tr>
               <td>
                 Professional Full{' '}
-                <TextBadge className='border-nav-blue text-nav-blue'>
+                <TextBadge className='border-nav-green text-nav-green'>
                   Early Bird
                 </TextBadge>
               </td>
@@ -267,8 +267,8 @@ export const ProfessionalTable = () => {
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={425}
-                fee={27.15}
+                val={475}
+                fee={30.19}
                 showFee={showFee}
               ></PriceElement>
             </tr>
@@ -279,8 +279,8 @@ export const ProfessionalTable = () => {
               </td>
               <td>September 30, 2024</td>
               <PriceElement
-                val={475}
-                fee={30.19}
+                val={425}
+                fee={27.15}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
@@ -371,7 +371,10 @@ export const ExpoOnlyTable = () => {
           </tr>
           <tr>
             <td>
-              Expo <TextBadge className='border-text-color'>On Site</TextBadge>
+              Expo{' '}
+              <TextBadge className='border-text-color text-gray-700 dark:text-gray-400'>
+                On Site
+              </TextBadge>
             </td>
             <td>On Site</td>
             <PriceElement val={125} fee={8.92} showFee={showFee}></PriceElement>
