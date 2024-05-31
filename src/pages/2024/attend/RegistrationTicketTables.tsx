@@ -75,7 +75,7 @@ const TicketFeeElement = ({
       <span className='grow'>
         Tickets are{' '}
         <span
-          className='text-nav-green cursor-help'
+          className='text-nav-pink cursor-help'
           title='Approx. 6.08% + $1.32/ticket'
         >
           subject to a fee
@@ -245,14 +245,14 @@ export const ProfessionalTable = () => {
       <div className='overflow-x-auto'>
         <table className='text-center table-mb md:w-[700px]'>
           <thead>
-            <tr className='bg-blue-400/30'>
+            <tr className='bg-lime-400/30'>
               <th>Ticket Type</th>
               <th>Purchase Deadline</th>
               <th>Member Price</th>
               <th>Non-Member Price</th>
             </tr>
           </thead>
-          <tbody className='[&>*:nth-child(2n)]:bg-blue-400/15'>
+          <tbody className='[&>*:nth-child(2n)]:bg-lime-400/15'>
             <tr>
               <td>
                 Professional Full{' '}
@@ -312,7 +312,7 @@ export const ProfessionalTable = () => {
         </table>
       </div>
       <table className='text-center table-mb'>
-        <thead className='bg-blue-400/30'>
+        <thead className='bg-lime-400/30'>
           <tr>
             <th>Optional Ticket Add-ons</th>
             <th>Purchase Deadline</th>
@@ -346,13 +346,13 @@ export const ExpoOnlyTable = () => {
               ></TicketFeeElement>
             </th>
           </tr>
-          <tr className='bg-green-400/30'>
+          <tr className='bg-yellow-400/30'>
             <th>Ticket Type</th>
             <th>Purchase Deadline</th>
             <th>Price</th>
           </tr>
         </thead>
-        <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
+        <tbody className='[&>*:nth-child(2n)]:bg-yellow-400/15'>
           <tr>
             <td>
               Expo (Attendee/Jobseeker){' '}
@@ -379,7 +379,7 @@ export const ExpoOnlyTable = () => {
         </tbody>
       </table>
       <table className='text-center table-mb'>
-        <thead className='bg-green-400/30'>
+        <thead className='bg-yellow-400/30'>
           <tr>
             <th>Optional Ticket Add-ons</th>
             <th>Purchase Deadline</th>
