@@ -44,7 +44,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Registration',
     href: '/2024/attend/registration',
     badge: {
-      label: 'Opens June 1',
+      label: 'Open',
+      accent: true,
     },
   },
   {
@@ -62,8 +63,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Request for Programs',
     href: '/2024/present/request-for-programs',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
     },
   },
   {
@@ -71,8 +71,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Request for Panel Topics',
     href: '/2024/present/request-for-panel-topics',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
     },
   },
   {
