@@ -1,34 +1,70 @@
 import { CTAButton } from "@/components/button/CTAButton";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCar, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
 
 <SiteLayout title="Attendee Resources" accent="purple">
-<div className="text-bright-peach font-bold">
+<div className="text-nav-green font-bold">
 
-## Transportation: Coming Soon
-
-</div>
-
-We will be publishing transportation guides specific to Portland, OR here in the coming weeks.
-
-The conference will be taking place at the <a href='https://www.oregoncc.org/en' target='_blank'>Oregon Convention Center</a>.
-
-<br/>
-
-<div className="text-bright-peach font-bold">
-
-## Building a Travel Request Proposal
+## General Resources
 
 </div>
 
-Asking for support from your supervisor or academic department can feel daunting. Here are some resources and templates to help you feel prepared and confident!
+We have a wealth of general information on our conference Notion page. Topics include Building a Travel Request Proposal, Conference Attire, and more.
 
 <br/>
 <div className="text-l flex justify-center p-2">
-    <CTAButton onClick="https://www.notion.so/ostem/Conference-Attendee-Resources-679ca7be44f34c4ca6dace34ea5f8eca/" backgroundColor="bright-peach">
+    <CTAButton onClick="https://ostem.notion.site/Conference-Attendee-Resources-2024-76ea110de8a447278d856623c7e8a7ce" backgroundColor="bright-peach">
       Conference Attendee Resources
     </CTAButton>
 </div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Getting to the Conference
+
+</div>
+
+The 14<sup>th</sup> annual conference will be taking place at the <a href='https://www.oregoncc.org/en' target='_blank'>Oregon Convention Center</a> in Portland, OR.
+
+The address of the convention center is <b>777 NE Martin Luther King, Jr. Boulevard, Portland, OR 97232</b>.
+
+<br/>
+
+<div className='flex flex-col md:flex-row gap-x-4'>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faPlane} className={"social-icon"} fixedWidth /> Plane</h3>
+
+The closest airport is Portland International Airport (PDX). The [TriMet MAX Red Line (light rail)](https://trimet.org/home/planner-trip?fromPlace=Portland%20Int%27l%20Airport%20MAX%20Station%20(ID%2010579)%3A%3A45.587584%2C-122.5931&toPlace=Convention%20Center%20MAX%20Station%3A%3A45.5300519305776%2C-122.661907990664&date=2024-06-09&time=17%3A21&arriveBy=false&mode=WALK%2CBUS%2CTRAM%2CRAIL%2CGONDOLA&showIntermediateStops=true&maxWalkDistance=1609&walkSpeed=1.34&ignoreRealtimeUpdates=false&numItineraries=1&otherThanPreferredRoutesPenalty=900&tripOption=1) offers a direct connection from the airport to the convention center and costs $2.80 each way.
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faTrain} className={"social-icon"} fixedWidth /> Train</h3>
+
+The [Amtrak PDX station](https://www.amtrak.com/stations/pdx) is the closest station to the Oregon Convention Center. Similar to PDX airport, you can take the light rail directly from the train station to the convention center.
+
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faCar} className={"social-icon"} fixedWidth /> Car</h3>
+
+If you're driving and need parking, please refer to [the OCC website for detailed parking information](https://www.oregoncc.org/en/attend/parking-directions). There is a charge for on-site parking which will not be covered by oSTEM.
+</div>
+</div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+### Lodging
+
+</div>
+
+We will publish hotel information as soon as we're finalized on our end. Expect hotels under the oSTEM rate to be approximately $200-$240/room/night + taxes and fees.
+
+<br/>
+
 
 </SiteLayout>
