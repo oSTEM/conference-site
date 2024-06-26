@@ -363,15 +363,7 @@ export const ExpoOnlyTable = () => {
           </tr>
           <tr>
             <td>
-              Expo (Recruiter){' '}
-              <TextBadge className='border-text-color'>Regular</TextBadge>
-            </td>
-            <td>September 30, 2024</td>
-            <PriceElement val={125} fee={8.92} showFee={showFee}></PriceElement>
-          </tr>
-          <tr>
-            <td>
-              Expo{' '}
+              Expo (Attendee/Jobseeker){' '}
               <TextBadge className='border-text-color text-gray-700 dark:text-gray-400'>
                 On Site
               </TextBadge>
