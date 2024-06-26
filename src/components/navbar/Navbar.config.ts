@@ -79,7 +79,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Call for Posters',
     href: '/2024/present/call-for-posters',
     badge: {
-      label: 'Not Yet Open',
+      label: 'Open',
+      accent: true,
     },
   },
   {
