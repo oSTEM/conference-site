@@ -91,3 +91,11 @@
   animation: 12s ease-in-out 4.50s infinite running fade-in-out;
   margin-top: -15px;
 }
+
+/* Relative text clipping does not work on Chrome/Safari due to https://crbug.com/1500148 */
+.gradientText .NavFade {
+ -webkit-text-fill-color: color-mix(in srgb, #ff7a59, var(--color-text) 40%); 
+}
+.gradientText .NavFadeAlt {
+  -webkit-text-fill-color: color-mix(in srgb, #c280ff, var(--color-text) 40%); ; 
+ }
