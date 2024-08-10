@@ -93,6 +93,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     },
   },
   {
+    category: 'partner',
+    label: 'Exhibitor/Sponsor Resources',
+    href: '/2024/partner/resources',
+  },
+  {
     category: 'misc',
     label: 'Annual Awards',
     href: '/2024/awards/',
