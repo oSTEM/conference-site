@@ -59,6 +59,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     href: '/2024/attend/schedule',
   },
   {
+    category: 'attend',
+    label: 'Community Health & Safety',
+    href: '/2024/attend/Community-Health-Safety',
+  },
+  {
     category: 'present',
     label: 'Request for Programs',
     href: '/2024/present/request-for-programs',
