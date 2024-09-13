@@ -27,6 +27,16 @@ const nextConfig = {
       source: '/2023/:path',
       destination: '/archive/2023/:path',
       permanent: false
+    }, 
+    {
+      source: '/2024/attend/attendee-resources',
+      destination: '/2024/attend/resources?oldlink=1',
+      permanent: false
+    }, 
+    {
+      source: '/2024/attend/Community-Health-Safety',
+      destination: '/2024/attend/health-and-safety?oldlink=1',
+      permanent: true
     }
   ])
 };

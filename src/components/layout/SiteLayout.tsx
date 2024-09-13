@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { SocialRow } from './Socials';
-import { faArchive } from '@fortawesome/free-solid-svg-icons';
+import { faArchive, faDirections } from '@fortawesome/free-solid-svg-icons';
 import { faMagic } from '@fortawesome/free-solid-svg-icons/faMagic';
 import NavBar from '@/components/navbar/NavbarCore';
 import { PageHeader } from '../header/PageHeader';
@@ -18,6 +18,7 @@ export interface SiteLayoutProps {
 export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   const router = useRouter();
   const isArchive = router.pathname.indexOf('/archive') !== -1;
+  const usedRedirect = router.query.oldlink === '1';
   let updateBannerVisible = false;
 
   if (
@@ -48,6 +49,18 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
             <BannerMessage icon={faArchive} type='warning' closeButton={false}>
               You're viewing an <b>archived</b> page for a past conference.
               Information may not be relevant to this year's conference.
+            </BannerMessage>
+          ) : (
+            ''
+          )}
+          {usedRedirect ? (
+            <BannerMessage icon={faDirections} type='warning'>
+              The URL for this page
+              <span className='text-orange-700 dark:text-orange-200'>
+                {router?.pathname ? ` (${router.pathname})` : ''}
+              </span>{' '}
+              has changed and you've been automatically redirected. Please
+              update your link and/or bookmark.
             </BannerMessage>
           ) : (
             ''
