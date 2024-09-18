@@ -2,7 +2,8 @@ import { CTAButton } from "@/components/button/CTAButton";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCar, faHotel, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
+import { BannerMessage } from '@/components/banner/BannerMessage'
+import { faCar, faHotel, faInfo, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
 
 <SiteLayout title="Attendee Resources" accent="nav-green">
@@ -97,6 +98,10 @@ To accomodate the increasing number of attendees each year, we are excited to an
 
 The hotels listed below are all **first come, first served**. Hotels may be booked until they're full or by September 24th, 2024, whichever comes first. Once a hotel block is full, it will be removed from this page. All hotels have a 17% charge for taxes and fees.
 
+<BannerMessage icon={faInfo} type='info' closeButton={false}>
+  Group rates are valid for <b>any number of days</b> between Wed 10/16 and Mon 10/21. <b>You do not have to stay the full period.</b><br/>Please note that most rooms are only available Thu 10/17 through Sun 10/20, so availability is limited outside that range.
+</BannerMessage>
+
 <div className='flex flex-col md:flex-row gap-x-4'>
 <div className='w-full'>
 <h3>DoubleTree</h3>
@@ -109,7 +114,7 @@ The hotels listed below are all **first come, first served**. Hotels may be book
 
 Price: $199/day + Taxes
 
-<a target='_blank' href='https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=RLLC-DT&arrivalDate=2024-10-16&departureDate=2024-10-20&groupCode=CDTOST&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink' className='border-red-400 text-red-800 dark:text-red-200 border-2 px-2 pt-0.5 pb-1 mt-4 inline-block hover:bg-gray-400/25 transition focus-visible:bg-gray-500/30'>
+<a target='_blank' href='https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=RLLC-DT&arrivalDate=2024-10-17&departureDate=2024-10-20&groupCode=CDTOST&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink' className='border-red-400 text-red-800 dark:text-red-200 border-2 px-2 pt-0.5 pb-1 mt-4 inline-block hover:bg-gray-400/25 transition focus-visible:bg-gray-500/30'>
   Book DoubleTree
 </a>
 
