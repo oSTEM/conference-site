@@ -44,8 +44,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Registration',
     href: '/2024/attend/registration',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
     },
   },
   {
@@ -62,10 +61,6 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     category: 'attend',
     label: 'Career Fair & Grad Expo',
     href: '/2024/attend/expo',
-    badge: {
-      label: 'Updated',
-      accent: true,
-    },
   },
   {
     category: 'attend',
@@ -93,8 +88,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Call for Posters',
     href: '/2024/present/call-for-posters',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
     },
   },
   {
