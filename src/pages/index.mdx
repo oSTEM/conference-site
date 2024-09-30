@@ -24,8 +24,13 @@ import { SiteLayout } from "../components/layout/SiteLayout";
   <div className="rounded md:col-span-5 mt-8 border-4 border-dark-teal border-solid bg-dark-teal">
     <h3 className="p-4 pt-3">2024 Conference</h3>
     <div className="bg-primary text-center rounded">
-      <p className='pt-4'>We are excited to see you soon for our 14<sup>th</sup> Annual Conference!<br/>Make the most out of conference with our event app, Whova. <Popover className='inline-block'><Popover.Button><a>What is Whova?</a></Popover.Button><Popover.Panel className='absolute z-10 mt-1 bg-primary border border-secondary px-3 py-1 mr-2 rounded'><p>Whova allows you to get the most up to date information, preplan your personalized conference agenda, and connect with the conference community. Whova is available on iOS, Android, and Web.</p></Popover.Panel></Popover></p>
-      
+      <div className='pt-4'>
+        <span >We are excited to see you soon for our 14<sup>th</sup> Annual Conference!<br/>Make the most out of conference with our event app, Whova. </span> 
+        <Popover className='inline-block'>
+          <Popover.Button><a>What is Whova?</a></Popover.Button>
+          <Popover.Panel className='absolute z-10 mt-1 bg-primary border border-secondary px-3 py-1 mr-2 rounded'><p>Whova allows you to get the most up to date information, preplan your personalized conference agenda, and connect with the conference community. Whova is available on iOS, Android, and Web.</p></Popover.Panel>
+        </Popover>
+      </div>
       <ConferenceCountdown></ConferenceCountdown>
       <div className="text-xl text-center p-2">
         <CTAButton onClick="https://whova.com/portal/ostem_202411/" backgroundColor="ostem-blue" target='_blank' className='mb-4 md:mb-0'>Whova Portal</CTAButton>
