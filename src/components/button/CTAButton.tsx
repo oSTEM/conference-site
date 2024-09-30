@@ -12,12 +12,16 @@ export const CTAButton = ({
   onClick,
   backgroundColor = 'antique-teal',
   target = '_blank',
+  className,
 }: {
   // The label for the button.
   children: string;
 
   // If true, the button is rendered in a disabled state and is not clickable.
   disabled?: boolean;
+
+  // Pass down class name, if needed
+  className?: string;
 
   // The action to take when clicking the button.
   // If a string, the button serves as a hyperlink; if a function, the button
@@ -31,7 +35,7 @@ export const CTAButton = ({
   target: '_self' | '_blank';
 }) => {
   const commonProps = {
-    'className': `${styles.CTAButton} no-underline`,
+    'className': `${styles.CTAButton} no-underline ${className}`,
     'data-disabled': disabled,
   };
 
