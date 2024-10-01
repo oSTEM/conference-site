@@ -1,15 +1,14 @@
-import { intervalToDuration, isPast } from "date-fns";
-import React from "react";
+import { intervalToDuration, isPast } from 'date-fns';
+import React from 'react';
 
-// Thursday, November 10, 2022 at 9:00AM Eastern
-const CONFERENCE_DATE = new Date("2022-11-10T14:00:00.000Z");
+const CONFERENCE_DATE = new Date('2024-10-17T19:00:00.000Z');
 
 export const ConferenceCountdown = () => {
   const now = useCurrentTime();
 
   if (isPast(CONFERENCE_DATE)) {
     return (
-      <div className="text-2xl font-display text-white">
+      <div className='text-2xl text-center font-display text-white py-5'>
         <p>The conference has started!</p>
       </div>
     );
@@ -26,30 +25,30 @@ export const ConferenceCountdown = () => {
   });
 
   return (
-    <div className="flex flex-wrap justify-center items-center text-white">
-      <Unit n={diff.months || 0} unit="months" />
-      <Unit n={diff.days || 0} unit="days" />
-      <Unit n={diff.hours || 0} unit="hours" />
-      <Unit n={diff.minutes || 0} unit="minutes" />
-      <Unit n={diff.seconds || 0} unit="seconds" />
+    <div className='flex flex-wrap justify-center items-center'>
+      {/* <Unit n={diff.months || 0} unit="months" /> */}
+      <Unit n={diff.days || 0} unit='days' />
+      <Unit n={diff.hours || 0} unit='hours' />
+      <Unit n={diff.minutes || 0} unit='minutes' />
+      <Unit n={diff.seconds || 0} unit='seconds' />
     </div>
   );
 };
 
 const Unit = ({ n, unit }: { n: number; unit: string }) => {
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className='flex flex-col items-center p-4'>
       <span
         // Use tabular-nums here to force the numbers to display in a monospace
         // font; this is useful especially for seconds, since otherwise the "5"
         // in "52" might shift rightward when decrementing to "51" (since 1
         // usually takes less space). We **don't** use font-display here since
         // many display fonts don't have support for tabular-nums.
-        className="block text-3xl tabular-nums"
+        className='block text-3xl tabular-nums'
       >
         {n}
       </span>
-      <span className="block mt-2 font-display text-white">{unit}</span>
+      <span className='block mt-2 font-display'>{unit}</span>
     </div>
   );
 };
