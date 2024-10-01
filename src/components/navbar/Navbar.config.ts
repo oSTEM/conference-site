@@ -44,7 +44,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Registration',
     href: '/2024/attend/registration',
     badge: {
-      label: 'Closed',
+      label: 'Onsite Only',
     },
   },
   {
