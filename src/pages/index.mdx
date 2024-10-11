@@ -6,6 +6,9 @@ import { CTAButton } from "../components/button/CTAButton";
 import { ConferenceCountdown } from "../components/ConferenceCountdown";
 import { SiteLayout } from "../components/layout/SiteLayout";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
+
 <SiteLayout>
 
 <div className="border-chill-green border-solid text-center">
@@ -33,14 +36,16 @@ import { SiteLayout } from "../components/layout/SiteLayout";
       </div>
       <ConferenceCountdown></ConferenceCountdown>
       <div className="text-xl text-center p-2">
-        <CTAButton onClick="https://whova.com/portal/ostem_202411/" backgroundColor="ostem-blue" target='_blank' className='mb-4 md:mb-0'>Whova Portal</CTAButton>
-        &nbsp;&nbsp;&nbsp;
+        <CTAButton onClick="https://whova.com/portal/ostem_202411/" backgroundColor="ostem-blue" target='_blank' className='mb-4'><FontAwesomeIcon icon={faMobileAlt}></FontAwesomeIcon><FontAwesomeIcon icon={faDesktop} className='ml-2 mr-2'></FontAwesomeIcon>Whova Portal</CTAButton>
+        <br/>
+        <CTAButton onClick="https://cdn.ostem.org/publicfiles/oSTEM2024_ProgramBook_v2_Web.pdf" backgroundColor="bright-peach" target='_blank' className='mb-4 md:mb-0'>2024 Program Book</CTAButton>
+        <span className='hidden md:inline-block'>&nbsp;&nbsp;&nbsp;</span>
         <CTAButton onClick="/2024/attend/resources" backgroundColor="bright-peach" target='_self'>Attendee Resources</CTAButton>
         <br/>
       </div>
       <br/>
       <hr className='border-dark-teal border-2'/>
-      <p className='p-4'>Online registration has closed. Onsite registration will be available for late registrants.<br/>If you submitted a poster, decisions and time assignments will be released by October 11.</p>
+      <p className='p-4'>Online registration has closed. Onsite registration will be available for late registrants.</p>
     </div>
   </div>
 
