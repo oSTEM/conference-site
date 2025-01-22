@@ -1,0 +1,68 @@
+import { CTAButton } from "@/components/button/CTAButton";
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCar, faHotel, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
+import Image from "next/image";
+
+<SiteLayout title="Career Fair & Grad Expo" accent="nav-green">
+
+<div className="rounded md:col-span-5 mt-8 border-4 border-dark-teal bg-dark-teal border-solid">
+  <h3 className="p-4 pt-3">Get Ready for the Conference: Webinar Series</h3>
+  <div className='bg-primary rounded p-4 pb-6'>
+      <p>Prepare yourself for a successful Expo with industry leaders through this series of webinars, each on a different topic.</p>
+      <ul>
+        <li>Building a Strong LinkedIn Profile with Ansys - October 2, 2024, 11:30 AM EDT/8:30 AM PDT</li>
+        <li>Making the Most of Career Fairs and Expos with The Allen Institute - Oct 2, 2024, 11:30 AM EDT/8:30 AM PDT</li>
+      </ul>
+      <br/>
+      <CTAButton onClick="https://ostem.webex.com/webappng/sites/ostem/webinar/webinarSeries/register/74b1cadbd3a7421da6268f319c7c8dae" backgroundColor="bright-peach" target='_blank'> Register for Webinar</CTAButton>
+  </div>
+</div>
+
+<div className="rounded md:col-span-5 mt-8 border-4 border-green-gray bg-green-gray border-solid">
+<h3 className="p-4 pt-3">Upload your Resumes Now!</h3>
+<div className='bg-primary rounded p-4 pb-6'>
+      
+Upload your resume on oSTEM's Career Center today and and be sure to check you are attending the 2024 oSTEM Conference!
+
+This increases your chances of receiving a job or internship interview at the 2-day Career Fair and Graduate School Expo.
+Need help getting started on your resume? In addition to your campus' career counseling office, [visit our Resume Resource bank here](https://ostem.notion.site/Conference-Attendee-Resources-679ca7be44f34c4ca6dace34ea5f8eca).
+
+<br/>
+<CTAButton onClick="https://careers.ostem.org" backgroundColor="bright-peach" target='_blank'> oSTEM Career Center</CTAButton>
+</div>
+</div>
+
+<div className="text-nav-green font-bold">
+<h2>Exhibitor List</h2>
+</div>
+
+Please note that this list is subject to change. **Exhibitors are not finalized.**
+
+
+<div>
+  <div title="Whova event and conference app" id="whova-exhibitorwidget">
+    <p id="whova-loading"><b>Loading...</b><br/>Not loading? Reload the page, or <a href='https://whova.com/embedded/exhibitor/LHX4DP3bth2jGh0nTHQ4YpCtgepdA-z%40rmbv9ldUOZ8%3D'>open the exhibitor widget in a new tab</a>.</p>
+  </div>
+  <script
+  src="https://whova.com/static/frontend/xems/js/whova-exhibitor-widget.js?eid=LHX4DP3bth2jGh0nTHQ4YpCtgepdA-z%40rmbv9ldUOZ8%3D&host=https://whova.com"
+  type="text/javascript" id="embeded-exhibitor-script">
+  </script>
+  <div id="whova-wrap" className="whova-wrap-class">
+    Powered By&nbsp;
+    <a target="_blank" href="https://whova.com">
+       <b>Whova</b>
+    </a>
+  </div>
+</div>
+
+<div className="text-nav-green font-bold">
+<h2>Floor Map</h2>
+</div>
+
+<div className="w-full h-full relative min-h-[400px] md:min-h-[600px]"><iframe className='w-full h-full absolute' src="https://oSTEM2024.expofp.com?allowConsent=false" allow="clipboard-read; clipboard-write"></iframe></div>
+
+The floor map can also be displayed on its own. [Click here to open ExpoFP as a full-screen window.](https://oSTEM2024.expofp.com)
+
+</SiteLayout>

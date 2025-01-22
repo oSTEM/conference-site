@@ -1,0 +1,40 @@
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { CTAButton } from "@/components/button/CTAButton";
+import { AwardSquare } from "@/components/awards/AwardSquare";
+import { AwardCard } from "@/components/awards/AwardCard";
+import Image from "next/future/image";
+
+<SiteLayout title="Previous Exhibitors" accent="linen">
+
+<Image
+  src="/images/partnership-banner-image.jpg"
+  alt="Decorative banner image showing three oSTEM attendees looking into the camera at a previous oSTEM national conference."
+  style={{width: "100%", height: 'auto'}}
+  width="400"
+  height="167"
+/>
+
+<br />
+
+<div>
+  (these are previous exhibitors)
+</div>
+
+<br />
+
+<div>
+  <div title="Whova event and conference app" id="whova-exhibitorwidget">
+    <p id="whova-loading"><b>Loading... please wait.</b> <br/>Note: If this widget does not load after 15-20 seconds, please refresh the page.</p>
+  </div>
+  <script
+    src="https://whova.com/static/frontend/xems/js/whova-exhibitor-widget.js?eid=w3nm9trIKDqa2Z4vqZBaEdUpVsJ8Xtqb1C7tvh3-BT0%3D&host=https://whova.com"
+    type="text/javascript"
+    id="embeded-exhibitor-script"
+  ></script>
+  <div id="whova-wrap" className="whova-wrap-class">
+    Powered By Whova
+    <br />
+  </div>
+</div>
+
+</SiteLayout>
