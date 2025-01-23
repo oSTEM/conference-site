@@ -40,7 +40,7 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   return (
     <div>
       <Head>
-        <title>{title ? title + ' - ' : ''}14th Annual oSTEM Conference</title>
+        <title>{title ? title + ' - ' : ''}15th Annual oSTEM Conference</title>
       </Head>
       <div className='flex flex-col min-h-screen bg-primary'>
         <NavBar />
