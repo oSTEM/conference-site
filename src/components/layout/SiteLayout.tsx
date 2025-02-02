@@ -29,7 +29,7 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
     if (typeof localStorage !== 'undefined')
       localStorage.setItem('ocf-ver', '1');
   } else {
-    updateBannerVisible = true;
+    updateBannerVisible = false;
   }
 
   function whatsNewCloseHandler() {

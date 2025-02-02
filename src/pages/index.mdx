@@ -11,7 +11,7 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
 
 <SiteLayout>
 
-<div className="border-chill-green border-solid text-center">
+<div className="border-skyblue border-solid text-center">
   <picture>
     <source srcSet="/images/2025/15th_banner_square.png" media='(orientation: portrait)'/>
     <img
@@ -21,24 +21,41 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
     />
   </picture>
 </div>
-<hr className='border-dark-teal border-2 mt-2 rounded'/>
 
 <div className="grid md:grid-cols-5">
-  <div className="rounded md:col-span-5 mt-8 border-4 border-dark-teal border-solid bg-dark-teal">
-    <h3 className="p-4 pt-3">2025 Conference</h3>
+  <div className="rounded md:col-span-5 mt-8 border-4 border-skyblue border-solid bg-skyblue">
+    <h3 className="p-4 pt-3">2025 Conference Updates</h3>
     <div className="bg-primary text-center rounded">
-      <div className='pt-4'>
+      <div className='text-left p-4'>
         <span>We are excited to see you soon for our 15<sup>th</sup> Annual Conference!
         <br/>While we are getting things ready for you, we wanted to share a few details!
         <br/>
-        <br/>Dates: Thursday, October 16th through Sunday, October 19th 2025
-        <br/>Location: Baltimore, Maryland at the Baltimore Convention Center</span>   
+        <br/><span className="font-bold">Dates:</span> Thursday, October 16th through Sunday, October 19th 2025
+        <br/><span className="font-bold">Location:</span> Baltimore, Maryland at the Baltimore Convention Center</span>   
       </div>
-      <ConferenceCountdown></ConferenceCountdown>
-  </div>
+      <br/>Sign Up to Be Notified when Registration or Request for Proposals Open
+      <br/>
+      <CTAButton
+        onClick="https://form.jotform.com/243035405380145"
+        backgroundColor="bright-peach"
+        >
+        Sign Up Here
+      </CTAButton>
+      <br/>
+      <br/>
+    </div>
   </div>
 
-  <div className="rounded mt-8 md:col-span-5 bg-green-gray border-4 border-green-gray">
+  <div className="rounded md:col-span-5 mt-8 border-4 border-skyblue border-solid bg-skyblue">
+    <h3 className="p-4 pt-3">2025 Conference Countdown</h3>
+    <div className="bg-primary text-center rounded">
+      <ConferenceCountdown></ConferenceCountdown>
+    </div>
+  </div>
+
+  
+
+  <div className="rounded md:col-span-5 mt-8 border-4 border-skyblue border-solid bg-skyblue">
     <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
@@ -47,34 +64,37 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
       height="2003"
       className='rounded-t'
     />
-    <div className='px-4 py-2'>
-    <h3>Conference for LGBTQ+ People in STEM</h3>
-    <p>
-      The 15th Annual oSTEM Conference will take place in Baltimore, MD
-      with 1,100+ LGBTQ+ students, professionals, and recruiters in STEM fields
-      from across the country and around the globe. This space is designed for
-      attendees to share their professional and personal experiences and learn
-      from one another in an authentic and vulnerable way. 
-    </p>
-    <p>
-      Programs and content range from introspective (e.g., safer spaces to talk about queer issues
-      and career development) to technical (e.g., discussing the latest in
-      research conducted by our members). The Career & Graduate School Expo
-      allows attendees to connect and network with professionals, academics, and
-      colleagues from STEM industries and universities. If you want a space where you can be your 
-      authentic LGBTQ+ self and your authentic STEM self, this is the conference for you!
-    </p>
-    </div>
+      
+      <h3 className="p-4 pt-3">Conference for LGBTQ+ People in STEM</h3>
+        <div className="bg-primary text-left rounded p-4">
+        <p>
+          The 15th Annual oSTEM Conference will take place in Baltimore, MD
+          with 1,100+ LGBTQ+ students, professionals, and recruiters in STEM fields
+          from across the country and around the globe. This space is designed for
+          attendees to share their professional and personal experiences and learn
+          from one another in an authentic and vulnerable way. 
+        </p>
+        <p>
+          Programs and content range from introspective (e.g., safer spaces to talk about queer issues
+          and career development) to technical (e.g., discussing the latest in
+          research conducted by our members). The Career & Graduate School Expo
+          allows attendees to connect and network with professionals, academics, and
+          colleagues from STEM industries and universities. If you want a space where you can be your 
+          authentic LGBTQ+ self and your authentic STEM self, this is the conference for you!
+        </p>
+        <br/>
+          <div className="text-xl flex justify-center p-8">
+            <CTAButton
+              onClick="https://www.ostem.org/page/newsletter"
+              backgroundColor="bright-peach"
+              >
+              Sign Up for Our Newsletter
+            </CTAButton>
+          </div>
+        <br/>
+      </div>
   </div>
 </div>
 
-<div className="text-xl flex justify-center p-8">
-  <CTAButton
-    onClick="https://www.ostem.org/page/newsletter"
-    backgroundColor="bright-peach"
-  >
-    Sign Up for Our Newsletter
-  </CTAButton>
-</div>
 
 </SiteLayout>
