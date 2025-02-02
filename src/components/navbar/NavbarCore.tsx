@@ -33,8 +33,17 @@ export interface NavbarCategory {
 }
 
 export interface NavbarLink {
+  /**
+   * Which category to group the link under in the navigation bar.
+   */
   category: string;
+  /**
+   * Label used in the navigation bar when a user is on this page. Page path must match @property href.
+   */
   label: string;
+  /**
+   * Link to the page. Do not include a trailing slash, or the label won't show properly.
+   */
   href: string;
   badge?: NavbarBadge;
 }

@@ -63,6 +63,8 @@ module.exports = {
         "dark-teal": "var(--color-dark-teal)",
         "chill-green": "var(--color-chill-green)",
         "green-gray": "var(--color-green-gray)",
+        // Colors used in 2025 conference
+        "baltimore-blue": "#20568a",
         // Navbar accents
         "nav-accent": "#6d8b85", // Default accent
         "nav-green": "rgb(var(--sp-nav-accent-green) / <alpha-value>)",

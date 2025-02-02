@@ -109,7 +109,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'misc',
     label: 'Annual Awards',
-    href: '/2025/awards/',
+    href: '/2025/awards',
   },
   /**{
     category: 'misc',
