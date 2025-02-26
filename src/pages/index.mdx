@@ -1,5 +1,7 @@
 import Image from "next/future/image";
 
+import styles from '@/../theme/landing_supplemental.module.css';
+
 import { Popover } from '@headlessui/react';
 import { TextBadge } from '@/components/badge/TextBadge';
 import { CTAButton } from "@/components/button/CTAButton";
@@ -24,15 +26,24 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
 
 <div className="grid md:grid-cols-5">
   <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
-    <h3 className="p-4 pt-3">2025 Conference Updates</h3>
+    <h3 className="p-4 pt-3 text-white">2025 Conference Countdown</h3>
+    <div className="bg-primary text-center rounded pt-4">
+      <p className='text-xl'>We are excited to see you soon in</p>
+      <p className="pt-0 text-4xl" ><b className={styles.gradient}>Baltimore, Maryland</b><span className={styles.gradientLight}> - October 16-19, 2025</span></p>
+      <ConferenceCountdown></ConferenceCountdown>
+    </div>
+  </div>
+
+  <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
+    <h3 className="p-4 pt-3 text-white">2025 Conference Updates</h3>
     <div className="bg-primary text-center rounded">
       <div className='text-left p-4'>
-        <span>We are excited to see you soon for our 15<sup>th</sup> Annual Conference!<br/>While we are getting things ready for you, we wanted to share a few details!</span>
+        <span>We are excited to see you soon for our 15<sup>th</sup> Annual Conference!<br/>While we are getting things ready for you, we wanted to share a few details below.</span>
         <br/>
         <br/><span className="font-bold">Dates:</span> Thursday, October 16th through Sunday, October 19th 2025
         <br/><span className="font-bold">Location:</span> Baltimore, Maryland at the Baltimore Convention Center
       </div>
-      <br/>Sign Up to Be Notified when Registration or Request for Proposals Open
+      <br/>Sign up to be notified when Registration or Request for Proposals open:
       <br/>
       <CTAButton
         onClick="https://form.jotform.com/243035405380145"
@@ -47,15 +58,6 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
   </div>
 
   <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
-    <h3 className="p-4 pt-3">2025 Conference Countdown</h3>
-    <div className="bg-primary text-center rounded">
-      <ConferenceCountdown></ConferenceCountdown>
-    </div>
-  </div>
-
-  
-
-  <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
     <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
@@ -65,7 +67,7 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
       className='rounded-t'
     />
       
-      <h3 className="p-4 pt-3">Conference for LGBTQ+ People in STEM</h3>
+      <h3 className="p-4 pt-3 text-white">Conference for LGBTQ+ People in STEM</h3>
         <div className="bg-primary text-left rounded p-4">
         <p>
           The 15th Annual oSTEM Conference will take place in Baltimore, MD

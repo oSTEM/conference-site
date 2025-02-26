@@ -1,0 +1,27 @@
+.gradient {
+  background: linear-gradient(330deg, #785ed7, #3aa6dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:global(.dark) .gradient {
+  background: linear-gradient(330deg, #ad9af1, #b2e7e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientLight {
+  background: #1a377f;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:global(.dark) .gradientLight {
+  background: #b1c4f5;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
