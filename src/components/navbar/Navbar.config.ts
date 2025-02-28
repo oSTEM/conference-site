@@ -15,13 +15,12 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
    *  name: 'attend',
    *  displayName: 'Attend',
    *  color: 'nav-green',
-   *},
-   *{
-   *  name: 'present',
-   *  displayName: 'Present',
-   *  color: 'nav-blue',
-   *},
-   */
+   *},*/
+  {
+    name: 'present',
+    displayName: 'Present',
+    color: 'nav-blue',
+  },
   {
     name: 'partner',
     displayName: 'Partner',
@@ -68,13 +67,6 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   *   label: 'Community Health & Safety',
   *   href: '/2025/attend/health-and-safety',
   * },
-  * {
-  *   category: 'present',
-  *   label: 'Request for Programs',
-  *   href: '/2025/present/request-for-programs',
-  *   badge: {
-  *     label: 'Closed',
-  *   },
   * },
   * {
   *   category: 'present',
@@ -91,12 +83,20 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   *   badge: {
   *     label: 'Closed',
   *   },
-  * },,
+  * },
   {
     category: 'partner',
     label: 'Exhibitor/Sponsor Resources',
     href: '/2025/partner/resources',
   }, */
+  {
+    category: 'present',
+    label: 'Request for Programs',
+    href: '/2025/present/request-for-programs',
+    badge: {
+      label: 'Closed',
+    },
+  },
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
