@@ -11,11 +11,11 @@ import { NavbarCategory, NavbarLink } from './NavbarCore';
  * Required properties: name, displayName, color
  */
 export const NAVBAR_CATEGORIES: NavbarCategory[] = [
-  /**
-   *  name: 'attend',
-   *  displayName: 'Attend',
-   *  color: 'nav-green',
-   *},*/
+  {
+    name: 'attend',
+    displayName: 'Attend',
+    color: 'nav-green',
+  },
   {
     name: 'present',
     displayName: 'Present',
@@ -40,18 +40,19 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
  */
 export const NAVBAR_LINKS: NavbarLink[] = [
   /** {
-  *   category: 'attend',
-  *   label: 'Registration',
-  *   href: '/2025/attend/registration',
-  *   badge: {
-  *     label: 'Onsite Only',
-  *   },
-  * },
-  * {
-  *   category: 'attend',
-  *   label: 'Attendee Resources',
-  *   href: '/2025/attend/resources',
-  * },
+   *   category: 'attend',
+   *   label: 'Registration',
+   *   href: '/2025/attend/registration',
+   *   badge: {
+   *     label: 'Onsite Only',
+   *   },
+   * }, */
+  {
+    category: 'attend',
+    label: 'Attendee Resources',
+    href: '/2025/attend/resources',
+  },
+  /**
   * {
   *   category: 'attend',
   *   label: 'Schedule',
