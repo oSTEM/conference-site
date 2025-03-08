@@ -1,102 +1,102 @@
 import Image from "next/future/image";
 
+import styles from '@/../theme/landing_supplemental.module.css';
+
 import { Popover } from '@headlessui/react';
 import { TextBadge } from '@/components/badge/TextBadge';
-import { CTAButton } from "../components/button/CTAButton";
-import { ConferenceCountdown } from "../components/ConferenceCountdown";
-import { SiteLayout } from "../components/layout/SiteLayout";
+import { CTAButton } from "@/components/button/CTAButton";
+import { ConferenceCountdown } from "@/components/ConferenceCountdown";
+import { SiteLayout } from "@/components/layout/SiteLayout";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
 
 <SiteLayout>
 
-<div className="border-chill-green border-solid text-center">
+<div className="border-baltimore-blue border-solid text-center">
   <picture>
-    <source srcSet="/images/2024/14th_banner_square.webp" media='(orientation: portrait)'/>
+    <source srcSet="/images/2025/15th_banner_square.png" media='(orientation: portrait)'/>
     <img
-      alt="Banner for the 14th Annual oSTEM Conference, from October 17-20 in Portland, OR."
-      src="/images/2024/14th_annual_banner.png"
+      alt="Banner for the 15th Annual oSTEM Conference, from October 16-19 in Baltimore, MD."
+      src="/images/2025/15th_annual_banner.png"
       className="flex w-200 mx-auto rounded"
     />
   </picture>
 </div>
-<hr className='border-dark-teal border-2 mt-2 rounded'/>
 
 <div className="grid md:grid-cols-5">
-  <div className="rounded md:col-span-5 mt-8 border-4 border-dark-teal border-solid bg-dark-teal">
-    <h3 className="p-4 pt-3">2024 Conference</h3>
-    <div className="bg-primary text-center rounded">
-      <div className='pt-4'>
-        <span >We are excited to see you soon for our 14<sup>th</sup> Annual Conference!<br/>Make the most out of conference with our event app, Whova. </span> 
-        <Popover className='inline-block'>
-          <Popover.Button><a>What is Whova?</a></Popover.Button>
-          <Popover.Panel className='absolute z-10 mt-1 bg-primary border border-secondary px-3 py-1 mr-2 rounded'><p>Whova allows you to get the most up to date information, preplan your personalized conference agenda, and connect with the conference community. Whova is available on iOS, Android, and Web.</p></Popover.Panel>
-        </Popover>
-      </div>
+  <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
+    <h3 className="p-4 pt-3 text-white">2025 Conference Countdown</h3>
+    <div className="bg-primary text-center rounded pt-4">
+      <p className='text-xl'>We are excited to see you soon in</p>
+      <p className="pt-0 text-4xl" ><b className={styles.gradient}>Baltimore, Maryland</b><span className={styles.gradientLight}> - October 16-19, 2025</span></p>
       <ConferenceCountdown></ConferenceCountdown>
-      <div className="text-xl text-center p-2">
-        <CTAButton onClick="https://whova.com/portal/ostem_202411/" backgroundColor="ostem-blue" target='_blank' className='mb-4'><FontAwesomeIcon icon={faMobileAlt}></FontAwesomeIcon><FontAwesomeIcon icon={faDesktop} className='ml-2 mr-2'></FontAwesomeIcon>Whova Portal</CTAButton>
-        <br/>
-        <CTAButton onClick="https://cdn.ostem.org/publicfiles/oSTEM2024_ProgramBook_v2_Web.pdf" backgroundColor="bright-peach" target='_blank' className='mb-4 md:mb-0'>2024 Program Book</CTAButton>
-        <span className='hidden md:inline-block'>&nbsp;&nbsp;&nbsp;</span>
-        <CTAButton onClick="/2024/attend/resources" backgroundColor="bright-peach" target='_self'>Attendee Resources</CTAButton>
-        <br/>
-      </div>
-      <br/>
-      <hr className='border-dark-teal border-2'/>
-      <p className='p-4'>Online registration has closed. Onsite registration will be available for late registrants.</p>
     </div>
   </div>
 
-  <div className="rounded mt-8 md:col-span-5 bg-green-gray border-4 border-green-gray">
+  <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
+    <h3 className="p-4 pt-3 text-white">2025 Conference Updates</h3>
+    <div className="bg-primary text-center rounded">
+      <div className='text-left p-4'>
+        <span>We are excited to see you soon for our 15<sup>th</sup> Annual Conference!<br/>While we are getting things ready for you, we wanted to share a few details below.</span>
+        <br/>
+        <br/><span className="font-bold">Dates:</span> Thursday, October 16th through Sunday, October 19th, 2025
+        <br/><span className="font-bold">Location:</span> Baltimore, Maryland at the Baltimore Convention Center
+      </div>
+      <br/>Sign up to be notified when Registration or Request for Proposals open:
+      <br/>
+      <CTAButton
+        onClick="https://form.jotform.com/243035405380145"
+        backgroundColor="bright-peach"
+        className="mt-4"
+        >
+        Sign Up Here
+      </CTAButton>
+      <br/>
+      <br/>
+    </div>
+  </div>
+
+  <div className="rounded md:col-span-5 mt-8 border-4 border-baltimore-blue border-solid bg-baltimore-blue">
     <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
       style={{width: "100%", height: 'auto'}}
       width="6000"
-      height="2003"
+      height="2000"
       className='rounded-t'
     />
-    <div className='px-4 py-2'>
-    <h3>Conference for LGBTQ+ People in STEM</h3>
-    <p>
-      The 14th Annual oSTEM Conference will take place in Portland, OR
-      with 1,100+ LGBTQ+ students, professionals, and recruiters in STEM fields
-      from across the country and around the globe. This space is designed for
-      attendees to share their professional and personal experiences and learn
-      from one another in an authentic and vulnerable way. 
-    </p>
-    <p>
-      Programs and content range from introspective (e.g., safer spaces to talk about queer issues
-      and career development) to technical (e.g., discussing the latest in
-      research conducted by our members). The Career & Graduate School Expo
-      allows attendees to connect and network with professionals, academics, and
-      colleagues from STEM industries and universities. If you want a space where you can be your 
-      authentic LGBTQ+ self and your authentic STEM self, this is the conference for you!
-    </p>
-    </div>
+      
+      <h3 className="p-4 pt-3 text-white">Conference for LGBTQ+ People in STEM</h3>
+        <div className="bg-primary text-left rounded p-4">
+        <p>
+          The 15th Annual oSTEM Conference will take place in Baltimore, MD
+          with 1,100+ LGBTQ+ students, professionals, and recruiters in STEM fields
+          from across the country and around the globe. This space is designed for
+          attendees to share their professional and personal experiences and learn
+          from one another in an authentic and vulnerable way. 
+        </p>
+        <p>
+          Programs and content range from introspective (e.g., safer spaces to talk about queer issues
+          and career development) to technical (e.g., discussing the latest in
+          research conducted by our members). The Career & Graduate School Expo
+          allows attendees to connect and network with professionals, academics, and
+          colleagues from STEM industries and universities. If you want a space where you can be your 
+          authentic LGBTQ+ self and your authentic STEM self, this is the conference for you!
+        </p>
+        <br/>
+          <div className="text-xl flex justify-center p-8">
+            <CTAButton
+              onClick="https://www.ostem.org/page/newsletter"
+              backgroundColor="bright-peach"
+              >
+              Sign Up for Our Newsletter
+            </CTAButton>
+          </div>
+        <br/>
+      </div>
   </div>
 </div>
 
-<div className="text-xl flex justify-center p-8">
-  <CTAButton
-    onClick="https://www.ostem.org/page/newsletter"
-    backgroundColor="bright-peach"
-  >
-    Sign Up for Our Newsletter
-  </CTAButton>
-</div>
-
-<div className="mt-8 rounded">
-  <Image
-    className="rounded"
-    src="/images/2023/2023_homepage_image.jpg"
-    alt="A decorative image of oSTEM conference attendees sitting around a table. One attendee is in focus looking at another attendee, while four other attendees can be seen blurred in the foreground and background."
-    style={{width: "100%", height: 'auto'}}
-    width="800"
-    height="500"
-  />
-</div>
 
 </SiteLayout>

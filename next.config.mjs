@@ -29,6 +29,11 @@ const nextConfig = {
       permanent: false
     }, 
     {
+      source: '/2024/:path',
+      destination: '/archive/2024/:path',
+      permanent: false
+    }, 
+    {
       source: '/2024/attend/attendee-resources',
       destination: '/2024/attend/resources?oldlink=1',
       permanent: false

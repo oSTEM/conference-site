@@ -21,17 +21,6 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   const usedRedirect = router.query.oldlink === '1';
   let updateBannerVisible = false;
 
-  if (
-    typeof localStorage !== 'undefined' &&
-    localStorage.getItem('ocf-ver') === '1'
-  ) {
-  } else if (router.pathname === '/2024/whats-new') {
-    if (typeof localStorage !== 'undefined')
-      localStorage.setItem('ocf-ver', '1');
-  } else {
-    updateBannerVisible = true;
-  }
-
   function whatsNewCloseHandler() {
     if (typeof localStorage !== 'undefined')
       localStorage.setItem('ocf-ver', '1');
@@ -40,7 +29,7 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
   return (
     <div>
       <Head>
-        <title>{title ? title + ' - ' : ''}14th Annual oSTEM Conference</title>
+        <title>{title ? title + ' - ' : ''}15th Annual oSTEM Conference</title>
       </Head>
       <div className='flex flex-col min-h-screen bg-primary'>
         <NavBar />
@@ -65,7 +54,7 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
           ) : (
             ''
           )}
-          {updateBannerVisible ? (
+          {/* {updateBannerVisible ? (
             <BannerMessage
               type='update'
               icon={faMagic}
@@ -78,7 +67,7 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
             </BannerMessage>
           ) : (
             ''
-          )}
+          )} */}
 
           <main className='container pt-2 max-w-5xl mx-auto bg-primary h-full'>
             {title ? <PageHeader accent={accent}>{title}</PageHeader> : ''}

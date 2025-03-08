@@ -1,0 +1,185 @@
+import { CTAButton } from "@/components/button/CTAButton";
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BannerMessage } from '@/components/banner/BannerMessage'
+import { faCar, faHotel, faInfo, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
+import Image from "next/image";
+
+<SiteLayout title="Attendee Resources" accent="nav-green">
+<div className="text-nav-green font-bold">
+
+## General Resources
+
+</div>
+
+We have a wealth of general information on our conference Notion page. Topics include Building a Travel Request Proposal, Conference Attire, and more. Please scroll down for information specific to this year's conference.
+
+<br/>
+<div className="text-l flex justify-center p-2">
+    <CTAButton onClick="https://ostem.notion.site/Conference-Attendee-Resources-2024-76ea110de8a447278d856623c7e8a7ce" backgroundColor="bright-peach">
+      Conference Attendee Resources
+    </CTAButton>
+</div>
+
+<br/>
+
+
+
+<div className="text-nav-green font-bold">
+
+## Getting to the Conference
+
+</div>
+
+The 15<sup>th</sup> annual conference will be taking place at the <a href='https://www.bccenter.org/' target='_blank'>Baltimore Convention Center</a> in Baltimore, MD.
+
+The address of the Convention Center is <b>1 West Pratt Street, Baltimore, MD 21201</b>.
+
+<br/>
+
+<div className='flex flex-col md:flex-row gap-x-4'>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faPlane} className={"social-icon"} fixedWidth /> Plane</h3>
+
+The closest airport is Baltimore/Washington International Thurgood Marshall Airport (BWI). The [MTA  Light RailLink (Light Rail)](https://www.mta.maryland.gov/schedule/lightrail) offers a direct connection from the airport to the Convention Center and costs $2.00 each way.
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faTrain} className={"social-icon"} fixedWidth /> Train</h3>
+
+The [Baltimore Penn station](https://www.amtrak.com/stations/bal) is the closest Amtrak station to the Baltimore Convention Center. The MTA Light Rail station is a 7 minute walk from the train station.
+
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faCar} className={"social-icon"} fixedWidth /> Car</h3>
+
+If you're driving and need parking, please refer to [the BCC website for detailed parking information](https://www.bccenter.org/p/attend/directions--parking). There is a charge for on-site parking which will not be covered by oSTEM.
+</div>
+</div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Lodging
+
+</div>
+
+### General Lodging Information
+
+Please see the hotel blocks below for the 2025 Annual Conference. These hotels have discounted group rates available exclusively for attendees, and are all located close to both the Light Rail station and the Convention Center. Because we have multiple hotels this year, please note the following:
+
+- There are three general hotels that can be reserved by any attendee.
+  - All hotels are within 5 blocks of both the Convention Center and the Light Rail station.
+  - Limited rooms are available in a hotel adjacent to the Convention Center for those with accessibility and/or mobility concerns.  For more information on costs and availability please contact access@ostem.org. 
+- Hotel blocks are first come, first served.
+  - This page will be updated weekly to indicate remaining capacity at each hotel. Once a hotel is full, you will not be able to make any reservations under our block.
+  - Reservations are available for booking Tuesday, October 15th through Monday, October 21st. Please note that Tuesday, Wednesday, and Sunday night availability is limited.
+
+<br/>
+
+### Conference Hotels
+
+The hotels listed below are all **first come, first served**. Hotels may be booked until they're full or by September 23rd, 2025, whichever comes first. Once a hotel block is full, it will be removed from this page. All hotels have a 17.5% charge for taxes and fees.
+
+<BannerMessage icon={faInfo} type='info' closeButton={false}>
+  We have secured the oSTEM room block discount for any length of stay between Wednesday, October 15 and Monday, October 20.
+</BannerMessage>
+
+<div className='flex flex-col md:flex-row gap-x-4'>
+<div className='w-full'>
+<h3>Hyatt Regency</h3>
+<hr className='border-red-400 border-b-2 rounded'/>
+
+**Hyatt Regency Baltimore**
+
+<p><span className='text-red-800 dark:text-red-200'>300 Light Street,
+Baltimore, MD, 21202</span>
+<br/>(1 block to BCC, 2 blocks to Light Rail)
+<br/>$225 per Night plus taxes and fees</p>
+
+<span className='text-red-800 dark:text-red-200'><b>Booking Link Coming Soon</b>!</span>
+<br/>
+
+
+<p target='_blank' className='border-gray-400 text-gray-800 dark:text-gray-200 border-2 px-2 pt-0.5 pb-1 mt-4 inline-block'>
+  Coming Soon!
+</p>
+
+
+
+</div>
+<div className='w-full'>
+<h3>Marriott</h3>
+<hr className='border-pink-400 border-b-2 rounded'/>
+
+**Marriott Inner Harbor (at Camden Yards)**
+
+<p><span className='text-pink-800 dark:text-pink-200'>110 S Eutaw St, Baltimore, MD 21201</span>
+<br/>(3 blocks to BCC, 2 blocks to Light Rail)
+<br/>$229 per Night plus taxes and fees</p>
+
+<span className='text-red-800 dark:text-red-200'><b>Booking Link Coming Soon</b>!</span>
+<br/>
+
+
+<p target='_blank' className='border-gray-400 text-gray-800 dark:text-gray-200 border-2 px-2 pt-0.5 pb-1 mt-4 inline-block'>
+  Coming Soon!
+</p>
+
+</div>
+<div className='w-full'>
+<h3>Sheraton</h3>
+<hr className='border-indigo-400 border-b-2 rounded'/>
+
+**Sheraton Inner Harbor**
+
+<p><span className='text-indigo-800 dark:text-indigo-200'>300 S Charles St, Baltimore, MD 21201</span>
+<br/>(3 blocks to OCC, 2 blocks to Light Rail)
+<br/>$229 per Night plus taxes and fees</p>
+
+
+<span className='text-red-800 dark:text-red-200'><b>Booking Link Coming Soon</b>!</span>
+<br/>
+
+
+<p target='_blank' className='border-gray-400 text-gray-800 dark:text-gray-200 border-2 px-2 pt-0.5 pb-1 mt-4 inline-block'>
+  Coming Soon!
+</p>
+
+</div>
+</div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Conference Accessibility
+
+</div>
+
+For general accessibility questions, please email our accessibility team at access@ostem.org.
+
+During online registration we ask what accomodations you need. We aim to fulfill all reasonable accomodations requested by **August 31st**; after that date, we will do what we can but our ability to fulfill accomodations may be more limited. You can also email us for inquiries into accomodations.
+
+For additional accessibility information available at the convention center, please visit https://www.bccenter.org/p/about/faqs.
+
+<br/>
+
+---
+
+<div className="text-nav-green font-bold">
+
+## Additional Resources
+
+</div>
+
+The following resources are third-party resources and are not affiliated or sponsored by oSTEM in any way.
+
+- **Visit Baltimore** is a hub of information for all things Baltimore. Check out their Charm City Passport for discounts!  For more info, please visit https://baltimore.org/guides/an-lgbtq-guide-to-baltimore/.
+
+- **Baltimore Beat** is is a Black-led, Black-controlled nonprofit newspaper and media outlet. Check out their stories to learn about life in Baltimore.  Check out their Calendars to see events happening during conference weekend! Check out their Charm City Passport for discounts!  For more info, please visit https://baltimorebeat.com/.
+
+
+<br/>
+</SiteLayout>

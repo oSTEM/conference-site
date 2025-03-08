@@ -33,8 +33,17 @@ export interface NavbarCategory {
 }
 
 export interface NavbarLink {
+  /**
+   * Which category to group the link under in the navigation bar.
+   */
   category: string;
+  /**
+   * Label used in the navigation bar when a user is on this page. Page path must match @property href.
+   */
   label: string;
+  /**
+   * Link to the page. Do not include a trailing slash, or the label won't show properly.
+   */
   href: string;
   badge?: NavbarBadge;
 }
@@ -351,7 +360,7 @@ export default function NavBar() {
                 ) : (
                   <span>
                     <b>
-                      14<sup>th</sup>
+                      15<sup>th</sup>
                     </b>{' '}
                     Annual Conference
                   </span>
@@ -360,7 +369,7 @@ export default function NavBar() {
                 {currentPage ? (
                   <span className='text-sm'>
                     <b>
-                      14<sup>th</sup>
+                      15<sup>th</sup>
                     </b>{' '}
                     Annual Conference
                   </span>
@@ -378,7 +387,7 @@ export default function NavBar() {
                       </span>
                     ) : (
                       <span>
-                        <b>Portland, OR</b> - Oct 17-20, 2024
+                        <b>Baltimore, MD</b> - Oct 16-19, 2025
                       </span>
                     )}
                   </span>
@@ -443,13 +452,13 @@ export default function NavBar() {
             <div className='flex w-full ml-0.5 mr-1'>
               <p className='grow'>
                 <b>
-                  14<sup>th</sup>
+                  15<sup>th</sup>
                 </b>{' '}
                 Annual Conference
               </p>
               <p className={`${styles['gradientText']} relative`}>
-                <span className={styles['NavFade']}>Portland, OR</span>
-                <span className={styles['NavFadeAlt']}>Oct 17-20, 2024</span>
+                <span className={styles['NavFade']}>Baltimore, MD</span>
+                <span className={styles['NavFadeAlt']}>Oct 16-19, 2025</span>
               </p>
             </div>
           )}
