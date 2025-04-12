@@ -39,35 +39,35 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
  * You can optionally add a badge property.
  */
 export const NAVBAR_LINKS: NavbarLink[] = [
-  /** {
-   *   category: 'attend',
-   *   label: 'Registration',
-   *   href: '/2025/attend/registration',
-   *   badge: {
-   *     label: 'Onsite Only',
-   *   },
-   * }, */
+  {
+    category: 'attend',
+    label: 'Registration',
+    href: '/2025/attend/registration',
+    badge: {
+      label: 'Coming Soon',
+    },
+  },
+  {
+    category: 'attend',
+    label: 'What to Expect',
+    href: '/2025/attend/about',
+  },
   {
     category: 'attend',
     label: 'Attendee Resources',
     href: '/2025/attend/resources',
   },
+  {
+    category: 'attend',
+    label: 'Schedule',
+    href: '/2025/attend/schedule',
+  },
+  /** {
+   *   category: 'attend',
+   *   label: 'Career Fair & Grad Expo',
+   *   href: '/2025/attend/expo',
+   * }, */
   /**
-  * {
-  *   category: 'attend',
-  *   label: 'Schedule',
-  *   href: '/2025/attend/schedule',
-  * },
-  * {
-  *   category: 'attend',
-  *   label: 'Career Fair & Grad Expo',
-  *   href: '/2025/attend/expo',
-  * },
-  * {
-  *   category: 'attend',
-  *   label: 'Community Health & Safety',
-  *   href: '/2025/attend/health-and-safety',
-  * },
   * },
   * {
   *   category: 'present',
@@ -112,6 +112,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     category: 'misc',
     label: 'Annual Awards',
     href: '/2025/awards',
+  },
+  {
+    category: 'misc',
+    label: 'Community Health & Safety',
+    href: '/2025/health-and-safety',
   },
   /**{
     category: 'misc',
