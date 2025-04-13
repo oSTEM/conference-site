@@ -262,12 +262,12 @@ export const ProfessionalTable = () => {
               </td>
               <td>June 30, 2024</td>
               <PriceElement
-                val={375}
+                val={400}
                 fee={24.11}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={475}
+                val={500}
                 fee={30.19}
                 showFee={showFee}
               ></PriceElement>
@@ -279,12 +279,12 @@ export const ProfessionalTable = () => {
               </td>
               <td>September 30, 2024</td>
               <PriceElement
-                val={425}
+                val={450}
                 fee={27.15}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={525}
+                val={550}
                 fee={33.23}
                 showFee={showFee}
               ></PriceElement>
@@ -298,12 +298,12 @@ export const ProfessionalTable = () => {
               </td>
               <td>(On Site)</td>
               <PriceElement
-                val={575}
+                val={600}
                 fee={36.27}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={575}
+                val={600}
                 fee={36.27}
                 showFee={showFee}
               ></PriceElement>
@@ -384,7 +384,7 @@ export const ExpoOnlyTable = () => {
         <tbody>
           <tr>
             <td>Gala Ticket</td>
-            <td>September 30, 2024</td>
+            <td>September 26, 2025</td>
             <PriceElement val={75} fee={5.89} showFee={showFee}></PriceElement>
           </tr>
         </tbody>
