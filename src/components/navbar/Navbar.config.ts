@@ -62,34 +62,22 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Schedule',
     href: '/2025/attend/schedule',
   },
-  /** {
-   *   category: 'attend',
-   *   label: 'Career Fair & Grad Expo',
-   *   href: '/2025/attend/expo',
-   * }, */
-  /**
-  * },
-  * {
-  *   category: 'present',
-  *   label: 'Request for Panel Topics',
-  *   href: '/2025/present/request-for-panel-topics',
-  *   badge: {
-  *     label: 'Closed',
-  *   },
-  * },
-  * {
-  *   category: 'present',
-  *   label: 'Call for Posters',
-  *   href: '/2025/present/call-for-posters',
-  *   badge: {
-  *     label: 'Closed',
-  *   },
-  * },
   {
-    category: 'partner',
-    label: 'Exhibitor/Sponsor Resources',
-    href: '/2025/partner/resources',
-  }, */
+    category: 'present',
+    label: 'Request for Panel Topics',
+    href: '/2025/present/request-for-panel-topics',
+    badge: {
+      label: 'Coming Soon',
+    },
+  },
+  {
+    category: 'present',
+    label: 'Call for Posters',
+    href: '/2025/present/call-for-posters',
+    badge: {
+      label: 'Coming Soon',
+    },
+  },
   {
     category: 'present',
     label: 'Request for Programs',
@@ -118,9 +106,21 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Community Health & Safety',
     href: '/2025/health-and-safety',
   },
-  /**{
-    category: 'misc',
-    label: "What's New?",
-    href: '/2025/whats-new',
-  },*/
 ];
+
+/**
+ * {
+ *   category: 'attend',
+ *   label: 'Career Fair & Grad Expo',
+ *   href: '/2025/attend/expo',
+ * },
+ *{
+ *  category: 'partner',
+ *  label: 'Exhibitor/Sponsor Resources',
+ *  href: '/2025/partner/resources',
+ *}, */
+/**{
+ *  category: 'misc',
+ *  label: "What's New?",
+ *  href: '/2025/whats-new',
+ *},*/
