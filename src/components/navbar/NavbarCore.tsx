@@ -387,7 +387,7 @@ export default function NavBar() {
                       </span>
                     ) : (
                       <span>
-                        <b>Baltimore, MD</b> - Oct 16-19, 2025
+                        <b>Baltimore, MD</b> - Oct 16-18, 2025
                       </span>
                     )}
                   </span>
@@ -458,7 +458,7 @@ export default function NavBar() {
               </p>
               <p className={`${styles['gradientText']} relative`}>
                 <span className={styles['NavFade']}>Baltimore, MD</span>
-                <span className={styles['NavFadeAlt']}>Oct 16-19, 2025</span>
+                <span className={styles['NavFadeAlt']}>Oct 16-18, 2025</span>
               </p>
             </div>
           )}
