@@ -64,10 +64,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: 'Request for Panel Topics',
-    href: '/2025/present/request-for-panel-topics',
+    label: 'Request for Programs',
+    href: '/2025/present/request-for-programs',
     badge: {
-      label: 'Coming Soon',
+      label: 'Open',
+      accent: true,
     },
   },
   {
@@ -80,11 +81,10 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: 'Request for Programs',
-    href: '/2025/present/request-for-programs',
+    label: 'Request for Panelists',
+    href: '/2025/present/request-for-panel-topics',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Coming Soon',
     },
   },
   {
