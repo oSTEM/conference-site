@@ -41,6 +41,11 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
+    label: 'Attendee Resources',
+    href: '/2025/attend/resources',
+  },
+  {
+    category: 'attend',
     label: 'Registration',
     href: '/2025/attend/registration',
     badge: {
@@ -49,18 +54,13 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
-    label: 'What to Expect',
-    href: '/2025/attend/about',
-  },
-  {
-    category: 'attend',
-    label: 'Attendee Resources',
-    href: '/2025/attend/resources',
-  },
-  {
-    category: 'attend',
     label: 'Schedule',
     href: '/2025/attend/schedule',
+  },
+  {
+    category: 'attend',
+    label: 'What to Expect',
+    href: '/2025/attend/about',
   },
   {
     category: 'present',
