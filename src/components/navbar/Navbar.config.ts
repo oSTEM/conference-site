@@ -71,7 +71,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
       accent: true,
     },
   },
-  /**{
+  {
     category: 'present',
     label: 'Call for Posters',
     href: '/2025/present/call-for-posters',
@@ -79,7 +79,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
       label: 'Coming Soon',
     },
   },
-  {
+  /**{
     category: 'present',
     label: 'Request for Panelists',
     href: '/2025/present/request-for-panel-topics',
