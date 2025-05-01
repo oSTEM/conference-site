@@ -123,7 +123,7 @@ export const CollegiateTable = () => {
                   Early Bird
                 </TextBadge>
               </td>
-              <td>June 30, 2024</td>
+              <td>June 30, 2025</td>
               <PriceElement
                 val={150}
                 fee={10.44}
@@ -136,7 +136,7 @@ export const CollegiateTable = () => {
                 Collegiate Full{' '}
                 <TextBadge className='border-text-color'>Regular</TextBadge>
               </td>
-              <td>September 30, 2024</td>
+              <td>September 26, 2025</td>
               <PriceElement
                 val={175}
                 fee={11.96}
@@ -174,7 +174,7 @@ export const CollegiateTable = () => {
                   Early Bird
                 </TextBadge>
               </td>
-              <td>June 30, 2024</td>
+              <td>June 30, 2025</td>
               <PriceElement
                 val={225}
                 fee={15.0}
@@ -187,7 +187,7 @@ export const CollegiateTable = () => {
                 Advisor Full{' '}
                 <TextBadge className='border-text-color'>Regular</TextBadge>
               </td>
-              <td>September 30, 2024</td>
+              <td>September 26, 2025</td>
               <PriceElement
                 val={250}
                 fee={16.52}
@@ -224,7 +224,7 @@ export const CollegiateTable = () => {
         <tbody>
           <tr>
             <td>Gala Ticket - Collegiate</td>
-            <td>September 30, 2024</td>
+            <td>September 26, 2025</td>
             <PriceElement val={50} fee={4.37} showFee={showFee}></PriceElement>
           </tr>
         </tbody>
@@ -260,15 +260,15 @@ export const ProfessionalTable = () => {
                   Early Bird
                 </TextBadge>
               </td>
-              <td>June 30, 2024</td>
+              <td>June 30, 2025</td>
               <PriceElement
-                val={375}
-                fee={24.11}
+                val={400}
+                fee={25.63}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={475}
-                fee={30.19}
+                val={500}
+                fee={31.71}
                 showFee={showFee}
               ></PriceElement>
             </tr>
@@ -277,15 +277,15 @@ export const ProfessionalTable = () => {
                 Professional Full{' '}
                 <TextBadge className='border-text-color'>Regular</TextBadge>
               </td>
-              <td>September 30, 2024</td>
+              <td>September 26, 2025</td>
               <PriceElement
-                val={425}
-                fee={27.15}
+                val={450}
+                fee={28.67}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={525}
-                fee={33.23}
+                val={550}
+                fee={34.75}
                 showFee={showFee}
               ></PriceElement>
             </tr>
@@ -298,13 +298,13 @@ export const ProfessionalTable = () => {
               </td>
               <td>(On Site)</td>
               <PriceElement
-                val={575}
-                fee={36.27}
+                val={600}
+                fee={37.79}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
-                val={575}
-                fee={36.27}
+                val={600}
+                fee={37.79}
                 showFee={showFee}
               ></PriceElement>
             </tr>
@@ -322,7 +322,7 @@ export const ProfessionalTable = () => {
         <tbody>
           <tr>
             <td>Gala Ticket</td>
-            <td>September 30, 2024</td>
+            <td>September 26, 2025</td>
             <PriceElement val={75} fee={5.89} showFee={showFee}></PriceElement>
           </tr>
         </tbody>
@@ -358,7 +358,7 @@ export const ExpoOnlyTable = () => {
               Expo (Attendee/Jobseeker){' '}
               <TextBadge className='border-text-color'>Regular</TextBadge>
             </td>
-            <td>September 30, 2024</td>
+            <td>September 26, 2025</td>
             <PriceElement val={100} fee={7.4} showFee={showFee}></PriceElement>
           </tr>
           <tr>
@@ -384,7 +384,7 @@ export const ExpoOnlyTable = () => {
         <tbody>
           <tr>
             <td>Gala Ticket</td>
-            <td>September 30, 2024</td>
+            <td>September 26, 2025</td>
             <PriceElement val={75} fee={5.89} showFee={showFee}></PriceElement>
           </tr>
         </tbody>

@@ -97,6 +97,36 @@ html:root {
   --color-chill-green: #b8e0dc;
   --color-dark-teal: #a8c6c0;
   --color-green-gray: #aec6ae;
+
+  /* Conference 2025 Colors */
+  /* Reds */
+  --color-red-accent: #cd133b;
+  --color-red-primary: #ee4266;
+  --color-red-muted: #f7a1b4;
+
+  /* Yellows */
+  --color-yellow-dark: #a2682a;
+  --color-yellow-primary: #cd8a40;
+  --color-yellow-light: #e2b98d;
+
+  /* Greens */
+  --color-green-darkest: #182620;
+  --color-green-dark: #335145;
+  --color-green-accent: #68a18a;
+
+  /* Blues */
+  --color-blue-dark: #224959;
+  --color-blue-primary: #53a2be;
+  --color-blue-light: #97c7d8;
+
+  /* Purples */
+  --color-purple-dark: #76426a;
+  --color-purple-primary: #a76297;
+  --color-purple-light: #cca4c2;
+
+  /* Neutrals */
+  --color-neutral-black: #120309;
+  --color-neutral-white: #f3fcf0;
 }
 
 .img-logo {
