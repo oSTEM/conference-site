@@ -15,7 +15,7 @@ export const AwardCard = ({
   alert,
   nominateUrl,
   awardDetailUrl,
-  nominationClosed = true,
+  nominationClosed = false,
 }: {
   borderColor: string;
   title: string;
