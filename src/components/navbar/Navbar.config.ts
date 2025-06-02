@@ -71,7 +71,14 @@ export const NAVBAR_LINKS: NavbarLink[] = [
       label: 'Open',
       accent: true,
     },
-  },
+  {
+    category: 'present',
+    label: 'Request for Panelists',
+    href: '/2025/present/request-for-panelists',
+    badge: {
+      label: 'Open',
+      accent: true,
+    },
   {
     category: 'present',
     label: 'Call for Posters',
@@ -81,14 +88,6 @@ export const NAVBAR_LINKS: NavbarLink[] = [
       accent: true,
     },
   },
-  /**{
-    category: 'present',
-    label: 'Request for Panelists',
-    href: '/2025/present/request-for-panel-topics',
-    badge: {
-      label: 'Coming Soon',
-    },
-  },**/
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
