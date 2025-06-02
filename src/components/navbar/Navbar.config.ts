@@ -79,6 +79,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
       label: 'Open',
       accent: true,
     },
+  },
   {
     category: 'present',
     label: 'Call for Posters',
