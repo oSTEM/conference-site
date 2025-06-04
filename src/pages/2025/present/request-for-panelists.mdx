@@ -2,15 +2,9 @@ import { CTAButton } from "@/components/button/CTAButton";
 import { SiteLayout } from "@/components/layout/SiteLayout";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
 import Image from "next/future/image";
+import { Tab } from '@headlessui/react';
 
 <SiteLayout title="Requests for Panelists" accent="nav-blue">
-    
-<picture>
-{/* 
-* <source srcSet="/images/2025/2025_rfp_vertical.png" media='(orientation: portrait)' alt="Graphical timeline explaining the 2025 RFP process. There are four headers titled Review the RFP, Four Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image."/> 
-*/}
-    <img src="/images/2025/2025_rfp_horizontal.png" alt="Graphical timeline explaining the 2025 RFP process. There are four headers titled Review the RFP, Four Tracks, Timeline, and Submit your App respectively. Details for each of the headers are explained in the text sections below this image." className='mx-auto max-h-screen rounded'/>
-</picture>
 
 <div className="text-nav-blue font-bold">
 
@@ -18,16 +12,13 @@ import Image from "next/future/image";
 
 </div>
 
-The oSTEM team is organizing panels for this year’s conference that align with the 2025 programming tracks and conference theme. We are looking for a diverse  set of panelists representing a variety of perspectives. We welcome panelists from all members of the LGBTQIA+ and/or STEM community. We encourage our students, sponsors, professionals, and all interested in furthering our mission to volunteer.
+The oSTEM team is organizing panels for this year's conference that align with the 2025 programming tracks and conference theme. We are looking for a diverse set of panelists representing a variety of perspectives. We welcome panelists from all members of the LGBTQIA+ and/or STEM community. We encourage our students, sponsors, professionals, and all interested in furthering our mission to volunteer.
 
-**Submit your proposal [here](Submit proposals online at: https://form.jotform.com/251386602288159)**
-
+<div className="text-nav-blue font-bold">
 
 ## Submission Milestones
 
-oSTEM is now accepting program proposals for the 15th Annual oSTEM Conference.
-
-Successful programs will align with oSTEM’s mission and core values: *integrity, intentionality, respect, passion, and grit*. 
+</div>
 
 - **Tuesday, May 27**: Request for Panelist Volunteers Released
 - **Friday, July 11**: Deadline for Submissions
@@ -35,64 +26,46 @@ Successful programs will align with oSTEM’s mission and core values: *integrit
 
 <br/>
 <div className="text-l flex justify-center p-2">
-    <CTAButton onClick="https://form.jotform.com/250156105369151" backgroundColor="bright-peach">
-      Submit your RFP Here!
+    <CTAButton onClick="https://form.jotform.com/251386602288159" backgroundColor="bright-peach">
+      Submit your Panelist Application Here!
     </CTAButton>
 </div>
 
-
 <div className="text-nav-blue font-bold">
 
-## 2025 Program Tracks and Updates
+## 2025 Panel Topics
+
 </div>
 
-Based on previous feedback, oSTEM is excited to introduce two general conference tracks, and four specialized tracks for the 2025 edition: Collegiate, Industry, Government and Community Organizations, and Technical Spotlight. Please read a little bit about each track in order to decide which track is best suited for your submission. All submissions are expected to be in workshop format. Workshops are defined as 1-2 speakers presenting on a program topic. *All workshops are expected to be 50 minutes.*
-
-
-**Collegiate:** This track is focused for individuals who regularly interact with a student population or hold positions that are based in academia. Submissions for this track will be applicable to undergraduate, graduate, and faculty/staff positions in order to build a network of tools and resources to take back to the participant’s home institution. 
-
-**Industry:** This track aims to engage individuals that are currently in the workforce or are imminently prepared to enter the workforce. Potential workshop topics include how to better engage your employer, advocate for LGBTQ+ populations during your work day, build career-development skills, or shape your professional brand.
-
-**Government and Community Organizations:**  Programming in this track will focus on the intersections between science and society. Workshops should engage conference attendees who are current employees of or interested in working for nonprofits, community organizations, political thinktanks, and/or local, state, or federal government. Examples of topics for this track include the role of scientists in government agencies, science policy and law, and utilizing science in advocacy work.
-
-**Technical Spotlight:** Topics for this track will be extremely focused on the highly technical aspects of the presented topic. Presenters will be professionals who already belong to this field or want to appreciate the intricacies of the field. These submissions are more focused and it is expected that the audience will have foundational knowledge of the topic being discussed. For the 2025 Conference, our programs will focus on AI and Machine Learning, Research and Study Design in LGBTQ+ Population, and Sustainable Engineering.
-
-The general conference will have two tracks. More information about these panels can be found below:
-
+We are organizing panels across two general conference topics and four specialized tracks. The panels will feature diverse voices and perspectives on the following themes:
 
 <div>
 <Tab.Group>
 <Tab.List className='z-10 mt-4 py-1 sm:py-2 sticky top-[87px] sm:top-[63px] flex space-x-1 bg-primary border-b border-text-color'>{
-    ['General Conference'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `bg-blue-300/25 border-nav-blue/90` : `hover:bg-blue-300/15`} text-nav-blue border border-transparent transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
+    ['General Conference', 'Specialized Tracks'].map(e => (<Tab key={e} className={({selected}) => (`${selected ? `bg-blue-300/25 border-nav-blue/90` : `hover:bg-blue-300/15`} text-nav-blue border border-transparent transition text-sm sm:text-base rounded px-1 sm:px-2 py-0.5`)}>{e}</Tab>))
 }</Tab.List>
 <Tab.Panels className='border-b border-text-color px-4 bg-blue-500/10'>
 <Tab.Panel>
 <div className="text-nav-blue font-bold">
 
-### General Conference 
+### General Conference Panels
 
-#### Panel title: From Burnout to Balance: Self-Care Strategies for Managing Mental Health
+#### Panel 1: From Burnout to Balance: Self-Care Strategies for Managing Mental Health
 
 </div>
 
 In high-pressure STEM environments, burnout can affect everyone— undergraduates, grad students, and professionals alike. This panel will explore practical self-care strategies to help LGBTQ+ individuals manage mental health, prevent burnout, and find balance across all stages of their STEM careers. Panelists will share insights on how to navigate the unique challenges in academia and the workplace, prioritize well-being, and build resilience for long-term success.
 
-</Tab.Panel>
-<Tab.Panel>
 <div className="text-nav-blue font-bold">
 
+#### Panel 2: A Sacred Intersection: Faith, Queer Identity, and Personal Truth
 
-#### Panel title: A Sacred Intersection: Faith, Queer Identity, and Personal Truth
+</div>
 
 For many LGBTQ+ individuals, navigating the intersection of faith and queer identity can be a complex and deeply personal journey. This panel will explore how individuals reconcile their spiritual beliefs with their queer identities, offering insights into the challenges and affirmations that come with embracing both. Panelists will share their unique stories and discuss how to foster inclusive, supportive spaces for others walking similar paths. Whether you are reconciling your own identities or seeking to better understand this intersection, this panel provides space for reflection, conversation, and connection.
 
-
 </Tab.Panel>
 <Tab.Panel>
-<div className="text-nav-blue font-bold">
-
-
-You can learn more about the four tracks below:
 
 <div>
 <Tab.Group>
@@ -103,56 +76,54 @@ You can learn more about the four tracks below:
 <Tab.Panel>
 <div className="text-nav-blue font-bold">
 
-### Collegiate Program
+### Collegiate Track Panel
 
-#### Panel title: Medical Students Across the Spectrum of Healing
+#### Medical Students Across the Spectrum of Healing
 
 </div>
 
-Curious about what it’s like to be LGBTQ+ in med school— or nursing, pharmacy, vet school, or any other healthcare path? This panel brings together students from across the healthcare spectrum to talk about how they got where they are, what it’s really like, and how they’re balancing their identities with their training. Whether you're pre-med, pre-vet, or just exploring the world of healing professions, come hear real stories, ask your questions, and get inspired by folks who’ve been in your shoes.
-
+Curious about what it's like to be LGBTQ+ in med school— or nursing, pharmacy, vet school, or any other healthcare path? This panel brings together students from across the healthcare spectrum to talk about how they got where they are, what it's really like, and how they're balancing their identities with their training. Whether you're pre-med, pre-vet, or just exploring the world of healing professions, come hear real stories, ask your questions, and get inspired by folks who've been in your shoes.
 
 </Tab.Panel>
 <Tab.Panel>
 <div className="text-nav-blue font-bold">
 
-### Industry Program
+### Industry Track Panel
 
-#### Panel title: Navigating Career Changes with Pride and Purpose
-
-</div>
-
-Thinking about switching paths or wondering if it’s ever “too late” to try something new? This panel features LGBTQ+ professionals who’ve made bold career changes, such as changing industries, becoming an entrepreneur, or switching fields altogether! They’ll share what it’s like to pivot, take risks, and find new purpose along the way. Whether you’re questioning your current path or just curious about what reinvention can look like, we invite you to join this conversation.
-
-
-</Tab.Panel>
-
-
-<Tab.Panel>
-<div className="text-nav-blue font-bold">
-
-
-### Government and Community Organizations Program
-
-#### Panel title: LGBTQ+ Rights and the Role of Scientists in Political Advocacy
+#### Navigating Career Changes with Pride and Purpose
 
 </div>
 
-Science doesn’t happen in a vacuum, and neither does advocacy. This panel explores how LGBTQ+ scientists are using their voices, research, and expertise to influence policy and push for equity in government, healthcare, education, and beyond. Hear from professionals working at the intersection of science and social justice who are advocating for LGBTQ+ rights, shaping public policy, and making change within community and government spaces. If you're passionate about activism, policy, or using your STEM background to make a difference, this one’s for you.
-
+Thinking about switching paths or wondering if it's ever "too late" to try something new? This panel features LGBTQ+ professionals who've made bold career changes, such as changing industries, becoming an entrepreneur, or switching fields altogether! They'll share what it's like to pivot, take risks, and find new purpose along the way. Whether you're questioning your current path or just curious about what reinvention can look like, we invite you to join this conversation.
 
 </Tab.Panel>
 <Tab.Panel>
 <div className="text-nav-blue font-bold">
 
+### Government and Community Organizations Track Panel
 
-### Technical Spotlight Program 
-
-#### Panel title: Reimagining Environmental Justice to Build a Better Future
+#### LGBTQ+ Rights and the Role of Scientists in Political Advocacy
 
 </div>
 
-What does it look like to build a more just and sustainable world, and who gets to lead the way? This panel brings together LGBTQ+ scientists, engineers, and advocates who are using data, research, and technology to tackle environmental injustice. From AI and sustainable design to community-centered research, panelists will share how they’re rethinking what environmental justice can be— technically, ethically, and inclusively. Whether you're into machine learning, public health, or green engineering, come hear how queer thinkers are reimagining the future of the planet.
+Science doesn't happen in a vacuum, and neither does advocacy. This panel explores how LGBTQ+ scientists are using their voices, research, and expertise to influence policy and push for equity in government, healthcare, education, and beyond. Hear from professionals working at the intersection of science and social justice who are advocating for LGBTQ+ rights, shaping public policy, and making change within community and government spaces. If you're passionate about activism, policy, or using your STEM background to make a difference, this one's for you.
+
+</Tab.Panel>
+<Tab.Panel>
+<div className="text-nav-blue font-bold">
+
+### Technical Spotlight Track Panel
+
+#### Reimagining Environmental Justice to Build a Better Future
+
+</div>
+
+What does it look like to build a more just and sustainable world, and who gets to lead the way? This panel brings together LGBTQ+ scientists, engineers, and advocates who are using data, research, and technology to tackle environmental injustice. From AI and sustainable design to community-centered research, panelists will share how they're rethinking what environmental justice can be— technically, ethically, and inclusively. Whether you're into machine learning, public health, or green engineering, come hear how queer thinkers are reimagining the future of the planet.
+
+</Tab.Panel>
+</Tab.Panels>
+</Tab.Group>
+</div>
 
 </Tab.Panel>
 </Tab.Panels>
@@ -161,81 +132,43 @@ What does it look like to build a more just and sustainable world, and who gets 
 
 <div className="text-nav-blue font-bold">
 
-## 2025 Proposal Components
+## Panelist Application Requirements
+
 </div>
 
-The strongest proposals will highlight intersectionality between STEM and LGBTQ+ identities. Program selection for our conference is highly competitive. Please follow the guidelines that have been outlined in this document to improve your chances of being selected. 
+We're looking for panelists who can share their unique perspectives and experiences. Your application should include:
 
-Your submission will be evaluated based on the following: 
-- An engaging title and abstract
-- Value to the LGBTQIA+ STEM Community
-- Attendee Engagement
-- A breakdown of your program that outlines the questions / topics you will be addressing
-- Having experience and/or identity(ies) that support your program proposal
+- **Name and contact information**
+- **Brief bio** (150 words max)
+- **Panel preference** (indicate which panel(s) you're interested in)
+- **Relevant experience** related to the panel topic
+- **What perspective you bring** to the panel discussion
+- **Availability** for October 16-18, 2025 in Baltimore, MD
 
-Please provide the following information (will not be used for evaluation):
-- Is this session closed to members of a specific community only? If so, please specify.
-- Please describe any additional technical services you may need. 
-- The standard room set-up includes a projector, HDMI cord, screen, microphones, and a table.
-- For each presenter, please provide a name, contact information, and demographic information.
-- Content warnings as applicable (for more information, check out [this resource from University of Michigan](https://sites.lsa.umich.edu/inclusive-teaching-sandbox/wp-content/uploads/sites/853/2021/02/An-Introduction-to-Content-Warnings-and-Trigger-Warnings-Draft.pdf))
-
-Your proposal must include the following components:
-
-
-<table>
-  <thead>
-    <tr>
-      <th><b>Proposal Components</b></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Session Title</b><br/><i>20 words max</i><br/>- Identifies program topic and how this relates to the oSTEM mission</td>
-    </tr>
-    <tr>
-      <td><b>Abstract for Program Book</b><br/><i>500 words max</i><br/>- Provides a succinct description of the goals of the workshop and what participants will learn</td>
-    </tr>
-    <tr>
-      <td><b>What is the value of this workshop to the LGBTQ+ STEM Community?</b><br/><i>500 words max</i><br/>- Describes and justifies the workshop's value<br/>- Establishes relevance to LGBTQ+ and STEM communities<br/>- States: What makes this program unique to this conference?</td>
-    </tr>
-    <tr>
-      <td><b>Session Outline</b><br/><i>500 words max</i><br/>- Submits an outline of the presentation, approximating the amount of time spent on each question/topic, i.e., (20 minute talk on Topic X, 10 minutes of discussion, 10 minutes of questions, etc.)</td>
-    </tr>
-    <tr>
-      <td><b>Presenter identity &amp; experience match the proposed topic</b><br/>- Demonstrates a basis of knowledge and relevant personal experience for this proposed program</td>
-    </tr>
-  </tbody>
-  </table>
-
-<Image
-  src="/images/2022-11-12 oSTEM_2489.jpg"
-  alt="A photo showing three presenters from the 2022 conference speaking."
-  style={{width: "100%", height: 'auto'}}
-  width="400"
-  height="180"
-  priority="true"
-/>
+<br/>
+<div className="text-l flex justify-center p-2">
+    <CTAButton onClick="https://form.jotform.com/251386602288159" backgroundColor="bright-peach">
+      Apply to be a Panelist
+    </CTAButton>
+</div>
 
 <div className="text-nav-blue font-bold">
 
-## Benefits for Presenters
+## Benefits for Panelists
+
 </div>
 
-- 50% registration discount for selected presenters. Each selected presentation is
-  limited to 2 presenter discount codes. <br/>
-- Add "Selected Talk for National Conference" to resume or CV <br/>
-- Gain additional public speaking experience <br/>
-- Increase visibility and networking opportunities with LGBTQ+ professionals and
-  recruiters in STEM <br/>
-- Present on lived experiences and identities in addition to academic and
-  professional development topics <br/>
-- Receive presenter acknowledgment in conference program book and on badge
+- Complimentary conference registration for selected panelists
+- Add "Conference Panelist" to your resume or CV
+- Share your expertise and experiences with the community
+- Network with other LGBTQ+ professionals in STEM
+- Receive panelist acknowledgment in conference program book and on badge
 <br />
 
 <div className="text-nav-blue font-bold">
 
 ## Additional Info
+
 </div>
 
 For more information about the conference visit https://conference.ostem.org
@@ -247,7 +180,7 @@ technical issues please contact conference@ostem.org prior to sending a document
 or email submission.
 
 Please email our Conference Programming Committee at
-conference-programming@ostem.org with any questions.
+conference-programming@ostem.org with any questions about serving as a panelist.
 
 For inquiries regarding available conference accommodations or to request this
 document in an accessible format, please contact the accessibility team at
