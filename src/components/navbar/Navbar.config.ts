@@ -83,7 +83,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: 'Call for Posterss',
+    label: 'Call for Posters',
     href: '/2025/present/call-for-posters',
     badge: {
       label: 'Open',
