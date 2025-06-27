@@ -1,0 +1,25 @@
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHammer } from '@fortawesome/free-solid-svg-icons';
+
+<SiteLayout title="Resources Under Construction" accent="nav-green">
+<div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+  <div className="mb-8">
+    <FontAwesomeIcon icon={faHammer} className="text-6xl text-nav-green animate-bounce" />
+  </div>
+  
+  <h1 className="text-4xl font-bold text-nav-green mb-4">
+    SITE UNDER CONSTRUCTION
+  </h1>
+  
+  <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+    We're currently updating our conference attendee resources for 2025. 
+    Please check back soon for information on travel planning, conference attire, 
+    and other helpful resources.
+  </p>
+  
+  <p className="text-sm text-gray-500 dark:text-gray-400">
+    In the meantime, feel free to explore other sections of our conference website.
+  </p>
+</div>
+</SiteLayout>
