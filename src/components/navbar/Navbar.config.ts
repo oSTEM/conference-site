@@ -46,6 +46,11 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
+    label: 'Collegiate Resources',
+    href: '/2025/attend/collegiate-resources',
+  },
+  {
+    category: 'attend',
     label: 'Registration',
     href: '/2025/attend/registration',
     badge: {
