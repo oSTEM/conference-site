@@ -6,6 +6,7 @@ import { BannerMessage } from '@/components/banner/BannerMessage'
 import { faCar, faHotel, faInfo, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
 import logoRiot from './002_RG_2021_FULL_LOCKUP_RED.png'
+import logoChevron from './CVX_Logo_THEC_4-line_Large_R_RGB.png'
 
 <SiteLayout title="Collegiate Resources" accent="nav-green">
 
@@ -25,8 +26,13 @@ The Collegiate Conference Grant is used to help chapters/individuals fund their 
 
 Huge thank you to our sponsors for making this Collegiate Conference Grant possible!
 
-<div class='w-48 pt-4 pb-6'>
-<Image src={logoRiot}></Image>
+<div class='pt-2 pb-3 flex items-center gap-4'>
+    <div class='w-48'>
+    <Image src={logoRiot}></Image> 
+    </div>
+    <div class='w-48'>
+    <Image src={logoChevron}></Image>
+    </div>
 </div>
 
 This year, the application is split into individual or chapter applications. Students are encouraged to apply based on the circumstance that best fits their situation.
