@@ -82,7 +82,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Request for Panelists',
     href: '/2025/present/request-for-panelists',
     badge: {
-      label: 'Open',
+      label: 'Closed',
       accent: true,
     },
   },
