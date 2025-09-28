@@ -54,8 +54,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Registration',
     href: '/2025/attend/registration',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
