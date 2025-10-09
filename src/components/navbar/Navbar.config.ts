@@ -46,11 +46,16 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
+    label: 'Collegiate Resources',
+    href: '/2025/attend/collegiate-resources',
+  },
+  {
+    category: 'attend',
     label: 'Registration',
     href: '/2025/attend/registration',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
@@ -77,8 +82,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Request for Panelists',
     href: '/2025/present/request-for-panelists',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
@@ -86,8 +91,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Call for Posters',
     href: '/2025/present/call-for-posters',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
