@@ -360,7 +360,7 @@ export default function NavBar() {
                 ) : (
                   <span>
                     <b>
-                      15<sup>th</sup>
+                      16<sup>th</sup>
                     </b>{' '}
                     Annual Conference
                   </span>
@@ -369,7 +369,7 @@ export default function NavBar() {
                 {currentPage ? (
                   <span className='text-sm'>
                     <b>
-                      15<sup>th</sup>
+                      16<sup>th</sup>
                     </b>{' '}
                     Annual Conference
                   </span>
@@ -387,7 +387,7 @@ export default function NavBar() {
                       </span>
                     ) : (
                       <span>
-                        <b>Baltimore, MD</b> - Oct 16-18, 2025
+                        <b>Albuquerque</b> - Oct 22-24, 2026
                       </span>
                     )}
                   </span>
@@ -452,7 +452,7 @@ export default function NavBar() {
             <div className='flex w-full ml-0.5 mr-1'>
               <p className='grow'>
                 <b>
-                  15<sup>th</sup>
+                  16<sup>th</sup>
                 </b>{' '}
                 Annual Conference
               </p>
