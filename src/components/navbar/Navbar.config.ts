@@ -41,17 +41,17 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: 'Attendee Resources',
+    label: '2025 Attendee Resources',
     href: '/2025/attend/resources',
   },
   {
     category: 'attend',
-    label: 'Collegiate Resources',
+    label: '2025 Collegiate Resources',
     href: '/2025/attend/collegiate-resources',
   },
   {
     category: 'attend',
-    label: 'Registration',
+    label: '2025 Registration',
     href: '/2025/attend/registration',
     badge: {
       label: 'Closed',
@@ -60,17 +60,17 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
-    label: 'Schedule',
+    label: '2025 Schedule',
     href: '/2025/attend/schedule',
   },
   {
     category: 'attend',
-    label: 'What to Expect',
+    label: '2025 What to Expect',
     href: '/2025/attend/about',
   },
   {
     category: 'present',
-    label: 'Request for Programs',
+    label: '2025 Request for Programs',
     href: '/2025/present/request-for-programs',
     badge: {
       label: 'Closed',
@@ -79,7 +79,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: 'Request for Panelists',
+    label: '2025 Request for Panelists',
     href: '/2025/present/request-for-panelists',
     badge: {
       label: 'Closed',
@@ -88,7 +88,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: 'Call for Posters',
+    label: '2025 Call for Posters',
     href: '/2025/present/call-for-posters',
     badge: {
       label: 'Closed',
@@ -97,7 +97,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'partner',
-    label: 'Exhibitors and Sponsors',
+    label: '2025 Exhibitors and Sponsors',
     href: '/2025/partner/exhibitors-and-sponsors',
     badge: {
       label: 'Open',
@@ -106,12 +106,12 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'misc',
-    label: 'Annual Awards',
+    label: '2025 Annual Awards',
     href: '/2025/awards',
   },
   {
     category: 'misc',
-    label: 'Community Health & Safety',
+    label: '2025 Community Health & Safety',
     href: '/2025/health-and-safety',
   },
 ];
