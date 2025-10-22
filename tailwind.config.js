@@ -56,6 +56,10 @@ module.exports = {
         "peach": "#FF9185",
         "light-peach": "#f7c2bc",
         "chill-yellow": "#FFD285",
+        // 2026
+        "albuquerque-brown" : "#c16729",
+        "albuquerque-sand"  : "#d2975f",
+        
         // Colors to KEEP
         "ostem-blue": "#1B7EA1",
         "text-color": "var(--text-color)",

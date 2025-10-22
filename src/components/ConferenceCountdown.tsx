@@ -1,14 +1,14 @@
 import { intervalToDuration, isPast } from 'date-fns';
 import React from 'react';
 
-const CONFERENCE_DATE = new Date('2025-10-16T19:00:00.000Z');
+const CONFERENCE_DATE = new Date('2026-10-22T19:00:00.000Z');
 
 export const ConferenceCountdown = () => {
   const now = useCurrentTime();
 
   if (isPast(CONFERENCE_DATE)) {
     return (
-      <div className='text-2xl text-center font-display text-white py-5'>
+      <div className='text-2xl text-center font-display text-black py-5'>
         <p>The conference has started!</p>
       </div>
     );
@@ -26,6 +26,7 @@ export const ConferenceCountdown = () => {
 
   return (
     <div className='flex flex-wrap justify-center items-center'>
+      <Unit n={diff.years || 0} unit='year' />
       <Unit n={diff.months || 0} unit='months' />
       <Unit n={diff.days || 0} unit='days' />
       <Unit n={diff.hours || 0} unit='hours' />
