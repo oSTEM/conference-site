@@ -59,6 +59,8 @@ module.exports = {
         // 2026
         "albuquerque-brown" : "#c16729",
         "albuquerque-sand"  : "#d2975f",
+        "albuquerque-purple": "#6c186d",
+        "albuquerque-orchid": "#6c4777",
         
         // Colors to KEEP
         "ostem-blue": "#1B7EA1",

@@ -1,27 +1,21 @@
 .gradient {
-  background: linear-gradient(330deg, #785ed7, #3aa6dc);
+  background: linear-gradient(340deg, color-mix(var(--color-albuquerque-sand) 90%, #000), color-mix(var(--color-albuquerque-sand) 70%, #ffa));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 :global(.dark) .gradient {
-  background: linear-gradient(330deg, #ad9af1, #b2e7e9);
+  background: linear-gradient(340deg, color-mix(var(--color-albuquerque-sand) 60%, #fff), color-mix(var(--color-albuquerque-sand) 30%, #fff));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradientLight {
-  background: #1a377f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-albuquerque-purple);
 }
 
 :global(.dark) .gradientLight {
-  background: #b1c4f5;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: color-mix(var(--color-albuquerque-purple) 35%, #fff);
 }
