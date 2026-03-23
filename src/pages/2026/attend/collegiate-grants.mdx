@@ -1,0 +1,65 @@
+import { CTAButton } from "@/components/button/CTAButton";
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BannerMessage } from '@/components/banner/BannerMessage'
+import { faCar, faHotel, faInfo, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
+import Image from "next/image";
+import logoRiot from './002_RG_2021_FULL_LOCKUP_RED.png'
+import logoChevron from './CVX_Logo_THEC_4-line_Large_R_RGB.png'
+
+<SiteLayout title="Collegiate Resources" accent="nav-green">
+
+For general attendee resources, please visit [the attendee resources page](resources).
+
+<div className="text-nav-green font-bold">
+
+## Collegiate Grants
+
+</div>
+
+**oSTEM Collegiate Conference Grant Applications for 2025**
+
+The Collegiate Conference Grant is used to help chapters/individuals fund their trip to the Annual oSTEM Conference in Baltimore, MD. This year, funds will be disbursed by means of:
+- Conference Registration Codes (which will be used to cover the cost of granted conference registrations per chapter)
+- Lodging Accommodations (hotel rooms)
+
+Huge thank you to our sponsors for making this Collegiate Conference Grant possible!
+
+<div class='pt-2 pb-3 flex items-center gap-4'>
+    <div class='w-48'>
+    <Image src={logoRiot}></Image> 
+    </div>
+    <div class='w-48'>
+    <Image src={logoChevron}></Image>
+    </div>
+</div>
+
+This year, the application is split into individual or chapter applications. Students are encouraged to apply based on the circumstance that best fits their situation.
+
+You may apply for a Conference Grant at the following link: https://form.jotform.com/251597266915166
+
+**The deadline to submit your application is Friday, September 5th, 2025 at 11:59pm PT. Please take note of the time zone.**
+
+We expect decisions to be released by Sunday, September 14, 2025 at the latest.
+
+Please direct any questions to our Co-Directors of Collegiate Membership at membership@ostem.org. Thank you.
+
+<div className="text-nav-green font-bold">
+
+## Exhibitor List
+
+</div>
+
+<div>
+    <div title="Whova event and conference app" id="whova-exhibitorwidget">
+        <p id="whova-loading">Loading... If this widget does not load, please reload the page.</p>
+    </div>
+    <script src="https://whova.com/static/frontend/xems/js/whova-exhibitor-widget.js?eid=-J%406VvB73x-tXpE35C9Cb%40cOeqq2bI5h8UjdZFTjs44%3D&host=https://whova.com" type="text/javascript"  id="embeded-exhibitor-script">
+    </script>
+    <div id="whova-wrap" class="whova-wrap-class">
+        Powered By <b>Whova</b>
+    </div>
+</div>
+
+</SiteLayout>
