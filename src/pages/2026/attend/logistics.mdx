@@ -3,25 +3,10 @@ import { SiteLayout } from "@/components/layout/SiteLayout";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BannerMessage } from '@/components/banner/BannerMessage'
-import { faCar, faHotel, faInfo, faPlane, faTrain } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faHotel, faInfo, faPlane, faBus } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
 
-<SiteLayout title="Attendee Resources" accent="nav-green">
-
-<div className="text-nav-green font-bold">
-
-## Collegiate Resources
-
-</div>
-
-Additional resources targeted specifically towards our collegiate attendees can be found below. Get information about collegiate grants and career fair exhibitors there!
-
-<br/>
-<div className="text-l flex justify-center p-2">
-    <CTAButton onClick="/2025/attend/collegiate-resources" backgroundColor="bright-peach">
-      Collegiate Attendee Resources
-    </CTAButton>
-</div>
+<SiteLayout title="Conference Logistics" accent="nav-green">
 
 <br/>
 
@@ -33,9 +18,9 @@ Additional resources targeted specifically towards our collegiate attendees can 
 
 </div>
 
-The 15<sup>th</sup> annual conference will be taking place at the <a href='https://www.bccenter.org/' target='_blank'>Baltimore Convention Center</a> in Baltimore, MD.
+The 16<sup>th</sup> annual conference will be taking place at the <a href='https://albuquerquecc.com/' target='_blank'>Albuquerque Convention Center</a> in Albuquerque, New Mexico.
 
-The address of the Convention Center is <b>1 West Pratt Street, Baltimore, MD 21201</b>.
+The address of the Convention Center is <b>401 2nd Street NW Albuquerque, NM 87102</b>.
 
 <br/>
 
@@ -43,18 +28,25 @@ The address of the Convention Center is <b>1 West Pratt Street, Baltimore, MD 21
 <div className='w-full'>
 <h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faPlane} className={"social-icon"} fixedWidth /> Plane</h3>
 
-The closest airport is Baltimore/Washington International Thurgood Marshall Airport (BWI). The [MTA  Light RailLink (Light Rail)](https://www.mta.maryland.gov/schedule/lightrail) offers a direct connection from the airport to the Convention Center and costs $2.00 each way.
+The closest airport is Albuquerque International Sunport (ABQ). Between approximately 7am-6pm, the 50 bus will get you directly from the airport to the convention center and vice versa in about 25 minutes.
+
+For more information, visit [the ABQ website](https://www.abqsunport.com/).
 </div>
 <div className='w-full'>
-<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faTrain} className={"social-icon"} fixedWidth /> Train</h3>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faBus} className={"social-icon"} fixedWidth /> Bus</h3>
 
-The [Baltimore Penn station](https://www.amtrak.com/stations/bal) is the closest Amtrak station to the Baltimore Convention Center. The MTA Light Rail station is a 7 minute walk from the train station.
+The City of Albuquerque operates a strong public transporation system which includes both regular busses and a rapid transit system (ART). All public transportation is **free**, so we encourage you to use it!
+
+For more information, visit [ABQ Ride](https://www.cabq.gov/transit).
 
 </div>
 <div className='w-full'>
 <h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faCar} className={"social-icon"} fixedWidth /> Car</h3>
 
-If you're driving and need parking, please refer to [the BCC website for detailed parking information](https://www.bccenter.org/p/attend/directions--parking). There is a charge for on-site parking which will not be covered by oSTEM.
+If you're driving and need parking, please refer to [the convention center's website](https://albuquerquecc.com/about-us/visitors/parking/) for detailed parking info. There is a charge for on-site parking which will not be covered by oSTEM.
+
+Cheaper parking may also be available at other public parking garages close to the convention center.
+
 </div>
 </div>
 
