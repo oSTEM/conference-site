@@ -41,46 +41,41 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: '2025 Attendee Resources',
-    href: '/2025/attend/resources',
+    label: 'What to Expect',
+    href: '/2026/attend/about',
   },
   {
     category: 'attend',
-    label: '2025 Collegiate Resources',
-    href: '/2025/attend/collegiate-resources',
+    label: 'Attendee Logistics',
+    href: '/2026/attend/logistics',
   },
   {
     category: 'attend',
-    label: '2025 Registration',
-    href: '/2025/attend/registration',
+    label: 'Registration',
+    href: '/2026/attend/registration',
     badge: {
-      label: 'Closed',
+      label: 'Coming Soon',
       accent: false,
     },
   },
   {
     category: 'attend',
-    label: '2025 Schedule',
-    href: '/2025/attend/schedule',
+    label: 'Schedule',
+    href: '/2026/attend/schedule',
   },
   {
     category: 'attend',
-    label: '2025 What to Expect',
-    href: '/2025/attend/about',
-  },
-  {
-    category: 'present',
-    label: '2025 Request for Programs',
-    href: '/2025/present/request-for-programs',
+    label: 'Collegiate Grants',
+    href: '/2026/attend/collegiate-grants',
     badge: {
-      label: 'Closed',
+      label: 'Coming Soon',
       accent: false,
     },
   },
   {
     category: 'present',
-    label: '2025 Request for Panelists',
-    href: '/2025/present/request-for-panelists',
+    label: 'Request for Programs',
+    href: '/2026/present/request-for-programs',
     badge: {
       label: 'Closed',
       accent: false,
@@ -88,8 +83,17 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: '2025 Call for Posters',
-    href: '/2025/present/call-for-posters',
+    label: 'Request for Panelists',
+    href: '/2026/present/request-for-panelists',
+    badge: {
+      label: 'Closed',
+      accent: false,
+    },
+  },
+  {
+    category: 'present',
+    label: 'Call for Posters',
+    href: '/2026/present/call-for-posters',
     badge: {
       label: 'Closed',
       accent: false,
@@ -97,8 +101,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'partner',
-    label: '2025 Exhibitors and Sponsors',
-    href: '/2025/partner/exhibitors-and-sponsors',
+    label: 'Exhibitors and Sponsors',
+    href: '/2026/partner/exhibitors-and-sponsors',
     badge: {
       label: 'Open',
       accent: true,
@@ -106,13 +110,13 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'misc',
-    label: '2025 Annual Awards',
-    href: '/2025/awards',
+    label: 'Annual Awards',
+    href: '/2026/awards',
   },
   {
     category: 'misc',
-    label: '2025 Community Health & Safety',
-    href: '/2025/health-and-safety',
+    label: 'Community Health & Safety',
+    href: '/2026/health-and-safety',
   },
 ];
 
@@ -120,15 +124,15 @@ export const NAVBAR_LINKS: NavbarLink[] = [
  * {
  *   category: 'attend',
  *   label: 'Career Fair & Grad Expo',
- *   href: '/2025/attend/expo',
+ *   href: '/2026/attend/expo',
  * },
  *{
  *  category: 'partner',
  *  label: 'Exhibitor/Sponsor Resources',
- *  href: '/2025/partner/resources',
+ *  href: '/2026/partner/resources',
  *}, */
 /**{
  *  category: 'misc',
  *  label: "What's New?",
- *  href: '/2025/whats-new',
+ *  href: '/2026/whats-new',
  *},*/
