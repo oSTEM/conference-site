@@ -10,7 +10,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faArchive, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
@@ -384,7 +384,7 @@ export default function NavBar() {
                   </span>
                 )}
                 <br></br>
-                {currentPage ? (
+                {currentPage && !isArchive ? (
                   <span className='text-sm'>
                     <b>
                       16<sup>th</sup>
@@ -401,6 +401,7 @@ export default function NavBar() {
                   >
                     {isArchive ? (
                       <span>
+                        <FontAwesomeIcon icon={faArchive} />{' '}
                         <b>{archiveYear}</b> Archive
                       </span>
                     ) : (

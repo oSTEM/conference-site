@@ -36,8 +36,18 @@ export const SiteLayout = ({ children, title, accent }: SiteLayoutProps) => {
         <div className='mt-20 sm:mt-12 p-4 sm:p-6'>
           {isArchive ? (
             <BannerMessage icon={faArchive} type='warning' closeButton={false}>
-              You're viewing an <b>archived</b> page for a past conference.
-              Information may not be relevant to this year's conference.
+              <div className='flex flex-col gap-1 sm:flex-row sm:gap-3'>
+                <span className='grow'>
+                  You're viewing an <b>archived</b> page for a past conference.
+                  These pages are public for preservation purposes but do{' '}
+                  <b>not</b> represent oSTEM's current conferences.
+                </span>
+                <Link href='/'>
+                  <a className='no-underline h-7 self-start sm:self-auto sm:ml-auto rounded border border-orange-700/30 dark:border-orange-200/35 px-2 py-0.5 text-sm font-semibold text-orange-700 dark:text-orange-200 hover:bg-orange-700/20 dark:hover:bg-orange-200/10 active:bg-orange-700/20 dark:active:bg-orange-200/20 transition'>
+                    Exit&nbsp;Archive
+                  </a>
+                </Link>
+              </div>
             </BannerMessage>
           ) : (
             ''
