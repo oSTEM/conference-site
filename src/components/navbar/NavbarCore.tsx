@@ -124,6 +124,8 @@ interface DropdownProps {
   fill?: boolean;
   compact: boolean;
   labelOverride?: string;
+  isArchive?: boolean;
+  archiveYear?: number | null;
   currentTheme?: number;
   setCurrentTheme?: Dispatch<SetStateAction<number>>;
 }
@@ -143,6 +145,8 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
   fill,
   compact,
   labelOverride,
+  isArchive,
+  archiveYear,
   currentTheme,
   setCurrentTheme,
 }) => {
@@ -204,6 +208,23 @@ const NavbarDropdown: React.FC<DropdownProps> = ({
               compact ? 'fixed left-2' : 'absolute right-0'
             } mt-2 w-64 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-zinc-900 shadow-lg ring-1 ring-black/5 focus:outline-none dark:border dark:border-zinc-700`}
           >
+            {isArchive ? (
+              <div className='px-1 py-0.5 bg-orange-700/10'>
+                <p className='flex pl-1 items-center text-xs text-orange-700 dark:text-orange-200'>
+                  <FontAwesomeIcon icon={faArchive} className='mr-1.5' />
+                  <span className='grow py-1'>
+                    Archived {archiveYear ?? '----'} pages
+                  </span>
+                  <Link href='/'>
+                    <a className='no-underline font-semibold rounded px-2 py-1 hover:bg-orange-700/10 dark:hover:bg-orange-200/10 active:bg-orange-700/20 dark:active:bg-orange-200/20 transition'>
+                      Exit Archive
+                    </a>
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              ''
+            )}
             {links.map((link) => (
               /* Use the `active` state to conditionally style the active item. */
               <div key={link.href} className='px-1 py-1'>
@@ -348,6 +369,8 @@ export default function NavBar() {
         active={sidebarOpen}
         currentPage={currentPage}
         navCategories={NavCategories}
+        isArchive={isArchive}
+        archiveYear={archiveYear}
         sidebarStateHandler={setSidebarOpen}
         currentTheme={currentTheme}
         setCurrentTheme={setCurrentTheme}
@@ -420,6 +443,8 @@ export default function NavBar() {
                 key={categoryWithLink.name}
                 category={categoryWithLink}
                 links={categoryWithLink.links}
+                isArchive={isArchive}
+                archiveYear={archiveYear}
                 compact={false}
                 fill={
                   categoryWithLink.name === NavCategories[currentCategory]?.name
@@ -456,6 +481,8 @@ export default function NavBar() {
               <NavbarDropdown
                 category={NavCategories[currentCategory]}
                 links={NavCategories[currentCategory].links}
+                isArchive={isArchive}
+                archiveYear={archiveYear}
                 labelOverride={currentPage.label}
                 compact={true}
               ></NavbarDropdown>

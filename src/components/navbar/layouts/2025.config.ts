@@ -103,8 +103,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Exhibitors and Sponsors',
     href: '/archive/2025/partner/exhibitors-and-sponsors',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
