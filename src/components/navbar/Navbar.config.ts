@@ -41,16 +41,6 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: 'What to Expect',
-    href: '/2026/attend/about',
-  },
-  {
-    category: 'attend',
-    label: 'Attendee Logistics',
-    href: '/2026/attend/logistics',
-  },
-  {
-    category: 'attend',
     label: 'Registration',
     href: '/2026/attend/registration',
     badge: {
@@ -60,17 +50,27 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
-    label: 'Schedule',
-    href: '/2026/attend/schedule',
-  },
-  {
-    category: 'attend',
     label: 'Collegiate Grants',
     href: '/2026/attend/collegiate-grants',
     badge: {
       label: 'Coming Soon',
       accent: false,
     },
+  },
+  {
+    category: 'attend',
+    label: 'Attendee Logistics',
+    href: '/2026/attend/logistics',
+  },
+  {
+    category: 'attend',
+    label: 'What to Expect',
+    href: '/2026/attend/about',
+  },
+  {
+    category: 'attend',
+    label: 'Schedule',
+    href: '/2026/attend/schedule',
   },
   {
     category: 'present',
@@ -95,8 +95,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Call for Posters',
     href: '/2026/present/call-for-posters',
     badge: {
-      label: 'Closed',
-      accent: false,
+      label: 'Open',
+      accent: true,
     },
   },
   {
