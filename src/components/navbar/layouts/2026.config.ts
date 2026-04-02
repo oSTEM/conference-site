@@ -4,7 +4,7 @@
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from '../NavbarCore';
+import type { NavbarCategory, NavbarLink } from '../NavbarCore';
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).

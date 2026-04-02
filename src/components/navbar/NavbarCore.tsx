@@ -2,7 +2,7 @@
  * NavbarCore.tsx
  *
  * Responsible for rendering the new navbar at the top/side of all pages.
- * Change the links in the navbar by editing @see Navbar.config.ts - not this file.
+ * Change the links in the navbar by editing @see layouts/*.config.ts - not this file.
  *
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
@@ -22,7 +22,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import { TextBadge } from '@/components/badge/TextBadge';
-import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './layouts/2026.config';
+import { getNavbarLayout } from './layouts';
 import SideBar from './NavbarSidebar';
 import styles from './Navbar.module.css';
 
@@ -318,6 +318,11 @@ function categorizeNavbarLinks(
 
 export default function NavBar() {
   const router = useRouter();
+  const archiveYearMatch = router.pathname.match(/(?<=archive\/)\d{4}/);
+  const archiveYear = archiveYearMatch ? Number(archiveYearMatch[0]) : null;
+  const { categories: navbarCategories, links: navbarLinks } = getNavbarLayout(
+    archiveYear ?? undefined,
+  );
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState(
     typeof localStorage === 'undefined'
@@ -328,15 +333,12 @@ export default function NavBar() {
         : 0
       : 2,
   );
-  const currentPage = NAVBAR_LINKS.find(
-    (link) => link.href === router.pathname,
-  );
+  const currentPage = navbarLinks.find((link) => link.href === router.pathname);
   const isArchive = router.pathname.indexOf('/archive') !== -1;
-  const archiveYear = router.pathname.match(/(?<=archive\/)\d{4}/);
 
   const [NavCategories, currentCategory] = categorizeNavbarLinks(
-    NAVBAR_CATEGORIES,
-    NAVBAR_LINKS,
+    navbarCategories,
+    navbarLinks,
     currentPage,
   );
 

@@ -1,8 +1,8 @@
 /**
  * Because the new navbar is dynamically generated, we need to manually tell Tailwind what CSS classes we need for navbar coloring.
- * Refer to Navbar.config and NavbarCore for more information.
+ * Refer to navbar/layouts/2026.config and NavbarCore for more information.
  */
-import {NAVBAR_CATEGORIES} from './src/components/navbar/Navbar.config';
+import { NAVBAR_CATEGORIES } from './src/components/navbar/layouts/2026.config';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;

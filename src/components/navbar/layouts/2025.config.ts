@@ -4,7 +4,10 @@
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from '@/components/navbar/NavbarCore';
+import type {
+  NavbarCategory,
+  NavbarLink,
+} from '@/components/navbar/NavbarCore';
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).
@@ -42,17 +45,17 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Attendee Resources',
-    href: 'attend/resources',
+    href: '/archive/2025/attend/resources',
   },
   {
     category: 'attend',
     label: 'Collegiate Resources',
-    href: 'attend/collegiate-resources',
+    href: '/archive/2025/attend/collegiate-resources',
   },
   {
     category: 'attend',
     label: 'Registration',
-    href: 'attend/registration',
+    href: '/archive/2025/attend/registration',
     badge: {
       label: 'Closed',
       accent: false,
@@ -61,17 +64,17 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
     label: 'Schedule',
-    href: 'attend/schedule',
+    href: '/archive/2025/attend/schedule',
   },
   {
     category: 'attend',
     label: 'What to Expect',
-    href: 'attend/about',
+    href: '/archive/2025/attend/about',
   },
   {
     category: 'present',
     label: 'Request for Programs',
-    href: 'present/request-for-programs',
+    href: '/archive/2025/present/request-for-programs',
     badge: {
       label: 'Closed',
       accent: false,
@@ -80,7 +83,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'present',
     label: 'Request for Panelists',
-    href: 'present/request-for-panelists',
+    href: '/archive/2025/present/request-for-panelists',
     badge: {
       label: 'Closed',
       accent: false,
@@ -89,7 +92,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'present',
     label: 'Call for Posters',
-    href: 'present/call-for-posters',
+    href: '/archive/2025/present/call-for-posters',
     badge: {
       label: 'Closed',
       accent: false,
@@ -98,7 +101,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
-    href: 'partner/exhibitors-and-sponsors',
+    href: '/archive/2025/partner/exhibitors-and-sponsors',
     badge: {
       label: 'Open',
       accent: true,
@@ -107,12 +110,12 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'misc',
     label: 'Annual Awards',
-    href: 'awards',
+    href: '/archive/2025/awards',
   },
   {
     category: 'misc',
     label: 'Community Health & Safety',
-    href: 'health-and-safety',
+    href: '/archive/2025/health-and-safety',
   },
 ];
 
