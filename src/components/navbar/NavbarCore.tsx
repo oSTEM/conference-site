@@ -79,25 +79,41 @@ const ThemeSelector = ({
           {themeOpts[currentTheme][1]}
         </span>
       </p>
-      {themeOpts.map((theme, ind) => (
-        <button
-          key={ind}
-          title={
-            ind === currentTheme ? `` : `Change to ${themeOpts[ind][1]} Theme`
-          }
-          className={`w-8 h-8 mt-0.5 ml-0.5 transition rounded-md border-2 ${
-            ind === currentTheme
-              ? 'cursor-default border-sky-500/50 text-sky-600 dark:text-sky-300'
-              : 'border-transparent hover:bg-sky-500/20 active:bg-sky-500/30'
-          }`}
-          onClick={() => {
-            setCurrentTheme(ind);
-            handleThemeClick(ind);
-          }}
-        >
-          <FontAwesomeIcon className='w-4 h-4 mx-auto mt-0.5' icon={theme[0]} />
-        </button>
-      ))}
+      <div className='flex'>
+        {themeOpts.map((theme, ind) => (
+          <Menu.Item as={Fragment} key={ind}>
+            {({ active }) => (
+              <button
+                type='button'
+                role='menuitemradio'
+                aria-checked={ind === currentTheme}
+                aria-label={`${theme[1]} theme`}
+                title={
+                  ind === currentTheme
+                    ? `${themeOpts[ind][1]} Theme selected`
+                    : `Change to ${themeOpts[ind][1]} Theme`
+                }
+                className={`w-8 h-8 mt-0.5 ml-0.5 transition rounded-md border-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/75 ${
+                  ind === currentTheme
+                    ? 'cursor-default border-sky-500/50 text-sky-600 dark:text-sky-300'
+                    : active
+                    ? 'border-transparent bg-sky-500/20'
+                    : 'border-transparent hover:bg-sky-500/20 active:bg-sky-500/30'
+                }`}
+                onClick={() => {
+                  setCurrentTheme(ind);
+                  handleThemeClick(ind);
+                }}
+              >
+                <FontAwesomeIcon
+                  className='w-4 h-4 mx-auto mt-0.5'
+                  icon={theme[0]}
+                />
+              </button>
+            )}
+          </Menu.Item>
+        ))}
+      </div>
     </div>
   );
 };
