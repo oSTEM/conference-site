@@ -4,7 +4,7 @@
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from './NavbarCore';
+import { NavbarCategory, NavbarLink } from '../NavbarCore';
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).
@@ -118,21 +118,9 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Community Health & Safety',
     href: '/2026/health-and-safety',
   },
+  {
+    category: 'misc',
+    label: '2025 Conference Archive',
+    href: '/archive/2025',
+  },
 ];
-
-/**
- * {
- *   category: 'attend',
- *   label: 'Career Fair & Grad Expo',
- *   href: '/2026/attend/expo',
- * },
- *{
- *  category: 'partner',
- *  label: 'Exhibitor/Sponsor Resources',
- *  href: '/2026/partner/resources',
- *}, */
-/**{
- *  category: 'misc',
- *  label: "What's New?",
- *  href: '/2026/whats-new',
- *},*/

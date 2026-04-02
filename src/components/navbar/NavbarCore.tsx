@@ -22,7 +22,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import { TextBadge } from '@/components/badge/TextBadge';
-import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './Navbar.config';
+import { NAVBAR_CATEGORIES, NAVBAR_LINKS } from './layouts/2026.config';
 import SideBar from './NavbarSidebar';
 import styles from './Navbar.module.css';
 
