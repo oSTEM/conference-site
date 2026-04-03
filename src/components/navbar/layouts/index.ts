@@ -1,5 +1,9 @@
 import type { NavbarCategory, NavbarLink } from '../NavbarCore';
 import {
+  NAVBAR_CATEGORIES as NAVBAR_CATEGORIES_2024,
+  NAVBAR_LINKS as NAVBAR_LINKS_2024,
+} from './2024.config';
+import {
   NAVBAR_CATEGORIES as NAVBAR_CATEGORIES_2025,
   NAVBAR_LINKS as NAVBAR_LINKS_2025,
 } from './2025.config';
@@ -29,6 +33,10 @@ function withArchivePrefix(links: NavbarLink[], year: number): NavbarLink[] {
 }
 
 const NAVBAR_LAYOUT_BY_YEAR: Record<number, NavbarLayoutConfig> = {
+  2024: {
+    categories: NAVBAR_CATEGORIES_2024,
+    links: withArchivePrefix(NAVBAR_LINKS_2024, 2024),
+  },
   2025: {
     categories: NAVBAR_CATEGORIES_2025,
     links: withArchivePrefix(NAVBAR_LINKS_2025, 2025),

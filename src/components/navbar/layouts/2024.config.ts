@@ -1,5 +1,5 @@
 /**
- * Navbar.config.ts - 2025 Archive
+ * Navbar.config.ts
  *
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
@@ -44,77 +44,77 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: 'Attendee Resources',
-    href: '/archive/2025/attend/resources',
-  },
-  {
-    category: 'attend',
-    label: 'Collegiate Resources',
-    href: '/archive/2025/attend/collegiate-resources',
-  },
-  {
-    category: 'attend',
     label: 'Registration',
-    href: '/archive/2025/attend/registration',
+    href: '/archive/2024/attend/registration',
     badge: {
-      label: 'Closed',
-      accent: false,
+      label: 'Onsite Only',
     },
+  },
+  {
+    category: 'attend',
+    label: 'Attendee Resources',
+    href: 'attend/resources',
   },
   {
     category: 'attend',
     label: 'Schedule',
-    href: '/archive/2025/attend/schedule',
+    href: '/archive/2024/attend/schedule',
   },
   {
     category: 'attend',
-    label: 'What to Expect',
-    href: '/archive/2025/attend/about',
+    label: 'Career Fair & Grad Expo',
+    href: '/archive/2024/attend/expo',
+  },
+  {
+    category: 'attend',
+    label: 'Community Health & Safety',
+    href: '/archive/2024/attend/health-and-safety',
   },
   {
     category: 'present',
     label: 'Request for Programs',
-    href: '/archive/2025/present/request-for-programs',
+    href: '/archive/2024/present/request-for-programs',
     badge: {
       label: 'Closed',
-      accent: false,
     },
   },
   {
     category: 'present',
-    label: 'Request for Panelists',
-    href: '/archive/2025/present/request-for-panelists',
+    label: 'Request for Panel Topics',
+    href: '/archive/2024/present/request-for-panel-topics',
     badge: {
       label: 'Closed',
-      accent: false,
     },
   },
   {
     category: 'present',
     label: 'Call for Posters',
-    href: '/archive/2025/present/call-for-posters',
+    href: '/archive/2024/present/call-for-posters',
     badge: {
       label: 'Closed',
-      accent: false,
     },
   },
   {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
-    href: '/archive/2025/partner/exhibitors-and-sponsors',
+    href: '/archive/2024/partner/exhibitors-and-sponsors',
     badge: {
       label: 'Closed',
-      accent: false,
     },
+  },
+  {
+    category: 'partner',
+    label: 'Exhibitor/Sponsor Resources',
+    href: '/archive/2024/partner/resources',
   },
   {
     category: 'misc',
     label: 'Annual Awards',
-    href: '/archive/2025/awards',
+    href: '/archive/2024/awards/',
   },
   {
     category: 'misc',
-    label: 'Community Health & Safety',
-    href: '/archive/2025/health-and-safety',
+    label: "What's New?",
+    href: '/archive/2024/whats-new',
   },
 ];
