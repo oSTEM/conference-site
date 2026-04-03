@@ -10,6 +10,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faArchive, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
@@ -129,6 +130,29 @@ interface DropdownProps {
   currentTheme?: number;
   setCurrentTheme?: Dispatch<SetStateAction<number>>;
 }
+
+const ExitArchiveButton = () => {
+  return (
+    <div className='mt-2.5 mr-4'>
+      <Link href='/'>
+        <button
+          className={`${styles['dropdownBtn']} inline-flex items-center w-full justify-center rounded-full border-2 border-nav-yellow px-4 py-2 text-sm focus:outline-none focus-visible:ring-4 focus-visible:ring-nav-yellow/75 transition hover:bg-nav-yellow/15 active:bg-nav-yellow/20
+    }`}
+        >
+          Exit Archive
+          <span>
+            <FontAwesomeIcon
+              className={`${
+                styles['dropdownIcon']
+              } ${'mt-0.5 ml-2 h-3.5'} transition duration-270`}
+              icon={faSignOutAlt}
+            />
+          </span>
+        </button>
+      </Link>
+    </div>
+  );
+};
 
 /**
  * Creates a selectable dropdown to navigate between pages.
@@ -339,6 +363,7 @@ function categorizeNavbarLinks(
 
 export default function NavBar() {
   const router = useRouter();
+  const isArchive = router.pathname.indexOf('/archive') !== -1;
   const archiveYearMatch = router.pathname.match(/(?<=archive\/)\d{4}/);
   const archiveYear = archiveYearMatch ? Number(archiveYearMatch[0]) : null;
   const { categories: navbarCategories, links: navbarLinks } = getNavbarLayout(
@@ -355,7 +380,6 @@ export default function NavBar() {
       : 2,
   );
   const currentPage = navbarLinks.find((link) => link.href === router.pathname);
-  const isArchive = router.pathname.indexOf('/archive') !== -1;
 
   const [NavCategories, currentCategory] = categorizeNavbarLinks(
     navbarCategories,
@@ -438,29 +462,38 @@ export default function NavBar() {
             </div>
           </div>
           <div className={`hidden lg:flex`}>
-            {NavCategories.map((categoryWithLink: NavbarCategoryWithLinks) => (
-              <NavbarDropdown
-                key={categoryWithLink.name}
-                category={categoryWithLink}
-                links={categoryWithLink.links}
-                isArchive={isArchive}
-                archiveYear={archiveYear}
-                compact={false}
-                fill={
-                  categoryWithLink.name === NavCategories[currentCategory]?.name
-                }
-                currentTheme={currentTheme}
-                setCurrentTheme={setCurrentTheme}
-              ></NavbarDropdown>
-            ))}
+            {NavCategories.length === 0
+              ? ExitArchiveButton()
+              : NavCategories.map(
+                  (categoryWithLink: NavbarCategoryWithLinks) => (
+                    <NavbarDropdown
+                      key={categoryWithLink.name}
+                      category={categoryWithLink}
+                      links={categoryWithLink.links}
+                      isArchive={isArchive}
+                      archiveYear={archiveYear}
+                      compact={false}
+                      fill={
+                        categoryWithLink.name ===
+                        NavCategories[currentCategory]?.name
+                      }
+                      currentTheme={currentTheme}
+                      setCurrentTheme={setCurrentTheme}
+                    ></NavbarDropdown>
+                  ),
+                )}
           </div>
           <div className={`flex lg:hidden`}>
-            <button
-              className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-3 sm:mr-4 mt-2.5'
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-            >
-              <FontAwesomeIcon className='w-5 h-5' icon={faBars} />
-            </button>
+            {NavCategories.length === 0 ? (
+              ExitArchiveButton()
+            ) : (
+              <button
+                className='inline-flex transition items-center w-10 h-10 justify-center rounded-md border-2 border-transparent hover:border-[#6d8b85] hover:bg-[#6d8b85]/10 active:text-[#6d8b85] active:bg-[#6d8b85]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d8b85]/75 mr-3 sm:mr-4 mt-2.5'
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+              >
+                <FontAwesomeIcon className='w-5 h-5' icon={faBars} />
+              </button>
+            )}
           </div>
         </div>
         <div

@@ -186,7 +186,7 @@ const SideBar: React.FC<SidebarProps> = ({
                 <p className='flex items-center'>
                   <FontAwesomeIcon icon={faArchive} className='mr-1.5' />
                   <span className='grow'>
-                    Archived {archiveYear ?? '----'} pages.
+                    Archived {archiveYear ?? '----'} pages
                   </span>
                   <Link href='/'>
                     <a className='no-underline font-semibold rounded px-1 hover:bg-orange-700/10 dark:hover:bg-orange-200/10 active:bg-orange-700/20 dark:active:bg-orange-200/20 transition'>

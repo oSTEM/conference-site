@@ -47,6 +47,10 @@ const NAVBAR_LAYOUT_BY_YEAR: Record<number, NavbarLayoutConfig> = {
   },
 };
 
+export function hasNavbarLayout(year: number): boolean {
+  return Boolean(NAVBAR_LAYOUT_BY_YEAR[year]);
+}
+
 export const DEFAULT_NAVBAR_LAYOUT_YEAR = 2026;
 
 export function getNavbarLayout(year?: number): NavbarLayoutConfig {
@@ -54,10 +58,13 @@ export function getNavbarLayout(year?: number): NavbarLayoutConfig {
     return NAVBAR_LAYOUT_BY_YEAR[year];
   }
 
-  if (typeof year === 'number' && process.env.NODE_ENV !== 'production') {
-    console.warn(
-      `[Navbar] No navbar layout found for year ${year}; using ${DEFAULT_NAVBAR_LAYOUT_YEAR} fallback.`,
-    );
+  if (typeof year === 'number') {
+    if (process.env.NODE_ENV !== 'production') {
+      console.info(
+        `[Navbar] Year ${year} does not have a navbar, using default fallback.`,
+      );
+    }
+    return { categories: [], links: [] };
   }
 
   return NAVBAR_LAYOUT_BY_YEAR[DEFAULT_NAVBAR_LAYOUT_YEAR];
