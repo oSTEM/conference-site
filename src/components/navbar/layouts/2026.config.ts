@@ -118,9 +118,13 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Community Health & Safety',
     href: '/2026/health-and-safety',
   },
-  {
-    category: 'misc',
-    label: '2025 Conference Archive',
-    href: '/archive/2025',
-  },
+  ...(process.env.NODE_ENV !== 'production'
+    ? [
+        {
+          category: 'misc',
+          label: '2025 Conference Archive',
+          href: '/archive/2025',
+        },
+      ]
+    : []),
 ];
