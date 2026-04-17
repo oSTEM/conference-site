@@ -112,7 +112,6 @@ export const CollegiateTable = () => {
               <th>Ticket Type</th>
               <th>Purchase Deadline</th>
               <th>Member Price</th>
-              <th>Non-Member Price</th>
             </tr>
           </thead>
           <tbody className='[&>*:nth-child(2n)]:bg-green-400/15'>
@@ -129,7 +128,6 @@ export const CollegiateTable = () => {
                 fee={10.44}
                 showFee={showFee}
               ></PriceElement>
-              <PriceElement val={225} fee={15} showFee={showFee}></PriceElement>
             </tr>
             <tr>
               <td>
@@ -138,13 +136,8 @@ export const CollegiateTable = () => {
               </td>
               <td>September 30, 2026</td>
               <PriceElement
-                val={175}
-                fee={11.96}
-                showFee={showFee}
-              ></PriceElement>
-              <PriceElement
-                val={250}
-                fee={16.52}
+                val={200}
+                fee={13.48}
                 showFee={showFee}
               ></PriceElement>
             </tr>
@@ -156,11 +149,6 @@ export const CollegiateTable = () => {
                 </TextBadge>
               </td>
               <td>(On Site)</td>
-              <PriceElement
-                val={275}
-                fee={18.04}
-                showFee={showFee}
-              ></PriceElement>
               <PriceElement
                 val={275}
                 fee={18.04}
@@ -176,11 +164,10 @@ export const CollegiateTable = () => {
               </td>
               <td>June 30, 2026</td>
               <PriceElement
-                val={225}
-                fee={15.0}
+                val={200}
+                fee={13.48}
                 showFee={showFee}
               ></PriceElement>
-              <td>n/a</td>
             </tr>
             <tr>
               <td>
@@ -193,7 +180,6 @@ export const CollegiateTable = () => {
                 fee={16.52}
                 showFee={showFee}
               ></PriceElement>
-              <td>n/a</td>
             </tr>
             <tr>
               <td>
@@ -208,7 +194,6 @@ export const CollegiateTable = () => {
                 fee={19.56}
                 showFee={showFee}
               ></PriceElement>
-              <td>n/a</td>
             </tr>
           </tbody>
         </table>
@@ -262,8 +247,8 @@ export const ProfessionalTable = () => {
               </td>
               <td>June 30, 2026</td>
               <PriceElement
-                val={400}
-                fee={25.63}
+                val={350}
+                fee={22.6}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
@@ -279,8 +264,8 @@ export const ProfessionalTable = () => {
               </td>
               <td>September 30, 2026</td>
               <PriceElement
-                val={450}
-                fee={28.67}
+                val={400}
+                fee={25.63}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
@@ -298,8 +283,8 @@ export const ProfessionalTable = () => {
               </td>
               <td>(On Site)</td>
               <PriceElement
-                val={600}
-                fee={37.79}
+                val={550}
+                fee={34.75}
                 showFee={showFee}
               ></PriceElement>
               <PriceElement
