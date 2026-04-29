@@ -1,6 +1,8 @@
 import { SiteLayout } from "@/components/layout/SiteLayout";
+import { BannerMessage } from "@/components/banner/BannerMessage";
 import { CTAButton } from "@/components/button/CTAButton";
 import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { Switch } from '@headlessui/react'
 import { Tab } from '@headlessui/react'
 import TicketTable from './RegistrationTicketTables';
@@ -53,7 +55,11 @@ We are pleased to invite you to the 16th Annual Conference in Albuquerque, NM!
     <TicketTable type='collegiate'></TicketTable>
     <p><b>Early Bird Discount:</b> Save $50 on registration tickets by purchasing them by June 30!</p>
     <p>Scroll down for more information about purchasing tickets and add-ons.</p>
-    <br/>
+    <div className='py-2'>
+      <BannerMessage closeButton={false} type={"warning"} icon={faExclamationTriangle}>
+      The registration form has changed significantly this year. Ensure you've read the <b>Membership and Demographics</b> section below before registering to ensure your registraion goes as smoothly as possible.
+      </BannerMessage>
+    </div>
     <CTAButton
     onClick="https://whova.com/portal/registration/pioyKvdWoH3XmzSwJPWD/gbgxchsb"
     backgroundColor="green">
@@ -64,7 +70,11 @@ We are pleased to invite you to the 16th Annual Conference in Albuquerque, NM!
     <TicketTable type='professional'></TicketTable>
     <p><b>Early Bird Discount:</b> Save $50 on registration tickets by purchasing them by June 30!</p>
     <p>Scroll down for more information about purchasing tickets and add-ons.</p>
-    <br/>
+    <div className='py-2'>
+      <BannerMessage closeButton={false} type={"warning"} icon={faExclamationTriangle}>
+      The registration form has changed significantly this year. Ensure you've read the <b>Membership and Demographics</b> section below before registering to ensure your registraion goes as smoothly as possible.
+      </BannerMessage>
+    </div>
     <CTAButton
     onClick="https://whova.com/portal/registration/pioyKvdWoH3XmzSwJPWD/j7tj77uo"
     backgroundColor="green-accent">
@@ -92,16 +102,27 @@ We are pleased to invite you to the 16th Annual Conference in Albuquerque, NM!
 </Tab.Group>
 </TopicSquare>
 
-<h4>Membership</h4>
+<h4>Membership and Demographics</h4>
   <p>oSTEM members receive discounted tickets. Member discounts stack with early-bird discounts.</p>
+  <p><b><span className='text-orange-700 dark:text-orange-300'>Important:</span> 2026 Changes:</b></p>
   <ul>
-    <li>If you are not currently a member, you can <a href='https://ostem.org/page/how-to-join-ostem'>become one on our Join oSTEM page</a>.</li>
-    <li>Members will need their <b>Member ID</b> to purchase tickets at the member rate. To find your Member ID, sign in to oSTEM.org, go to your profile, and then navigate to 'Accounts + Settings'. Direct link: https://ostem.org/members/edit.asp*</li>
+    <li>Starting in 2026, your demographic information will be pulled <b className='text-yellow-700 dark:text-yellow-300'>directly from your member profile</b> after registering for a member ticket.</li>
+    <ul>
+      <li>Ensure that you and anyone you're registering for has updated their demographic information <b>before registration</b>. This information is found on the <a target='blank' href="https://ostem.org/members/edit.asp">Accounts + Settings page</a>.</li>
+      <li>If you do not wish to answer any demographic questions, you can select "Prefer not to say" or leave the question blank.</li>
+      <li>Demographic information helps us obtain exhibitors and sponsors. Your responses are kept confidential and only de-identified data is published in aggregate.</li>
+    </ul>
+    <li>Additionally, starting in 2026, collegiate pricing is only available to oSTEM members. See below for information on joining if you're not already a member.</li>
+  </ul>
+  <p>General Information:</p>
+  <ul>
+    <li>If you are not currently a member, you can <a href='https://ostem.org/page/how-to-join-ostem'>become one on our Join oSTEM page</a>. Membership is free with an optional donation.</li>
+    <li>Members will need their <b>Member ID</b> to purchase tickets at the member rate. To find your Member ID, sign in to oSTEM.org, go to your profile, and then navigate to 'Accounts + Settings'. Direct link: <a target='blank' href="https://ostem.org/members/edit.asp">ostem.org/members/edit.asp</a></li>
   </ul>
 <br/>
 
 <h4>Group Tickets</h4>
-  <p>Collegiate chapters and companies can purchase tickets for their members in bulk if everyone is an oSTEM member. Select "Collegiate (Member) - Group Tickets" or "Professional (Member) - Group Tickets" on the registration page to use this option.</p>
+  <p>Collegiate chapters can purchase tickets for their members in bulk. Select "Collegiate (Member) - Group Tickets" on the registration page to use this option.</p>
   <ul>
     <li>The benefit of group tickets is that you may buy blank group tickets first and then fill in attendee names on a later day.</li>
     <ul>
