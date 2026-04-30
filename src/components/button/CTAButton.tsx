@@ -39,9 +39,11 @@ export const CTAButton = ({
     'data-disabled': disabled,
   };
 
-  let bgStyle = {
-    backgroundColor: `var(--color-${backgroundColor})`,
-  };
+  let bgStyle = backgroundColor
+    ? {
+        backgroundColor: `var(--color-${backgroundColor})`,
+      }
+    : {};
 
   const button = (() => {
     if (typeof onClick === 'string') {
