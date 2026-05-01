@@ -364,8 +364,8 @@ function categorizeNavbarLinks(
 export default function NavBar() {
   const router = useRouter();
   const isArchive = router.pathname.indexOf('/archive') !== -1;
-  const archiveYearMatch = router.pathname.match(/(?<=archive\/)\d{4}/);
-  const archiveYear = archiveYearMatch ? Number(archiveYearMatch[0]) : null;
+  const archiveYearMatch = router.pathname.match(/\/archive\/(\d{4})/);
+  const archiveYear = archiveYearMatch ? Number(archiveYearMatch[1]) : null;
   const { categories: navbarCategories, links: navbarLinks } = getNavbarLayout(
     archiveYear ?? undefined,
   );
