@@ -1,6 +1,7 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, Dispatch, SetStateAction } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArchive } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import {
   NavbarLink,
@@ -65,6 +66,8 @@ interface SidebarProps {
   active: boolean;
   currentPage?: NavbarLink | undefined;
   navCategories: NavbarCategoryWithLinks[];
+  isArchive?: boolean;
+  archiveYear?: number | null;
   sidebarStateHandler: Dispatch<SetStateAction<boolean>>;
   currentTheme: number;
   setCurrentTheme: Dispatch<SetStateAction<number>>;
@@ -74,6 +77,8 @@ const SideBar: React.FC<SidebarProps> = ({
   active,
   currentPage,
   navCategories,
+  isArchive,
+  archiveYear,
   sidebarStateHandler,
   currentTheme,
   setCurrentTheme,
@@ -176,6 +181,23 @@ const SideBar: React.FC<SidebarProps> = ({
             </button>
           </div>
           <div className='p-4 overflow-y-auto'>
+            {isArchive ? (
+              <div className='mb-4 p-2 rounded border border-orange-700/20 dark:border-orange-200/20 bg-orange-600/10 text-orange-700 dark:text-orange-200 text-sm'>
+                <p className='flex items-center'>
+                  <FontAwesomeIcon icon={faArchive} className='mr-1.5' />
+                  <span className='grow'>
+                    Archived {archiveYear ?? '----'} pages
+                  </span>
+                  <Link href='/'>
+                    <a className='no-underline font-semibold rounded px-1 hover:bg-orange-700/10 dark:hover:bg-orange-200/10 active:bg-orange-700/20 dark:active:bg-orange-200/20 transition'>
+                      Exit Archive
+                    </a>
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              ''
+            )}
             {navCategories.map((category) => (
               <LinkGroup
                 key={category.name}

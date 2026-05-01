@@ -26,7 +26,7 @@ export const ConferenceCountdown = () => {
 
   return (
     <div className='flex flex-wrap justify-center items-center'>
-      <Unit n={diff.years || 0} unit='year' />
+      {/* <Unit n={diff.years || 0} unit='year' /> */}
       <Unit n={diff.months || 0} unit='months' />
       <Unit n={diff.days || 0} unit='days' />
       <Unit n={diff.hours || 0} unit='hours' />

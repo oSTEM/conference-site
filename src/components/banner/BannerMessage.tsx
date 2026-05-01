@@ -48,7 +48,7 @@ export const BannerMessage = ({
         <span className={`pl-2 py-1 ${theme[1]}`}>
           <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
         </span>
-        <span className='grow p-1 px-2'>{children}</span>
+        <div className='grow p-1 px-2'>{children}</div>
         {closeButton === false ? (
           ''
         ) : (

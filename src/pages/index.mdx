@@ -29,12 +29,12 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
     <h3 className="p-4 pt-3 text-white">2026 Conference Countdown</h3>
     <div className="bg-primary text-center rounded pt-4">
       <p className='text-xl'>We are excited to see you soon in</p>
-      <p className="pt-0 text-4xl" ><b className={styles.gradient}>Albuquerque, New Mexico</b><span className={styles.gradientLight}> - October 22-24, 2026</span></p>
+      <p className="pt-0 text-4xl font-display" ><b className={styles.gradient}>Albuquerque, New Mexico</b><span className={styles.gradientLight}><span className='hidden lg:inline'> - </span><br className='lg:hidden'/>October 22-24, 2026</span></p>
       <ConferenceCountdown></ConferenceCountdown>
     </div>
   </div>
 
-  <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-brown border-solid bg-albuquerque-brown">
+  <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-orchid border-solid bg-albuquerque-orchid">
   <h3 className="p-4 pt-3 text-white">2026 Conference Key Info</h3>
   <div className="bg-primary text-center rounded">
     <div className='text-left p-4'>
@@ -46,15 +46,21 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
     <div className="text-left p-4">
       <h4 className="font-bold text-lg mb-2">🗓️ Key Dates</h4>
       <ul className="space-y-2">
-        <li><span className="font-semibold">Website Updates:</span> Check Back in 2026</li>
+        <li><span className="font-semibold">Early Bird Registration:</span> May 1, 2026 – June 30, 2026</li>
+        <li><span className="font-semibold">Regular Registration:</span> July 1, 2026 – September 30, 2026</li>
         <li><span className="font-semibold">Conference Weekend:</span> October 22–24, 2026</li>
       </ul>
+    </div>
+    <div className="flex justify-center pb-6">
+      <CTAButton onClick="/2026/attend/registration" target="_self" className="bg-albuquerque-orchid" backgroundColor={false}>
+        Registration
+      </CTAButton>
     </div>
   </div>
 </div>
 
 
-  <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-brown border-solid bg-albuquerque-brown">
+  <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-purple border-solid bg-albuquerque-purple">
     <Image
       src="/images/2023/2023_homepage_bannerupdate.png"
       alt=""
@@ -85,7 +91,8 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
           <div className="text-xl flex justify-center p-8">
             <CTAButton
               onClick="https://www.ostem.org/page/newsletter"
-              backgroundColor="bright-peach"
+              className="bg-albuquerque-purple"
+              backgroundColor={false}
               >
               Sign Up for Our Newsletter
             </CTAButton>

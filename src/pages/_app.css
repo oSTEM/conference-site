@@ -31,6 +31,7 @@ html.dark:root {
   --color-green-gray: #5c6d5c;
 
   /* Navbar Accents (Dark) */
+  --sp-nav-accent-yellow: 254 240 138;
   --sp-nav-accent-green: 110 231 183;
   --sp-nav-accent-blue: 96 165 250;
   --sp-nav-accent-purple: 192 132 252;
@@ -44,6 +45,7 @@ html:root {
   color-scheme: light;
 
   /* Navbar Accents */
+  --sp-nav-accent-yellow: 234 88 12;
   --sp-nav-accent-green: 21 128 61;
   --sp-nav-accent-blue: 37 99 235;
   --sp-nav-accent-purple: 147 51 234;
@@ -103,6 +105,10 @@ html:root {
   --color-red-accent: #cd133b;
   --color-red-primary: #ee4266;
   --color-red-muted: #f7a1b4;
+
+  /* Conference 2026 */
+  --color-albuquerque-sand: #c16729;
+  --color-albuquerque-purple: #6c186d;
 
   /* Yellows */
   --color-yellow-dark: #a2682a;
@@ -274,6 +280,48 @@ table.table-mb th {
   th {
     padding: 0.4rem 0.5rem;
   }
+}
+
+/* Rounded tables */
+table.table-rounded {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+table.table-rounded th,
+table.table-rounded td {
+  border: none;
+}
+
+table.table-rounded tr > * {
+  border-top: 1px solid #c6c9cc;
+  border-left: 1px solid #c6c9cc;
+}
+
+table.table-rounded thead tr:first-child > * {
+  border-top: none;
+}
+
+table.table-rounded tr > *:first-child {
+  border-left: none;
+}
+
+table.table-rounded thead tr:first-child > th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+table.table-rounded thead tr:first-child > th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+table.table-rounded tbody tr:last-child > td:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+table.table-rounded tbody tr:last-child > td:last-child {
+  border-bottom-right-radius: 0.25rem;
 }
 
 /* tbody tr:nth-child(2n) {

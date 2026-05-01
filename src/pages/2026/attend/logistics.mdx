@@ -1,0 +1,126 @@
+import { CTAButton } from "@/components/button/CTAButton";
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { TopicSquare } from "@/components/rfp/TopicSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BannerMessage } from '@/components/banner/BannerMessage'
+import { faCar, faHotel, faInfo, faPlane, faBus } from '@fortawesome/free-solid-svg-icons';
+import Image from "next/image";
+
+<SiteLayout title="Attendee Logistics" accent="nav-green">
+
+<br/>
+
+
+
+<div className="text-nav-green font-bold">
+
+## Getting to the Conference
+
+</div>
+
+The 16<sup>th</sup> annual conference will be taking place at the <a href='https://albuquerquecc.com/' target='_blank'>Albuquerque Convention Center</a> in Albuquerque, New Mexico.
+
+The address of the Convention Center is <b>401 2nd Street NW Albuquerque, NM 87102</b>.
+
+<br/>
+
+<div className='flex flex-col md:flex-row gap-x-4'>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faPlane} className={"social-icon"} fixedWidth /> Plane</h3>
+
+The closest airport is Albuquerque International Sunport (ABQ). Between approximately 7am-6pm, the <b className='text-green-800 dark:text-green-200'>50 bus</b> will get you directly from the airport to the convention center and vice versa in about 25 minutes. And it's free!
+
+For more information, visit [the ABQ website](https://www.abqsunport.com/).
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faBus} className={"social-icon"} fixedWidth /> Bus</h3>
+
+The City of Albuquerque operates a strong public transporation system which includes both regular busses and a rapid transit system (ART). All public transportation is **free**, so we encourage you to use it during your time here!
+
+For more information, visit [ABQ Ride](https://www.cabq.gov/transit).
+
+</div>
+<div className='w-full'>
+<h3 className='text-green-900 dark:text-green-100'><FontAwesomeIcon icon={faCar} className={"social-icon"} fixedWidth /> Car</h3>
+
+If you're driving and need parking, please refer to [the convention center's website](https://albuquerquecc.com/about-us/visitors/parking/) for detailed parking info. There is a charge for on-site parking which will not be covered by oSTEM.
+
+Cheaper parking may also be available at other public parking garages close to the convention center.
+
+</div>
+</div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Lodging
+
+</div>
+
+### General Lodging Information
+
+We have an oSTEM exclusive hotel block with discounted group rates available exclusively for attendees. This year's exclusive hotel is The Clyde, located right across diagonally from the convention center. Please note that rooms are first come, first served.
+  - Once the hotel is full, you will not be able to make any reservations under our block.
+  - Reservations are available for booking Tuesday, October 20th through Monday, October 26th. Please note that Tuesday, Wednesday, and Sunday night availability is limited.
+
+<br/>
+
+<div className='flex flex-col md:flex-row gap-x-2'>
+<div className='w-full flex-1'>
+  <h3>Conference Hotel</h3>
+  <hr className='border-red-400 border-b-2 rounded'/>
+
+  <h4>The Clyde</h4>
+
+  <p><span className='text-red-800 dark:text-red-200'>330 Tijeras Ave NW, Albuquerque, NM 87102</span>
+  <br/>$209 per Night plus taxes
+  <br/><i>Diagonally adjacent to the convention center!</i></p>
+
+  <br/>
+  <a href="" rel="noopener noreferrer" target='_blank' 
+  className="inline-block mt-4 px-3 py-1.5 bg-red-600 text-white shadow hover:bg-red-700 transition-colors duration-200 dark:bg-red-500 dark:hover:bg-red-600"
+  >
+    Booking Website Coming Soon
+  </a>
+</div>
+<div className='w-full flex-2'>
+  <h3>&nbsp;</h3>
+  <hr className='border-red-400 border-b-2 rounded mb-2'/>
+  <BannerMessage icon={faInfo} type='info' closeButton={false}>
+    The oSTEM room block discount is valid for any length of stay between Wednesday, October 21 and Monday, October 26.
+  </BannerMessage>
+  <p>
+
+  Hotel rooms may be booked until they're full or by September 28th, 2026, whichever comes first. Once a hotel block is full, it will be removed from this page.
+
+  </p>
+  <p>A 15.625% hotel occupancy tax applies to all hotel reservations in Albuquerque.</p>
+
+</div>
+
+</div>
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Meals and Refreshments
+
+</div>
+
+Meal offerings are currently being finalized.
+
+<br/>
+
+<div className="text-nav-green font-bold">
+
+## Exhibitor List
+
+</div>
+
+Exhibitors at the conference will be listed here in June.
+
+
+<br/>
+</SiteLayout>

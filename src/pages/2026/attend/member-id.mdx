@@ -1,0 +1,91 @@
+import { SiteLayout } from "@/components/layout/SiteLayout";
+import { CTAButton } from "@/components/button/CTAButton";
+import Image from "next/image";
+import whovaMemberIdImg from "./member-id/whova-member-id.png";
+import ymDemographicsImg from "./member-id/ym-demographics.png";
+import ymMemberIdImg from "./member-id/ym-member-id.png";
+
+<SiteLayout title="Member ID" accent="nav-green">
+<p>
+  Whova requires a valid oSTEM member ID pulled from YourMembership. When you register
+  for a member ticket, Whova validates your membership through YourMembership. Note that if you just signed up on YourMembership, it may take up to 48 hours for Whova to sync.
+</p>
+<p>
+  To enhance privacy and security, we no longer collect any demographic information within Whova.
+  Instead, demographic data will be pulled directly from YourMembership and will only be published in an aggregate, de-identified form.
+  If you prefer not to submit demographics, choose "Prefer not to say" for the questions below in YourMembership before you register.
+</p>
+
+<div className="my-6 flex flex-wrap justify-center gap-3">
+  <CTAButton
+    onClick={() => window.history.back()}
+    target="_self"
+    backgroundColor="green"
+  >
+    Back to Previous Page
+  </CTAButton>
+  <CTAButton
+    onClick="https://ostem.org/members/edit.asp"
+    target="_blank"
+    backgroundColor="green-accent"
+  >
+    Open Account Information
+  </CTAButton>
+</div>
+
+<figure className="my-6 flex flex-col items-center">
+  <div className="w-full max-w-[470px] sm:max-w-[615px] md:max-w-[761px] lg:max-w-[878px]">
+    <Image
+      src={ymMemberIdImg}
+      placeholder="blur"
+      alt="YourMembership account information panel highlighting the oSTEM member ID field."
+      layout="responsive"
+      width="850"
+      height="465"
+      className="rounded"
+    />
+  </div>
+  <figcaption className="mt-2 text-text-color/70 text-center max-w-[470px] sm:max-w-[615px] md:max-w-[761px] lg:max-w-[878px]">
+    Step 1: Find your oSTEM member ID in YourMembership under Account Information.
+  </figcaption>
+</figure>
+
+<figure className="my-6 flex flex-col items-center">
+  <div className="w-full max-w-[345px] sm:max-w-[453px] md:max-w-[560px] lg:max-w-[647px]">
+    <Image
+      src={ymDemographicsImg}
+      placeholder="blur"
+      alt="YourMembership demographics form with multiple questions and a Prefer not to say option selected."
+      layout="responsive"
+      width="1008"
+      height="771"
+      className="rounded"
+    />
+  </div>
+  <figcaption className="mt-2 text-text-color/70 text-center max-w-[470px] sm:max-w-[615px] md:max-w-[761px] lg:max-w-[878px]">
+    <span className='text-yellow-700 dark:text-yellow-300'>Step 2: Review your demographic data before proceeding (on the same Account Information page).</span>
+    <br/>
+    YourMembership demographic data is used in aggregate, de-identified form for conference reporting as well as obtaining exhibitors and sponsors. Individual responses are kept confidential. Please ensure you review and update any fields as needed before registration. You can also set any question to "Prefer not to say" if desired.
+  </figcaption>
+</figure>
+
+<figure className="my-6 flex flex-col items-center">
+  <div className="w-full max-w-[544px] sm:max-w-[714px] md:max-w-[761px] lg:max-w-[878px]">
+    <Image
+      src={whovaMemberIdImg}
+      placeholder="blur"
+      alt="Whova registration form showing the field where you enter your oSTEM member ID."
+      layout="responsive"
+      width="935"
+      height="440"
+      className="rounded"
+    />
+  </div>
+  <figcaption className="mt-2 text-text-color/70 text-center max-w-[544px] sm:max-w-[714px] md:max-w-[761px] lg:max-w-[878px]">
+    Step 3: Finally, enter the same YourMembership member ID in the Whova registration form.
+  </figcaption>
+</figure>
+
+If you still have any questions regarding this, please email [conference@ostem.org](mailto:conference@ostem.org). We look forward to welcoming you at conference!
+
+</SiteLayout>

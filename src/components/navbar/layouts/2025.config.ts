@@ -1,10 +1,13 @@
 /**
- * Navbar.config.ts
+ * Navbar.config.ts - 2025 Archive
  *
  * Edit this file to change what links are shown in the navbar.
  * Written by Rem Zhang (rem.zhang). Please reach out if you have questions.
  */
-import { NavbarCategory, NavbarLink } from './NavbarCore';
+import type {
+  NavbarCategory,
+  NavbarLink,
+} from '@/components/navbar/NavbarCore';
 
 /**
  * This object specifies what categories are used in the header dropdowns (desktop) and sidebar lists (tablet/mobile).
@@ -41,18 +44,18 @@ export const NAVBAR_CATEGORIES: NavbarCategory[] = [
 export const NAVBAR_LINKS: NavbarLink[] = [
   {
     category: 'attend',
-    label: '2025 Attendee Resources',
-    href: '/2025/attend/resources',
+    label: 'Attendee Resources',
+    href: '/archive/2025/attend/resources',
   },
   {
     category: 'attend',
-    label: '2025 Collegiate Resources',
-    href: '/2025/attend/collegiate-resources',
+    label: 'Collegiate Resources',
+    href: '/archive/2025/attend/collegiate-resources',
   },
   {
     category: 'attend',
-    label: '2025 Registration',
-    href: '/2025/attend/registration',
+    label: 'Registration',
+    href: '/archive/2025/attend/registration',
     badge: {
       label: 'Closed',
       accent: false,
@@ -60,18 +63,18 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'attend',
-    label: '2025 Schedule',
-    href: '/2025/attend/schedule',
+    label: 'Schedule',
+    href: '/archive/2025/attend/schedule',
   },
   {
     category: 'attend',
-    label: '2025 What to Expect',
-    href: '/2025/attend/about',
+    label: 'What to Expect',
+    href: '/archive/2025/attend/about',
   },
   {
     category: 'present',
-    label: '2025 Request for Programs',
-    href: '/2025/present/request-for-programs',
+    label: 'Request for Programs',
+    href: '/archive/2025/present/request-for-programs',
     badge: {
       label: 'Closed',
       accent: false,
@@ -79,8 +82,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: '2025 Request for Panelists',
-    href: '/2025/present/request-for-panelists',
+    label: 'Request for Panelists',
+    href: '/archive/2025/present/request-for-panelists',
     badge: {
       label: 'Closed',
       accent: false,
@@ -88,8 +91,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'present',
-    label: '2025 Call for Posters',
-    href: '/2025/present/call-for-posters',
+    label: 'Call for Posters',
+    href: '/archive/2025/present/call-for-posters',
     badge: {
       label: 'Closed',
       accent: false,
@@ -97,38 +100,21 @@ export const NAVBAR_LINKS: NavbarLink[] = [
   },
   {
     category: 'partner',
-    label: '2025 Exhibitors and Sponsors',
-    href: '/2025/partner/exhibitors-and-sponsors',
+    label: 'Exhibitors and Sponsors',
+    href: '/archive/2025/partner/exhibitors-and-sponsors',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
     category: 'misc',
-    label: '2025 Annual Awards',
-    href: '/2025/awards',
+    label: 'Annual Awards',
+    href: '/archive/2025/awards',
   },
   {
     category: 'misc',
-    label: '2025 Community Health & Safety',
-    href: '/2025/health-and-safety',
+    label: 'Community Health & Safety',
+    href: '/archive/2025/health-and-safety',
   },
 ];
-
-/**
- * {
- *   category: 'attend',
- *   label: 'Career Fair & Grad Expo',
- *   href: '/2025/attend/expo',
- * },
- *{
- *  category: 'partner',
- *  label: 'Exhibitor/Sponsor Resources',
- *  href: '/2025/partner/resources',
- *}, */
-/**{
- *  category: 'misc',
- *  label: "What's New?",
- *  href: '/2025/whats-new',
- *},*/

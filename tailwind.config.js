@@ -1,8 +1,8 @@
 /**
  * Because the new navbar is dynamically generated, we need to manually tell Tailwind what CSS classes we need for navbar coloring.
- * Refer to Navbar.config and NavbarCore for more information.
+ * Refer to navbar/layouts/2026.config and NavbarCore for more information.
  */
-import {NAVBAR_CATEGORIES} from './src/components/navbar/Navbar.config';
+import { NAVBAR_CATEGORIES } from './src/components/navbar/layouts/2026.config';
 let safelist = [];
 for (let i of NAVBAR_CATEGORIES) {
   let c = i.color;
@@ -59,6 +59,8 @@ module.exports = {
         // 2026
         "albuquerque-brown" : "#c16729",
         "albuquerque-sand"  : "#d2975f",
+        "albuquerque-purple": "#6c186d",
+        "albuquerque-orchid": "#6c4777",
         
         // Colors to KEEP
         "ostem-blue": "#1B7EA1",
@@ -71,6 +73,7 @@ module.exports = {
         "baltimore-blue": "#20568a",
         // Navbar accents
         "nav-accent": "#6d8b85", // Default accent
+        "nav-yellow": "rgb(var(--sp-nav-accent-yellow) / <alpha-value>)",
         "nav-green": "rgb(var(--sp-nav-accent-green) / <alpha-value>)",
         "nav-blue": "rgb(var(--sp-nav-accent-blue) / <alpha-value>)",
         "nav-purple": "rgb(var(--sp-nav-accent-purple) / <alpha-value>)",
