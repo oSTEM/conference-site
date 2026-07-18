@@ -100,6 +100,15 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     },
   },
   {
+    category: 'present',
+    label: 'Conference Proceedings',
+    href: '/2026/present/conference-proceedings',
+    badge: {
+      label: 'Open',
+      accent: true,
+    },
+  },
+  {
     category: 'partner',
     label: 'Exhibitors and Sponsors',
     href: '/2026/partner/exhibitors-and-sponsors',
