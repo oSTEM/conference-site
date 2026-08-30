@@ -4,6 +4,7 @@ import Image from "next/image";
 import whovaMemberIdImg from "./member-id/whova-member-id.png";
 import ymDemographicsImg from "./member-id/ym-demographics.png";
 import ymMemberIdImg from "./member-id/ym-member-id.png";
+import ymMembershipUpgradeImg from "./member-id/ym-membership-upgrade.png";
 
 <SiteLayout title="Member ID" accent="nav-green">
 <p>
@@ -86,6 +87,72 @@ import ymMemberIdImg from "./member-id/ym-member-id.png";
   </figcaption>
 </figure>
 
+## Frequently Asked Questions
+
+#### I'm getting an error that says my member ID is valid but not eligible for a specific ticket.
+
+This applies to registrations where you get errors that look like this:
+
+<blockquote className="member-id-quote">
+  <p><em>The Member ID “(your ID)” is not eligible for ”Collegiate / Professional (Member) - Full Conference”. This ticket requires membership level(s): collegiate chapter membership, collegiate global membership, etc...</em></p>
+</blockquote>
+
+If your account does not currently show an active oSTEM membership, please update it in YourMembership. Visit the [Membership page](https://ostem.org/members/membership.asp) (can also be reached under Payments & History &rarr; Membership), select “Upgrade your membership”, choose the membership option that matches your status (collegiate or professional, with or without a chapter), and submit the form. Once complete, your member ID should work for registration; please allow up to 24 hours for Whova to sync the updated membership. There are no additional dues for this change, and donations are optional.
+
+<figure className="my-6 flex flex-col items-center">
+  <div className="w-full max-w-[544px] sm:max-w-[714px] md:max-w-[761px] lg:max-w-[878px]">
+    <Image
+      src={ymMembershipUpgradeImg}
+      placeholder="blur"
+      alt="YourMembership membership page with a clickable link that says Upgrade your Membership"
+      layout="responsive"
+      width="1054"
+      height="477"
+      className="rounded"
+    />
+  </div>
+  <figcaption className="mt-2 text-text-color/70 text-center max-w-[544px] sm:max-w-[714px] md:max-w-[761px] lg:max-w-[878px]">
+    An account that does not have a current membership, indicated by the “Upgrade your membership” link.
+  </figcaption>
+</figure>
+
+<span className='text-yellow-700 dark:text-yellow-300'><b>Note:</b> You may notice that the image above says "Your membership is current and does not expire." This does not mean you have a collegiate/professional membership active - it is a leftover artifact of an expired membership migrated over from our previous system.</span>
+
+To validate that your membership is active and valid, the same page should instead say the following with no “Upgrade your membership” link:
+
+<blockquote className="member-id-quote">
+  <p><strong>oSTEM Member</strong></p>
+  <p>Collegiate Global Membership <i>(or another specific membership)</i> </p>
+  <p>Your membership is current through <i>(expiration date)</i>.</p>
+</blockquote>
+
+#### Other Questions
+
 If you still have any questions regarding this, please email [conference@ostem.org](mailto:conference@ostem.org). We look forward to welcoming you at conference!
+
+<style jsx>{`
+  .member-id-quote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    border-left: 4px solid;
+    border-color: rgb(var(--sp-nav-accent-green));
+    background: rgba(148, 163, 184, 0.08);
+    border-radius: 0rem;
+    color: inherit;
+    line-height: 1.7;
+  }
+
+  .member-id-quote p {
+    margin: 0.35rem 0;
+  }
+
+  .member-id-quote p:first-child {
+    margin-top: 0;
+  }
+
+  .member-id-quote p:last-child {
+    margin-bottom: 0;
+  }
+`}</style>
 
 </SiteLayout>
