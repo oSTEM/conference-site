@@ -77,8 +77,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Request for Programs',
     href: '/2026/present/request-for-programs',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
@@ -95,8 +95,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Call for Posters',
     href: '/2026/present/call-for-posters',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
