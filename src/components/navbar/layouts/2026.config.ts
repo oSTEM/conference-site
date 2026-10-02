@@ -44,8 +44,8 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Registration',
     href: '/2026/attend/registration',
     badge: {
-      label: 'Open',
-      accent: true,
+      label: 'Closed',
+      accent: false,
     },
   },
   {
@@ -53,7 +53,7 @@ export const NAVBAR_LINKS: NavbarLink[] = [
     label: 'Collegiate Grants',
     href: '/2026/attend/collegiate-grants',
     badge: {
-      label: 'Coming Soon',
+      label: 'Closed',
       accent: false,
     },
   },
