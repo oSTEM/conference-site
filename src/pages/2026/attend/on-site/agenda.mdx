@@ -1,0 +1,17 @@
+import { SiteLayout } from "@/components/layout/SiteLayout";
+
+<SiteLayout title="Agenda" accent="nav-green">
+
+<div className="bg-yellow-500/15 rounded-md px-2 pb-1 mb-3">
+  <b>You can access the agenda in Whova!</b> For full session details and additional features, please use the Whova app or website. <a href="https://whova.com/portal/WzUj4kytVI-vFQz9Smth@B-l7H8WUGwpYX6zglUve9Q=/?source=text_link" target="_blank" rel="noreferrer" data-reactroot="">Open Whova</a>
+</div>
+
+<div>
+    <div title="Whova event and conference app" id="whova-agendawidget">
+        <p id="whova-loading">Loading agenda... (Please reload this page if this page stays stuck on this message.)</p>
+    </div>
+    <script src="https://whova.com/static/frontend/xems/js/embed/embedagendasecond.js?eid=Lx0FWVTwfDM%40Gtof1L-PWl5MP0Nktb2tqZicJ3HG1gk%3D&host=https://whova.com" type="text/javascript"  id="embeded-agenda-script">
+    </script>
+</div>
+
+</SiteLayout>
