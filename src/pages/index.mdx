@@ -26,11 +26,22 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
 
 <div className="grid md:grid-cols-5">
   <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-brown border-solid bg-albuquerque-brown">
-    <h3 className="p-4 pt-3 text-white">2026 Conference Countdown</h3>
+    <h3 className="p-4 pt-3 text-white">2026 Conference</h3>
     <div className="bg-primary text-center rounded pt-4">
-      <p className='text-xl'>We are excited to see you soon in</p>
-      <p className="pt-0 text-4xl font-display" ><b className={styles.gradient}>Albuquerque, New Mexico</b><span className={styles.gradientLight}><span className='hidden lg:inline'> - </span><br className='lg:hidden'/>October 22-24, 2026</span></p>
-      <ConferenceCountdown></ConferenceCountdown>
+      <p className='text-xl pb-4'>Welcome to oSTEM 2026!</p>
+      <p className="p-0 text-4xl font-display" ><b className={styles.gradient}>Albuquerque, New Mexico</b></p>
+      <p className={`${styles.gradientLight} text-3xl pt-0 pb-8`}>October 22-24, 2026</p>
+      <div className="flex justify-center pb-6 gap-4">
+        <CTAButton onClick="https://whova.com/portal/DUdBUeyz2Zo2Uw8hy0mHSNTGs1bppJKL6TnErpGE9t8=/" target="_self" className="bg-albuquerque-brown" backgroundColor={false}>
+          Whova
+        </CTAButton>
+        <CTAButton onClick="/2026/attend/logistics" target="_self" className="bg-albuquerque-orchid" backgroundColor={false}>
+          Attendee Logistics
+        </CTAButton>
+        <CTAButton onClick="https://heyzine.com/flip-book/271cdad07f.html" target="_self" className="bg-albuquerque-purple" backgroundColor={false}>
+          Program Book
+        </CTAButton>
+      </div>
     </div>
   </div>
 
@@ -42,14 +53,6 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
     <br />
     <span className="font-bold">Location:</span> Albuquerque, New Mexico at the Albuquerque Convention Center
     <br />
-    </div>
-    <div className="flex justify-center pb-6 gap-4">
-      <CTAButton onClick="https://whova.com/portal/DUdBUeyz2Zo2Uw8hy0mHSNTGs1bppJKL6TnErpGE9t8=/" target="_self" className="bg-albuquerque-orchid" backgroundColor={false}>
-        Whova
-      </CTAButton>
-      <CTAButton onClick="https://heyzine.com/flip-book/271cdad07f.html" target="_self" className="bg-albuquerque-orchid" backgroundColor={false}>
-        Program Book
-      </CTAButton>
     </div>
     <div className="text-left p-4">
       <h4 className="font-bold text-lg mb-2">🗓️ Key Dates</h4>
