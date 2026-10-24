@@ -28,7 +28,7 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
   <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-brown border-solid bg-albuquerque-brown">
     <h3 className="p-4 pt-3 text-white">2026 Conference</h3>
     <div className="bg-primary text-center rounded pt-4">
-      <p className='text-xl pb-4'>Thank you for joining us at oSTEM 2026</p>
+      <p className='text-xl pb-4'>Thank you for joining us at oSTEM 2026!</p>
       <p className="p-0 text-4xl font-display" ><b className={styles.gradient}>Albuquerque, New Mexico</b></p>
       <p className={`${styles.gradientLight} text-3xl pt-0 pb-8`}>October 22-24, 2026</p>
       <div className="flex flex-col px-4 md:px-0 md:flex-row justify-center pb-6 gap-4">
@@ -46,9 +46,9 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
   </div>
 
   <div className="rounded md:col-span-5 mt-8 border-4 border-albuquerque-orchid border-solid bg-albuquerque-orchid">
-    <h3 className="p-4 pt-3 text-white">2027 Conference</h3>
+    <h3 className="p-4 pt-3 text-white">What's Next?</h3>
     <div className="bg-primary text-center rounded pt-4">
-      <p className='text-lg pb-4'>Sign up for our newsletter to get updates on the 2027 Conference as soon as they're available.</p>
+      <p className='text-lg px-6 pb-4'>Thank you to everyone who joined us and made this conference so incredible! Whether you were able to join us in Albuquerque or not, please stay connected and keep the conversation going—sign up for our newsletter to get updates on future events and announcements.</p>
       <div className="text-xl flex justify-center pb-8">
         <CTAButton
           onClick="https://www.ostem.org/page/newsletter"
@@ -56,6 +56,18 @@ import { faMobileAlt, faDesktop } from '@fortawesome/free-solid-svg-icons';
           backgroundColor={false}
           >
           Sign Up for Our Newsletter
+        </CTAButton>
+      </div>
+      
+      <p className='text-lg px-6 pb-4'>Conference proceeding submissions are still open. If you presented at oSTEM 2026, please consider submitting to our proceedings by December 4, 2026. Sessions, talks, and posters are all eligible.</p>
+      
+      <div className="text-xl flex justify-center pb-8">
+        <CTAButton
+          onClick="/2026/present/conference-proceedings"
+          className="bg-albuquerque-orchid"
+          backgroundColor={false}
+          >
+          Conference Proceedings
         </CTAButton>
       </div>
     </div>
